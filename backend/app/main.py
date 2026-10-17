@@ -1,4 +1,3 @@
-﻿import math
 from datetime import datetime, timezone
 
 from fastapi import Depends, FastAPI, HTTPException
@@ -8,6 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.database import Base, engine, get_db
 from app.models.models import Tourist, SafetyZone, SOSAlert
+from app.services.geofence import distance_meters
 
 Base.metadata.create_all(bind=engine)
 
@@ -49,13 +49,6 @@ class SOSCreate(BaseModel):
     message: str = "Emergency assistance required"
 
 
-def distance_meters(lat1, lon1, lat2, lon2):
-    radius = 6371000
-    p1, p2 = math.radians(lat1), math.radians(lat2)
-    dlat = math.radians(lat2 - lat1)
-    dlon = math.radians(lon2 - lon1)
-    a = math.sin(dlat / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dlon / 2) ** 2
-    return radius * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
 @app.get("/")
