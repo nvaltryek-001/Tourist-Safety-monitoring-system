@@ -1,0 +1,32 @@
+﻿.venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+dist/
+.expo/
+# Local databases and backups
+*.db
+*.sqlite
+*.sqlite3
+
+# Personal registration/import data
+*registration*.csv
+
+# Python environments and generated files
+backend/.venv/
+
+# Local secrets
+.env.*
+!.env.example
+
+# Editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Local timestamped backups
+backup_*/
+# Local backup files
+*.backup_*
