@@ -212,6 +212,9 @@ def create_sos(
     data: SOSCreate,
     db: Session = Depends(get_db),
 ):
+    import os
+    import httpx
+
     tourist = db.query(Tourist).filter_by(tourist_code=tourist_code).first()
     if not tourist:
         raise HTTPException(status_code=404, detail="Tourist not found")
@@ -230,6 +233,97 @@ def create_sos(
     db.commit()
     db.refresh(alert)
 
+    admin_email = os.getenv("ADMIN_ALERT_EMAIL", "pavithranp921@gmail.com")
+    sid = os.getenv("TWILIO_ACCOUNT_SID", "")
+    token = os.getenv("TWILIO_AUTH_TOKEN", "")
+    from_number = os.getenv("TWILIO_FROM_NUMBER", "")
+    admin_phone = os.getenv("ADMIN_ALERT_PHONE", "")
+
+    location = (
+        f"Location: {latitude}, {longitude}"
+        if latitude is not None and longitude is not None
+        else "Location: unavailable"
+    )
+    body = (
+        "SMART TOURIST SAFETY SYSTEM - SOS ALERT\\n\\n"
+        f"Tourist: {tourist.name}\\n"
+        f"Tourist code: {tourist_code}\\n"
+        f"Emergency contact: {tourist.emergency_contact_name or 'Not provided'}\\n"
+        f"Message: {data.message or 'Emergency assistance requested'}\\n"
+        f"{location}\\nSOS alert ID: {alert.id}\\n\\n"
+        "Please contact the tourist and emergency services if needed."
+    )
+    results = []
+
+    # Email to the assigned contact and admin.
+    email_recipients = []
+    if tourist.emergency_contact_email:
+        email_recipients.append(("emergency_contact", tourist.emergency_contact_email))
+    if admin_email and admin_email.lower() not in {
+        e.lower() for _, e in email_recipients
+    }:
+        email_recipients.append(("admin", admin_email))
+
+    email_enabled = os.getenv("SOS_EMAIL_ENABLED", "").lower() == "true"
+    for recipient_type, email in email_recipients:
+        if not email_enabled:
+            results.append({"channel": "email", "recipient_type": recipient_type, "status": "dry_run"})
+            continue
+        api_key = os.getenv("RESEND_API_KEY", "")
+        sender = os.getenv("RESEND_FROM_EMAIL", "")
+        if not api_key or not sender:
+            results.append({"channel": "email", "recipient_type": recipient_type, "status": "failed", "reason": "Resend configuration missing"})
+            continue
+        try:
+            r = httpx.post(
+                "https://api.resend.com/emails",
+                headers={"Authorization": f"Bearer {api_key}"},
+                json={"from": sender, "to": [email], "subject": f"SOS ALERT: {tourist.name} ({tourist_code})", "text": body},
+                timeout=10.0,
+            )
+            r.raise_for_status()
+            results.append({"channel": "email", "recipient_type": recipient_type, "status": "accepted_by_provider"})
+        except Exception:
+            results.append({"channel": "email", "recipient_type": recipient_type, "status": "failed", "reason": "Email provider request failed"})
+
+    # SMS and voice go to the assigned emergency contact; admin is optional.
+    phone_recipients = []
+    if tourist.emergency_contact_phone:
+        phone_recipients.append(("emergency_contact", tourist.emergency_contact_phone))
+    if admin_phone and admin_phone not in {p for _, p in phone_recipients}:
+        phone_recipients.append(("admin", admin_phone))
+
+    sms_enabled = os.getenv("SOS_SMS_ENABLED", "").lower() == "true"
+    voice_enabled = os.getenv("SOS_VOICE_ENABLED", "").lower() == "true"
+
+    for recipient_type, phone in phone_recipients:
+        if not sms_enabled:
+            results.append({"channel": "sms", "recipient_type": recipient_type, "status": "dry_run"})
+        elif not (sid and token and from_number):
+            results.append({"channel": "sms", "recipient_type": recipient_type, "status": "failed", "reason": "Twilio configuration missing"})
+        else:
+            try:
+                from twilio.rest import Client
+                client = Client(sid, token)
+                client.messages.create(to=phone, from_=from_number, body=body[:1500])
+                results.append({"channel": "sms", "recipient_type": recipient_type, "status": "accepted_by_provider"})
+            except Exception:
+                results.append({"channel": "sms", "recipient_type": recipient_type, "status": "failed", "reason": "SMS provider request failed"})
+
+        if not voice_enabled:
+            results.append({"channel": "voice", "recipient_type": recipient_type, "status": "dry_run"})
+        elif not (sid and token and from_number):
+            results.append({"channel": "voice", "recipient_type": recipient_type, "status": "failed", "reason": "Twilio configuration missing"})
+        else:
+            try:
+                from twilio.rest import Client
+                client = Client(sid, token)
+                twiml = "<Response><Say>This is an emergency alert from the Smart Tourist Safety System. A tourist has triggered SOS. Please check your messages and contact them immediately.</Say></Response>"
+                client.calls.create(to=phone, from_=from_number, twiml=twiml)
+                results.append({"channel": "voice", "recipient_type": recipient_type, "status": "accepted_by_provider"})
+            except Exception:
+                results.append({"channel": "voice", "recipient_type": recipient_type, "status": "failed", "reason": "Voice provider request failed"})
+
     return {
         "message": "SOS alert recorded",
         "alert_id": alert.id,
@@ -237,6 +331,7 @@ def create_sos(
         "status": alert.status,
         "latitude": alert.latitude,
         "longitude": alert.longitude,
+        "notification_results": results,
     }
 
 
@@ -315,3 +410,4 @@ form.addEventListener('submit',async e=>{
 </script>
 </main></body></html>
 """)
+
