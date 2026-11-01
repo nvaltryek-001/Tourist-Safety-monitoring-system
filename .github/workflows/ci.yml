@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  backend:
+    name: Backend tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements*.txt
+      - run: pip install -r requirements-dev.txt
+      - name: Ruff (errors only)
+        run: ruff check app tests --select E9,F --exclude app/accurate_kml_boundary_analysis.py,app/export_kml_to_geojson.py,app/inspect_kml_dataset.py,app/shortlist_near_rajanukunte.py
+      - name: Pytest
+        run: |
+          set +e
+          python -m pytest -q -p no:cacheprovider 2>&1 | tee pytest.log
+          status=${PIPESTATUS[0]}
+          grep -E "passed|failed|error" pytest.log | tail -1 | sed 's/^/::notice title=pytest summary::/'
+          if [ $status -ne 0 ]; then
+            grep -E "^(FAILED|ERROR) |^E  " pytest.log | head -60 | while IFS= read -r line; do echo "::error title=pytest::${line}"; done
+          fi
+          exit $status
+
+  dashboard:
+    name: Dashboard build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dashboard
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --no-audit --no-fund
+      - name: Lint, typecheck, test and build
+        env:
+          NEXT_PUBLIC_API_URL: https://example.invalid
+        run: |
+          set +e
+          for step in "npm run lint" "npm run typecheck" "npm test" "npm run build"; do
+            $step > step.log 2>&1
+            status=$?
+            tail -5 step.log
+            if [ $status -ne 0 ]; then
+              grep -E "error|Error|ERR|✗|FAIL|×" step.log | head -40 | while IFS= read -r line; do echo "::error title=${step}::${line}"; done
+              exit $status
+            fi
+            echo "::notice title=${step}::ok"
+          done
+
+  mobile:
+    name: Mobile typecheck & tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --no-audit --no-fund
+      - name: Typecheck and test
+        run: |
+          set +e
+          for step in "npm run typecheck" "npm test"; do
+            $step > step.log 2>&1
+            status=$?
+            tail -5 step.log
+            if [ $status -ne 0 ]; then
+              grep -E "error|Error|✕|FAIL|●" step.log | head -40 | while IFS= read -r line; do echo "::error title=${step}::${line}"; done
+              exit $status
+            fi
+            echo "::notice title=${step}::ok"
+          done

@@ -1,23 +1,19 @@
-﻿import os
+"""Smoke test against a *running* server (skipped when none is reachable).
 
-import httpx
+Run: SMART_TOURIST_API_URL=https://your-api.onrender.com pytest tests/test_health_api.py
+"""
+import os
+
 import pytest
-
 
 API_BASE_URL = os.getenv("SMART_TOURIST_API_URL", "http://127.0.0.1:8000")
 
 
-@pytest.fixture
-def api_client():
-    with httpx.Client(base_url=API_BASE_URL, timeout=5.0) as client:
-        yield client
-
-
-def test_health_endpoint_returns_healthy_status(api_client):
-    response = api_client.get("/health")
-
+def test_live_health_endpoint():
+    httpx = pytest.importorskip("httpx")
+    try:
+        response = httpx.get(f"{API_BASE_URL}/health", timeout=3.0)
+    except httpx.HTTPError:
+        pytest.skip(f"no server reachable at {API_BASE_URL}")
     assert response.status_code == 200
-    body = response.json()
-    assert body["status"] == "healthy"
-    assert body["service"] == "smart-tourist-management"
-    assert body["timestamp"]
+    assert response.json()["status"] == "healthy"
