@@ -16,3 +16,9 @@
 - No duplicate exact `name + latitude + longitude` combinations were found in the API response.
 - Limitation: different names at identical coordinates and nearby overlaps have not yet been ruled out.
 - No zone records were created, deleted, or modified during these checks.
+
+## 2026-11-01 — Platform completion (v2.0)
+- Backend v2: authentication/roles, additive migrations, SOS lifecycle, geofence events, notifications, AI advisories, WebSocket; legacy routes preserved but personal-data routes now require auth.
+- New Next.js dashboard (admin + police) and Expo tourist app.
+- CI on GitHub Actions: backend 82 passed / 1 skipped; dashboard lint, types, 6 tests, build pass; mobile types and 8 tests pass.
+- Real `tourist_safety.db` was not available in the repository; no data was changed. See docs/FINAL_COMPLETION_REPORT.md.
