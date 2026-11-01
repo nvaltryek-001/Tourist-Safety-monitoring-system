@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f3f5f6;
+  --panel: #ffffff;
+  --line: #e2e7ea;
+  --text: #13212a;
+  --muted: #5d6d77;
+}
+.dark {
+  --bg: #0b141a;
+  --panel: #111d24;
+  --line: #22343d;
+  --text: #e3eaee;
+  --muted: #8ea0aa;
+}
+html, body { background: var(--bg); color: var(--text); }
+body { font-feature-settings: "tnum" 1; }
+
+@layer components {
+  .panel { @apply rounded-lg border bg-[var(--panel)] border-[var(--line)]; }
+  .muted { color: var(--muted); }
+  .hairline { border-color: var(--line); }
+  .field {
+    @apply w-full rounded border bg-[var(--panel)] border-[var(--line)] px-3 py-2 text-sm outline-none
+      focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20;
+  }
+  .label { @apply mb-1 block text-xs font-medium uppercase tracking-wide muted; }
+  .th { @apply px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider muted; }
+  .td { @apply px-4 py-3 text-sm align-top; }
+}
+
+.leaflet-container { font: inherit; background: #dfe6ea; }
+.dark .leaflet-tile { filter: brightness(0.75) contrast(1.1) saturate(0.6); }
+.leaflet-popup-content { margin: 10px 12px; }
+@keyframes pulse-ring { 0% { transform: scale(.8); opacity: .9 } 100% { transform: scale(2.2); opacity: 0 } }
+.sos-pulse { animation: pulse-ring 1.6s ease-out infinite; }
