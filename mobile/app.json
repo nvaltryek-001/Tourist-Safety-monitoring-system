@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "SafeTrail",
+    "slug": "safetrail-tourist",
+    "scheme": "safetrail",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "android": {
+      "package": "com.safetrail.tourist",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": ["android.permission.RECORD_AUDIO"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.safetrail.tourist",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "SafeTrail shares your location with the safety team so they can warn you about restricted zones and find you in an emergency.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow background location so safety monitoring continues while the app is closed during an active trip.",
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow background location so safety monitoring continues during an active trip.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ],
+      "expo-notifications"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {}
+    }
+  }
+}
