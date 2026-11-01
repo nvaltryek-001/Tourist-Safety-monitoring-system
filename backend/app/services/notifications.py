@@ -52,6 +52,51 @@ def send_email_resend(to: str, subject: str, text: str) -> None:
         raise ProviderError(f"email provider HTTP {response.status_code}")
 
 
+def send_email_brevo(to: str, subject: str, text: str) -> None:
+    """Brevo transactional email over HTTPS (free tier; works on hosts that block SMTP)."""
+    import httpx
+
+    settings = get_settings()
+    response = httpx.post(
+        "https://api.brevo.com/v3/smtp/email",
+        headers={"api-key": settings.email_api_key, "accept": "application/json"},
+        json={
+            "sender": {"email": settings.email_from, "name": "SafeTrail Safety"},
+            "to": [{"email": to}],
+            "subject": subject,
+            "textContent": text,
+        },
+        timeout=10.0,
+    )
+    if response.status_code >= 400:
+        raise ProviderError(f"email provider HTTP {response.status_code}")
+
+
+def send_email_smtp(to: str, subject: str, text: str) -> None:
+    """Plain SMTP (e.g. Gmail app password). Many free hosts block SMTP ports."""
+    import smtplib
+    from email.message import EmailMessage
+
+    settings = get_settings()
+    msg = EmailMessage()
+    msg["From"], msg["To"], msg["Subject"] = settings.email_from, to, subject
+    msg.set_content(text)
+    with smtplib.SMTP(settings.smtp_host, settings.smtp_port, timeout=10) as server:
+        server.starttls()
+        server.login(settings.smtp_username or settings.email_from, settings.email_api_key)
+        server.send_message(msg)
+
+
+EMAIL_SENDERS = {"resend": send_email_resend, "brevo": send_email_brevo, "smtp": send_email_smtp}
+
+
+def send_email(to: str, subject: str, text: str) -> None:
+    sender = EMAIL_SENDERS.get(get_settings().email_provider)
+    if sender is None:
+        raise ProviderError("unknown EMAIL_PROVIDER")
+    sender(to, subject, text)
+
+
 def send_expo_push(token: str, title: str, body: str, data: dict | None = None) -> None:
     import httpx
 
@@ -73,12 +118,12 @@ def send_expo_push(token: str, title: str, body: str, data: dict | None = None) 
 
 
 # Indirection so tests can swap providers without network access.
-PROVIDERS: dict[str, Callable] = {"email": send_email_resend, "push": send_expo_push}
+PROVIDERS: dict[str, Callable] = {"email": send_email, "push": send_expo_push}
 
 
 def email_configured() -> bool:
     s = get_settings()
-    return s.email_provider == "resend" and bool(s.email_api_key and s.email_from)
+    return s.email_provider in EMAIL_SENDERS and bool(s.email_api_key and s.email_from)
 
 
 def push_configured() -> bool:

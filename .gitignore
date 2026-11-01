@@ -30,3 +30,10 @@ Thumbs.db
 backup_*/
 # Local backup files
 *.backup_*
+
+# Automatic migration backups and audit outputs
+backups/
+backend/backups/
+db_audit*.json
+perf.txt
+pytest.log

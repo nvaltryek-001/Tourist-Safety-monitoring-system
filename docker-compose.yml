@@ -1,0 +1,32 @@
+# Local full stack: PostgreSQL + API + dashboard.  docker compose up --build
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: safetrail
+      POSTGRES_USER: safetrail
+      POSTGRES_PASSWORD: safetrail-local-only
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U safetrail"]
+      interval: 5s
+      retries: 10
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql://safetrail:safetrail-local-only@db:5432/safetrail
+      SECRET_KEY: local-development-secret-not-for-production
+      ALLOWED_ORIGINS: http://localhost:3000
+      SEED_DEMO_STAFF: "true"
+      OTP_DEV_ECHO: "true"
+    ports: ["8000:8000"]
+    depends_on:
+      db: { condition: service_healthy }
+  dashboard:
+    build:
+      context: ./dashboard
+      args: { NEXT_PUBLIC_API_URL: http://localhost:8000 }
+    ports: ["3000:3000"]
+    depends_on: [api]
+volumes:
+  pgdata:
