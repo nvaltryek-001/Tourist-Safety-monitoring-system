@@ -62,3 +62,6 @@ GitHub Actions, branch `feature/gis-maps-datasets`, commit `69e7df2`:
 New backend tests (`tests/test_geo_api.py`): OSM facility import idempotency, nearest police/hospital search and type filters, facility CRUD and permissions, SOS nearest-help, weather risk rules and offline behaviour, dataset layers and manifest, tourist update/delete safeguards, access and staff delete, zone category/evidence, open-data → pending-review zone import, and **one integration test against the real committed dataset** (more than 5,000 facilities imported, a police station within 3 km of MG Road Bengaluru, 30 district polygons, crime years 2022/2024/2025).
 
 **Not tested here (need your keys or a phone):** Google tiles, Advanced Markers, Directions routes and Android Google rendering. CI proves they compile and build; follow the checklist in [GOOGLE_MAPS_SETUP.md](GOOGLE_MAPS_SETUP.md).
+
+## v3.1 update (2026-11-02, commit `b72ed07`)
+Backend **97 passed, 1 skipped, 0 failed**; dashboard lint, types, tests and build pass; mobile types and tests pass. New tests cover hotspot clustering (including the minimum-data refusal), response-time percentiles, zone dwell time, movement summary and the four analytics endpoints with role checks.

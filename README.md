@@ -16,7 +16,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-![Tests](https://img.shields.io/badge/backend_tests-92_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
+![Tests](https://img.shields.io/badge/backend_tests-97_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
 ![Dashboard](https://img.shields.io/badge/dashboard_build-passing-2ea44f?style=flat-square&logo=vercel)
 ![Mobile](https://img.shields.io/badge/mobile_typecheck-passing-2ea44f?style=flat-square&logo=android&logoColor=white)
 ![Hardware](https://img.shields.io/badge/IoT_hardware-none-6e7781?style=flat-square)
@@ -333,7 +333,7 @@ Set your Render URL in `eas.json` before building. Push notifications work in th
 
 | Suite | Status |
 |---|---|
-| 🐍 Backend (pytest) | ![](https://img.shields.io/badge/92_passed-1_skipped-2ea44f?style=flat-square) |
+| 🐍 Backend (pytest) | ![](https://img.shields.io/badge/97_passed-1_skipped-2ea44f?style=flat-square) |
 | 🖥️ Dashboard lint · types · tests · build | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
 | 📱 Mobile types · tests | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
 | ⚡ Performance smoke | ![](https://img.shields.io/badge/~8--9_ms-per_location_update-1f6feb?style=flat-square) |

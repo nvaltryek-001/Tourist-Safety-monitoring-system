@@ -104,6 +104,8 @@ Measured against the 28 Definition-of-Done items: **20 complete, 6 partial, 2 bl
 | PostGIS | ❌ | Spatial queries use bounding-box prefilter + Haversine / ray casting (works on SQLite and Postgres); PostGIS not required at this data size |
 | Full CRUD | ✅ | Tourists, access, staff, zones, facilities (see API_DOCUMENTATION.md) |
 | Expo Go connection | ✅ | Runtime server URL + connection test screen |
+| SOS hotspots, response times, zone entry/exit, movement analytics | ✅ | `/api/v1/analytics/{hotspots,response-times,zone-activity,movement}`, Analytics page |
+| Weather risk shown to users | ✅ | tourist home card, incident page panel |
 | Animated UI | ✅ | Staggered entry, count-up KPIs, shimmer skeletons, page fades, hover lift, radar logo, SOS pulse; respects reduced-motion |
 
-**Updated estimate:** about 88 % of measurable requirements are verified in CI. The remaining items need your Google keys, a phone, the private `tourist_safety.db`, or PostGIS.
+**Updated estimate:** about 90 % of measurable requirements are verified in CI. The remaining items need your Google keys, a phone, the private `tourist_safety.db`, or PostGIS.

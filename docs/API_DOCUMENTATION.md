@@ -54,3 +54,11 @@ Pagination (`page`, `page_size`) returns `{items, total, page, page_size}` on to
 | Trips | ✅ | ✅ | ✅ end | — |
 | Location history | ✅ | ✅ | — | ✅ (tourist self / retention purge) |
 | Notifications | system | ✅ | ✅ read | — |
+
+## Operational analytics (v3.1)
+| Endpoint | Access | Returns |
+|---|---|---|
+| `GET /api/v1/analytics/hotspots?days&cell_m&min_count&include_zone_entries` | staff | 500 m grid-density cells over SafeTrail's own SOS alerts and restricted-zone entries; `INSUFFICIENT_DATA` below 5 located events |
+| `GET /api/v1/analytics/response-times?days` | staff | median and p90 minutes to acknowledge and resolve, by alert type and officer, plus outcome counts |
+| `GET /api/v1/analytics/zone-activity?days` | staff | per-zone entries, exits, unique tourists, median dwell time, tourists currently inside |
+| `GET /api/v1/analytics/movement?hours` | admin | per-tourist points, distance, stationary minutes, route-deviation flag |
