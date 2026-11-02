@@ -299,3 +299,59 @@ async def import_zones(
     return {"dry_run": dry_run, "activated": activate and not dry_run,
             **{k: v for k, v in report.items()},
             "summary": {k: len(v) for k, v in report.items()}}
+
+
+DATASET_ZONE_LAYERS = {"natural_hazards": ("CAUTION", 150), "protected_areas": ("CAUTION", None)}
+
+
+@router.post("/import-dataset")
+def import_dataset_layer(
+    layer: str = Query(pattern="^(natural_hazards|protected_areas)$"),
+    dry_run: bool = True,
+    principal: Principal = Depends(require_admin),
+    db: Session = Depends(get_db),
+):
+    """Create zones from a processed open-data layer. Always inactive + PENDING_REVIEW:
+    these are community-mapped features, not official danger designations."""
+    from app.services.datasets import layer_path, read_json
+    from app.services.geodata import parse_geojson
+
+    path = layer_path(layer)
+    if path is None:
+        raise HTTPException(404, "Layer not available — run the dataset pipeline first")
+    zone_type, default_radius = DATASET_ZONE_LAYERS[layer]
+    data = read_json(path)
+    features = []
+    for f in data.get("features", []):
+        p = dict(f.get("properties") or {})
+        p.setdefault("radius_meters", p.get("suggested_radius_m") or default_radius)
+        p["zone_type"] = zone_type
+        features.append({**f, "properties": p})
+    parsed = parse_geojson(json.dumps({"type": "FeatureCollection", "features": features}))
+    existing = {dedupe_key(z.name, z.latitude, z.longitude) for z in db.query(SafetyZone).all()}
+    created, duplicates, invalid = 0, 0, 0
+    for zone, feat in zip(parsed, features):
+        if zone.problems:
+            invalid += 1
+            continue
+        key = zone.dedupe_key()
+        if key in existing:
+            duplicates += 1
+            continue
+        existing.add(key)
+        created += 1
+        if not dry_run:
+            props = feat["properties"]
+            db.add(SafetyZone(
+                name=zone.name[:100], latitude=zone.latitude, longitude=zone.longitude, radius_meters=zone.radius_meters,
+                zone_type=zone_type, geometry_geojson=json.dumps(zone.geometry) if zone.geometry else None, active=False,
+                source=f"OpenStreetMap ({props.get('osm_id')})", verification_status="PENDING_REVIEW",
+                category=props.get("category"), evidence=props.get("evidence") or f"OSM {props.get('osm_id')}",
+                description=f"{props.get('category', '').title()} from OpenStreetMap; community-mapped, not an official designation.",
+            ))
+    if not dry_run:
+        audit(db, "ZONES_IMPORTED_FROM_DATASET", "STAFF", principal.subject, None,
+              {"layer": layer, "created": created, "duplicates": duplicates, "invalid": invalid})
+        db.commit()
+    return {"layer": layer, "dry_run": dry_run, "created": created, "duplicates": duplicates, "invalid": invalid,
+            "note": "Imported zones are inactive and PENDING_REVIEW until an admin verifies and activates them."}

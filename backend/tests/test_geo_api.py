@@ -137,3 +137,25 @@ def test_zone_category_and_evidence(client, admin_headers):
         "name": "Falls edge", "latitude": 13.2, "longitude": 77.4, "radius_meters": 60,
         "zone_type": "HIGH_RISK", "category": "WATERFALL", "evidence": "OSM node/123 waterway=waterfall"}).json()
     assert z["category"] == "WATERFALL" and z["evidence"].startswith("OSM")
+
+
+def test_import_dataset_layer_as_pending_zones(client, admin_headers, tmp_path, monkeypatch):
+    hazards = {"type": "FeatureCollection", "features": [
+        {"type": "Feature", "geometry": {"type": "Point", "coordinates": [75.5, 13.4]},
+         "properties": {"name": "Fixture Falls", "category": "WATERFALL", "osm_id": "node/9", "suggested_radius_m": 150}},
+        {"type": "Feature", "geometry": {"type": "Point", "coordinates": [999, 13.4]},
+         "properties": {"name": "Broken", "category": "CLIFF", "osm_id": "node/10"}},
+    ]}
+    (tmp_path / "natural_hazards.geojson").write_text(json.dumps(hazards))
+    monkeypatch.setenv("DATASETS_DIR", str(tmp_path))
+    dry = client.post("/api/v1/zones/import-dataset?layer=natural_hazards", headers=admin_headers).json()
+    assert dry["created"] == 1 and dry["invalid"] == 1 and dry["dry_run"]
+    assert client.get("/api/v1/zones?search=Fixture").json() == []
+    real = client.post("/api/v1/zones/import-dataset?layer=natural_hazards&dry_run=false", headers=admin_headers).json()
+    assert real["created"] == 1
+    zone = client.get("/api/v1/zones?search=Fixture").json()[0]
+    assert zone["active"] is False and zone["verification_status"] == "PENDING_REVIEW"
+    assert zone["category"] == "WATERFALL" and zone["radius_meters"] == 150
+    again = client.post("/api/v1/zones/import-dataset?layer=natural_hazards&dry_run=false", headers=admin_headers).json()
+    assert again["created"] == 0 and again["duplicates"] == 1
+    assert client.post("/api/v1/zones/import-dataset?layer=evil", headers=admin_headers).status_code == 422

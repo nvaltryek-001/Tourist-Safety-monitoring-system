@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { API_URL } from "@/lib/api";
+import { API_URL, api } from "@/lib/api";
 import { humanize } from "@/lib/format";
 import { useApi, useLayer } from "@/lib/hooks";
 import { SafetyMap } from "./Map";
-import { Badge, EmptyState, Panel, SkeletonRows, Stat, StatusBadge } from "./ui";
+import { Badge, Button, EmptyState, Panel, SkeletonRows, Stat, StatusBadge, useToast } from "./ui";
 
 interface ManifestRow {
   dataset_id: string;
@@ -55,6 +55,26 @@ export function OpenDatasets() {
   const analysis = useApi<Analysis>("/api/v1/datasets/analysis");
   const [showRisk, setShowRisk] = useState(false);
   const riskLayer = useLayer(showRisk ? "district_risk" : null);
+  const toast = useToast();
+  const [importing, setImporting] = useState<string | null>(null);
+
+  async function importLayer(layer: "natural_hazards" | "protected_areas") {
+    setImporting(layer);
+    try {
+      const dry = await api<{ created: number; duplicates: number; invalid: number }>(`/api/v1/zones/import-dataset?layer=${layer}`, { method: "POST" });
+      if (!dry.created) {
+        toast(`Nothing new to import (${dry.duplicates} already present, ${dry.invalid} invalid)`, "info");
+        return;
+      }
+      if (!window.confirm(`Create ${dry.created} inactive "pending review" zones from ${humanize(layer)}? They will not alert tourists until you activate them.`)) return;
+      const r = await api<{ created: number }>(`/api/v1/zones/import-dataset?layer=${layer}&dry_run=false`, { method: "POST" });
+      toast(`Created ${r.created} pending-review zones — review them on the Safety zones page`);
+    } catch (e) {
+      toast(e instanceof Error ? e.message : "Import failed", "error");
+    } finally {
+      setImporting(null);
+    }
+  }
 
   if (info.loading) return <Panel title="Open datasets"><SkeletonRows rows={4} /></Panel>;
   if (!info.data?.available) {
@@ -153,6 +173,14 @@ export function OpenDatasets() {
           </div>
         )}
         <p className="mt-3 text-[11px] muted">Registered crimes 55 % · heavy-rain days 30 % · heat days 15 %. OSM police counts are shown for coverage only. An analysis aid, not a crime prediction.</p>
+      </Panel>
+
+      <Panel title="Use open data as safety zones">
+        <p className="text-sm muted">Turn OpenStreetMap features into zones for review. They are created <b>inactive</b> with status <b>pending review</b> and never alert tourists until an admin verifies and activates each one.</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <Button disabled={!info.data.layers.natural_hazards} loading={importing === "natural_hazards"} onClick={() => importLayer("natural_hazards")}>Waterfalls & cliffs → review zones</Button>
+          <Button disabled={!info.data.layers.protected_areas} loading={importing === "protected_areas"} onClick={() => importLayer("protected_areas")}>Protected areas → review zones</Button>
+        </div>
       </Panel>
 
       <Panel title="Dataset manifest" bodyClass="p-0">
