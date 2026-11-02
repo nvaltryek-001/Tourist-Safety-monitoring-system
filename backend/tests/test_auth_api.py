@@ -108,3 +108,70 @@ def test_police_sees_masked_contact_details(client, tourist_headers, police_head
     items = client.get("/api/v1/admin/tourists", headers=police_headers).json()["items"]
     assert items[0]["emergency_contact_email"].startswith("co***@")
     assert items[0]["enrollment_number"] is None
+
+
+def test_demo_passwords_are_generated_when_not_configured(tmp_path, monkeypatch):
+    """Without DEMO_*_PASSWORD env vars, random policy-compliant passwords are written to a local file."""
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+
+    from app import bootstrap
+    from app.core.config import reset_settings_cache
+    from app.core.security import password_problems, verify_password
+    from app.database import Base
+    from app.models.models import StaffUser
+
+    for name in ("DEMO_SUPERADMIN_PASSWORD", "DEMO_ADMIN_PASSWORD", "DEMO_POLICE_PASSWORD"):
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.setattr(bootstrap, "CREDENTIALS_FILE", tmp_path / "demo_credentials.txt")
+    reset_settings_cache()
+    engine = create_engine(f"sqlite:///{tmp_path}/demo.db")
+    Base.metadata.create_all(engine)
+    db = sessionmaker(bind=engine)()
+    try:
+        created = bootstrap.bootstrap_staff(db)
+        assert len(created) == 3
+        lines = [line.split() for line in (tmp_path / "demo_credentials.txt").read_text().splitlines() if not line.startswith("#")]
+        assert len(lines) == 3
+        for role, email, password in lines:
+            assert not password_problems(password)
+            assert password not in {"Admin@12345", "SuperAdmin@123", "Police@12345"}
+            assert verify_password(password, db.query(StaffUser).filter_by(email=email).one().password_hash)
+        assert bootstrap.bootstrap_staff(db) == []  # existing accounts are never overwritten
+    finally:
+        db.close()
+        engine.dispose()
+        reset_settings_cache()
+
+
+def test_forged_forwarded_for_cannot_bypass_rate_limit(client, admin_headers, monkeypatch):
+    """Rotating a fake X-Forwarded-For must not reset the per-IP OTP limit."""
+    from app.core.config import reset_settings_cache
+
+    monkeypatch.delenv("TRUST_PROXY_HEADERS", raising=False)
+    reset_settings_cache()
+    codes = [
+        client.post("/api/v1/auth/tourist/request-otp", json={"email": f"nobody{i}@gmail.com"},
+                    headers={"X-Forwarded-For": f"10.0.0.{i}"}).status_code
+        for i in range(12)
+    ]
+    assert codes[:10] == [403] * 10 and 429 in codes[10:]
+
+
+def test_trusted_proxy_uses_rightmost_forwarded_address(monkeypatch):
+    from starlette.requests import Request
+
+    from app.core.config import reset_settings_cache
+    from app.deps import client_ip
+
+    scope = {"type": "http", "headers": [(b"x-forwarded-for", b"6.6.6.6, 203.0.113.9")], "client": ("10.1.1.1", 1234)}
+    monkeypatch.delenv("TRUST_PROXY_HEADERS", raising=False)
+    reset_settings_cache()
+    assert client_ip(Request(scope)) == "10.1.1.1"
+    monkeypatch.setenv("TRUST_PROXY_HEADERS", "true")
+    reset_settings_cache()
+    try:
+        assert client_ip(Request(scope)) == "203.0.113.9"
+    finally:
+        monkeypatch.delenv("TRUST_PROXY_HEADERS")
+        reset_settings_cache()

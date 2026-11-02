@@ -74,6 +74,17 @@ jobs:
         with:
           node-version: "20"
       - run: npm install --no-audit --no-fund
+      - name: Expo SDK dependency check
+        run: |
+          set +e
+          npx --yes expo install --check > expo-check.log 2>&1
+          status=$?
+          tail -20 expo-check.log
+          if [ $status -ne 0 ]; then
+            grep -vE "^\s*$" expo-check.log | tail -15 | while IFS= read -r line; do echo "::error title=expo install --check::${line}"; done
+            exit $status
+          fi
+          echo "::notice title=expo install --check::dependencies match the Expo SDK"
       - name: Typecheck and test
         run: |
           set +e

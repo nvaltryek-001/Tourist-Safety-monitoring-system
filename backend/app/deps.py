@@ -39,9 +39,20 @@ class Principal:
 
 
 def client_ip(request: Request) -> str:
+    """Client address for rate limiting and audit.
+
+    X-Forwarded-For is only trusted when TRUST_PROXY_HEADERS=true (e.g. behind
+    Render's proxy), and then the RIGHTMOST entry is used: that one is appended
+    by our own proxy, while entries to its left are supplied by the client and
+    can be forged to dodge per-IP rate limits.
+    """
+    from app.core.config import get_settings
+
     forwarded = request.headers.get("x-forwarded-for")
-    if forwarded:
-        return forwarded.split(",")[0].strip()[:64]
+    if forwarded and get_settings().trust_proxy_headers:
+        parts = [p.strip() for p in forwarded.split(",") if p.strip()]
+        if parts:
+            return parts[-1][:64]
     return (request.client.host if request.client else "unknown")[:64]
 
 

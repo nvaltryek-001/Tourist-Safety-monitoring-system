@@ -89,7 +89,7 @@ Measured against the 28 Definition-of-Done items: **20 complete, 6 partial, 2 bl
 | Requirement | Status | Evidence |
 |---|---|---|
 | Open datasets downloaded, raw preserved, manifest | ✅ | `datasets/` — 42/42 sources, `dataset_manifest.csv` with URL, licence, date, records |
-| OSM police / hospitals / fire / tourism / protected areas | ✅ | 7,664 facilities, 283 attractions, 59 protected areas, 204 hazards |
+| OSM police / hospitals / fire / tourism / protected areas | ✅ | 7,604 facilities (after removing 60 duplicates), 283 attractions, 59 protected areas, 204 hazards |
 | Official crime statistics | ✅ (KSP) / ⛔ (NCRB) | KSP district tables 2022/2024/2025; NCRB not machine-readable |
 | Tourism statistics | ⛔ | Ministry of Tourism data published only as PDF; OSM POIs used instead |
 | Weather (Open-Meteo + official) | ✅ | ERA5 21,930 district-days; KSNDMC 2020–2025 |

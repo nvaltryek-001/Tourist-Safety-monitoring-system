@@ -22,7 +22,7 @@ Dashboard (Next.js) ─HTTPS + WebSocket─▶ FastAPI ──▶ Email (Brevo/Re
 3. `tracking.ingest_location` stores a `location_history` row, evaluates active zones, derives ENTER/EXIT events against the event log, updates the tourist's latest position only if the fix is newer, sends restricted-zone notifications, commits, then publishes `location.updated` / `geofence.event` over WebSocket.
 
 ## Real-time
-`/ws?token=…` — staff receive all operational events; a tourist connection receives only its own SOS events. Fan-out is in-process (one instance, fits Render free). Scaling out would require Redis pub/sub; the publish interface stays the same.
+`/ws` (token sent as the first `{"type":"auth"}` message, never in the URL, so it cannot leak into proxy/access logs) — staff receive all operational events; a tourist connection receives only its own SOS events. Fan-out is in-process (one instance, fits Render free). Scaling out would require Redis pub/sub; the publish interface stays the same.
 
 ## Roles
 `SUPER_ADMIN` ⊃ `ADMIN` (manage tourists, zones, officers, audit) · `POLICE` (incidents, masked tourist list, contact details only during an active unassigned/own SOS) · `TOURIST` (only `/api/v1/me/*`, public zone reads).

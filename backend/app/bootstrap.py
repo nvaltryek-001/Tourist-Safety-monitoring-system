@@ -3,13 +3,20 @@
 * BOOTSTRAP_ADMIN_EMAIL + BOOTSTRAP_ADMIN_PASSWORD -> a SUPER_ADMIN, created
   only if no account with that email exists (an existing password is never
   overwritten).
-* SEED_DEMO_STAFF=true -> local demo accounts with documented passwords.
-  Never enable this on a public deployment.
+* SEED_DEMO_STAFF=true -> local demo accounts (superadmin@ / admin@ / police@demo.local).
+  Passwords are NOT published: they come from DEMO_SUPERADMIN_PASSWORD /
+  DEMO_ADMIN_PASSWORD / DEMO_POLICE_PASSWORD if set, otherwise a random strong
+  password is generated and written once to backend/demo_credentials.txt
+  (git-ignored). Ignored when ENVIRONMENT=production.
 """
 
 from __future__ import annotations
 
 import logging
+import os
+import secrets
+import string
+from pathlib import Path
 
 from sqlalchemy.orm import Session
 
@@ -21,10 +28,20 @@ from app.services.audit import audit
 log = logging.getLogger("app.bootstrap")
 
 DEMO_STAFF = (
-    ("superadmin@demo.local", "Demo Super Admin", "SUPER_ADMIN", "SuperAdmin@123", None),
-    ("admin@demo.local", "Demo Admin", "ADMIN", "Admin@12345", None),
-    ("police@demo.local", "Demo Officer", "POLICE", "Police@12345", "KA-DEMO-001"),
+    ("superadmin@demo.local", "Demo Super Admin", "SUPER_ADMIN", "DEMO_SUPERADMIN_PASSWORD", None),
+    ("admin@demo.local", "Demo Admin", "ADMIN", "DEMO_ADMIN_PASSWORD", None),
+    ("police@demo.local", "Demo Officer", "POLICE", "DEMO_POLICE_PASSWORD", "KA-DEMO-001"),
 )
+CREDENTIALS_FILE = Path(__file__).resolve().parents[1] / "demo_credentials.txt"
+
+
+def generate_password(length: int = 14) -> str:
+    """Random password that satisfies the staff policy (upper, lower, digit, 10+ chars)."""
+    alphabet = string.ascii_letters + string.digits
+    while True:
+        pw = "".join(secrets.choice(alphabet) for _ in range(length))
+        if any(c.isupper() for c in pw) and any(c.islower() for c in pw) and any(c.isdigit() for c in pw):
+            return pw
 
 
 def _ensure(db: Session, email: str, name: str, role: str, password: str, badge: str | None) -> bool:
@@ -49,9 +66,21 @@ def bootstrap_staff(db: Session) -> list[str]:
         if settings.is_production:
             log.warning("SEED_DEMO_STAFF ignored because ENVIRONMENT=production")
         else:
-            for row in DEMO_STAFF:
-                if _ensure(db, *row):
-                    created.append(row[0])
+            written = []
+            for email, name, role, env_name, badge in DEMO_STAFF:
+                password = os.getenv(env_name) or generate_password()
+                if _ensure(db, email, name, role, password, badge):
+                    created.append(email)
+                    if not os.getenv(env_name):
+                        written.append(f"{role:12s} {email:24s} {password}")
+            if written:
+                try:
+                    with CREDENTIALS_FILE.open("a", encoding="utf-8") as fh:
+                        fh.write("# SafeTrail local demo accounts (generated; never commit this file)\n")
+                        fh.write("\n".join(written) + "\n")
+                    log.warning("Demo staff passwords written to %s", CREDENTIALS_FILE)
+                except OSError:
+                    log.error("Could not write %s; set DEMO_*_PASSWORD env vars instead", CREDENTIALS_FILE)
     db.commit()
     if created:
         log.info("Bootstrapped staff accounts: %s", ", ".join(created))

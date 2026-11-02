@@ -37,3 +37,7 @@ backend/backups/
 db_audit*.json
 perf.txt
 pytest.log
+
+# Generated local demo credentials
+backend/demo_credentials.txt
+demo_credentials.txt

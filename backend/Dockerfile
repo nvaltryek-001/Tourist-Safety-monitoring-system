@@ -7,4 +7,5 @@ COPY app ./app
 RUN useradd --create-home appuser && chown -R appuser /app
 USER appuser
 EXPOSE 8000
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips='*'"]
+# Set TRUST_PROXY_HEADERS=true only when running behind a reverse proxy you control.
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]

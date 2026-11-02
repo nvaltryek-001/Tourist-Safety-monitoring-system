@@ -94,6 +94,11 @@ function safeJson(text: string): unknown {
   }
 }
 
-export function wsUrl(token: string): string {
-  return `${API_URL.replace(/^http/, "ws")}/ws?token=${encodeURIComponent(token)}`;
+/** WebSocket URL without credentials; the token is sent as the first message (see useLiveEvents). */
+export function wsUrl(): string {
+  return `${API_URL.replace(/^http/, "ws")}/ws`;
+}
+
+export function wsAuthMessage(token: string): string {
+  return JSON.stringify({ type: "auth", token });
 }

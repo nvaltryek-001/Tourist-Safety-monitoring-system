@@ -13,7 +13,7 @@ Everything here is produced by scripts in `datasets/scripts/` and the **Datasets
 ## Sources (all downloaded: 42/42)
 | Source | Publisher | Licence | What we use |
 |---|---|---|---|
-| OpenStreetMap (Overpass API) | © OpenStreetMap contributors | ODbL 1.0 | 7,664 emergency facilities (374 police, 3,610 hospitals, 2,345 clinics, 63 fire stations, 1,272 pharmacies), 283 named attractions, 59 protected areas, 204 waterfalls/cliffs, 29,398 road segments around SVIT |
+| OpenStreetMap (Overpass API) | © OpenStreetMap contributors | ODbL 1.0 | 7,604 emergency facilities after removing 60 double-mapped duplicates (366 police, 3,583 hospitals, 2,334 clinics, 63 fire stations, 1,258 pharmacies), 283 named attractions, 59 protected areas, 204 waterfalls/cliffs, 29,398 road segments around SVIT |
 | geoBoundaries gbOpen IND ADM1/ADM2 (2021) | geoBoundaries (source: lgdirectory.gov.in) | ODbL 1.0 | 30 Karnataka district polygons |
 | Karnataka State Police crime tables 2022, 2024, 2025 | KSP via OpenCity (data.opencity.in) | Public Domain | District-wise registered crimes, 2024 crime heads, 2022 road accidents |
 | KSNDMC district rainfall 2020–2025 | KSNDMC via OpenCity | Public Domain | Official annual rainfall vs normal |

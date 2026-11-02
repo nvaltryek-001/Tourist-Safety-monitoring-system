@@ -55,6 +55,7 @@ class Settings:
         default_factory=lambda: os.getenv("ALLOWED_ORIGIN_REGEX") or None
     )
 
+    trust_proxy_headers: bool = field(default_factory=lambda: _bool("TRUST_PROXY_HEADERS", False))
     access_token_minutes: int = field(default_factory=lambda: _int("ACCESS_TOKEN_MINUTES", 60 * 12))
     tourist_token_days: int = field(default_factory=lambda: _int("TOURIST_TOKEN_DAYS", 7))
 

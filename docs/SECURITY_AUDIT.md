@@ -33,7 +33,7 @@ Note: the old public endpoints remain reachable on any copy of the **old** code 
 | Debug mode | no debug flags; generic 500 responses; structured logs |
 | Security headers | API: nosniff, no-referrer, DENY framing; dashboard: same + Permissions-Policy |
 | Dependency vulnerabilities | not scanned in this session (package registry access was unavailable locally); run `pip-audit` and `npm audit` in CI before production |
-| Demo credentials | public in README by request; created only with `SEED_DEMO_STAFF=true` and never in production |
+| Demo credentials | no longer published (final audit): taken from `DEMO_*_PASSWORD` or randomly generated into git-ignored `backend/demo_credentials.txt`; created only with `SEED_DEMO_STAFF=true` and never in production. Databases created by older versions still hold the old published passwords — reset them with `python -m app.scripts.set_password <email>` |
 | `OTP_DEV_ECHO` | must stay `false` in production: with it on, anyone who knows an approved Gmail can sign in as that tourist |
 
 ## Residual risks
@@ -41,4 +41,11 @@ Note: the old public endpoints remain reachable on any copy of the **old** code 
 * Tokens in the dashboard live in `localStorage`; an XSS would expose them (mitigated by React escaping and no third-party scripts besides map tiles).
 * No 2FA for staff.
 
-No critical or high findings remain open in the code reviewed.
+## Final release audit (2026-11-02)
+| # | Severity | Finding | Fix | Test |
+|---|---|---|---|---|
+| 9 | High | WebSocket JWT passed as `?token=` query string — ends up in proxy/access logs and browser history | token sent as the first `{"type":"auth"}` message, 10 s timeout, close 4401 | `test_websocket_*` in `test_platform_api.py` |
+| 10 | High | Demo staff passwords hard-coded in `bootstrap.py` and published in README | env vars or random generated passwords, README table removed, `set_password` CLI | `test_demo_passwords_are_generated_when_not_configured` |
+| 11 | Medium | `X-Forwarded-For` trusted unconditionally (leftmost entry), so a client could rotate it to bypass per-IP OTP/login rate limits; uvicorn ran with `--forwarded-allow-ips="*"` | only trusted when `TRUST_PROXY_HEADERS=true`, rightmost entry used; uvicorn proxy flags removed | `test_forged_forwarded_for_cannot_bypass_rate_limit`, `test_trusted_proxy_uses_rightmost_forwarded_address` |
+
+No critical or high findings remain open in the code reviewed. Git history still contains the old demo passwords (commits before the final audit); they are only valid on databases seeded by those older versions — reset them as above.

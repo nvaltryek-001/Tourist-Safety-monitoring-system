@@ -17,9 +17,9 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)
 
-![Backend](https://img.shields.io/badge/backend_tests-98_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
-![Dashboard](https://img.shields.io/badge/dashboard_build-passing-2ea44f?style=flat-square&logo=vercel)
-![Mobile](https://img.shields.io/badge/mobile_typecheck-passing-2ea44f?style=flat-square&logo=android&logoColor=white)
+[![CI](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/ci.yml)
+[![Open datasets](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/datasets.yml/badge.svg)](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/datasets.yml)
+[![Uptime](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/uptime.yml/badge.svg)](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/uptime.yml)
 ![Datasets](https://img.shields.io/badge/open_datasets-42%2F42_downloaded-1f6feb?style=flat-square)
 ![Hardware](https://img.shields.io/badge/IoT_hardware-none-6e7781?style=flat-square)
 ![Privacy](https://img.shields.io/badge/privacy-consent_first-8250df?style=flat-square)
@@ -241,13 +241,25 @@ flowchart LR
 ## 🔐 Login Details
 
 <table>
-<tr><th>Role</th><th>Email</th><th>Password</th><th>Opens</th></tr>
-<tr><td>👑 <b>Super Admin</b></td><td><code>superadmin@demo.local</code></td><td><code>SuperAdmin@123</code></td><td>Everything + manage admins</td></tr>
-<tr><td>🛠️ <b>Admin</b></td><td><code>admin@demo.local</code></td><td><code>Admin@12345</code></td><td>Tourists, zones, facilities, reports</td></tr>
-<tr><td>🚓 <b>Police</b></td><td><code>police@demo.local</code></td><td><code>Police@12345</code></td><td>Officer workspace</td></tr>
+<tr><th>Role</th><th>Local demo email</th><th>Opens</th></tr>
+<tr><td>👑 <b>Super Admin</b></td><td><code>superadmin@demo.local</code></td><td>Everything + manage admins</td></tr>
+<tr><td>🛠️ <b>Admin</b></td><td><code>admin@demo.local</code></td><td>Tourists, zones, facilities, reports</td></tr>
+<tr><td>🚓 <b>Police</b></td><td><code>police@demo.local</code></td><td>Officer workspace</td></tr>
 </table>
 
-> ⚠️ Demo accounts work **only locally** and switch off automatically in production. On the live server, create your own admin with `BOOTSTRAP_ADMIN_EMAIL` and `BOOTSTRAP_ADMIN_PASSWORD`.
+**Passwords are not published.** With `SEED_DEMO_STAFF=true` (local only) the backend creates these accounts once:
+
+- if `DEMO_SUPERADMIN_PASSWORD` / `DEMO_ADMIN_PASSWORD` / `DEMO_POLICE_PASSWORD` are set in `backend/.env`, those are used;
+- otherwise a random strong password is generated and written to **`backend/demo_credentials.txt`** (git-ignored) — open that file after the first start.
+
+Forgot one, or your database still has an old password? Reset it safely (prompts, nothing echoed):
+
+```bash
+cd backend
+python -m app.scripts.set_password admin@demo.local
+```
+
+> ⚠️ Demo accounts switch off automatically in production. On the live server, create your own admin with `BOOTSTRAP_ADMIN_EMAIL` and `BOOTSTRAP_ADMIN_PASSWORD`.
 
 <details>
 <summary><b>📱 How tourists log in</b></summary>
@@ -400,9 +412,9 @@ eas build -p android --profile preview
 
 | Suite | Status |
 |---|---|
-| 🐍 Backend (pytest) | ![](https://img.shields.io/badge/98_passed-1_skipped-2ea44f?style=flat-square) |
-| 🖥️ Dashboard lint · types · tests · build | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
-| 📱 Mobile types · tests | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
+| 🐍 Backend (pytest) | [![CI](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system/actions/workflows/ci.yml) live — see [docs/FINAL_RELEASE_AUDIT.md](docs/FINAL_RELEASE_AUDIT.md) |
+| 🖥️ Dashboard lint · types · tests · build | same CI workflow (job *dashboard*) |
+| 📱 Mobile types · tests | same CI workflow (job *mobile*, incl. `expo install --check`) |
 | 📊 Dataset pipeline | ![](https://img.shields.io/badge/42%2F42_sources-37%2F37_outputs-1f6feb?style=flat-square) |
 | ⚡ Speed (in-process) | ![](https://img.shields.io/badge/~8--10_ms-per_location_update-1f6feb?style=flat-square) |
 

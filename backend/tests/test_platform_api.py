@@ -52,7 +52,8 @@ def test_notification_provider_success_is_not_called_delivered(client, tourist_h
 
 def test_websocket_receives_sos_event(client, tourist_headers):
     token = staff_headers(client, ADMIN)["Authorization"].split()[1]
-    with client.websocket_connect(f"/ws?token={token}") as ws:
+    with client.websocket_connect("/ws") as ws:
+        ws.send_json({"type": "auth", "token": token})
         assert ws.receive_json()["type"] == "hello"
         client.post("/api/v1/me/sos", headers=tourist_headers, json={"message": "ws test"})
         event = ws.receive_json()
@@ -63,8 +64,16 @@ def test_websocket_rejects_bad_token(client):
     import pytest
     from starlette.websockets import WebSocketDisconnect
 
+    with pytest.raises(WebSocketDisconnect) as bad:
+        with client.websocket_connect("/ws") as ws:
+            ws.send_json({"type": "auth", "token": "nope"})
+            ws.receive_json()
+    assert bad.value.code == 4401
+    # a token in the URL is ignored: the first message must authenticate
+    token = staff_headers(client, ADMIN)["Authorization"].split()[1]
     with pytest.raises(WebSocketDisconnect):
-        with client.websocket_connect("/ws?token=nope") as ws:
+        with client.websocket_connect(f"/ws?token={token}") as ws:
+            ws.send_json({"type": "ping"})
             ws.receive_json()
 
 
@@ -137,3 +146,52 @@ def test_csv_reports_and_metrics(client, tourist_headers, admin_headers, police_
     assert client.get("/api/v1/reports/incidents.csv", headers=police_headers).status_code == 403
     m = client.get("/api/v1/system/metrics", headers=admin_headers).json()
     assert m["requests"] > 0 and m["last_24h"]["sos"] == 1 and m["uptime_seconds"] >= 0
+
+
+def test_backup_script_creates_restorable_sqlite_copy(tmp_path, monkeypatch):
+    """backup_db on a file-based SQLite DB produces a copy with the same rows."""
+    import sqlite3
+
+    from sqlalchemy import create_engine
+
+    from app.migrations import backup_sqlite
+
+    path = tmp_path / "tourist_safety.db"
+    con = sqlite3.connect(path)
+    con.execute("CREATE TABLE tourists (id INTEGER PRIMARY KEY, tourist_code TEXT)")
+    con.executemany("INSERT INTO tourists (tourist_code) VALUES (?)", [("A",), ("B",), ("C",)])
+    con.commit()
+    con.close()
+    engine = create_engine(f"sqlite:///{path}")
+    backup = backup_sqlite(engine, label="manual")
+    engine.dispose()
+    assert backup.exists() and backup.parent.name == "backups"
+    copy = sqlite3.connect(backup)
+    assert copy.execute("SELECT COUNT(*) FROM tourists").fetchone()[0] == 3
+    copy.close()
+    assert sqlite3.connect(path).execute("SELECT COUNT(*) FROM tourists").fetchone()[0] == 3  # original untouched
+
+
+def test_restore_replaces_db_and_keeps_safety_copy(tmp_path):
+    import sqlite3
+
+    from sqlalchemy import create_engine
+
+    from app.migrations import backup_sqlite, restore_sqlite
+
+    path = tmp_path / "tourist_safety.db"
+    con = sqlite3.connect(path)
+    con.execute("CREATE TABLE t (v TEXT)")
+    con.execute("INSERT INTO t VALUES ('original')")
+    con.commit()
+    con.close()
+    engine = create_engine(f"sqlite:///{path}")
+    backup = backup_sqlite(engine, label="manual")
+    con = sqlite3.connect(path)
+    con.execute("INSERT INTO t VALUES ('added later')")
+    con.commit()
+    con.close()
+    safety = restore_sqlite(engine, backup)
+    engine.dispose()
+    assert sqlite3.connect(path).execute("SELECT COUNT(*) FROM t").fetchone()[0] == 1
+    assert sqlite3.connect(safety).execute("SELECT COUNT(*) FROM t").fetchone()[0] == 2

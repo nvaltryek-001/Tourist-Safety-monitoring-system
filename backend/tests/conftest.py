@@ -26,10 +26,14 @@ os.environ["EMAIL_PROVIDER"] = "none"
 os.environ["EXPO_PUSH_ENABLED"] = "false"
 os.environ["ADMIN_ALERT_EMAIL"] = "alerts@example.invalid"
 os.environ["AUTO_IMPORT_FACILITIES"] = "false"
+# Test-only passwords for the seeded demo accounts (real installs get random ones).
+os.environ["DEMO_SUPERADMIN_PASSWORD"] = "TestSuper12345"
+os.environ["DEMO_ADMIN_PASSWORD"] = "TestAdmin12345"
+os.environ["DEMO_POLICE_PASSWORD"] = "TestPolice12345"
 
-ADMIN = ("admin@demo.local", "Admin@12345")
-SUPER = ("superadmin@demo.local", "SuperAdmin@123")
-POLICE = ("police@demo.local", "Police@12345")
+ADMIN = ("admin@demo.local", "TestAdmin12345")
+SUPER = ("superadmin@demo.local", "TestSuper12345")
+POLICE = ("police@demo.local", "TestPolice12345")
 
 
 @pytest.fixture

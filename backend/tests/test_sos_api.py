@@ -1,4 +1,4 @@
-from conftest import ADMIN, make_tourist, staff_headers
+from conftest import ADMIN, SUPER, make_tourist, staff_headers
 
 
 def _sos(client, headers, key=None):
@@ -64,7 +64,7 @@ def test_police_accept_and_isolation(client, tourist_headers, admin_headers, pol
     alert_id = _sos(client, tourist_headers).json()["alert"]["id"]
     accepted = client.post(f"/api/v1/sos/{alert_id}/accept", headers=police_headers).json()
     assert accepted["status"] == "RESPONDING"
-    sup_headers = staff_headers(client, ("superadmin@demo.local", "SuperAdmin@123"))
+    sup_headers = staff_headers(client, SUPER)
     client.post("/api/v1/admin/staff", headers=sup_headers, json={
         "email": "second.cop@example.invalid", "name": "Second", "role": "POLICE", "password": "SecondCop12345"})
     other = staff_headers(client, ("second.cop@example.invalid", "SecondCop12345"))

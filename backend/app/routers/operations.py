@@ -251,8 +251,19 @@ def delivery_log(channel: str | None = None, status: str | None = None,
 
 
 # ------------------------------------------------------------- websocket
+WS_AUTH_TIMEOUT_SECONDS = 10
+
+
 @router.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket, token: str = Query(default="")):
+async def websocket_endpoint(websocket: WebSocket):
+    """Token is sent in the first message ({"type": "auth", "token": ...}), never in
+    the URL, so it cannot leak into server or proxy access logs."""
+    await websocket.accept()
+    try:
+        first = await asyncio.wait_for(websocket.receive_json(), timeout=WS_AUTH_TIMEOUT_SECONDS)
+        token = str(first.get("token", "")) if isinstance(first, dict) and first.get("type") == "auth" else ""
+    except (asyncio.TimeoutError, ValueError, WebSocketDisconnect, KeyError, TypeError):
+        token = ""
     db = SessionLocal()
     try:
         principal = principal_from_token(token, db)
@@ -261,7 +272,6 @@ async def websocket_endpoint(websocket: WebSocket, token: str = Query(default=""
         return
     finally:
         db.close()
-    await websocket.accept()
     conn = Connection(websocket=websocket, role=principal.role, subject=principal.subject)
     manager.register(conn)
     await websocket.send_json({"type": "hello", "data": {"role": principal.role}})

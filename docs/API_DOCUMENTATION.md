@@ -27,7 +27,7 @@ Interactive OpenAPI docs: `GET /docs` (Swagger) and `GET /openapi.json` on the r
 | Analytics & AI | `GET /api/v1/analytics/overview`, `GET /api/v1/analytics/trends?days=`, `GET /api/v1/intelligence/tourists`, `/zones`, `/report` |
 | Notifications | `GET /api/v1/notifications`, `POST /{id}/read`, `POST /read-all`, `GET /delivery-log` (admin) |
 | System | `GET /api/v1/system/health`, `GET /ready`, `GET /api/v1/system/info` (admin) |
-| Real-time | `WS /ws?token=<jwt>` → `{type, data}` events: `hello`, `location.updated`, `geofence.event`, `sos.created`, `sos.updated`, `pong` |
+| Real-time | `WS /ws`, then send `{"type":"auth","token":"<jwt>"}` as the first message within 10 s (bad/missing → close 4401; the token is never put in the URL) → `{type, data}` events: `hello`, `location.updated`, `geofence.event`, `sos.created`, `sos.updated`, `pong` |
 
 Pagination (`page`, `page_size`) returns `{items, total, page, page_size}` on tourist and audit lists.
 

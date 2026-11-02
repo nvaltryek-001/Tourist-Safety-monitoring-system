@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { API_URL, api, readSession, wsUrl } from "./api";
+import { API_URL, api, readSession, wsAuthMessage, wsUrl } from "./api";
 import type { FeatureCollection } from "geojson";
 import type { LiveEvent } from "./types";
 
@@ -64,8 +64,9 @@ export function useLiveEvents(onEvent: (event: LiveEvent) => void): LiveStatus {
         setStatus("offline");
         return;
       }
-      socket = new WebSocket(wsUrl(session.token));
+      socket = new WebSocket(wsUrl());
       socket.onopen = () => {
+        socket?.send(wsAuthMessage(session.token));
         attempt = 0;
         setStatus("live");
         ping = window.setInterval(() => socket?.readyState === WebSocket.OPEN && socket.send("ping"), 25000);

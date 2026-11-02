@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { clusterPoints } from "./cluster";
-import { errorMessage } from "./api";
+import { errorMessage, wsAuthMessage, wsUrl } from "./api";
 import { coords, humanize, metres, statusTone, timeAgo } from "./format";
 import { boundsOf, geometryPaths, hotspotCells, googleDirectionsUrl, hasGoogleMaps, zoneColor, zonesToFeatureCollection } from "./maps";
 
@@ -91,5 +91,13 @@ describe("hotspot cells", () => {
     expect(ring[0]).toEqual(ring[4]);
     expect((ring[2][1] - ring[0][1]) * 111320).toBeCloseTo(500, 0);
     expect(fc.features[0].properties?.count).toBe(4);
+  });
+});
+
+describe("websocket auth", () => {
+  it("never puts the token in the URL", () => {
+    expect(wsUrl()).not.toContain("token");
+    expect(wsUrl()).toMatch(/^ws(s)?:\/\/.+\/ws$/);
+    expect(JSON.parse(wsAuthMessage("abc"))).toEqual({ type: "auth", token: "abc" });
   });
 });

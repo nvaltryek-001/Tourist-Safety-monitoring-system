@@ -11,7 +11,9 @@ Configuration names only — never commit real values.
 | `ALLOWED_ORIGINS` | localhost:3000, :8081 | comma-separated dashboard origins |
 | `ALLOWED_ORIGIN_REGEX` | — | optional, e.g. preview deployments |
 | `BOOTSTRAP_ADMIN_EMAIL` / `BOOTSTRAP_ADMIN_PASSWORD` | — | create the first super admin once |
-| `SEED_DEMO_STAFF` | `false` | create README demo accounts (non-production only) |
+| `SEED_DEMO_STAFF` | `false` | create local demo staff accounts (non-production only) |
+| `DEMO_SUPERADMIN_PASSWORD` / `DEMO_ADMIN_PASSWORD` / `DEMO_POLICE_PASSWORD` | unset | fixed demo passwords; if unset, random ones go to `backend/demo_credentials.txt` (git-ignored) |
+| `TRUST_PROXY_HEADERS` | `false` | trust the rightmost `X-Forwarded-For` entry for rate limiting/audit; only behind a trusted proxy (Render: `true`) |
 | `EMAIL_PROVIDER` | `none` | `brevo`, `resend`, `smtp` or `none` |
 | `EMAIL_API_KEY` | — | Brevo/Resend API key, or SMTP password (also reads `RESEND_API_KEY`) |
 | `EMAIL_FROM` | — | verified sender (also reads `RESEND_FROM_EMAIL`) |
