@@ -65,3 +65,6 @@ New backend tests (`tests/test_geo_api.py`): OSM facility import idempotency, ne
 
 ## v3.1 update (2026-11-02, commit `b72ed07`)
 Backend **97 passed, 1 skipped, 0 failed**; dashboard lint, types, tests and build pass; mobile types and tests pass. New tests cover hotspot clustering (including the minimum-data refusal), response-time percentiles, zone dwell time, movement summary and the four analytics endpoints with role checks.
+
+## v3.2 update (2026-11-02, commit `2d63561`)
+Backend **98 passed, 1 skipped, 0 failed**; dashboard lint, types, 11 tests and build pass; mobile types and tests pass; Datasets workflow 37/37 outputs OK. New tests cover facility retirement on re-import, CSV exports (including a check that contact details are absent from the tourist export) and the metrics endpoint.

@@ -106,6 +106,7 @@ Measured against the 28 Definition-of-Done items: **20 complete, 6 partial, 2 bl
 | Expo Go connection | ✅ | Runtime server URL + connection test screen |
 | SOS hotspots, response times, zone entry/exit, movement analytics | ✅ | `/api/v1/analytics/{hotspots,response-times,zone-activity,movement}`, Analytics page |
 | Weather risk shown to users | ✅ | tourist home card, incident page panel |
+| Duplicate removal, reports, metrics, backups, uptime | ✅ | 60 OSM duplicates removed and logged; `/api/v1/reports/*.csv`; `/api/v1/system/metrics`; `backup_db.py`; `uptime.yml` |
 | Animated UI | ✅ | Staggered entry, count-up KPIs, shimmer skeletons, page fades, hover lift, radar logo, SOS pulse; respects reduced-motion |
 
-**Updated estimate:** about 90 % of measurable requirements are verified in CI. The remaining items need your Google keys, a phone, the private `tourist_safety.db`, or PostGIS.
+**Updated estimate:** about 91 % of measurable requirements are verified in CI. The remaining items need your Google keys, a phone, the private `tourist_safety.db`, or PostGIS.

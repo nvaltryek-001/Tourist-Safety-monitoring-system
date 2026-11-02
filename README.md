@@ -16,7 +16,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-![Tests](https://img.shields.io/badge/backend_tests-97_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
+![Tests](https://img.shields.io/badge/backend_tests-98_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
 ![Dashboard](https://img.shields.io/badge/dashboard_build-passing-2ea44f?style=flat-square&logo=vercel)
 ![Mobile](https://img.shields.io/badge/mobile_typecheck-passing-2ea44f?style=flat-square&logo=android&logoColor=white)
 ![Hardware](https://img.shields.io/badge/IoT_hardware-none-6e7781?style=flat-square)
@@ -333,7 +333,7 @@ Set your Render URL in `eas.json` before building. Push notifications work in th
 
 | Suite | Status |
 |---|---|
-| 🐍 Backend (pytest) | ![](https://img.shields.io/badge/97_passed-1_skipped-2ea44f?style=flat-square) |
+| 🐍 Backend (pytest) | ![](https://img.shields.io/badge/98_passed-1_skipped-2ea44f?style=flat-square) |
 | 🖥️ Dashboard lint · types · tests · build | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
 | 📱 Mobile types · tests | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
 | ⚡ Performance smoke | ![](https://img.shields.io/badge/~8--9_ms-per_location_update-1f6feb?style=flat-square) |
@@ -391,7 +391,7 @@ npm test
 <table>
 <tr>
 <td align="center" width="25%">🗺️<br/><b>Google Maps</b><br/><sub>Web (vis.gl) + Android (Maps SDK)</sub></td>
-<td align="center" width="25%">🚓<br/><b>7,664 facilities</b><br/><sub>Police · hospitals · fire · pharmacies</sub></td>
+<td align="center" width="25%">🚓<br/><b>7,604 facilities</b><br/><sub>Police · hospitals · fire · pharmacies</sub></td>
 <td align="center" width="25%">📊<br/><b>42 / 42 sources</b><br/><sub>Downloaded & documented</sub></td>
 <td align="center" width="25%">🧭<br/><b>SOS routes</b><br/><sub>Nearest police → tourist</sub></td>
 </tr>
@@ -423,7 +423,7 @@ NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-referrer-restricted-key
 
 | Source | Licence | Used for |
 |---|---|---|
-| 🗺️ OpenStreetMap (Overpass) | ODbL | 374 police · 3,610 hospitals · 2,345 clinics · 63 fire stations · 1,272 pharmacies · 283 attractions · 59 protected areas · 204 waterfalls/cliffs |
+| 🗺️ OpenStreetMap (Overpass) | ODbL | 366 police · 3,583 hospitals · 2,334 clinics · 63 fire stations · 1,258 pharmacies (60 double-mapped duplicates removed) · 283 attractions · 59 protected areas · 204 waterfalls/cliffs |
 | 🏛️ Karnataka State Police (via OpenCity) | Public Domain | District crime 2022 / 2024 / 2025, road accidents |
 | 🌧️ KSNDMC rainfall (via OpenCity) | Public Domain | Official district rainfall 2020–2025 |
 | ☁️ Open-Meteo ERA5 | CC BY 4.0 | 21,930 district-days of rain, heat and wind |
@@ -436,6 +436,23 @@ NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-referrer-restricted-key
 - 🧠 Explainable district risk index: crime 55 % · heavy rain 30 % · heat 15 % (no fabricated ML)
 
 Download → clean → analyse runs automatically in GitHub Actions (`.github/workflows/datasets.yml`). Every file is listed in [`datasets/dataset_manifest.csv`](datasets/dataset_manifest.csv).
+
+</details>
+
+<details>
+<summary><b>📈 Analytics, reports & monitoring</b></summary>
+<br/>
+
+| Feature | Where |
+|---|---|
+| 🔥 SOS & restricted-entry **hotspots** (500 m grid; says "not enough data" below 5 events) | Analytics page · Live map → *SOS hotspots* |
+| ⏱️ **Response times**: median and p90 to acknowledge and resolve, by type and officer | Analytics page · Police workspace |
+| 🛡️ **Zone activity**: entries, unique tourists, dwell time, inside now | Analytics page |
+| 🧭 **Tourist movement**: distance, stationary time, route deviation | Analytics page (admin) |
+| 🌦️ **Weather risk** (Open-Meteo) | Tourist home screen · Incident page |
+| 📄 **CSV reports**: incidents, zones, tourists (no contact details, every export audit-logged) | Analytics → Reports |
+| 💓 **Monitoring**: `/health`, `/ready`, `/api/v1/system/metrics`, scheduled **Uptime** workflow | Set the repo variable `SAFETRAIL_API_URL` |
+| 💾 **Backups**: `python -m app.scripts.backup_db` (SQLite copy or `pg_dump`) | backend |
 
 </details>
 
