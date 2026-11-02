@@ -128,7 +128,7 @@ def test_access_and_staff_delete(client, admin_headers):
     staff = client.get("/api/v1/admin/staff", headers=admin_headers).json()
     police = next(s for s in staff if s["role"] == "POLICE")
     admin = next(s for s in staff if s["role"] == "ADMIN")
-    assert client.delete(f"/api/v1/admin/staff/{admin['id']}", headers=admin_headers).status_code == 409  # self
+    assert client.delete(f"/api/v1/admin/staff/{admin['id']}", headers=admin_headers).status_code == 403  # admins cannot delete admins
     assert client.delete(f"/api/v1/admin/staff/{police['id']}", headers=admin_headers).json()["deleted"]
 
 
