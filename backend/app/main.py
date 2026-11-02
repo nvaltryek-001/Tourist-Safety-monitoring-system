@@ -18,7 +18,7 @@ from app.bootstrap import bootstrap_staff
 from app.core.config import get_settings
 from app.database import SessionLocal, engine
 from app.migrations import run_migrations
-from app.routers import admin, auth, geo, incidents, legacy, me, operations, zones
+from app.routers import admin, auth, geo, incidents, legacy, me, operations, reports, zones
 
 logging.basicConfig(
     level=os.getenv("LOG_LEVEL", "INFO"),
@@ -77,6 +77,13 @@ async def request_context(request: Request, call_next):
     request_id = request.headers.get("x-request-id") or uuid.uuid4().hex[:12]
     start = time.perf_counter()
     response = await call_next(request)
+    from app.routers.reports import METRICS
+
+    METRICS["requests"] += 1
+    if response.status_code >= 500:
+        METRICS["errors_5xx"] += 1
+    elif response.status_code >= 400:
+        METRICS["errors_4xx"] += 1
     elapsed = (time.perf_counter() - start) * 1000
     response.headers["X-Request-ID"] = request_id
     response.headers["X-Content-Type-Options"] = "nosniff"
@@ -107,5 +114,5 @@ async def unhandled_error(request: Request, exc: Exception):
     return JSONResponse({"detail": "Internal server error"}, status_code=500)
 
 
-for module in (legacy, auth, me, zones, geo, incidents, admin, operations):
+for module in (legacy, auth, me, zones, geo, incidents, admin, operations, reports):
     app.include_router(module.router)

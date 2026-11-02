@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { OperationalAnalytics } from "@/components/OperationalAnalytics";
+import { Reports } from "@/components/Reports";
+import { isAdminRole, useAuth } from "@/lib/auth";
 import { Button, EmptyState, ErrorState, PageHeader, Panel, SkeletonRows, Stat } from "@/components/ui";
 import { humanize } from "@/lib/format";
 import { useApi } from "@/lib/hooks";
@@ -20,6 +22,8 @@ interface Trends {
 
 export default function AnalyticsPage() {
   const [days, setDays] = useState(30);
+  const { session } = useAuth();
+  const admin = isAdminRole(session?.user.role);
   const trends = useApi<Trends>(`/api/v1/analytics/trends?days=${days}`);
   const t = trends.data;
   const daily = t ? t.daily.map((d, i) => ({ date: d.date.slice(5), sos: d.count, entries: t.restricted_entries_daily[i]?.count ?? 0 })) : [];
@@ -79,6 +83,7 @@ export default function AnalyticsPage() {
             </div>
           </Panel>
           <OperationalAnalytics days={days} />
+          {admin && <div className="mt-6"><Reports days={days} /></div>}
         </>
       )}
     </>

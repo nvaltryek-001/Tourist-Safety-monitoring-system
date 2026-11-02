@@ -1,0 +1,22 @@
+name: Uptime
+
+# Pings the deployed API every 30 minutes. Set the repository variable
+# SAFETRAIL_API_URL (Settings > Secrets and variables > Actions > Variables),
+# e.g. https://safetrail-api.onrender.com. Skips quietly when it is not set.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    if: ${{ vars.SAFETRAIL_API_URL != '' }}
+    steps:
+      - name: Health and readiness
+        run: |
+          for path in /health /ready; do
+            code=$(curl -s -o body.txt -w "%{http_code}" --max-time 90 "${{ vars.SAFETRAIL_API_URL }}$path")
+            echo "$path -> $code $(cat body.txt | head -c 200)"
+            if [ "$code" != "200" ]; then echo "::error title=uptime::$path returned $code"; exit 1; fi
+          done

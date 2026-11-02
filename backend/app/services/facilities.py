@@ -33,7 +33,8 @@ def import_geojson(db: Session, path: Path | None = None) -> dict:
         return {"imported": 0, "updated": 0, "skipped": 0, "error": "facility dataset not found"}
     features = read_json(path).get("features", [])
     existing = {(f.source, f.source_ref): f for f in db.query(EmergencyFacility).filter(EmergencyFacility.source == "osm").all()}
-    imported = updated = skipped = 0
+    imported = updated = skipped = retired = 0
+    present = set()
     for feat in features:
         props = feat.get("properties") or {}
         coords = (feat.get("geometry") or {}).get("coordinates") or []
@@ -42,6 +43,7 @@ def import_geojson(db: Session, path: Path | None = None) -> dict:
             skipped += 1
             continue
         key = ("osm", props.get("osm_id"))
+        present.add(props.get("osm_id"))
         row = existing.get(key)
         if row is None:
             db.add(EmergencyFacility(
@@ -54,8 +56,14 @@ def import_geojson(db: Session, path: Path | None = None) -> dict:
         else:
             row.latitude, row.longitude, row.district = coords[1], coords[0], props.get("district")
             updated += 1
+    # OSM rows no longer in the dataset (deleted upstream or removed as duplicates)
+    # are deactivated, never deleted, so admin edits and history are preserved.
+    for (source, ref), row in existing.items():
+        if ref not in present and row.active:
+            row.active = False
+            retired += 1
     db.commit()
-    return {"imported": imported, "updated": updated, "skipped": skipped, "file": path.name}
+    return {"imported": imported, "updated": updated, "skipped": skipped, "retired": retired, "file": path.name}
 
 
 def nearest(db: Session, lat: float, lon: float, types: list[str] | None = None, limit: int = 5,

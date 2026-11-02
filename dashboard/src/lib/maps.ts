@@ -1,4 +1,5 @@
 /** Map helpers shared by the Google and OpenStreetMap renderers (pure, unit-tested). */
+import type { FeatureCollection } from "geojson";
 import type { Facility, FacilityType, GeoJSONGeometry, Zone } from "./types";
 
 export const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
@@ -61,4 +62,26 @@ export function googleDirectionsUrl(to: [number, number], from?: [number, number
 
 export function facilityLabel(f: Pick<Facility, "facility_type">): string {
   return FACILITY_STYLE[f.facility_type]?.label ?? f.facility_type;
+}
+
+/** Square cells (cellM metres wide) around hotspot centres, as GeoJSON for either map provider. */
+export function hotspotCells(cells: { latitude: number; longitude: number; count: number }[], cellM = 500): FeatureCollection {
+  return {
+    type: "FeatureCollection",
+    features: cells.map((c) => {
+      const dLat = cellM / 2 / 111320;
+      const dLon = cellM / 2 / (111320 * Math.cos((c.latitude * Math.PI) / 180));
+      return {
+        type: "Feature",
+        properties: { name: `${c.count} events`, count: c.count },
+        geometry: {
+          type: "Polygon",
+          coordinates: [[
+            [c.longitude - dLon, c.latitude - dLat], [c.longitude + dLon, c.latitude - dLat],
+            [c.longitude + dLon, c.latitude + dLat], [c.longitude - dLon, c.latitude + dLat], [c.longitude - dLon, c.latitude - dLat],
+          ]],
+        },
+      };
+    }),
+  };
 }

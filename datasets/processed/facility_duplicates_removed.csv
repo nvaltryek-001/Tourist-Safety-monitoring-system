@@ -1,0 +1,61 @@
+removed_osm_id,kept_osm_id,facility_type,name,distance_m
+way/327551781,node/428843493,POLICE,Cubbon Park Police Station,12.7
+way/1076398555,node/663317752,POLICE,Police Headquarters,10.4
+way/331352075,node/844462412,POLICE,Indira Nagar Police Station,0.9
+way/349794011,node/951203526,POLICE,Mico Layout Police Station,15.5
+way/1111108766,node/1118255762,POLICE,Rajaji Nagar Police Station,13.7
+way/369453166,node/3732425276,POLICE,SP office,4.9
+way/1030050639,node/4447422294,POLICE,Upparpet Traffic Police Station,11.6
+way/1124828967,node/5229482744,POLICE,High Grounds Traffic Police Station,13.5
+way/328758432,node/1436177631,HOSPITAL,ESI Hospital,12.1
+way/771822733,node/8188036723,HOSPITAL,Government Hospital,23.5
+way/1088209015,node/1437213383,HOSPITAL,Karunalayam Hospital,30.9
+way/1039760096,node/1471781028,HOSPITAL,Diacon Hospital,2.7
+node/7576958065,node/1473921774,HOSPITAL,Shekhar Hospital,14.9
+node/1474220555,node/4446883154,CLINIC,Lotus Diagnostic centre,44.7
+node/7579924779,node/1474449391,HOSPITAL,Spurthy Hospital,22.8
+way/1039760097,node/1474819886,HOSPITAL,Fortis Hospital,4.7
+node/1719092095,node/1719092087,HOSPITAL,Primary Health Centre,3.5
+node/2621952293,node/2621952292,CLINIC,Health Sub Center,65.2
+way/1039668732,node/3714125744,HOSPITAL,"Shifa Hospital, Bengaluru Urban",17.0
+node/12959840781,node/4349443891,HOSPITAL,Trilife Hospital,40.2
+node/10009305818,node/4446399880,CLINIC,Anand Diagnostic Laboratory,47.4
+node/6938783140,node/4446907220,HOSPITAL,Ring Road Hospital,56.1
+way/354497944,node/4509817152,HOSPITAL,ChanRe Rheumatology And Immunology Center And Research,0.7
+node/4518518893,node/8188038795,HOSPITAL,Anupama hospital,77.6
+way/474088572,node/4681103423,HOSPITAL,A B Shetty Memorial Institute of Dental Sciences,10.2
+node/4943348561,node/4943348560,CLINIC,Skin Clinic,28.7
+node/5520248783,node/5520248052,CLINIC,We care clinic,26.2
+node/5520252188,node/7577248243,CLINIC,Sham's Child and Adult Care,31.1
+node/6779105266,node/6779132017,HOSPITAL,Krupa Nursing Home,2.9
+way/162001272,node/6938770601,HOSPITAL,Tejaswini Hospital,47.7
+node/11210420956,node/6938833111,HOSPITAL,Hoysala Hospital,98.5
+node/7579924704,node/6944236562,CLINIC,Prashanth Nursing Home,24.0
+node/7559701869,node/6944239589,CLINIC,Manjunatha Health Care,52.0
+way/133125087,node/8188037653,HOSPITAL,Bapuji Hospital,75.7
+node/7562027314,node/6944507671,HOSPITAL,Priyadarshini General Hospital,1.3
+node/7566600727,node/6945069843,CLINIC,Kaumudi Nursing Home,6.6
+way/770591863,node/7192707930,HOSPITAL,Co-operative Hospital,3.5
+way/771820629,node/7205339604,HOSPITAL,Molakalmuru Taluk Government Hospital,17.3
+relation/10703856,node/7205339785,HOSPITAL,Kudligi Government Hospital,20.4
+node/7568266731,node/7213514093,HOSPITAL,Amarjyothi Hospital,6.3
+way/346517391,node/7976291965,CLINIC,Shree Srinivasa Uro Care,11.3
+way/314691237,node/8984979754,HOSPITAL,Kamakshi Hospital,17.7
+way/1029706100,node/9493211254,HOSPITAL,SDM Hospital,59.6
+node/12551032332,node/12504252127,CLINIC,Apollo Medical Center,57.6
+way/347236718,node/12956090274,HOSPITAL,Proteeth Dental,0.3
+way/334493056,way/334493050,HOSPITAL,Sanjay Gandhi Accident and Trauma Hospital,40.6
+node/6779127687,node/6779091184,PHARMACY,Apollo Pharmacy,8.6
+node/6779119199,node/6779091184,PHARMACY,Apollo Pharmacy,22.6
+node/6779122509,node/6779091184,PHARMACY,Apollo Pharmacy,21.7
+node/2954412605,node/2021556248,PHARMACY,Apollo Pharmacy,99.6
+node/6779119173,node/6779091184,PHARMACY,Apollo Pharmacy,7.9
+node/10558971059,node/9689162982,PHARMACY,Apollo Pharmacy,2.6
+node/11949324219,node/4198040362,PHARMACY,Apollo Pharmacy,25.6
+node/13063810467,node/1473224706,PHARMACY,Apollo Pharmacy,17.7
+node/12748167750,node/12231720778,PHARMACY,Maruthi Medicals,82.4
+way/332071364,node/3391133323,PHARMACY,Sln Medical And General Stores,5.4
+node/4446999695,node/4446670981,PHARMACY,Nandhi Medicals,81.3
+node/6779131807,node/6779108055,PHARMACY,Rajini medicals,8.1
+node/6779127467,node/6779114147,PHARMACY,Omkar medicals and pet shop,1.4
+node/10558971056,node/9689131157,PHARMACY,Aster Pharmacy,1.7

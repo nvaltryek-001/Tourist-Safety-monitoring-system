@@ -1,10 +1,10 @@
 "use client";
 
-import type { FeatureCollection } from "geojson";
 import { useMemo } from "react";
 import { humanize } from "@/lib/format";
 import { useApi } from "@/lib/hooks";
 import { isAdminRole, useAuth } from "@/lib/auth";
+import { hotspotCells } from "@/lib/maps";
 import { SafetyMap } from "./Map";
 import { EmptyState, Panel, SkeletonRows, Stat } from "./ui";
 
@@ -33,22 +33,6 @@ interface Movement {
   tourists: { tourist_code: string; points: number; distance_km: number; max_speed_kmh: number; stationary_minutes: number; route_deviation: boolean }[];
 }
 
-/** Square polygon (cell_m wide) around each hotspot so both map providers can draw it. */
-function cellsToGeoJSON(cells: Hotspots["cells"], cellM: number): FeatureCollection {
-  return {
-    type: "FeatureCollection",
-    features: cells.map((c) => {
-      const dLat = cellM / 2 / 111320;
-      const dLon = cellM / 2 / (111320 * Math.cos((c.latitude * Math.PI) / 180));
-      const ring = [
-        [c.longitude - dLon, c.latitude - dLat], [c.longitude + dLon, c.latitude - dLat],
-        [c.longitude + dLon, c.latitude + dLat], [c.longitude - dLon, c.latitude + dLat], [c.longitude - dLon, c.latitude - dLat],
-      ];
-      return { type: "Feature", geometry: { type: "Polygon", coordinates: [ring] }, properties: { name: `${c.count} events`, ...c.by_kind } };
-    }),
-  };
-}
-
 export function OperationalAnalytics({ days }: { days: number }) {
   const { session } = useAuth();
   const admin = isAdminRole(session?.user.role);
@@ -56,7 +40,7 @@ export function OperationalAnalytics({ days }: { days: number }) {
   const rt = useApi<ResponseTimes>(`/api/v1/analytics/response-times?days=${days}`);
   const za = useApi<ZoneActivity>(`/api/v1/analytics/zone-activity?days=${days}`);
   const mv = useApi<Movement>(admin ? "/api/v1/analytics/movement?hours=24" : null);
-  const hotLayer = useMemo(() => (hot.data?.cells.length ? cellsToGeoJSON(hot.data.cells, 500) : null), [hot.data]);
+  const hotLayer = useMemo(() => (hot.data?.cells.length ? hotspotCells(hot.data.cells, 500) : null), [hot.data]);
 
   return (
     <div className="mt-6 space-y-6">

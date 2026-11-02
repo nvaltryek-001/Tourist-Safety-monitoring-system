@@ -123,3 +123,17 @@ def test_migration_upgrades_v1_database_without_losing_rows(tmp_path):
     columns = {c["name"] for c in inspect(create_engine(f"sqlite:///{path}")).get_columns("sos_alerts")}
     assert "idempotency_key" not in columns
     engine.dispose()
+
+
+def test_csv_reports_and_metrics(client, tourist_headers, admin_headers, police_headers):
+    client.post("/api/v1/me/sos", headers=tourist_headers, json={"latitude": 13.0, "longitude": 77.0, "alert_type": "MEDICAL"})
+    inc = client.get("/api/v1/reports/incidents.csv", headers=admin_headers)
+    assert inc.status_code == 200 and inc.headers["content-type"].startswith("text/csv")
+    lines = inc.text.strip().splitlines()
+    assert lines[0].startswith("sos_id,tourist_code") and len(lines) == 2 and ",MEDICAL,OPEN," in lines[1]
+    tour = client.get("/api/v1/reports/tourists.csv", headers=admin_headers).text
+    assert "T-TEST-01" in tour and "contact@example.invalid" not in tour  # no contact details in exports
+    assert client.get("/api/v1/reports/zones.csv", headers=admin_headers).status_code == 200
+    assert client.get("/api/v1/reports/incidents.csv", headers=police_headers).status_code == 403
+    m = client.get("/api/v1/system/metrics", headers=admin_headers).json()
+    assert m["requests"] > 0 and m["last_24h"]["sos"] == 1 and m["uptime_seconds"] >= 0

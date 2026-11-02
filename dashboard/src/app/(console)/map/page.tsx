@@ -7,6 +7,7 @@ import { MapLegend, SafetyMap } from "@/components/Map";
 import { Badge, Button, PageHeader, Panel, StatusBadge } from "@/components/ui";
 import { coords, humanize, metres, timeAgo } from "@/lib/format";
 import { useApi, useLayer, useLiveEvents } from "@/lib/hooks";
+import { hotspotCells } from "@/lib/maps";
 import type { Facility, Paged, SOSAlert, Tourist, Zone } from "@/lib/types";
 
 const FILTERS = ["ALL", "ACTIVE", "ATTENTION", "SOS"] as const;
@@ -23,6 +24,9 @@ export default function LiveMapPage() {
   const [showFacilities, setShowFacilities] = useState(true);
   const [showProtected, setShowProtected] = useState(false);
   const [showDistricts, setShowDistricts] = useState(false);
+  const [showHotspots, setShowHotspots] = useState(false);
+  const hotspots = useApi<{ status: string; cells: { latitude: number; longitude: number; count: number }[] }>(showHotspots ? "/api/v1/analytics/hotspots?days=90" : null);
+  const riskLayer = useLayer(showDistricts ? "district_risk" : null);
   const facilities = useApi<Paged<Facility>>(showFacilities ? "/api/v1/facilities?type=POLICE,HOSPITAL,FIRE_STATION&page_size=2000" : null);
   const protectedAreas = useLayer(showProtected ? "protected_areas" : null);
   const districts = useLayer(showDistricts ? "districts" : null);
@@ -80,7 +84,7 @@ export default function LiveMapPage() {
             </select>
             <input className="field h-8 w-48 py-0 text-xs" placeholder="Search tourist…" value={search} onChange={(e) => setSearch(e.target.value)} />
             <span className="mx-1 h-5 w-px bg-[var(--line)]" />
-            {([["Facilities", showFacilities, setShowFacilities], ["Protected areas", showProtected, setShowProtected], ["Districts", showDistricts, setShowDistricts]] as const).map(([label, on, set]) => (
+            {([["Facilities", showFacilities, setShowFacilities], ["Protected areas", showProtected, setShowProtected], ["District risk", showDistricts, setShowDistricts], ["SOS hotspots", showHotspots, setShowHotspots]] as const).map(([label, on, set]) => (
               <label key={label} className="inline-flex cursor-pointer items-center gap-1.5 text-xs">
                 <input type="checkbox" checked={on} onChange={(e) => set(e.target.checked)} /> {label}
               </label>
@@ -96,7 +100,11 @@ export default function LiveMapPage() {
             facilities={showFacilities ? facilities.data?.items ?? [] : []}
             layers={[
               { id: "protected", label: "Protected area (OSM)", color: "#16a34a", data: protectedAreas },
-              { id: "districts", label: "District boundary (geoBoundaries)", color: "#475569", data: districts },
+              { id: "districts", label: "District risk index", color: "#475569", data: riskLayer ?? districts },
+              {
+                id: "hotspots", label: "SOS / restricted-entry hotspot", color: "#dc2626",
+                data: showHotspots && hotspots.data?.cells.length ? hotspotCells(hotspots.data.cells) : null,
+              },
             ]}
           />
           <div className="mt-3">

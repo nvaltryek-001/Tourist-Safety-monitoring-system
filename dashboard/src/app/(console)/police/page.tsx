@@ -6,7 +6,7 @@ import { useState } from "react";
 import { IncidentActions, IncidentSummary, Timeline } from "@/components/IncidentPanel";
 import { LiveBadge } from "@/components/LiveBadge";
 import { SafetyMap } from "@/components/Map";
-import { Badge, Button, EmptyState, ErrorState, PageHeader, Panel, SkeletonRows, StatusBadge, useToast } from "@/components/ui";
+import { Badge, Button, EmptyState, ErrorState, PageHeader, Panel, SkeletonRows, Stat, StatusBadge, useToast } from "@/components/ui";
 import { useAuth } from "@/lib/auth";
 import { humanize, metres, timeAgo } from "@/lib/format";
 import { useApi, useLiveEvents } from "@/lib/hooks";
@@ -21,6 +21,7 @@ export default function PoliceWorkspace() {
   const active = useApi<SOSAlert[]>(`/api/v1/sos?scope=active${nearQuery}`);
   const history = useApi<SOSAlert[]>("/api/v1/sos?scope=mine&status=RESOLVED&limit=20");
   const [selectedId, setSelectedId] = useState<number | null>(null);
+  const perf = useApi<{ resolve_median_by_officer: Record<string, number | null>; ack_minutes: { median: number | null } }>("/api/v1/analytics/response-times?days=90");
   const selected = useApi<SOSAlert>(selectedId ? `/api/v1/sos/${selectedId}` : null);
 
   const live = useLiveEvents((event) => {
@@ -62,6 +63,10 @@ export default function PoliceWorkspace() {
         <div className="space-y-6">
           <AlertList title={`Assigned to me (${myActive.length})`} res={mine} items={myActive} selectedId={selectedId} onSelect={setSelectedId} empty="No active incidents assigned to you." />
           <AlertList title={`Unassigned nearby (${unassigned.length})`} res={active} items={unassigned} selectedId={selectedId} onSelect={setSelectedId} empty="No unassigned alerts." />
+          <div className="stagger grid grid-cols-2 gap-3">
+            <Stat label="My median resolve time (90 d)" value={perf.data?.resolve_median_by_officer[session?.user.name ?? ""] != null ? `${perf.data.resolve_median_by_officer[session?.user.name ?? ""]} min` : "—"} />
+            <Stat label="Team median to acknowledge" value={perf.data?.ack_minutes.median != null ? `${perf.data.ack_minutes.median} min` : "—"} />
+          </div>
           <Panel title="My response history" bodyClass="p-0">
             {!history.data?.length ? (
               <EmptyState title="No resolved incidents yet" />

@@ -30,9 +30,16 @@ def _import_fixture(client, tmp_path, monkeypatch, admin_headers):
 
 def test_dataset_import_is_idempotent(client, admin_headers, tmp_path, monkeypatch):
     first = _import_fixture(client, tmp_path, monkeypatch, admin_headers)
-    assert first == {"imported": 3, "updated": 0, "skipped": 1, "file": "emergency_facilities.geojson"}
+    assert first == {"imported": 3, "updated": 0, "skipped": 1, "retired": 0, "file": "emergency_facilities.geojson"}
     second = client.post("/api/v1/facilities/import-dataset", headers=admin_headers).json()
     assert second["imported"] == 0 and second["updated"] == 3
+    # a facility dropped from the dataset (e.g. a removed duplicate) is deactivated, not deleted
+    reduced = {**FACILITY_GEOJSON, "features": FACILITY_GEOJSON["features"][1:]}
+    (tmp_path / "emergency_facilities.geojson").write_text(json.dumps(reduced))
+    third = client.post("/api/v1/facilities/import-dataset", headers=admin_headers).json()
+    assert third["retired"] == 1
+    inactive = client.get("/api/v1/facilities?active=false", headers=admin_headers).json()
+    assert [f["source_ref"] for f in inactive["items"]] == ["node/1"]
 
 
 def test_nearest_and_nearby_help(client, admin_headers, tourist_headers, tmp_path, monkeypatch):

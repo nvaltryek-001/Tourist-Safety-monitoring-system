@@ -38,12 +38,13 @@ def layer_path(name: str) -> Path | None:
 
 
 @lru_cache(maxsize=16)
-def _read_json(path: str, mtime: float):
+def _read_json(path: str, mtime_ns: int, size: int):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def read_json(path: Path):
-    return _read_json(str(path), path.stat().st_mtime)
+    st = path.stat()
+    return _read_json(str(path), st.st_mtime_ns, st.st_size)
 
 
 def manifest() -> list[dict]:

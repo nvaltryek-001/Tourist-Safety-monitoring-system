@@ -160,6 +160,12 @@ def process_facilities(index: DistrictIndex | None) -> None:
                 },
             })
             counts[ftype] += 1
+    feats, removed = dedupe_facilities(feats)
+    with (PROC / "facility_duplicates_removed.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["removed_osm_id", "kept_osm_id", "facility_type", "name", "distance_m"])
+        w.writerows(removed)
+    counts = Counter(f["properties"]["facility_type"] for f in feats)
     write_geojson(APP / "emergency_facilities.geojson", feats, {"attribution": "© OpenStreetMap contributors (ODbL 1.0)"})
     with (PROC / "emergency_facilities.csv").open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
@@ -168,8 +174,47 @@ def process_facilities(index: DistrictIndex | None) -> None:
             p, (lon, lat) = f["properties"], f["geometry"]["coordinates"]
             w.writerow([p["osm_id"], p["facility_type"], p["name"], lat, lon, p["district"], p["phone"], p["address"]])
     REPORT["emergency_facilities"] = {"status": "OK", "records": len(feats), "by_type": dict(counts), "unnamed": dict(unnamed),
+                                      "duplicates_removed": len(removed),
                                       "output": "application_data/emergency_facilities.geojson",
-                                      "steps": "nodes/ways/relations -> centre point; de-duplicated by OSM id; bbox-validated; district by point-in-polygon"}
+                                      "steps": "nodes/ways/relations -> centre point; de-duplicated by OSM id and by same type+name within 100 m "
+                                               "(e.g. a hospital mapped as both a point and a building; the record with more details is kept); "
+                                               "bbox-validated; district by point-in-polygon"}
+
+
+def dedupe_facilities(feats: list[dict], radius_m: float = 100) -> tuple[list[dict], list[list]]:
+    """Drop OSM double-mapping: same facility type + same (non-generic) name within radius_m."""
+    import math
+
+    def dist(a, b):
+        (lo1, la1), (lo2, la2) = a, b
+        p1, p2 = math.radians(la1), math.radians(la2)
+        h = math.sin((p2 - p1) / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(math.radians(lo2 - lo1) / 2) ** 2
+        return 6371000 * 2 * math.asin(math.sqrt(min(1.0, h)))
+
+    def richness(f):
+        p = f["properties"]
+        return sum(1 for k in ("phone", "address", "opening_hours", "operator") if p.get(k)) + (0.5 if p["osm_id"].startswith("node") else 0)
+
+    groups: dict[tuple, list[dict]] = {}
+    for f in feats:
+        p = f["properties"]
+        groups.setdefault((p["facility_type"], p["name"].strip().lower()), []).append(f)
+    keep, removed = [], []
+    for (ftype, name), members in groups.items():
+        if name.startswith("unnamed") or len(members) == 1:
+            keep += members
+            continue
+        members = sorted(members, key=richness, reverse=True)
+        kept: list[dict] = []
+        for f in members:
+            twin = next((k for k in kept if dist(k["geometry"]["coordinates"], f["geometry"]["coordinates"]) < radius_m), None)
+            if twin:
+                removed.append([f["properties"]["osm_id"], twin["properties"]["osm_id"], ftype, f["properties"]["name"],
+                                round(dist(twin["geometry"]["coordinates"], f["geometry"]["coordinates"]), 1)])
+            else:
+                kept.append(f)
+        keep += kept
+    return keep, removed
 
 
 def process_attractions(index: DistrictIndex | None) -> None:

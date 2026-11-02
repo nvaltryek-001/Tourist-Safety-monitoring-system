@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { clusterPoints } from "./cluster";
 import { errorMessage } from "./api";
 import { coords, humanize, metres, statusTone, timeAgo } from "./format";
-import { boundsOf, geometryPaths, googleDirectionsUrl, hasGoogleMaps, zoneColor, zonesToFeatureCollection } from "./maps";
+import { boundsOf, geometryPaths, hotspotCells, googleDirectionsUrl, hasGoogleMaps, zoneColor, zonesToFeatureCollection } from "./maps";
 
 describe("format helpers", () => {
   it("formats relative time", () => {
@@ -80,5 +80,16 @@ describe("map helpers", () => {
     expect(zoneColor({ zone_type: "RESTRICTED", synthetic: false })).toBe("#dc2626");
     expect(googleDirectionsUrl([13.1, 77.5], [13, 77])).toContain("destination=13.1%2C77.5");
     expect(boundsOf([{ lat: 1, lng: 2 }, { lat: -1, lng: 5 }])).toEqual({ south: -1, west: 2, north: 1, east: 5 });
+  });
+});
+
+describe("hotspot cells", () => {
+  it("builds closed square polygons about the requested size", () => {
+    const fc = hotspotCells([{ latitude: 13, longitude: 77, count: 4 }], 500);
+    const ring = (fc.features[0].geometry as { coordinates: number[][][] }).coordinates[0];
+    expect(ring).toHaveLength(5);
+    expect(ring[0]).toEqual(ring[4]);
+    expect((ring[2][1] - ring[0][1]) * 111320).toBeCloseTo(500, 0);
+    expect(fc.features[0].properties?.count).toBe(4);
   });
 });

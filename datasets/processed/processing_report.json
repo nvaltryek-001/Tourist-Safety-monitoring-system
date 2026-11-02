@@ -7,13 +7,13 @@
   },
   "emergency_facilities": {
     "status": "OK",
-    "records": 7664,
+    "records": 7604,
     "by_type": {
-      "POLICE": 374,
-      "HOSPITAL": 3610,
-      "CLINIC": 2345,
+      "POLICE": 366,
+      "HOSPITAL": 3583,
+      "CLINIC": 2334,
       "FIRE_STATION": 63,
-      "PHARMACY": 1272
+      "PHARMACY": 1258
     },
     "unnamed": {
       "POLICE": 32,
@@ -22,8 +22,9 @@
       "FIRE_STATION": 18,
       "PHARMACY": 109
     },
+    "duplicates_removed": 60,
     "output": "application_data/emergency_facilities.geojson",
-    "steps": "nodes/ways/relations -> centre point; de-duplicated by OSM id; bbox-validated; district by point-in-polygon"
+    "steps": "nodes/ways/relations -> centre point; de-duplicated by OSM id and by same type+name within 100 m (e.g. a hospital mapped as both a point and a building; the record with more details is kept); bbox-validated; district by point-in-polygon"
   },
   "tourist_attractions": {
     "status": "OK",
