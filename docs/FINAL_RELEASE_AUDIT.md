@@ -1,6 +1,6 @@
 # SafeTrail — Final Release Audit
 
-Date: 2026-11-02 · Branch: `main` · Audited commit: `046e78e` (fixes in `6bc5167` + `046e78e`)
+Date: 2026-11-02 · Branch: `main` · Audited commit: `e629ec9` (fixes in `6bc5167`, `046e78e`, `e629ec9`)
 Statuses used: **PASS**, **FAIL**, **BLOCKED**, **NOT TESTED**. No completion percentage is given.
 
 Evidence for every PASS below is a GitHub Actions run on `main`
@@ -94,7 +94,7 @@ Remaining open bugs: none known in repository code. Open items are environmental
 ## 6. Exact test results
 | Check | Commit | Result |
 |---|---|---|
-| Backend tests | `046e78e` | PASS — 103 passed, 1 skipped, 66 warnings |
+| Backend tests | `e629ec9` | PASS — 104 passed, 1 skipped, 66 warnings |
 | Dashboard lint / typecheck / tests / build | `046e78e` | PASS |
 | Mobile expo check / typecheck / tests | `046e78e` | PASS |
 | Mobile expo check | `6bc5167` | FAIL — react-native 0.81.4 vs 0.81.5 (fixed in `046e78e`) |
@@ -183,4 +183,4 @@ Setup steps: [GOOGLE_MAPS_SETUP.md](GOOGLE_MAPS_SETUP.md). No keys are in the re
 ## 13. Final release decision
 **READY WITH LIMITATIONS.**
 
-Every automated check on `main` (`046e78e`) passes, and all bugs found in the repository code are fixed and covered by tests. The release is not "ready for demonstration" without qualification because the parts a reviewer will actually see on a phone or a live map (device GPS, Android build, Google Maps, real OTP email, the deployed site) have not been tested; they are BLOCKED on hardware and credentials, not on known code defects.
+Every automated check on `main` (`e629ec9`) passes, and all bugs found in the repository code are fixed and covered by tests. The release is not "ready for demonstration" without qualification because the parts a reviewer will actually see on a phone or a live map (device GPS, Android build, Google Maps, real OTP email, the deployed site) have not been tested; they are BLOCKED on hardware and credentials, not on known code defects.
