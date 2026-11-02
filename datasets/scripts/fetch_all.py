@@ -37,11 +37,10 @@ OVERPASS_QUERIES = {
         'nwr["tourism"~"^(attraction|viewpoint|museum|zoo|theme_park|picnic_site|camp_site)$"](area.ka);'
         'nwr["historic"~"^(fort|monument|castle|ruins)$"](area.ka);out center tags;'
     ),
-    "osm_protected_areas": (
-        f'[out:json][timeout:600][maxsize:536870912];{KA}'
-        '(relation["boundary"="protected_area"](area.ka);relation["leisure"="nature_reserve"](area.ka);'
-        'way["boundary"="protected_area"](area.ka);way["leisure"="nature_reserve"](area.ka););out geom;'
-    ),
+    # Split into small queries: one combined query timed out (HTTP 504) on the public servers.
+    "osm_protected_areas_rel_pa": f'[out:json][timeout:900];{KA}relation["boundary"="protected_area"](area.ka);out geom;',
+    "osm_protected_areas_rel_nr": f'[out:json][timeout:900];{KA}relation["leisure"="nature_reserve"](area.ka);out geom;',
+    "osm_protected_areas_ways": f'[out:json][timeout:900];{KA}(way["boundary"="protected_area"](area.ka);way["leisure"="nature_reserve"](area.ka););out geom;',
     "osm_water_hazards": (
         f'[out:json][timeout:300];{KA}'
         '(way["waterway"="waterfall"](area.ka);node["waterway"="waterfall"](area.ka);'
@@ -95,8 +94,10 @@ def record(source_id: str, url: str, status: str, **extra) -> None:
 
 
 # ---------------------------------------------------------------- sources
-def fetch_overpass() -> None:
+def fetch_overpass(only_prefix: str | None = None) -> None:
     for name, query in OVERPASS_QUERIES.items():
+        if only_prefix and not name.startswith(only_prefix):
+            continue
         body = urllib.parse.urlencode({"data": query}).encode()
         for endpoint in OVERPASS:
             try:
@@ -199,15 +200,17 @@ def fetch_open_meteo() -> None:
 
 def main() -> None:
     only = set(sys.argv[1:])
-    steps = [("osm", fetch_overpass), ("geoboundaries", fetch_geoboundaries), ("opencity", fetch_opencity),
-             ("weather", fetch_open_meteo)]
+    steps = [("osm", fetch_overpass), ("protected", lambda: fetch_overpass("osm_protected_areas")),
+             ("geoboundaries", fetch_geoboundaries), ("opencity", fetch_opencity), ("weather", fetch_open_meteo)]
     for key, func in steps:
-        if not only or key in only:
+        if (not only and key != "protected") or key in only:
             func()
     log_path = RAW / "fetch_log.json"
     previous = json.loads(log_path.read_text()) if log_path.exists() else []
     # keep the newest entry per source_id
     merged = {e["source_id"]: e for e in previous + LOG}
+    if any(e["source_id"].startswith("osm_protected_areas_") and e["status"] == "DOWNLOADED" for e in merged.values()):
+        merged.pop("osm_protected_areas", None)  # superseded by the split queries
     log_path.write_text(json.dumps(sorted(merged.values(), key=lambda e: e["source_id"]), indent=2))
     ok = sum(1 for e in merged.values() if e["status"] == "DOWNLOADED")
     print(f"::notice title=datasets::{ok} downloaded, {len(merged) - ok} failed")

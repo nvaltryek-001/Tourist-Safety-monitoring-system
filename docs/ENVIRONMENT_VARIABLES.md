@@ -42,3 +42,12 @@ Configuration names only — never commit real values.
 |---|---|
 | `EXPO_PUBLIC_API_URL` | backend base URL baked into the build |
 | `EXPO_PUBLIC_GOOGLE_MAPS_API_KEY` | only needed if you switch Android maps to a custom Google key in a standalone build |
+
+## Added in v3
+| Variable | Where | Purpose |
+|---|---|---|
+| `AUTO_IMPORT_FACILITIES` | backend | `true` (default): load OSM emergency facilities on first start |
+| `DATASETS_DIR` | backend | override the processed-dataset folder (default `../datasets/application_data`) |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | dashboard | Google Maps JavaScript key (referrer-restricted); empty → OpenStreetMap |
+| `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID` | dashboard | optional Map ID for Advanced Markers (default `DEMO_MAP_ID`) |
+| `GOOGLE_MAPS_ANDROID_API_KEY` | mobile (EAS secret) | Maps SDK for Android key for APK builds; not needed in Expo Go |

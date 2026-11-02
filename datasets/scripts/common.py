@@ -124,7 +124,10 @@ def norm_name(value: str) -> str:
 def load_karnataka_districts(raw: Path) -> list[dict]:
     """Karnataka ADM2 polygons from geoBoundaries (district centroid inside the Karnataka ADM1 shape)."""
     adm1 = load_json(raw / "geoboundaries" / "IND_ADM1.geojson")
-    karnataka = next(f for f in adm1["features"] if "karnataka" in json.dumps(f["properties"]).lower())
+    karnataka = next(
+        (f for f in adm1["features"] if f["properties"].get("shapeISO") == "IN-KA"),
+        None,
+    ) or next(f for f in adm1["features"] if norm_name(f["properties"].get("shapeName", "")).startswith("karn"))
     adm2 = load_json(raw / "geoboundaries" / "IND_ADM2.geojson")
     out = []
     for f in adm2["features"]:

@@ -23,7 +23,7 @@ concurrency:
 jobs:
   build-datasets:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -34,8 +34,11 @@ jobs:
         run: |
           if [ -n "${{ github.event.inputs.steps }}" ]; then
             python datasets/scripts/fetch_all.py ${{ github.event.inputs.steps }}
-          elif [ ! -f datasets/raw/fetch_log.json ] || grep -q "FETCH_ALL" datasets/scripts/FETCH_TRIGGER 2>/dev/null; then
+          elif [ ! -f datasets/raw/fetch_log.json ]; then
             python datasets/scripts/fetch_all.py
+          elif [ -s datasets/scripts/FETCH_STEPS ]; then
+            # re-run only the listed steps (e.g. sources that failed last time)
+            python datasets/scripts/fetch_all.py $(cat datasets/scripts/FETCH_STEPS)
           else
             echo "::notice title=datasets::raw data present; skipping download"
           fi

@@ -30,3 +30,27 @@ Interactive OpenAPI docs: `GET /docs` (Swagger) and `GET /openapi.json` on the r
 | Real-time | `WS /ws?token=<jwt>` → `{type, data}` events: `hello`, `location.updated`, `geofence.event`, `sos.created`, `sos.updated`, `pong` |
 
 Pagination (`page`, `page_size`) returns `{items, total, page, page_size}` on tourist and audit lists.
+
+## Added in v3 (facilities, datasets, weather, CRUD)
+| Area | Endpoints |
+|---|---|
+| Facilities | `GET /api/v1/facilities` (type=POLICE,HOSPITAL,…, search, district, active, bbox south/west/north/east, page) · `GET /api/v1/facilities/nearby?lat&lon&type&radius_m&limit` · `GET /api/v1/facilities/stats` · `GET /api/v1/facilities/{id}` · `POST /api/v1/facilities` (admin) · `PATCH /api/v1/facilities/{id}` (admin) · `DELETE /api/v1/facilities/{id}` (admin) · `POST /api/v1/facilities/import-dataset` (admin; upserts OSM facilities by OSM id) |
+| Nearest help | `GET /api/v1/me/nearby-help[?lat&lon]` (nearest police / hospital / fire station + 15 km list) · `GET /api/v1/sos/{id}/nearest-help` (staff) |
+| Datasets | `GET /api/v1/datasets` (manifest + available layers, staff) · `GET /api/v1/datasets/analysis` (staff) · `GET /api/v1/datasets/layers/{districts|protected_areas|attractions|facilities|natural_hazards|district_risk}` (public GeoJSON, open data only) |
+| Weather | `GET /api/v1/weather?lat&lon` → Open-Meteo current conditions + rule-based `weather_risk_level` (15-min cache; `available:false` when offline) |
+| Tourists (admin) | `PATCH /api/v1/admin/tourists/{code}` · `DELETE /api/v1/admin/tourists/{code}?confirm={code}` (super admin; keeps SOS records, refuses while an SOS is active) |
+| Access & staff | `DELETE /api/v1/admin/tourist-access/{id}` · `DELETE /api/v1/admin/staff/{id}` (super admin for admin accounts; not self; not with active incidents) |
+| Zones | new fields `category`, `evidence` on create/update/read |
+
+### CRUD coverage
+| Resource | Create | Read | Update | Delete |
+|---|---|---|---|---|
+| Tourists | ✅ | ✅ | ✅ | ✅ (super admin) |
+| Tourist login access | ✅ | ✅ | ✅ enable/disable | ✅ |
+| Staff / officers | ✅ | ✅ | ✅ | ✅ |
+| Safety zones | ✅ (+ import) | ✅ (+ export) | ✅ | ✅ soft / permanent |
+| Emergency facilities | ✅ (+ dataset import) | ✅ | ✅ | ✅ |
+| SOS incidents | ✅ | ✅ | ✅ lifecycle | — (kept for audit) |
+| Trips | ✅ | ✅ | ✅ end | — |
+| Location history | ✅ | ✅ | — | ✅ (tourist self / retention purge) |
+| Notifications | system | ✅ | ✅ read | — |

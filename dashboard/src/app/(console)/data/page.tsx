@@ -2,6 +2,7 @@
 
 import { Upload } from "lucide-react";
 import { useState } from "react";
+import { OpenDatasets } from "@/components/OpenDatasets";
 import { Badge, Button, ErrorState, Field, PageHeader, Panel, SkeletonRows, Stat, useToast } from "@/components/ui";
 import { api } from "@/lib/api";
 import { humanize } from "@/lib/format";
@@ -68,7 +69,9 @@ export default function DataPage() {
   const z = audit.data?.zones;
   return (
     <>
-      <PageHeader title="Dataset management" subtitle="Read-only integrity audit of the live database, plus validated GeoJSON/KML zone import. No personal data is shown." />
+      <PageHeader title="Dataset management" subtitle="Open-data sources and analysis, a read-only audit of the live database, and validated GeoJSON/KML zone import. No personal data is shown." />
+      <OpenDatasets />
+      <h2 className="mb-3 mt-10 text-sm font-semibold uppercase tracking-wider muted">Live database audit</h2>
       {audit.loading ? <SkeletonRows rows={6} /> : audit.error || !audit.data || !z ? <Panel><ErrorState message={audit.error ?? "Unavailable"} onRetry={audit.reload} /></Panel> : (
         <>
           <div className="stagger grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-6">
