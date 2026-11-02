@@ -1,0 +1,31 @@
+district,heavy_rain_days,very_heavy_rain_days,heat_days,gust_days,thunder_days,total_rain_mm,days
+Bagalkot,1,0,36,27,0,2248.7,731
+Bangalore,0,0,0,29,0,2115.7,731
+Bangalore Rural,0,0,0,29,0,2020.3,731
+Belgaum,0,0,11,38,0,2103.3,731
+Bellary,0,0,23,75,0,1836.4,731
+Bidar,2,0,23,6,0,2551.6,731
+Bijapur,1,0,33,23,0,2329.1,731
+Chamarajanagar,0,0,1,20,0,2582.3,731
+Chikkaballapura,0,0,0,38,0,1589.1,731
+Chikmagalur,1,0,0,44,0,4401.9,731
+Chitradurga,0,0,11,18,0,1736.2,731
+Dakshina Kannada,15,0,52,4,0,8075.7,731
+Davanagere,0,0,6,22,0,2572.2,731
+Dharwad,1,0,10,37,0,2484.9,731
+Gadag,0,0,9,74,0,2134.3,731
+Gulbarga,1,0,52,7,0,2579.9,731
+Hassan,0,0,0,26,0,2132.7,731
+Haveri,0,0,1,35,0,2289.2,731
+Kodagu,4,0,0,6,0,3600.3,731
+Kolar,0,0,0,26,0,1723.5,731
+Koppal,0,0,10,47,0,1841.5,731
+Mandya,0,0,0,24,0,2076.0,731
+Mysore,0,0,0,11,0,2492.9,731
+Raichur,0,0,58,21,0,1889.6,731
+Ramanagara,0,0,2,19,0,2208.7,731
+Shimoga,2,0,0,9,0,3681.4,731
+Tumkur,0,0,0,15,0,1993.7,731
+Udupi,18,2,1,0,0,8626.8,731
+Uttara Kannada,6,0,22,3,0,5926.1,731
+Yadgir,1,0,57,11,0,2406.6,731

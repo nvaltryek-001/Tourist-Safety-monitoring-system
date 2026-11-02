@@ -1,0 +1,1797 @@
+{
+  "generated_at": "2026-11-02T02:25:40+00:00",
+  "limitations": [
+    "OSM facility coverage is community-mapped and uneven; low counts can mean missing data, not missing facilities.",
+    "ERA5 reanalysis at one centroid per district smooths local extremes; it is not station data.",
+    "Police units are mapped to 2021 district polygons; Vijayanagara is merged into Ballari and Bengaluru South into Ramanagara; Railways is excluded.",
+    "District risk index uses raw crime counts (no population denominator available in the downloaded data), so populous districts rank higher.",
+    "No geocoded crime incidents exist in the open data, so incident hotspot maps cannot be produced from it; hotspots are computed only from SafeTrail's own SOS records in the app."
+  ],
+  "facilities": {
+    "facility_counts": {
+      "POLICE": 374,
+      "HOSPITAL": 3610,
+      "CLINIC": 2345,
+      "FIRE_STATION": 63,
+      "PHARMACY": 1272
+    },
+    "attractions": 283,
+    "attraction_to_police_km": {
+      "median": 2.12,
+      "p90": 26.0
+    },
+    "attraction_to_hospital_km": {
+      "median": 1.89,
+      "p90": 7.68
+    },
+    "attractions_over_15km_from_police": 76,
+    "top_gaps": [
+      {
+        "attraction": "Maliyabad Fort",
+        "category": "castle",
+        "district": "Raichur",
+        "nearest_police_km": 54.2,
+        "nearest_hospital_km": 4.1,
+        "latitude": 16.150635,
+        "longitude": 77.356307
+      },
+      {
+        "attraction": "Navarangi Darwaza",
+        "category": "monument",
+        "district": "Raichur",
+        "nearest_police_km": 50.8,
+        "nearest_hospital_km": 0.1,
+        "latitude": 16.207139,
+        "longitude": 77.352691
+      },
+      {
+        "attraction": "Raichur Fort",
+        "category": "fort",
+        "district": "Raichur",
+        "nearest_police_km": 50.8,
+        "nearest_hospital_km": 0.3,
+        "latitude": 16.19912,
+        "longitude": 77.349143
+      },
+      {
+        "attraction": "Jama Masjid",
+        "category": "monument",
+        "district": "Raichur",
+        "nearest_police_km": 50.7,
+        "nearest_hospital_km": 0.1,
+        "latitude": 16.203429,
+        "longitude": 77.349718
+      },
+      {
+        "attraction": "Makka Darawaja",
+        "category": "castle",
+        "district": "Raichur",
+        "nearest_police_km": 50.3,
+        "nearest_hospital_km": 0.4,
+        "latitude": 16.201831,
+        "longitude": 77.34535
+      },
+      {
+        "attraction": "Hazrat Syed Shah Murtuza Quadri (ra)",
+        "category": "monument",
+        "district": "Raichur",
+        "nearest_police_km": 47.8,
+        "nearest_hospital_km": 0.5,
+        "latitude": 15.98727,
+        "longitude": 77.047221
+      },
+      {
+        "attraction": "Bhasmangi",
+        "category": "fort",
+        "district": "Tumkur",
+        "nearest_police_km": 45.8,
+        "nearest_hospital_km": 10.0,
+        "latitude": 13.748434,
+        "longitude": 77.034757
+      },
+      {
+        "attraction": "Medigeshi Fort",
+        "category": "fort",
+        "district": "Tumkur",
+        "nearest_police_km": 42.6,
+        "nearest_hospital_km": 7.6,
+        "latitude": 13.832085,
+        "longitude": 77.193568
+      },
+      {
+        "attraction": "Sada Fort",
+        "category": "castle",
+        "district": "Belgaum",
+        "nearest_police_km": 41.5,
+        "nearest_hospital_km": 13.4,
+        "latitude": 15.672567,
+        "longitude": 74.100135
+      },
+      {
+        "attraction": "Sira Fort",
+        "category": "attraction",
+        "district": "Tumkur",
+        "nearest_police_km": 40.6,
+        "nearest_hospital_km": 1.5,
+        "latitude": 13.743432,
+        "longitude": 76.913751
+      },
+      {
+        "attraction": "Kanakuppe Fort",
+        "category": "castle",
+        "district": "Davanagere",
+        "nearest_police_km": 39.5,
+        "nearest_hospital_km": 5.7,
+        "latitude": 14.551836,
+        "longitude": 76.286022
+      },
+      {
+        "attraction": "Sadashivagad Fort",
+        "category": "castle",
+        "district": "Uttara Kannada",
+        "nearest_police_km": 39.3,
+        "nearest_hospital_km": 2.0,
+        "latitude": 14.846276,
+        "longitude": 74.131783
+      },
+      {
+        "attraction": "Rangapura Fort",
+        "category": "ruins",
+        "district": "Raichur",
+        "nearest_police_km": 35.5,
+        "nearest_hospital_km": 8.8,
+        "latitude": 15.936413,
+        "longitude": 76.460968
+      },
+      {
+        "attraction": "Shrimantgad",
+        "category": "castle",
+        "district": "Gadag",
+        "nearest_police_km": 34.8,
+        "nearest_hospital_km": 9.1,
+        "latitude": 15.115249,
+        "longitude": 75.609764
+      },
+      {
+        "attraction": "Bhatambra Kote",
+        "category": "fort",
+        "district": "Bidar",
+        "nearest_police_km": 33.4,
+        "nearest_hospital_km": 6.0,
+        "latitude": 18.070564,
+        "longitude": 77.160705
+      }
+    ],
+    "by_district": [
+      {
+        "district": "Bagalkot",
+        "police": 2,
+        "hospitals": 121,
+        "fire_stations": 0,
+        "area_km2": 6708.7,
+        "police_per_1000km2": 0.3
+      },
+      {
+        "district": "Bangalore",
+        "police": 142,
+        "hospitals": 2166,
+        "fire_stations": 22,
+        "area_km2": 2060.0,
+        "police_per_1000km2": 68.93
+      },
+      {
+        "district": "Bangalore Rural",
+        "police": 12,
+        "hospitals": 114,
+        "fire_stations": 5,
+        "area_km2": 2359.4,
+        "police_per_1000km2": 5.09
+      },
+      {
+        "district": "Belgaum",
+        "police": 22,
+        "hospitals": 225,
+        "fire_stations": 1,
+        "area_km2": 13466.4,
+        "police_per_1000km2": 1.63
+      },
+      {
+        "district": "Bellary",
+        "police": 16,
+        "hospitals": 167,
+        "fire_stations": 4,
+        "area_km2": 8414.3,
+        "police_per_1000km2": 1.9
+      },
+      {
+        "district": "Bidar",
+        "police": 2,
+        "hospitals": 94,
+        "fire_stations": 1,
+        "area_km2": 5467.6,
+        "police_per_1000km2": 0.37
+      },
+      {
+        "district": "Bijapur",
+        "police": 2,
+        "hospitals": 186,
+        "fire_stations": 1,
+        "area_km2": 10460.5,
+        "police_per_1000km2": 0.19
+      },
+      {
+        "district": "Chamarajanagar",
+        "police": 2,
+        "hospitals": 49,
+        "fire_stations": 0,
+        "area_km2": 5783.3,
+        "police_per_1000km2": 0.35
+      },
+      {
+        "district": "Chikkaballapura",
+        "police": 4,
+        "hospitals": 40,
+        "fire_stations": 3,
+        "area_km2": 4230.0,
+        "police_per_1000km2": 0.95
+      },
+      {
+        "district": "Chikmagalur",
+        "police": 9,
+        "hospitals": 100,
+        "fire_stations": 0,
+        "area_km2": 6954.8,
+        "police_per_1000km2": 1.29
+      },
+      {
+        "district": "Chitradurga",
+        "police": 3,
+        "hospitals": 95,
+        "fire_stations": 1,
+        "area_km2": 8499.5,
+        "police_per_1000km2": 0.35
+      },
+      {
+        "district": "Dakshina Kannada",
+        "police": 7,
+        "hospitals": 190,
+        "fire_stations": 4,
+        "area_km2": 5252.4,
+        "police_per_1000km2": 1.33
+      },
+      {
+        "district": "Davanagere",
+        "police": 7,
+        "hospitals": 142,
+        "fire_stations": 2,
+        "area_km2": 5982.8,
+        "police_per_1000km2": 1.17
+      },
+      {
+        "district": "Dharwad",
+        "police": 7,
+        "hospitals": 176,
+        "fire_stations": 1,
+        "area_km2": 4251.7,
+        "police_per_1000km2": 1.65
+      },
+      {
+        "district": "Gadag",
+        "police": 1,
+        "hospitals": 97,
+        "fire_stations": 1,
+        "area_km2": 4664.1,
+        "police_per_1000km2": 0.21
+      },
+      {
+        "district": "Gulbarga",
+        "police": 5,
+        "hospitals": 235,
+        "fire_stations": 0,
+        "area_km2": 11030.7,
+        "police_per_1000km2": 0.45
+      },
+      {
+        "district": "Hassan",
+        "police": 11,
+        "hospitals": 125,
+        "fire_stations": 3,
+        "area_km2": 6823.5,
+        "police_per_1000km2": 1.61
+      },
+      {
+        "district": "Haveri",
+        "police": 4,
+        "hospitals": 55,
+        "fire_stations": 1,
+        "area_km2": 4837.8,
+        "police_per_1000km2": 0.83
+      },
+      {
+        "district": "Kodagu",
+        "police": 5,
+        "hospitals": 56,
+        "fire_stations": 1,
+        "area_km2": 4158.3,
+        "police_per_1000km2": 1.2
+      },
+      {
+        "district": "Kolar",
+        "police": 7,
+        "hospitals": 99,
+        "fire_stations": 1,
+        "area_km2": 4128.3,
+        "police_per_1000km2": 1.7
+      },
+      {
+        "district": "Koppal",
+        "police": 4,
+        "hospitals": 73,
+        "fire_stations": 2,
+        "area_km2": 5679.0,
+        "police_per_1000km2": 0.7
+      },
+      {
+        "district": "Mandya",
+        "police": 13,
+        "hospitals": 115,
+        "fire_stations": 2,
+        "area_km2": 4935.6,
+        "police_per_1000km2": 2.63
+      },
+      {
+        "district": "Mysore",
+        "police": 28,
+        "hospitals": 335,
+        "fire_stations": 3,
+        "area_km2": 6466.9,
+        "police_per_1000km2": 4.33
+      },
+      {
+        "district": "Raichur",
+        "police": 2,
+        "hospitals": 113,
+        "fire_stations": 0,
+        "area_km2": 8499.5,
+        "police_per_1000km2": 0.24
+      },
+      {
+        "district": "Ramanagara",
+        "police": 4,
+        "hospitals": 30,
+        "fire_stations": 1,
+        "area_km2": 3526.4,
+        "police_per_1000km2": 1.13
+      },
+      {
+        "district": "Shimoga",
+        "police": 7,
+        "hospitals": 133,
+        "fire_stations": 1,
+        "area_km2": 8494.9,
+        "police_per_1000km2": 0.82
+      },
+      {
+        "district": "Tumkur",
+        "police": 8,
+        "hospitals": 162,
+        "fire_stations": 1,
+        "area_km2": 10680.0,
+        "police_per_1000km2": 0.75
+      },
+      {
+        "district": "Udupi",
+        "police": 19,
+        "hospitals": 95,
+        "fire_stations": 1,
+        "area_km2": 3604.1,
+        "police_per_1000km2": 5.27
+      },
+      {
+        "district": "Uttara Kannada",
+        "police": 11,
+        "hospitals": 115,
+        "fire_stations": 0,
+        "area_km2": 10428.7,
+        "police_per_1000km2": 1.05
+      },
+      {
+        "district": "Yadgir",
+        "police": 8,
+        "hospitals": 251,
+        "fire_stations": 0,
+        "area_km2": 5306.5,
+        "police_per_1000km2": 1.51
+      }
+    ],
+    "chart": "facilities_by_district.png",
+    "distance_chart": "attraction_police_distance.png"
+  },
+  "weather": {
+    "districts": 30,
+    "period": "2024-01-01 to 2025-12-31",
+    "by_district": [
+      {
+        "district": "Bagalkot",
+        "heavy_rain_days": 1,
+        "very_heavy_rain_days": 0,
+        "heat_days": 36,
+        "gust_days": 27,
+        "thunder_days": 0,
+        "total_rain_mm": 2248.7,
+        "days": 731
+      },
+      {
+        "district": "Bangalore",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 29,
+        "thunder_days": 0,
+        "total_rain_mm": 2115.7,
+        "days": 731
+      },
+      {
+        "district": "Bangalore Rural",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 29,
+        "thunder_days": 0,
+        "total_rain_mm": 2020.3,
+        "days": 731
+      },
+      {
+        "district": "Belgaum",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 11,
+        "gust_days": 38,
+        "thunder_days": 0,
+        "total_rain_mm": 2103.3,
+        "days": 731
+      },
+      {
+        "district": "Bellary",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 23,
+        "gust_days": 75,
+        "thunder_days": 0,
+        "total_rain_mm": 1836.4,
+        "days": 731
+      },
+      {
+        "district": "Bidar",
+        "heavy_rain_days": 2,
+        "very_heavy_rain_days": 0,
+        "heat_days": 23,
+        "gust_days": 6,
+        "thunder_days": 0,
+        "total_rain_mm": 2551.6,
+        "days": 731
+      },
+      {
+        "district": "Bijapur",
+        "heavy_rain_days": 1,
+        "very_heavy_rain_days": 0,
+        "heat_days": 33,
+        "gust_days": 23,
+        "thunder_days": 0,
+        "total_rain_mm": 2329.1,
+        "days": 731
+      },
+      {
+        "district": "Chamarajanagar",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 1,
+        "gust_days": 20,
+        "thunder_days": 0,
+        "total_rain_mm": 2582.3,
+        "days": 731
+      },
+      {
+        "district": "Chikkaballapura",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 38,
+        "thunder_days": 0,
+        "total_rain_mm": 1589.1,
+        "days": 731
+      },
+      {
+        "district": "Chikmagalur",
+        "heavy_rain_days": 1,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 44,
+        "thunder_days": 0,
+        "total_rain_mm": 4401.9,
+        "days": 731
+      },
+      {
+        "district": "Chitradurga",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 11,
+        "gust_days": 18,
+        "thunder_days": 0,
+        "total_rain_mm": 1736.2,
+        "days": 731
+      },
+      {
+        "district": "Dakshina Kannada",
+        "heavy_rain_days": 15,
+        "very_heavy_rain_days": 0,
+        "heat_days": 52,
+        "gust_days": 4,
+        "thunder_days": 0,
+        "total_rain_mm": 8075.7,
+        "days": 731
+      },
+      {
+        "district": "Davanagere",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 6,
+        "gust_days": 22,
+        "thunder_days": 0,
+        "total_rain_mm": 2572.2,
+        "days": 731
+      },
+      {
+        "district": "Dharwad",
+        "heavy_rain_days": 1,
+        "very_heavy_rain_days": 0,
+        "heat_days": 10,
+        "gust_days": 37,
+        "thunder_days": 0,
+        "total_rain_mm": 2484.9,
+        "days": 731
+      },
+      {
+        "district": "Gadag",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 9,
+        "gust_days": 74,
+        "thunder_days": 0,
+        "total_rain_mm": 2134.3,
+        "days": 731
+      },
+      {
+        "district": "Gulbarga",
+        "heavy_rain_days": 1,
+        "very_heavy_rain_days": 0,
+        "heat_days": 52,
+        "gust_days": 7,
+        "thunder_days": 0,
+        "total_rain_mm": 2579.9,
+        "days": 731
+      },
+      {
+        "district": "Hassan",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 26,
+        "thunder_days": 0,
+        "total_rain_mm": 2132.7,
+        "days": 731
+      },
+      {
+        "district": "Haveri",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 1,
+        "gust_days": 35,
+        "thunder_days": 0,
+        "total_rain_mm": 2289.2,
+        "days": 731
+      },
+      {
+        "district": "Kodagu",
+        "heavy_rain_days": 4,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 6,
+        "thunder_days": 0,
+        "total_rain_mm": 3600.3,
+        "days": 731
+      },
+      {
+        "district": "Kolar",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 26,
+        "thunder_days": 0,
+        "total_rain_mm": 1723.5,
+        "days": 731
+      },
+      {
+        "district": "Koppal",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 10,
+        "gust_days": 47,
+        "thunder_days": 0,
+        "total_rain_mm": 1841.5,
+        "days": 731
+      },
+      {
+        "district": "Mandya",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 24,
+        "thunder_days": 0,
+        "total_rain_mm": 2076.0,
+        "days": 731
+      },
+      {
+        "district": "Mysore",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 11,
+        "thunder_days": 0,
+        "total_rain_mm": 2492.9,
+        "days": 731
+      },
+      {
+        "district": "Raichur",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 58,
+        "gust_days": 21,
+        "thunder_days": 0,
+        "total_rain_mm": 1889.6,
+        "days": 731
+      },
+      {
+        "district": "Ramanagara",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 2,
+        "gust_days": 19,
+        "thunder_days": 0,
+        "total_rain_mm": 2208.7,
+        "days": 731
+      },
+      {
+        "district": "Shimoga",
+        "heavy_rain_days": 2,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 9,
+        "thunder_days": 0,
+        "total_rain_mm": 3681.4,
+        "days": 731
+      },
+      {
+        "district": "Tumkur",
+        "heavy_rain_days": 0,
+        "very_heavy_rain_days": 0,
+        "heat_days": 0,
+        "gust_days": 15,
+        "thunder_days": 0,
+        "total_rain_mm": 1993.7,
+        "days": 731
+      },
+      {
+        "district": "Udupi",
+        "heavy_rain_days": 18,
+        "very_heavy_rain_days": 2,
+        "heat_days": 1,
+        "gust_days": 0,
+        "thunder_days": 0,
+        "total_rain_mm": 8626.8,
+        "days": 731
+      },
+      {
+        "district": "Uttara Kannada",
+        "heavy_rain_days": 6,
+        "very_heavy_rain_days": 0,
+        "heat_days": 22,
+        "gust_days": 3,
+        "thunder_days": 0,
+        "total_rain_mm": 5926.1,
+        "days": 731
+      },
+      {
+        "district": "Yadgir",
+        "heavy_rain_days": 1,
+        "very_heavy_rain_days": 0,
+        "heat_days": 57,
+        "gust_days": 11,
+        "thunder_days": 0,
+        "total_rain_mm": 2406.6,
+        "days": 731
+      }
+    ],
+    "state_mean_monthly_rain_mm": {
+      "2024-01": 11.1,
+      "2024-02": 0.3,
+      "2024-03": 0.7,
+      "2024-04": 15.3,
+      "2024-05": 143.7,
+      "2024-06": 267.5,
+      "2024-07": 347.9,
+      "2024-08": 253.5,
+      "2024-09": 144.3,
+      "2024-10": 224.4,
+      "2024-11": 33.9,
+      "2024-12": 51.5,
+      "2025-01": 2.5,
+      "2025-02": 0.1,
+      "2025-03": 8.5,
+      "2025-04": 32.0,
+      "2025-05": 231.5,
+      "2025-06": 186.4,
+      "2025-07": 270.8,
+      "2025-08": 275.4,
+      "2025-09": 177.4,
+      "2025-10": 173.4,
+      "2025-11": 16.3,
+      "2025-12": 6.5
+    },
+    "chart": "monthly_rainfall.png",
+    "heavy_rain_chart": "heavy_rain_days.png"
+  },
+  "ksndmc_rainfall": {
+    "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "latest_year": 2025,
+    "state_mean_annual_mm": {
+      "2020": 1352.3,
+      "2021": 1392.6,
+      "2022": 1552.2,
+      "2023": 905.3,
+      "2024": 1314.9,
+      "2025": 1366.1
+    },
+    "excess_districts_latest": [
+      {
+        "district": "Bijapur",
+        "departure_pct": 47.0
+      },
+      {
+        "district": "Gulbarga",
+        "departure_pct": 39.0
+      },
+      {
+        "district": "Yadgir",
+        "departure_pct": 33.0
+      },
+      {
+        "district": "Hassan",
+        "departure_pct": 30.0
+      },
+      {
+        "district": "Belgaum",
+        "departure_pct": 26.0
+      },
+      {
+        "district": "Kolar",
+        "departure_pct": 26.0
+      },
+      {
+        "district": "Bagalkot",
+        "departure_pct": 25.0
+      },
+      {
+        "district": "Dakshina Kannada",
+        "departure_pct": 23.0
+      },
+      {
+        "district": "Raichur",
+        "departure_pct": 22.0
+      },
+      {
+        "district": "Bidar",
+        "departure_pct": 21.0
+      },
+      {
+        "district": "Udupi",
+        "departure_pct": 20.0
+      }
+    ],
+    "chart": "ksndmc_annual_rainfall.png"
+  },
+  "crime": {
+    "years": [
+      2022,
+      2024,
+      2025
+    ],
+    "charts": [
+      "crime_by_district.png",
+      "tourist_relevant_crime_2024.png"
+    ],
+    "unmapped_units": [],
+    "by_district": [
+      {
+        "district": "Bagalkot",
+        "total_2022": 2934,
+        "ipc_2022": 2199,
+        "total_2025": 3570,
+        "ipc_bns_2025": 2208,
+        "change_2022_2025_pct": 21.7,
+        "police_units_2025": 1,
+        "theft_2024": 275,
+        "robbery_2024": 8,
+        "molestation_2024": 146,
+        "cyber_crime_2024": 47,
+        "fatal_motor_accidents_2024": 367,
+        "murder_2024": 20,
+        "rape_2024": 9,
+        "cases_of_hurt_2024": 132,
+        "road_accidents_2022": 356
+      },
+      {
+        "district": "Bangalore",
+        "total_2022": 46187,
+        "ipc_2022": 28666,
+        "total_2025": 56472,
+        "ipc_bns_2025": 37181,
+        "change_2022_2025_pct": 22.3,
+        "police_units_2025": 1,
+        "theft_2024": 9605,
+        "robbery_2024": 693,
+        "molestation_2024": 1251,
+        "cyber_crime_2024": 17682,
+        "fatal_motor_accidents_2024": 876,
+        "murder_2024": 176,
+        "rape_2024": 167,
+        "cases_of_hurt_2024": 3828,
+        "road_accidents_2022": 769
+      },
+      {
+        "district": "Bangalore Rural",
+        "total_2022": 6992,
+        "ipc_2022": 6031,
+        "total_2025": 7620,
+        "ipc_bns_2025": 6433,
+        "change_2022_2025_pct": 9.0,
+        "police_units_2025": 1,
+        "theft_2024": 1588,
+        "robbery_2024": 90,
+        "molestation_2024": 231,
+        "cyber_crime_2024": 875,
+        "fatal_motor_accidents_2024": 723,
+        "murder_2024": 66,
+        "rape_2024": 28,
+        "cases_of_hurt_2024": 625,
+        "road_accidents_2022": 572
+      },
+      {
+        "district": "Belgaum",
+        "total_2022": 8154,
+        "ipc_2022": 6424,
+        "total_2025": 8901,
+        "ipc_bns_2025": 6190,
+        "change_2022_2025_pct": 9.2,
+        "police_units_2025": 2,
+        "theft_2024": 698,
+        "robbery_2024": 47,
+        "molestation_2024": 242,
+        "cyber_crime_2024": 176,
+        "fatal_motor_accidents_2024": 826,
+        "murder_2024": 85,
+        "rape_2024": 28,
+        "cases_of_hurt_2024": 620,
+        "road_accidents_2022": 859
+      },
+      {
+        "district": "Bellary",
+        "total_2022": 6112,
+        "ipc_2022": 3587,
+        "total_2025": 7133,
+        "ipc_bns_2025": 3705,
+        "change_2022_2025_pct": 16.7,
+        "police_units_2025": 2,
+        "theft_2024": 538,
+        "robbery_2024": 20,
+        "molestation_2024": 184,
+        "cyber_crime_2024": 147,
+        "fatal_motor_accidents_2024": 420,
+        "murder_2024": 37,
+        "rape_2024": 27,
+        "cases_of_hurt_2024": 362,
+        "road_accidents_2022": 432
+      },
+      {
+        "district": "Bidar",
+        "total_2022": 4022,
+        "ipc_2022": 3136,
+        "total_2025": 4226,
+        "ipc_bns_2025": 3054,
+        "change_2022_2025_pct": 5.1,
+        "police_units_2025": 1,
+        "theft_2024": 303,
+        "robbery_2024": 11,
+        "molestation_2024": 52,
+        "cyber_crime_2024": 44,
+        "fatal_motor_accidents_2024": 315,
+        "murder_2024": 31,
+        "rape_2024": 11,
+        "cases_of_hurt_2024": 556,
+        "road_accidents_2022": 305
+      },
+      {
+        "district": "Bijapur",
+        "total_2022": 4296,
+        "ipc_2022": 2858,
+        "total_2025": 5054,
+        "ipc_bns_2025": 3062,
+        "change_2022_2025_pct": 17.6,
+        "police_units_2025": 1,
+        "theft_2024": 350,
+        "robbery_2024": 11,
+        "molestation_2024": 122,
+        "cyber_crime_2024": 86,
+        "fatal_motor_accidents_2024": 417,
+        "murder_2024": 63,
+        "rape_2024": 32,
+        "cases_of_hurt_2024": 367,
+        "road_accidents_2022": 387
+      },
+      {
+        "district": "Chamarajanagar",
+        "total_2022": 2373,
+        "ipc_2022": 1705,
+        "total_2025": 2912,
+        "ipc_bns_2025": 2068,
+        "change_2022_2025_pct": 22.7,
+        "police_units_2025": 1,
+        "theft_2024": 151,
+        "robbery_2024": 16,
+        "molestation_2024": 194,
+        "cyber_crime_2024": 29,
+        "fatal_motor_accidents_2024": 234,
+        "murder_2024": 11,
+        "rape_2024": 14,
+        "cases_of_hurt_2024": 358,
+        "road_accidents_2022": 179
+      },
+      {
+        "district": "Chikkaballapura",
+        "total_2022": 4320,
+        "ipc_2022": 2577,
+        "total_2025": 4161,
+        "ipc_bns_2025": 2542,
+        "change_2022_2025_pct": -3.7,
+        "police_units_2025": 1,
+        "theft_2024": 300,
+        "robbery_2024": 20,
+        "molestation_2024": 128,
+        "cyber_crime_2024": 197,
+        "fatal_motor_accidents_2024": 311,
+        "murder_2024": 27,
+        "rape_2024": 17,
+        "cases_of_hurt_2024": 457,
+        "road_accidents_2022": 252
+      },
+      {
+        "district": "Chikmagalur",
+        "total_2022": 3855,
+        "ipc_2022": 2759,
+        "total_2025": 4210,
+        "ipc_bns_2025": 2722,
+        "change_2022_2025_pct": 9.2,
+        "police_units_2025": 1,
+        "theft_2024": 232,
+        "robbery_2024": 9,
+        "molestation_2024": 152,
+        "cyber_crime_2024": 102,
+        "fatal_motor_accidents_2024": 237,
+        "murder_2024": 31,
+        "rape_2024": 12,
+        "cases_of_hurt_2024": 521,
+        "road_accidents_2022": 222
+      },
+      {
+        "district": "Chitradurga",
+        "total_2022": 5321,
+        "ipc_2022": 4057,
+        "total_2025": 5838,
+        "ipc_bns_2025": 4098,
+        "change_2022_2025_pct": 9.7,
+        "police_units_2025": 1,
+        "theft_2024": 443,
+        "robbery_2024": 25,
+        "molestation_2024": 398,
+        "cyber_crime_2024": 80,
+        "fatal_motor_accidents_2024": 413,
+        "murder_2024": 30,
+        "rape_2024": 17,
+        "cases_of_hurt_2024": 702,
+        "road_accidents_2022": 402
+      },
+      {
+        "district": "Dakshina Kannada",
+        "total_2022": 4743,
+        "ipc_2022": 3791,
+        "total_2025": 5716,
+        "ipc_bns_2025": 4094,
+        "change_2022_2025_pct": 20.5,
+        "police_units_2025": 2,
+        "theft_2024": 370,
+        "robbery_2024": 29,
+        "molestation_2024": 154,
+        "cyber_crime_2024": 264,
+        "fatal_motor_accidents_2024": 317,
+        "murder_2024": 22,
+        "rape_2024": 31,
+        "cases_of_hurt_2024": 379,
+        "road_accidents_2022": 300
+      },
+      {
+        "district": "Davanagere",
+        "total_2022": 4391,
+        "ipc_2022": 3396,
+        "total_2025": 4771,
+        "ipc_bns_2025": 3385,
+        "change_2022_2025_pct": 8.7,
+        "police_units_2025": 1,
+        "theft_2024": 424,
+        "robbery_2024": 48,
+        "molestation_2024": 194,
+        "cyber_crime_2024": 143,
+        "fatal_motor_accidents_2024": 283,
+        "murder_2024": 27,
+        "rape_2024": 24,
+        "cases_of_hurt_2024": 326,
+        "road_accidents_2022": 305
+      },
+      {
+        "district": "Dharwad",
+        "total_2022": 4874,
+        "ipc_2022": 3199,
+        "total_2025": 4289,
+        "ipc_bns_2025": 2504,
+        "change_2022_2025_pct": -12.0,
+        "police_units_2025": 2,
+        "theft_2024": 325,
+        "robbery_2024": 37,
+        "molestation_2024": 100,
+        "cyber_crime_2024": 315,
+        "fatal_motor_accidents_2024": 288,
+        "murder_2024": 41,
+        "rape_2024": 26,
+        "cases_of_hurt_2024": 277,
+        "road_accidents_2022": 305
+      },
+      {
+        "district": "Gadag",
+        "total_2022": 1916,
+        "ipc_2022": 1060,
+        "total_2025": 2268,
+        "ipc_bns_2025": 1043,
+        "change_2022_2025_pct": 18.4,
+        "police_units_2025": 1,
+        "theft_2024": 169,
+        "robbery_2024": 8,
+        "molestation_2024": 49,
+        "cyber_crime_2024": 70,
+        "fatal_motor_accidents_2024": 148,
+        "murder_2024": 17,
+        "rape_2024": 8,
+        "cases_of_hurt_2024": 93,
+        "road_accidents_2022": 154
+      },
+      {
+        "district": "Gulbarga",
+        "total_2022": 5662,
+        "ipc_2022": 4230,
+        "total_2025": 6448,
+        "ipc_bns_2025": 4413,
+        "change_2022_2025_pct": 13.9,
+        "police_units_2025": 2,
+        "theft_2024": 737,
+        "robbery_2024": 50,
+        "molestation_2024": 139,
+        "cyber_crime_2024": 78,
+        "fatal_motor_accidents_2024": 396,
+        "murder_2024": 55,
+        "rape_2024": 37,
+        "cases_of_hurt_2024": 532,
+        "road_accidents_2022": 394
+      },
+      {
+        "district": "Hassan",
+        "total_2022": 5841,
+        "ipc_2022": 4652,
+        "total_2025": 6147,
+        "ipc_bns_2025": 4781,
+        "change_2022_2025_pct": 5.2,
+        "police_units_2025": 1,
+        "theft_2024": 396,
+        "robbery_2024": 47,
+        "molestation_2024": 234,
+        "cyber_crime_2024": 141,
+        "fatal_motor_accidents_2024": 459,
+        "murder_2024": 44,
+        "rape_2024": 27,
+        "cases_of_hurt_2024": 899,
+        "road_accidents_2022": 439
+      },
+      {
+        "district": "Haveri",
+        "total_2022": 3176,
+        "ipc_2022": 2409,
+        "total_2025": 3561,
+        "ipc_bns_2025": 2406,
+        "change_2022_2025_pct": 12.1,
+        "police_units_2025": 1,
+        "theft_2024": 470,
+        "robbery_2024": 14,
+        "molestation_2024": 111,
+        "cyber_crime_2024": 130,
+        "fatal_motor_accidents_2024": 262,
+        "murder_2024": 22,
+        "rape_2024": 18,
+        "cases_of_hurt_2024": 233,
+        "road_accidents_2022": 258
+      },
+      {
+        "district": "Kodagu",
+        "total_2022": 1639,
+        "ipc_2022": 1355,
+        "total_2025": 2324,
+        "ipc_bns_2025": 1724,
+        "change_2022_2025_pct": 41.8,
+        "police_units_2025": 1,
+        "theft_2024": 108,
+        "robbery_2024": 8,
+        "molestation_2024": 55,
+        "cyber_crime_2024": 90,
+        "fatal_motor_accidents_2024": 82,
+        "murder_2024": 24,
+        "rape_2024": 4,
+        "cases_of_hurt_2024": 274,
+        "road_accidents_2022": 67
+      },
+      {
+        "district": "Kolar",
+        "total_2022": 4002,
+        "ipc_2022": 3272,
+        "total_2025": 3892,
+        "ipc_bns_2025": 3027,
+        "change_2022_2025_pct": -2.7,
+        "police_units_2025": 2,
+        "theft_2024": 323,
+        "robbery_2024": 37,
+        "molestation_2024": 133,
+        "cyber_crime_2024": 164,
+        "fatal_motor_accidents_2024": 325,
+        "murder_2024": 40,
+        "rape_2024": 11,
+        "cases_of_hurt_2024": 506,
+        "road_accidents_2022": 283
+      },
+      {
+        "district": "Koppal",
+        "total_2022": 3068,
+        "ipc_2022": 2175,
+        "total_2025": 3200,
+        "ipc_bns_2025": 1945,
+        "change_2022_2025_pct": 4.3,
+        "police_units_2025": 1,
+        "theft_2024": 218,
+        "robbery_2024": 10,
+        "molestation_2024": 107,
+        "cyber_crime_2024": 38,
+        "fatal_motor_accidents_2024": 271,
+        "murder_2024": 18,
+        "rape_2024": 20,
+        "cases_of_hurt_2024": 110,
+        "road_accidents_2022": 248
+      },
+      {
+        "district": "Mandya",
+        "total_2022": 5611,
+        "ipc_2022": 4830,
+        "total_2025": 5930,
+        "ipc_bns_2025": 4780,
+        "change_2022_2025_pct": 5.7,
+        "police_units_2025": 1,
+        "theft_2024": 344,
+        "robbery_2024": 34,
+        "molestation_2024": 227,
+        "cyber_crime_2024": 76,
+        "fatal_motor_accidents_2024": 500,
+        "murder_2024": 26,
+        "rape_2024": 13,
+        "cases_of_hurt_2024": 603,
+        "road_accidents_2022": 453
+      },
+      {
+        "district": "Mysore",
+        "total_2022": 8708,
+        "ipc_2022": 6973,
+        "total_2025": 9128,
+        "ipc_bns_2025": 7176,
+        "change_2022_2025_pct": 4.8,
+        "police_units_2025": 2,
+        "theft_2024": 823,
+        "robbery_2024": 86,
+        "molestation_2024": 311,
+        "cyber_crime_2024": 330,
+        "fatal_motor_accidents_2024": 603,
+        "murder_2024": 71,
+        "rape_2024": 39,
+        "cases_of_hurt_2024": 1159,
+        "road_accidents_2022": 621
+      },
+      {
+        "district": "Raichur",
+        "total_2022": 3925,
+        "ipc_2022": 2577,
+        "total_2025": 4271,
+        "ipc_bns_2025": 2813,
+        "change_2022_2025_pct": 8.8,
+        "police_units_2025": 1,
+        "theft_2024": 568,
+        "robbery_2024": 18,
+        "molestation_2024": 178,
+        "cyber_crime_2024": 30,
+        "fatal_motor_accidents_2024": 318,
+        "murder_2024": 39,
+        "rape_2024": 20,
+        "cases_of_hurt_2024": 267,
+        "road_accidents_2022": 303
+      },
+      {
+        "district": "Ramanagara",
+        "total_2022": 5875,
+        "ipc_2022": 4155,
+        "total_2025": 4580,
+        "ipc_bns_2025": 3644,
+        "change_2022_2025_pct": -22.0,
+        "police_units_2025": 1,
+        "theft_2024": 500,
+        "robbery_2024": 42,
+        "molestation_2024": 205,
+        "cyber_crime_2024": 242,
+        "fatal_motor_accidents_2024": 408,
+        "murder_2024": 40,
+        "rape_2024": 10,
+        "cases_of_hurt_2024": 517,
+        "road_accidents_2022": 346
+      },
+      {
+        "district": "Shimoga",
+        "total_2022": 6091,
+        "ipc_2022": 4591,
+        "total_2025": 6995,
+        "ipc_bns_2025": 4840,
+        "change_2022_2025_pct": 14.8,
+        "police_units_2025": 1,
+        "theft_2024": 428,
+        "robbery_2024": 42,
+        "molestation_2024": 272,
+        "cyber_crime_2024": 136,
+        "fatal_motor_accidents_2024": 361,
+        "murder_2024": 36,
+        "rape_2024": 17,
+        "cases_of_hurt_2024": 734,
+        "road_accidents_2022": 331
+      },
+      {
+        "district": "Tumkur",
+        "total_2022": 7044,
+        "ipc_2022": 5520,
+        "total_2025": 8470,
+        "ipc_bns_2025": 5961,
+        "change_2022_2025_pct": 20.2,
+        "police_units_2025": 1,
+        "theft_2024": 738,
+        "robbery_2024": 87,
+        "molestation_2024": 323,
+        "cyber_crime_2024": 331,
+        "fatal_motor_accidents_2024": 737,
+        "murder_2024": 52,
+        "rape_2024": 33,
+        "cases_of_hurt_2024": 742,
+        "road_accidents_2022": 700
+      },
+      {
+        "district": "Udupi",
+        "total_2022": 2908,
+        "ipc_2022": 2342,
+        "total_2025": 3001,
+        "ipc_bns_2025": 2249,
+        "change_2022_2025_pct": 3.2,
+        "police_units_2025": 1,
+        "theft_2024": 312,
+        "robbery_2024": 16,
+        "molestation_2024": 65,
+        "cyber_crime_2024": 222,
+        "fatal_motor_accidents_2024": 225,
+        "murder_2024": 6,
+        "rape_2024": 13,
+        "cases_of_hurt_2024": 248,
+        "road_accidents_2022": 234
+      },
+      {
+        "district": "Uttara Kannada",
+        "total_2022": 3525,
+        "ipc_2022": 2323,
+        "total_2025": 3930,
+        "ipc_bns_2025": 2334,
+        "change_2022_2025_pct": 11.5,
+        "police_units_2025": 1,
+        "theft_2024": 184,
+        "robbery_2024": 13,
+        "molestation_2024": 221,
+        "cyber_crime_2024": 109,
+        "fatal_motor_accidents_2024": 248,
+        "murder_2024": 17,
+        "rape_2024": 12,
+        "cases_of_hurt_2024": 389,
+        "road_accidents_2022": 239
+      },
+      {
+        "district": "Yadgir",
+        "total_2022": 1824,
+        "ipc_2022": 1316,
+        "total_2025": 2715,
+        "ipc_bns_2025": 1622,
+        "change_2022_2025_pct": 48.8,
+        "police_units_2025": 1,
+        "theft_2024": 195,
+        "robbery_2024": 1,
+        "molestation_2024": 128,
+        "cyber_crime_2024": 23,
+        "fatal_motor_accidents_2024": 153,
+        "murder_2024": 22,
+        "rape_2024": 16,
+        "cases_of_hurt_2024": 210,
+        "road_accidents_2022": 164
+      }
+    ],
+    "state_totals": {
+      "total_2022": 179389,
+      "total_2025": 201733,
+      "theft_2024": 22115,
+      "cyber_crime_2024": 22397
+    },
+    "top_districts": [
+      {
+        "district": "Bangalore",
+        "total": 56472,
+        "year": 2025
+      },
+      {
+        "district": "Mysore",
+        "total": 9128,
+        "year": 2025
+      },
+      {
+        "district": "Belgaum",
+        "total": 8901,
+        "year": 2025
+      },
+      {
+        "district": "Tumkur",
+        "total": 8470,
+        "year": 2025
+      },
+      {
+        "district": "Bangalore Rural",
+        "total": 7620,
+        "year": 2025
+      },
+      {
+        "district": "Bellary",
+        "total": 7133,
+        "year": 2025
+      },
+      {
+        "district": "Shimoga",
+        "total": 6995,
+        "year": 2025
+      },
+      {
+        "district": "Gulbarga",
+        "total": 6448,
+        "year": 2025
+      },
+      {
+        "district": "Hassan",
+        "total": 6147,
+        "year": 2025
+      },
+      {
+        "district": "Mandya",
+        "total": 5930,
+        "year": 2025
+      },
+      {
+        "district": "Chitradurga",
+        "total": 5838,
+        "year": 2025
+      },
+      {
+        "district": "Dakshina Kannada",
+        "total": 5716,
+        "year": 2025
+      },
+      {
+        "district": "Bijapur",
+        "total": 5054,
+        "year": 2025
+      },
+      {
+        "district": "Davanagere",
+        "total": 4771,
+        "year": 2025
+      },
+      {
+        "district": "Ramanagara",
+        "total": 4580,
+        "year": 2025
+      },
+      {
+        "district": "Dharwad",
+        "total": 4289,
+        "year": 2025
+      },
+      {
+        "district": "Raichur",
+        "total": 4271,
+        "year": 2025
+      },
+      {
+        "district": "Bidar",
+        "total": 4226,
+        "year": 2025
+      },
+      {
+        "district": "Chikmagalur",
+        "total": 4210,
+        "year": 2025
+      },
+      {
+        "district": "Chikkaballapura",
+        "total": 4161,
+        "year": 2025
+      },
+      {
+        "district": "Uttara Kannada",
+        "total": 3930,
+        "year": 2025
+      },
+      {
+        "district": "Kolar",
+        "total": 3892,
+        "year": 2025
+      },
+      {
+        "district": "Bagalkot",
+        "total": 3570,
+        "year": 2025
+      },
+      {
+        "district": "Haveri",
+        "total": 3561,
+        "year": 2025
+      },
+      {
+        "district": "Koppal",
+        "total": 3200,
+        "year": 2025
+      },
+      {
+        "district": "Udupi",
+        "total": 3001,
+        "year": 2025
+      },
+      {
+        "district": "Chamarajanagar",
+        "total": 2912,
+        "year": 2025
+      },
+      {
+        "district": "Yadgir",
+        "total": 2715,
+        "year": 2025
+      },
+      {
+        "district": "Kodagu",
+        "total": 2324,
+        "year": 2025
+      },
+      {
+        "district": "Gadag",
+        "total": 2268,
+        "year": 2025
+      }
+    ],
+    "narrative": "Registered crimes (IPC/BNS + SLL) across the mapped districts: 179,389 in 2022 and 201,733 in 2025 (+12.5%). Bangalore (incl. Bengaluru City commissionerate) records the most: 56,472 in 2025. 2024 head-wise data: 22,115 thefts and 22,397 cyber crimes. Counts are not population-adjusted; IPC was replaced by BNS from July 2024, so 2025 figures combine both codes."
+  },
+  "district_risk": [
+    {
+      "name": "Dakshina Kannada",
+      "risk_index": 76.8,
+      "risk_level": "HIGH",
+      "crime_total": 5716.0,
+      "heavy_rain_days": 15,
+      "police_stations": 7,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Gulbarga",
+      "risk_index": 76.6,
+      "risk_level": "HIGH",
+      "crime_total": 6448.0,
+      "heavy_rain_days": 1,
+      "police_stations": 5,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Shimoga",
+      "risk_index": 71.6,
+      "risk_level": "HIGH",
+      "crime_total": 6995.0,
+      "heavy_rain_days": 2,
+      "police_stations": 7,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Belgaum",
+      "risk_index": 70.1,
+      "risk_level": "HIGH",
+      "crime_total": 8901.0,
+      "heavy_rain_days": 0,
+      "police_stations": 22,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Bangalore",
+      "risk_index": 66.4,
+      "risk_level": "MEDIUM",
+      "crime_total": 56472.0,
+      "heavy_rain_days": 0,
+      "police_stations": 142,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Bellary",
+      "risk_index": 65.9,
+      "risk_level": "MEDIUM",
+      "crime_total": 7133.0,
+      "heavy_rain_days": 0,
+      "police_stations": 16,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Bijapur",
+      "risk_index": 65.9,
+      "risk_level": "MEDIUM",
+      "crime_total": 5054.0,
+      "heavy_rain_days": 1,
+      "police_stations": 2,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Mysore",
+      "risk_index": 64.5,
+      "risk_level": "MEDIUM",
+      "crime_total": 9128.0,
+      "heavy_rain_days": 0,
+      "police_stations": 28,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Tumkur",
+      "risk_index": 60.7,
+      "risk_level": "MEDIUM",
+      "crime_total": 8470.0,
+      "heavy_rain_days": 0,
+      "police_stations": 8,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Bidar",
+      "risk_index": 59.7,
+      "risk_level": "MEDIUM",
+      "crime_total": 4226.0,
+      "heavy_rain_days": 2,
+      "police_stations": 2,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Bangalore Rural",
+      "risk_index": 58.8,
+      "risk_level": "MEDIUM",
+      "crime_total": 7620.0,
+      "heavy_rain_days": 0,
+      "police_stations": 12,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Dharwad",
+      "risk_index": 56.8,
+      "risk_level": "MEDIUM",
+      "crime_total": 4289.0,
+      "heavy_rain_days": 1,
+      "police_stations": 7,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Uttara Kannada",
+      "risk_index": 55.9,
+      "risk_level": "MEDIUM",
+      "crime_total": 3930.0,
+      "heavy_rain_days": 6,
+      "police_stations": 11,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Chitradurga",
+      "risk_index": 54.9,
+      "risk_level": "MEDIUM",
+      "crime_total": 5838.0,
+      "heavy_rain_days": 0,
+      "police_stations": 3,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Hassan",
+      "risk_index": 51.2,
+      "risk_level": "MEDIUM",
+      "crime_total": 6147.0,
+      "heavy_rain_days": 0,
+      "police_stations": 11,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Mandya",
+      "risk_index": 49.3,
+      "risk_level": "MEDIUM",
+      "crime_total": 5930.0,
+      "heavy_rain_days": 0,
+      "police_stations": 13,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Raichur",
+      "risk_index": 48.4,
+      "risk_level": "MEDIUM",
+      "crime_total": 4271.0,
+      "heavy_rain_days": 0,
+      "police_stations": 2,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Bagalkot",
+      "risk_index": 47.4,
+      "risk_level": "MEDIUM",
+      "crime_total": 3570.0,
+      "heavy_rain_days": 1,
+      "police_stations": 2,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Davanagere",
+      "risk_index": 46.9,
+      "risk_level": "MEDIUM",
+      "crime_total": 4771.0,
+      "heavy_rain_days": 0,
+      "police_stations": 7,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Chikmagalur",
+      "risk_index": 44.7,
+      "risk_level": "MEDIUM",
+      "crime_total": 4210.0,
+      "heavy_rain_days": 1,
+      "police_stations": 9,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Ramanagara",
+      "risk_index": 44.5,
+      "risk_level": "MEDIUM",
+      "crime_total": 4580.0,
+      "heavy_rain_days": 0,
+      "police_stations": 4,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Udupi",
+      "risk_index": 43.8,
+      "risk_level": "MEDIUM",
+      "crime_total": 3001.0,
+      "heavy_rain_days": 18,
+      "police_stations": 19,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Yadgir",
+      "risk_index": 39.5,
+      "risk_level": "MEDIUM",
+      "crime_total": 2715.0,
+      "heavy_rain_days": 1,
+      "police_stations": 8,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Kodagu",
+      "risk_index": 31.4,
+      "risk_level": "LOW",
+      "crime_total": 2324.0,
+      "heavy_rain_days": 4,
+      "police_stations": 5,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Chikkaballapura",
+      "risk_index": 30.3,
+      "risk_level": "LOW",
+      "crime_total": 4161.0,
+      "heavy_rain_days": 0,
+      "police_stations": 4,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Koppal",
+      "risk_index": 27.3,
+      "risk_level": "LOW",
+      "crime_total": 3200.0,
+      "heavy_rain_days": 0,
+      "police_stations": 4,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Kolar",
+      "risk_index": 26.6,
+      "risk_level": "LOW",
+      "crime_total": 3892.0,
+      "heavy_rain_days": 0,
+      "police_stations": 7,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Haveri",
+      "risk_index": 26.4,
+      "risk_level": "LOW",
+      "crime_total": 3561.0,
+      "heavy_rain_days": 0,
+      "police_stations": 4,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Chamarajanagar",
+      "risk_index": 20.7,
+      "risk_level": "LOW",
+      "crime_total": 2912.0,
+      "heavy_rain_days": 0,
+      "police_stations": 2,
+      "kind": "EXPLAINABLE_INDEX"
+    },
+    {
+      "name": "Gadag",
+      "risk_index": 17.1,
+      "risk_level": "LOW",
+      "crime_total": 2268.0,
+      "heavy_rain_days": 0,
+      "police_stations": 1,
+      "kind": "EXPLAINABLE_INDEX"
+    }
+  ],
+  "districts": 30,
+  "ml_evaluation": "Not trained: no labelled incident outcomes or incident coordinates are available; district crime data is aggregated counts. Rule-based, explainable scoring is used instead."
+}

@@ -1,0 +1,291 @@
+{
+  "karnataka_districts": {
+    "status": "OK",
+    "records": 30,
+    "output": "application_data/karnataka_districts.geojson",
+    "steps": "Karnataka districts selected by centroid-in-ADM1; Douglas-Peucker simplified (0.002\u00b0)"
+  },
+  "emergency_facilities": {
+    "status": "OK",
+    "records": 7664,
+    "by_type": {
+      "POLICE": 374,
+      "HOSPITAL": 3610,
+      "CLINIC": 2345,
+      "FIRE_STATION": 63,
+      "PHARMACY": 1272
+    },
+    "unnamed": {
+      "POLICE": 32,
+      "CLINIC": 32,
+      "HOSPITAL": 39,
+      "FIRE_STATION": 18,
+      "PHARMACY": 109
+    },
+    "output": "application_data/emergency_facilities.geojson",
+    "steps": "nodes/ways/relations -> centre point; de-duplicated by OSM id; bbox-validated; district by point-in-polygon"
+  },
+  "tourist_attractions": {
+    "status": "OK",
+    "records": 283,
+    "by_category": {
+      "ruins": 91,
+      "artwork": 2,
+      "attraction": 27,
+      "monument": 66,
+      "castle": 45,
+      "viewpoint": 1,
+      "fort": 51
+    },
+    "output": "application_data/tourist_attractions.geojson",
+    "steps": "named POIs only; centre points"
+  },
+  "protected_areas": {
+    "status": "OK",
+    "records": 59,
+    "unusable_geometry": 3,
+    "output": "application_data/protected_areas.geojson (+ .kml)",
+    "steps": "ways + multipolygon relations stitched into rings, inner holes kept, simplified 0.0005\u00b0"
+  },
+  "natural_hazards": {
+    "status": "OK",
+    "records": 204,
+    "by_category": {
+      "WATERFALL": 65,
+      "CLIFF": 139
+    },
+    "output": "application_data/natural_hazards.geojson"
+  },
+  "study_area_roads": {
+    "status": "OK",
+    "records": 29398,
+    "by_highway": {
+      "primary": 274,
+      "tertiary": 968,
+      "residential": 26343,
+      "secondary": 484,
+      "path": 424,
+      "footway": 811,
+      "trunk": 86,
+      "motorway": 8
+    },
+    "output": "processed/study_area_roads.geojson"
+  },
+  "weather_daily": {
+    "status": "OK",
+    "records": 21930,
+    "missing_values": 0,
+    "districts": 30,
+    "output": "processed/weather_daily_karnataka_2024_2025.csv",
+    "steps": "ERA5 reanalysis via Open-Meteo archive at district centroids; daily values, Asia/Kolkata"
+  },
+  "ksndmc_rainfall:district_level_rainfall_in_2025": {
+    "status": "OK",
+    "records": 32,
+    "columns": 19,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/district_level_rainfall_in_2025.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:district_taluk_and_hobli_level_rainfall_in_2025": {
+    "status": "OK",
+    "records": 1117,
+    "columns": 5,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/district_taluk_and_hobli_level_rainfall_in_2025.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_annual_rainfall_in_all_stations_in_2023": {
+    "status": "OK",
+    "records": 5266,
+    "columns": 4,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_annual_rainfall_in_all_stations_in_2023.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2020_for_districts": {
+    "status": "OK",
+    "records": 30,
+    "columns": 14,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2020_for_districts.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2020_for_districts__taluks_and_hoblis": {
+    "status": "OK",
+    "records": 1134,
+    "columns": 15,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2020_for_districts__taluks_and_hoblis.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2020_for_taluks": {
+    "status": "OK",
+    "records": 227,
+    "columns": 14,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2020_for_taluks.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2021_for_districts": {
+    "status": "OK",
+    "records": 36,
+    "columns": 5,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2021_for_districts.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2021_for_districts__taluks_and_hoblis": {
+    "status": "OK",
+    "records": 1113,
+    "columns": 16,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2021_for_districts__taluks_and_hoblis.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2021_for_taluks": {
+    "status": "OK",
+    "records": 257,
+    "columns": 16,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2021_for_taluks.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2022_for_districts": {
+    "status": "OK",
+    "records": 32,
+    "columns": 5,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2022_for_districts.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2022_for_districts__taluks_and_hoblis": {
+    "status": "OK",
+    "records": 1113,
+    "columns": 8,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2022_for_districts__taluks_and_hoblis.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2022_for_taluks": {
+    "status": "OK",
+    "records": 263,
+    "columns": 6,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2022_for_taluks.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2023_for_districts": {
+    "status": "OK",
+    "records": 32,
+    "columns": 14,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2023_for_districts.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2024_at_taluk_and_hobli_level": {
+    "status": "OK",
+    "records": 1122,
+    "columns": 5,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2024_at_taluk_and_hobli_level.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksndmc_rainfall:karnataka_rainfall_in_2024_for_districts": {
+    "status": "OK",
+    "records": 32,
+    "columns": 14,
+    "output": "processed/crime_and_rainfall/ksndmc_rainfall/karnataka_rainfall_in_2024_for_districts.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2022:district_and_city_wise_death_due_to_crimes_and_negligence": {
+    "status": "OK",
+    "records": 39,
+    "columns": 10,
+    "output": "processed/crime_and_rainfall/ksp_crime_2022/district_and_city_wise_death_due_to_crimes_and_negligence.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2022:district_and_city_wise_deaths_due_to_road_accidents": {
+    "status": "OK",
+    "records": 39,
+    "columns": 10,
+    "output": "processed/crime_and_rainfall/ksp_crime_2022/district_and_city_wise_deaths_due_to_road_accidents.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2022:district_and_city_wise_sexual_harrassment_cases": {
+    "status": "OK",
+    "records": 39,
+    "columns": 37,
+    "output": "processed/crime_and_rainfall/ksp_crime_2022/district_and_city_wise_sexual_harrassment_cases.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2022:district_and_city_wise_total_crimes_registered_2022": {
+    "status": "OK",
+    "records": 39,
+    "columns": 4,
+    "output": "processed/crime_and_rainfall/ksp_crime_2022/district_and_city_wise_total_crimes_registered_2022.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2024:crimes_against_women_children_and_scs_sts___2024": {
+    "status": "OK",
+    "records": 25,
+    "columns": 11,
+    "output": "processed/crime_and_rainfall/ksp_crime_2024/crimes_against_women_children_and_scs_sts___2024.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2024:district_wise_ipc_crimes_in_karnataka___2024": {
+    "status": "OK",
+    "records": 49,
+    "columns": 23,
+    "output": "processed/crime_and_rainfall/ksp_crime_2024/district_wise_ipc_crimes_in_karnataka___2024.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2024:ipc_crimes_under_various_heads_in_2024": {
+    "status": "OK",
+    "records": 618,
+    "columns": 3,
+    "output": "processed/crime_and_rainfall/ksp_crime_2024/ipc_crimes_under_various_heads_in_2024.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2024:karnataka_crime_review_2024_tables": {
+    "status": "OK",
+    "records": 735,
+    "columns": 8,
+    "output": "processed/crime_and_rainfall/ksp_crime_2024/karnataka_crime_review_2024_tables.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2024:sll_crimes_under_various_heads___2024": {
+    "status": "OK",
+    "records": 234,
+    "columns": 3,
+    "output": "processed/crime_and_rainfall/ksp_crime_2024/sll_crimes_under_various_heads___2024.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2025:crime_review_tables_from_december_2025": {
+    "status": "OK",
+    "records": 764,
+    "columns": 8,
+    "output": "processed/crime_and_rainfall/ksp_crime_2025/crime_review_tables_from_december_2025.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2025:crimes_against_women_children_and_scs_sts_in_2025": {
+    "status": "OK",
+    "records": 25,
+    "columns": 9,
+    "output": "processed/crime_and_rainfall/ksp_crime_2025/crimes_against_women_children_and_scs_sts_in_2025.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2025:crimes_under_special_local_laws_2025": {
+    "status": "OK",
+    "records": 239,
+    "columns": 3,
+    "output": "processed/crime_and_rainfall/ksp_crime_2025/crimes_under_special_local_laws_2025.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2025:district_and_commissionerate_wise_crimes__ipc_bns_and_sll__in_karnataka_in_2025": {
+    "status": "OK",
+    "records": 47,
+    "columns": 4,
+    "output": "processed/crime_and_rainfall/ksp_crime_2025/district_and_commissionerate_wise_crimes__ipc_bns_and_sll__in_karnataka_in_2025.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "ksp_crime_2025:ipc_and_bns_crimes_in_karnataka_for_2025": {
+    "status": "OK",
+    "records": 651,
+    "columns": 3,
+    "output": "processed/crime_and_rainfall/ksp_crime_2025/ipc_and_bns_crimes_in_karnataka_for_2025.csv",
+    "steps": "UTF-8, blank rows dropped, snake_case headers"
+  },
+  "demo_ka_synthetic_zones": {
+    "status": "OK",
+    "records": 200,
+    "output": "synthetic_test_data/demo_ka_synthetic_zones.geojson",
+    "steps": "same RNG seed and algorithm as seed_demo_zones.py"
+  }
+}

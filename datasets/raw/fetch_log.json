@@ -373,10 +373,15 @@
   },
   {
     "source_id": "open_meteo_daily",
-    "url": "",
-    "status": "FAILED",
-    "downloaded_at": "2026-11-02T02:12:30+00:00",
-    "error": "no district centroids: "
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "status": "DOWNLOADED",
+    "downloaded_at": "2026-11-02T02:25:36+00:00",
+    "records": 21930,
+    "locations": 30,
+    "bytes": 1142082,
+    "file": "raw/open_meteo/karnataka_districts_daily_2024_2025.json.gz",
+    "licence": "CC BY 4.0",
+    "attribution": "Weather data by Open-Meteo.com (ERA5 reanalysis)"
   },
   {
     "source_id": "osm_fire_stations",
@@ -427,11 +432,40 @@
     "query": "[out:json][timeout:300];area[\"ISO3166-2\"=\"IN-KA\"][admin_level=4]->.ka;nwr[\"amenity\"=\"police\"](area.ka);out center tags;"
   },
   {
-    "source_id": "osm_protected_areas",
-    "url": "https://overpass.kumi.systems/api/interpreter",
-    "status": "FAILED",
-    "downloaded_at": "2026-11-02T02:09:27+00:00",
-    "error": "HTTPError: HTTP Error 504: Gateway Timeout"
+    "source_id": "osm_protected_areas_rel_nr",
+    "url": "https://overpass-api.de/api/interpreter",
+    "status": "DOWNLOADED",
+    "downloaded_at": "2026-11-02T02:22:38+00:00",
+    "records": 21,
+    "bytes": 1116638,
+    "file": "raw/osm/osm_protected_areas_rel_nr.json",
+    "licence": "ODbL 1.0",
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "query": "[out:json][timeout:900];area[\"ISO3166-2\"=\"IN-KA\"][admin_level=4]->.ka;relation[\"leisure\"=\"nature_reserve\"](area.ka);out geom;"
+  },
+  {
+    "source_id": "osm_protected_areas_rel_pa",
+    "url": "https://overpass-api.de/api/interpreter",
+    "status": "DOWNLOADED",
+    "downloaded_at": "2026-11-02T02:19:30+00:00",
+    "records": 27,
+    "bytes": 1595340,
+    "file": "raw/osm/osm_protected_areas_rel_pa.json",
+    "licence": "ODbL 1.0",
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "query": "[out:json][timeout:900];area[\"ISO3166-2\"=\"IN-KA\"][admin_level=4]->.ka;relation[\"boundary\"=\"protected_area\"](area.ka);out geom;"
+  },
+  {
+    "source_id": "osm_protected_areas_ways",
+    "url": "https://overpass-api.de/api/interpreter",
+    "status": "DOWNLOADED",
+    "downloaded_at": "2026-11-02T02:23:45+00:00",
+    "records": 33,
+    "bytes": 351896,
+    "file": "raw/osm/osm_protected_areas_ways.json",
+    "licence": "ODbL 1.0",
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "query": "[out:json][timeout:900];area[\"ISO3166-2\"=\"IN-KA\"][admin_level=4]->.ka;(way[\"boundary\"=\"protected_area\"](area.ka);way[\"leisure\"=\"nature_reserve\"](area.ka););out geom;"
   },
   {
     "source_id": "osm_study_roads",

@@ -1,0 +1,40 @@
+districts,murder_incidence,murder_victims,murder_rate,culpable_homicide_i,culpable_homicide_v,culpable_homicide_r,causing_death_by_negligence_i,causing_death_by_negligence_v,causing_death_by_negligence_r
+Bagalkot,41,42,1.9,0,0,0,367,579,16.7
+Bengaluru City,173,177,1.2,16,19,0.1,902,945,6.1
+Bengaluru District,70,70,5.9,3,4,0.3,585,651,49.3
+Belagavi District,69,69,1.9,0,0,0,707,904,19.3
+Ballari,26,26,1.4,2,2,0.1,217,230,12
+Bidar,54,62,2.8,1,1,0.1,312,552,15.9
+Vijayapura,59,59,2.2,1,1,0,395,435,14.8
+Chikkaballapura,29,33,2.1,0,0,0,256,410,18.4
+Chamarajnagar,19,21,1.7,3,11,0.3,179,201,16.5
+Chikkamagaluru,14,14,1.2,5,6,0.4,238,348,20.9
+Chitradurga,30,33,1.6,3,3,0.2,408,441,22.2
+Dakshina Kannada,22,22,1.2,1,1,0.1,152,161,8.5
+Davanagere,29,30,1.6,2,3,0.1,311,333,17.2
+Dharwad,26,26,2.5,1,1,0.1,212,310,20.1
+Gadag,22,25,1.9,0,0,0,162,343,13.8
+Kalaburgi,55,59,2.6,3,3,0.1,290,454,14
+Hassan,63,63,3.4,3,3,0.2,456,530,24.6
+Haveri,16,16,0.9,4,4,0.2,258,284,14.4
+Hubballi Dharwad City,17,17,1.5,1,1,0.1,102,207,9.2
+K.G.F.,12,12,1.8,0,0,0,50,52,7.4
+Kodagu,19,19,3.4,4,4,0.7,70,87,12.5
+Kolar,28,29,2.7,1,1,0.1,241,261,23
+Koppal,18,18,1.1,0,0,0,251,268,15.3
+Mandya,57,65,3.1,3,3,0.2,456,650,24.6
+Mangaluru City,11,13,2,11,15,2,161,170,29.8
+Mysuru City,26,27,1.8,0,0,0,181,183,12.6
+Mysuru District,62,67,3,1,1,0,447,526,21.8
+Raichur,43,43,1.8,4,4,0.2,305,357,12.9
+K.Railways,11,11,0,0,3,3,,,
+Ramanagara,44,47,3.8,2,2,0.2,350,380,30.3
+Shimoga,31,34,1.6,6,8,0.3,347,385,18.4
+Tumakuru,79,84,2.8,5,5,0.2,702,798,25.1
+Udupi,16,17,1.2,0,0,0,247,300,18.4
+Uttara Kannada,15,16,1,1,1,0.1,241,255,15.7
+Yadgiri,21,25,1.4,1,1,0.1,171,270,11.6
+Belagavi City,36,47,2,0,0,0,164,272,8.9
+Kalaburgi City,27,28,2.7,0,0,0,110,133,11
+Vijayanagara,14,16,0.9,0,0,0,219,237,13.4
+TOTAL CITIES,1404,1482,1.9,88,108,0.1,11225,13905,15.3
