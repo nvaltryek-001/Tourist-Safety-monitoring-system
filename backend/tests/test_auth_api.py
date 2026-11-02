@@ -1,3 +1,4 @@
+import pytest
 from conftest import ADMIN, POLICE, SUPER, make_tourist, staff_headers
 
 
@@ -175,3 +176,15 @@ def test_trusted_proxy_uses_rightmost_forwarded_address(monkeypatch):
     finally:
         monkeypatch.delenv("TRUST_PROXY_HEADERS")
         reset_settings_cache()
+
+
+def test_production_refuses_dev_or_short_secret_key(monkeypatch):
+    from app.core.config import DEV_SECRET, Settings
+
+    monkeypatch.setenv("ENVIRONMENT", "production")
+    for bad in (DEV_SECRET, "short-secret"):
+        monkeypatch.setenv("SECRET_KEY", bad)
+        with pytest.raises(RuntimeError):
+            Settings().validate()
+    monkeypatch.setenv("SECRET_KEY", "x" * 40)
+    Settings().validate()
