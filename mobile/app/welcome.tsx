@@ -35,6 +35,7 @@ export default function Welcome() {
         <View style={{ gap: 12 }}>
           {sessionExpired && <Text style={{ color: "#fbbf24", textAlign: "center" }}>Your session ended. Please sign in again.</Text>}
           <Button title="Sign in with Gmail" onPress={() => router.push("/login")} />
+          <Button title="Server connection" variant="secondary" onPress={() => router.push("/server")} />
           <Text style={{ color: "#8ea0aa", textAlign: "center", fontSize: 12 }}>
             Only Gmail addresses registered by your administrator can sign in.
           </Text>

@@ -2,7 +2,7 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { KeyboardAvoidingView, Platform, ScrollView, View } from "react-native";
 import { Button, ErrorText, H1, Input, Label, Muted, Screen } from "@/components/ui";
-import { api } from "@/lib/api";
+import { api, apiUrl } from "@/lib/api";
 import { isGmail } from "@/lib/status";
 
 interface OTPResponse {
@@ -62,6 +62,11 @@ export default function Login() {
             <ErrorText message={error} />
           </View>
           <Button title="Send login code" onPress={submit} loading={busy} />
+          <Muted>
+            Your administrator must first add your Gmail under Dashboard → Tourist login access. Not approved yet? Ask them — new Gmail
+            addresses cannot sign themselves up.
+          </Muted>
+          <Button title={`Server: ${apiUrl()}`} variant="ghost" onPress={() => router.push("/server")} />
         </ScrollView>
       </KeyboardAvoidingView>
     </Screen>

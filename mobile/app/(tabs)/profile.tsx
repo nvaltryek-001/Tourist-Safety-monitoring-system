@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { Alert, ScrollView, Text } from "react-native";
 import { Button, Card, Label, Row, Screen, colors } from "@/components/ui";
-import { API_URL } from "@/lib/api";
+import { apiUrl } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
 import { useLocation } from "@/lib/location";
 
@@ -14,6 +14,8 @@ export default function Profile() {
     ["Safety report", "/report"],
     ["Emergency contacts", "/contacts"],
     ["Privacy & location consent", "/consent"],
+    ["Nearby police & hospitals", "/help"],
+    ["Server connection", "/server"],
     ["Settings", "/settings"],
   ];
   return (
@@ -50,7 +52,7 @@ export default function Profile() {
             ])
           }
         />
-        <Text style={{ textAlign: "center", color: colors.muted, fontSize: 11 }}>Server: {API_URL}</Text>
+        <Text style={{ textAlign: "center", color: colors.muted, fontSize: 11 }}>Server: {apiUrl()}</Text>
       </ScrollView>
     </Screen>
   );

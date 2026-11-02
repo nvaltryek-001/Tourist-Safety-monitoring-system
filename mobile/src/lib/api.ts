@@ -1,7 +1,58 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as SecureStore from "expo-secure-store";
+import { normalizeUrl } from "./url";
 
-export const API_URL = (process.env.EXPO_PUBLIC_API_URL || "http://10.0.2.2:8000").replace(/\/+$/, "");
+export { normalizeUrl };
+
+/** Build-time default (EXPO_PUBLIC_API_URL); can be overridden at runtime from the server screen. */
+export const DEFAULT_API_URL = (process.env.EXPO_PUBLIC_API_URL || "http://10.0.2.2:8000").replace(/\/+$/, "");
 const TOKEN_KEY = "safetrail.token";
+const URL_KEY = "safetrail.apiUrl";
+let currentUrl = DEFAULT_API_URL;
+
+export function apiUrl(): string {
+  return currentUrl;
+}
+
+export async function loadApiUrl(): Promise<string> {
+  try {
+    const saved = await AsyncStorage.getItem(URL_KEY);
+    if (saved) currentUrl = saved;
+  } catch {
+    /* keep default */
+  }
+  return currentUrl;
+}
+
+export async function setApiUrl(url: string | null): Promise<string> {
+  currentUrl = url ? normalizeUrl(url) : DEFAULT_API_URL;
+  try {
+    if (url) await AsyncStorage.setItem(URL_KEY, currentUrl);
+    else await AsyncStorage.removeItem(URL_KEY);
+  } catch {
+    /* memory only */
+  }
+  return currentUrl;
+}
+
+/** Checks /health on a server URL; returns latency in ms or throws a readable error. */
+export async function testServer(url: string): Promise<number> {
+  const target = normalizeUrl(url);
+  const started = Date.now();
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 6000);
+  try {
+    const res = await fetch(`${target}/health`, { signal: controller.signal });
+    const body = (await res.json()) as { status?: string };
+    if (!res.ok || body.status !== "healthy") throw new Error(`Server answered but is not healthy (${res.status})`);
+    return Date.now() - started;
+  } catch (e) {
+    if (e instanceof Error && e.message.startsWith("Server answered")) throw e;
+    throw new Error(`Cannot reach ${target}. Same Wi-Fi as the PC? Backend started with --host 0.0.0.0? Firewall allowed?`);
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 export class ApiError extends Error {
   status: number;
@@ -54,14 +105,14 @@ export async function api<T = unknown>(path: string, init: { method?: string; bo
   if (memoryToken) headers.Authorization = `Bearer ${memoryToken}`;
   let response: Response;
   try {
-    response = await fetch(`${API_URL}${path}`, {
+    response = await fetch(`${currentUrl}${path}`, {
       method: init.method ?? "GET",
       headers,
       body: init.body !== undefined ? JSON.stringify(init.body) : undefined,
       signal: controller.signal,
     });
   } catch {
-    throw new ApiError(0, "No connection to the safety server. Check your internet connection.");
+    throw new ApiError(0, `No connection to the safety server (${currentUrl}). Check Wi-Fi or tap “Server” to change the address.`);
   } finally {
     clearTimeout(timer);
   }

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { backoffMs, enqueue, makeClientId, nextBatch, removeSent, type QueuedPoint } from "./queue";
 import { accuracyLabel, isGmail, sosStatusText, statusView } from "./status";
+import { formatDistance, haversineMeters, navigationUrl, normalizeUrl } from "./url";
 
 const point = (i: number): QueuedPoint => ({
   client_id: makeClientId(1000 + i, 13 + i / 1000, 77),
@@ -52,5 +53,20 @@ describe("status helpers", () => {
   });
   it("explains SOS states", () => {
     expect(sosStatusText("OPEN")).toMatch(/Received by the server/);
+  });
+});
+
+describe("server url and distance helpers", () => {
+  it("normalises typed server addresses", () => {
+    expect(normalizeUrl("192.168.1.10")).toBe("http://192.168.1.10:8000");
+    expect(normalizeUrl("192.168.1.10:9000/")).toBe("http://192.168.1.10:9000");
+    expect(normalizeUrl("https://safetrail-api.onrender.com/")).toBe("https://safetrail-api.onrender.com");
+  });
+  it("computes distances and navigation links", () => {
+    expect(haversineMeters(0, 0, 1, 0)).toBeGreaterThan(111000);
+    expect(haversineMeters(0, 0, 1, 0)).toBeLessThan(111400);
+    expect(formatDistance(850)).toBe("850 m");
+    expect(formatDistance(2400)).toBe("2.4 km");
+    expect(navigationUrl(13.1, 77.5)).toContain("destination=13.1,77.5");
   });
 });

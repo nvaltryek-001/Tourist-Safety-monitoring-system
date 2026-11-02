@@ -30,6 +30,8 @@ export default function RootLayout() {
             <Stack.Screen name="report" options={{ title: "Safety report" }} />
             <Stack.Screen name="contacts" options={{ title: "Emergency contacts" }} />
             <Stack.Screen name="settings" options={{ title: "Settings" }} />
+            <Stack.Screen name="server" options={{ title: "Server connection" }} />
+            <Stack.Screen name="help" options={{ title: "Nearby help" }} />
             <Stack.Screen name="sos-status/[id]" options={{ title: "Emergency status" }} />
           </Stack>
         </LocationProvider>

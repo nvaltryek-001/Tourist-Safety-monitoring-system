@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { api, loadToken, saveToken, setUnauthorizedHandler } from "./api";
+import { api, loadApiUrl, loadToken, saveToken, setUnauthorizedHandler } from "./api";
 
 export interface Profile {
   tourist_code: string;
@@ -56,6 +56,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setSessionExpired(true);
     });
     (async () => {
+      await loadApiUrl();
       const token = await loadToken();
       if (token) {
         setSignedIn(true);
