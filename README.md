@@ -1,31 +1,32 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f766a,50:14917c,100:0b141a&height=220&section=header&text=SafeTrail&fontSize=72&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Smart%20Tourist%20Safety%20Monitoring%20%26%20AI%20Incident%20Intelligence&descAlignY=58&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f766a,50:14917c,100:0b141a&height=230&section=header&text=SafeTrail&fontSize=76&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Smart%20Tourist%20Safety%20Monitoring%20%26%20AI%20Incident%20Intelligence&descAlignY=58&descSize=18" width="100%"/>
 
 <a href="#-quick-start-windows">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=14917C&center=true&vCenter=true&width=700&lines=%F0%9F%93%8D+Live+GPS+safety+monitoring;%F0%9F%9A%A8+One-tap+SOS+with+server+confirmation;%F0%9F%9B%A1%EF%B8%8F+Geofenced+restricted+zones;%F0%9F%A7%A0+Explainable+AI+risk+advisories;%F0%9F%9A%93+Live+admin+%26+police+command+centre" alt="Typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=700&color=14917C&center=true&vCenter=true&width=760&lines=%F0%9F%93%8D+Live+GPS+safety+monitoring+with+consent;%F0%9F%9A%A8+Server-confirmed+one-tap+SOS;%F0%9F%97%BA%EF%B8%8F+Google+Maps+for+Web+%2B+Android;%F0%9F%9A%93+Nearest+police+%26+hospital+routes;%F0%9F%93%8A+Real+open+datasets+%E2%80%94+42+sources;%F0%9F%A7%A0+Explainable+AI+%E2%80%94+no+fake+data" alt="Typing animation" />
 </a>
 
 <br/>
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React Native](https://img.shields.io/badge/Expo_React_Native-000020?style=for-the-badge&logo=expo&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo_React_Native-000020?style=for-the-badge&logo=expo&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google_Maps-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python_3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)
 
-![Tests](https://img.shields.io/badge/backend_tests-98_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
+![Backend](https://img.shields.io/badge/backend_tests-98_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
 ![Dashboard](https://img.shields.io/badge/dashboard_build-passing-2ea44f?style=flat-square&logo=vercel)
 ![Mobile](https://img.shields.io/badge/mobile_typecheck-passing-2ea44f?style=flat-square&logo=android&logoColor=white)
+![Datasets](https://img.shields.io/badge/open_datasets-42%2F42_downloaded-1f6feb?style=flat-square)
 ![Hardware](https://img.shields.io/badge/IoT_hardware-none-6e7781?style=flat-square)
 ![Privacy](https://img.shields.io/badge/privacy-consent_first-8250df?style=flat-square)
-![Deploy](https://img.shields.io/badge/deploy-Render_%2B_Vercel_(free)-46E3B7?style=flat-square&logo=render&logoColor=black)
 
 <br/>
 
-**[✨ Features](#-features) · [🏗 Architecture](#-architecture) · [🔐 Logins](#-login-details) · [💻 Quick start](#-quick-start-windows) · [🚀 Deploy](#-free-deployment) · [🧪 Tests](#-testing--results) · [📚 Docs](#-documentation)**
+**[✨ Features](#-features) · [🗺️ Maps](#%EF%B8%8F-google-maps--gis) · [📊 Datasets](#-real-open-datasets) · [🧠 AI](#-ai--analytics) · [🔐 Logins](#-login-details) · [💻 Run](#-quick-start-windows) · [🚀 Deploy](#-free-deployment) · [🧪 Tests](#-testing--results)**
 
 </div>
 
@@ -33,16 +34,38 @@
 
 ## 📖 About
 
-> **SafeTrail** is a **software-only** tourist safety platform. Tourists share their phone location **only after consent**, are warned when they enter **restricted or high-risk zones**, and can raise an **SOS** with one press. **Admins** and **police officers** monitor everything live on a web command centre and respond to emergencies.
+> **SafeTrail** is a **software-only** tourist safety platform. Tourists share their phone location **only after consent**, are warned when they enter **restricted or high-risk zones**, see the **nearest police stations and hospitals**, and can raise an **SOS** with one press. **Admins** and **police officers** watch everything live on a **Google Maps command centre**, get the **route to the tourist**, and resolve incidents. All analytics run on **real, documented open data**.
 
 <table>
 <tr>
-<td align="center" width="25%">📍<br/><b>Real phone GPS</b><br/><sub>No wearables or IoT</sub></td>
-<td align="center" width="25%">🚨<br/><b>Server-confirmed SOS</b><br/><sub>Never falsely "sent"</sub></td>
-<td align="center" width="25%">🛡️<br/><b>Geofencing</b><br/><sub>Circles and polygons</sub></td>
-<td align="center" width="25%">🧠<br/><b>Explainable AI</b><br/><sub>Advisories with evidence</sub></td>
+<td align="center" width="20%">📍<br/><b>Real phone GPS</b><br/><sub>No wearables or IoT</sub></td>
+<td align="center" width="20%">🚨<br/><b>Server-confirmed SOS</b><br/><sub>Never falsely "sent"</sub></td>
+<td align="center" width="20%">🗺️<br/><b>Google Maps</b><br/><sub>Web + Android</sub></td>
+<td align="center" width="20%">🏥<br/><b>7,604 facilities</b><br/><sub>Police · hospitals · fire</sub></td>
+<td align="center" width="20%">🧠<br/><b>Explainable AI</b><br/><sub>Evidence for every alert</sub></td>
 </tr>
 </table>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
+
+## 🛠 What We Built
+
+| ❌ Original project | ✅ SafeTrail today |
+|---|---|
+| 8 public API endpoints, no login | **~90 secured endpoints**, 4 roles, audit log |
+| Tourist phones, emails and locations publicly readable | Role-based access, privacy masking, consent required |
+| A hard-coded personal Gmail in the code | Removed; all secrets in environment variables |
+| Basic SOS record | Full SOS lifecycle: timeline, assignment, duplicate protection, notes |
+| No mobile app | **20+ screen** Expo Android app |
+| No dashboard | **17-page** admin + police command console |
+| Simple circle check | Circle + polygon geofencing, entry/exit events |
+| No maps | **Google Maps** (web + Android) with OpenStreetMap fallback |
+| No real data | **42 open-data sources**, cleaned, analysed, documented |
+| No AI | Explainable risk scores, hotspots, route deviation, response analytics |
+| No tests in CI | **98 backend tests** + dashboard & mobile checks on every push |
+| No deployment | Render + Vercel + Expo EAS, backups, uptime monitoring |
+
+> 💾 **Data safety:** the existing database is **never deleted**. Upgrades only **add** tables and columns, after an **automatic backup**.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
 
@@ -54,16 +77,18 @@
 
 | | Feature |
 |---|---|
-| 🔑 | Passwordless **Gmail + 6-digit OTP** login |
+| 🔑 | Passwordless **Gmail + 6-digit OTP** (only admin-approved Gmail addresses) |
+| 🌐 | **Server connection screen**: type the PC's IP and test the connection (Expo Go friendly) |
 | ✅ | **Privacy & location consent** before any sharing |
-| 📡 | Real GPS with accuracy display, battery-friendly updates |
-| 📶 | **Offline queue**: locations saved and uploaded later |
+| 📡 | Real GPS, accuracy display, battery-friendly updates, optional background tracking (APK) |
+| 📶 | **Offline queue** with de-duplicated batch upload and automatic retry |
 | 🟢🟡🟠🔴 | Status: **Safe · Caution · Restricted · Emergency · Location unavailable** |
-| 🗺️ | Safety map with zones, search, filters and legend |
-| 🚨 | **Hold-to-confirm SOS**, safe to retry with no duplicates |
+| 🗺️ | **Google Maps** safety map: zones, polygons, police & hospital pins, search, filters |
+| 🚓 | **Nearby help**: closest police, hospital and fire station, with **Navigate** and **Call** buttons |
+| 🚨 | **Hold-to-confirm SOS**, retry-safe, shows the nearest help afterwards |
 | ⏱️ | Emergency tracking: Received → Acknowledged → Responding → Resolved |
-| 🔔 | Alerts, trips, travel history, AI safety report |
-| ☎️ | Emergency contacts + helplines **112 · 100 · 108 · 1363** |
+| 🌦️ | **Weather alerts** (rain, storm, heat, wind) at your location |
+| 🧳 | Trips, travel history, AI safety report, alerts inbox, emergency contacts, 112/100/108/1363 |
 
 </details>
 
@@ -73,15 +98,19 @@
 
 | | Feature |
 |---|---|
-| 📊 | Live KPIs from the real database |
-| 🗺️ | **Live map** over WebSocket with clustering and stale markers |
+| 📊 | Live KPIs with animated counters |
+| 🗺️ | **Live Google Map**: clustered tourists, facilities, protected areas, district risk, **SOS hotspots** |
 | 🚨 | **SOS Command Centre**: New → Acknowledged → Responding → Resolved |
-| 👥 | Tourist management, search, filters, location history |
-| 🧭 | Zone editor + **GeoJSON / KML import & export** |
-| 🧾 | Dataset audit: counts, duplicates, overlaps |
-| 🔐 | Tourist Gmail access list, officer accounts, **audit log** |
-| 🧠 | AI intelligence + analytics charts |
-| 🌗 | Light and dark mode, responsive on desktop and tablet |
+| 🧭 | **SOS route** from the nearest police station or hospital to the tourist (Directions API) |
+| 👥 | Tourists: create, view, **edit, delete**, location history, AI risk |
+| 🔑 | Gmail login access list: add, enable/disable, remove |
+| 🚓 | Officers & staff: create, edit, reset password, **delete** |
+| 🛡️ | **GIS zone editor**: circles, polygons, **GeoJSON / KML import & export**, overlap checks |
+| 🏥 | **Emergency facilities**: full create/edit/delete + one-click OSM dataset import |
+| 📊 | **Dataset management**: sources, crime chart, rainfall, district risk map, open data → zones |
+| 📈 | Analytics: trends, hotspots, response times, zone activity, tourist movement |
+| 📄 | **CSV reports**: incidents, zones, tourists (no contact details) |
+| 🧾 | Audit log · notifications · settings · 🌗 dark / light mode |
 
 </details>
 
@@ -89,49 +118,35 @@
 <summary><b>🚓 Police Dashboard</b></summary>
 <br/>
 
-- Officer workspace: **assigned** incidents + **nearby unassigned** SOS (sorted by distance)
+- Live **SOS alerts** with sound-free toast pop-ups over WebSocket
+- **Assigned** incidents + **nearby unassigned** alerts sorted by distance from the officer
 - **Accept → Respond → Resolve** with notes and a full timeline
-- One-click **Google Maps navigation** to the tourist
-- Contact details visible **only during an active SOS**
-- No access to admin settings, zones, staff or audit logs
-
-</details>
-
-<details>
-<summary><b>🧠 AI Safety Intelligence</b></summary>
-<br/>
-
-| Signal | How it works |
-|---|---|
-| 🧍 Prolonged stationary | Stayed within 50 m for 45+ minutes |
-| 🧭 Route deviation | Statistical anomaly (median / MAD z-score) against the tourist's own path |
-| ⛔ High-risk entry | Entered a restricted / high-risk zone |
-| 🔁 Repeated entry | 2+ restricted entries in 24 hours |
-| 📉 Stale location | No update for 30+ minutes |
-| 📈 Risk score | 0–100 → Low / Medium / High / Critical, with reasons |
-
-> 💡 Every output is labelled **AI Advisory**, never a confirmed emergency. No ML model is trained because there isn't enough real data. The system is honest about this.
+- **Nearest facilities + route** and one-click **Google Maps navigation**
+- **Weather at the SOS location**
+- Personal **response-time stats** (median time to resolve)
+- Tourist contact details shown **only during an active SOS**
 
 </details>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
 
-## 🏗 Architecture
+## 🗺️ Google Maps & GIS
 
-```mermaid
-flowchart LR
-    A["📱 Tourist App<br/>Expo · Android"] -- "HTTPS" --> B["⚙️ FastAPI Backend<br/>Auth · Geofence · SOS · AI"]
-    B -- "Push alerts" --> A
-    C["🖥️ Admin & Police<br/>Next.js Dashboard"] <-- "REST + WebSocket" --> B
-    B --> D[("🗄️ Database<br/>SQLite / PostgreSQL")]
-    B --> E["✉️ Email<br/>Brevo / Resend"]
+| Surface | Implementation |
+|---|---|
+| 🖥️ Dashboard | `@vis.gl/react-google-maps` following Google's **Maps Platform 101 React codelab**: `APIProvider`, `AdvancedMarker`, **MarkerClusterer**, circles, polygons, GeoJSON layers, info windows |
+| 🧭 SOS routes | Directions API driving route, nearest police / hospital → tourist, plus a Google Maps navigation link |
+| 📱 Android | `react-native-maps` with **`PROVIDER_GOOGLE`**: zones, facility pins, route line, Navigate opens the Google Maps app |
+| 🔁 Fallback | No key → **OpenStreetMap** automatically, same features |
+| 🛡️ Geofencing | Circle (Haversine) + polygon (point-in-polygon), entry/exit events, caution buffer |
+| 📁 Formats | GeoJSON & KML import/export, polygon validation, duplicate and overlap detection |
 
-    style A fill:#0f766a,color:#fff,stroke:#0b141a
-    style B fill:#14917c,color:#fff,stroke:#0b141a
-    style C fill:#1f6feb,color:#fff,stroke:#0b141a
-    style D fill:#336791,color:#fff,stroke:#0b141a
-    style E fill:#8250df,color:#fff,stroke:#0b141a
+```env
+# dashboard/.env.local  (restrict the key to your website addresses)
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-own-key
 ```
+
+🔒 Keys are **never committed**. Setup and test checklist: [`docs/GOOGLE_MAPS_SETUP.md`](docs/GOOGLE_MAPS_SETUP.md)
 
 ### 🚨 SOS Flow
 
@@ -143,33 +158,83 @@ sequenceDiagram
     participant A as 🖥️ Admin
     participant P as 🚓 Police
     T->>S: Hold SOS + GPS location
-    S-->>T: ✅ Confirmed (alert #id)
+    S-->>T: ✅ Confirmed (alert #id) + nearest help
     S->>A: 🔴 Live alert (WebSocket)
     A->>S: Acknowledge + assign officer
     S->>P: New assigned incident
-    P->>S: Accept → Responding
+    P->>S: Accept → Responding (route to tourist)
     P->>S: Resolve with notes
     S-->>T: 🟢 Status: Resolved
 ```
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
 
-## 🛠 What We Built
+## 📊 Real Open Datasets
 
-| ❌ Before | ✅ After |
+> 📂 Everything is in [`datasets/`](datasets): `raw/` (originals, untouched) · `processed/` · `application_data/` · `analysis/` · `synthetic_test_data/` · [`dataset_manifest.csv`](datasets/dataset_manifest.csv)
+
+| Source | Licence | What we use |
+|---|---|---|
+| 🗺️ **OpenStreetMap** (Overpass) | ODbL | 366 police · 3,583 hospitals · 2,334 clinics · 63 fire stations · 1,258 pharmacies · 283 attractions · 59 protected areas · 204 waterfalls & cliffs |
+| 🏛️ **Karnataka State Police** (via OpenCity) | Public Domain | District crime 2022 / 2024 / 2025, road accidents |
+| 🌧️ **KSNDMC** rainfall (via OpenCity) | Public Domain | Official district rainfall 2020–2025 |
+| ☁️ **Open-Meteo** (ERA5) | CC BY 4.0 | 21,930 district-days of rain, heat and wind |
+| 🧭 **geoBoundaries** | ODbL | 30 Karnataka district boundaries |
+
+**🧹 Cleaning:** validated coordinates, removed **60 duplicate facilities** (mapped twice in OSM, listed in a log file), and wrote out every police unit → district mapping.
+**🚫 Not faked:** NCRB, India Tourism and IMD only publish PDFs or need a data request; they are marked *Not downloaded* in the manifest.
+
+### 🔎 Key findings
+
+| | Finding |
 |---|---|
-| 8 public API endpoints | ~75 secured endpoints with roles |
-| No login | Gmail OTP (tourists) + passwords (staff) |
-| Tourist data publicly visible | Role-based access + privacy masking |
-| Basic SOS record | Full SOS lifecycle, timeline, no duplicates |
-| No mobile app | **20-screen** Android app |
-| No dashboard | **15-page** admin + police dashboard |
-| No live updates | WebSocket real-time map and alerts |
-| No AI | Explainable safety intelligence |
-| No CI | GitHub Actions: **82 backend tests passing** |
-| No deployment | Free hosting on **Render + Vercel** |
+| 📈 | Registered crimes in Karnataka: **179,389 (2022) → 201,733 (2025), +12.5 %** |
+| 🔐 | 2024: **22,115 thefts** and **22,397 cyber crimes** |
+| 🚓 | Median distance from a tourist attraction to the nearest police station: **2.1 km** (hospital: **1.9 km**) |
+| ⚠️ | **76 attractions** are more than **15 km** from any mapped police station |
+| 🌧️ | 2025: **11 districts** had rainfall ≥ 20 % above normal (Vijayapura **+47 %**) |
 
-> 💾 **Data safety:** the existing database is **never deleted**. Upgrades only **add** tables and columns, after an **automatic backup**.
+📄 Full report with charts: [`datasets/analysis/report.md`](datasets/analysis/report.md)
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
+
+## 🧠 AI & Analytics
+
+| Signal | How it works |
+|---|---|
+| 📈 Crime trends | District crime 2022 → 2025 from police data |
+| 🌦️ Weather risk | Live Open-Meteo: thunderstorm, heavy rain, wind gusts, heat |
+| 🔥 Hotspots | 500 m grid of real SOS & restricted-zone entries (says "not enough data" below 5 events) |
+| 🧭 Route deviation | Statistical anomaly against the tourist's own path |
+| 🧍 Stationary / stale | Not moving 45+ min, or no update for 30+ min |
+| 🛡️ Zone activity | Entries, unique tourists, time spent inside, who is inside now |
+| ⏱️ Response times | Median & slowest-10 % time to acknowledge and resolve, per officer and type |
+| 🗺️ District risk index | Crime 55 % · heavy rain 30 % · heat 15 % (ranked, fully explained) |
+
+> 💡 Every AI output is labelled **AI Advisory**, never a confirmed emergency. **No ML model is trained**, because no labelled incident data exists, and the project says so honestly.
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
+
+## 🏗 Architecture
+
+```mermaid
+flowchart LR
+    A["📱 Tourist App<br/>Expo · Google Maps"] -- "HTTPS" --> B["⚙️ FastAPI Backend<br/>Auth · Geofence · SOS · AI"]
+    B -- "Push alerts" --> A
+    C["🖥️ Admin & Police<br/>Next.js · Google Maps"] <-- "REST + WebSocket" --> B
+    B --> D[("🗄️ SQLite / PostgreSQL")]
+    B --> E["✉️ Email<br/>Brevo / Resend"]
+    F["📊 Open Datasets<br/>OSM · KSP · KSNDMC · Open-Meteo"] --> B
+    B --> G["☁️ Open-Meteo<br/>live weather"]
+
+    style A fill:#0f766a,color:#fff,stroke:#0b141a
+    style B fill:#14917c,color:#fff,stroke:#0b141a
+    style C fill:#1f6feb,color:#fff,stroke:#0b141a
+    style D fill:#336791,color:#fff,stroke:#0b141a
+    style E fill:#8250df,color:#fff,stroke:#0b141a
+    style F fill:#d97706,color:#fff,stroke:#0b141a
+    style G fill:#0284c7,color:#fff,stroke:#0b141a
+```
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
 
@@ -177,23 +242,23 @@ sequenceDiagram
 
 <table>
 <tr><th>Role</th><th>Email</th><th>Password</th><th>Opens</th></tr>
-<tr><td>👑 <b>Super Admin</b></td><td><code>superadmin@demo.local</code></td><td><code>SuperAdmin@123</code></td><td>Overview + manage admins</td></tr>
-<tr><td>🛠️ <b>Admin</b></td><td><code>admin@demo.local</code></td><td><code>Admin@12345</code></td><td>Overview, tourists, zones</td></tr>
+<tr><td>👑 <b>Super Admin</b></td><td><code>superadmin@demo.local</code></td><td><code>SuperAdmin@123</code></td><td>Everything + manage admins</td></tr>
+<tr><td>🛠️ <b>Admin</b></td><td><code>admin@demo.local</code></td><td><code>Admin@12345</code></td><td>Tourists, zones, facilities, reports</td></tr>
 <tr><td>🚓 <b>Police</b></td><td><code>police@demo.local</code></td><td><code>Police@12345</code></td><td>Officer workspace</td></tr>
 </table>
 
-> ⚠️ Demo accounts work **only locally** and are switched off automatically in production. On the live server, create your own admin with `BOOTSTRAP_ADMIN_EMAIL` and `BOOTSTRAP_ADMIN_PASSWORD`.
+> ⚠️ Demo accounts work **only locally** and switch off automatically in production. On the live server, create your own admin with `BOOTSTRAP_ADMIN_EMAIL` and `BOOTSTRAP_ADMIN_PASSWORD`.
 
 <details>
 <summary><b>📱 How tourists log in</b></summary>
 <br/>
 
-1. An admin links the tourist to their **Gmail** under **Tourist Login Access**
+1. An admin adds the tourist's **Gmail** under **Dashboard → Tourist login access**
 2. The tourist types that Gmail in the app
 3. A **6-digit code** arrives (valid 5 min, single use, 5 tries)
-4. **No email set up?** Demo mode shows the code in a yellow box in the app
+4. **No email set up?** Demo mode shows the code in a yellow box in the app (`OTP_DEV_ECHO=true`)
 
-🔒 Only approved Gmail addresses can sign in.
+🔒 Gmail addresses that are not approved cannot sign in.
 
 </details>
 
@@ -205,24 +270,23 @@ sequenceDiagram
 <summary><b>✅ Requirements</b></summary>
 <br/>
 
-| Tool | Version | Get it |
-|---|---|---|
-| 🐍 Python | 3.11+ (tick **Add to PATH**) | python.org |
-| 🟢 Node.js | 20+ LTS | nodejs.org |
-| 🔧 Git | latest | git-scm.com |
-| 📱 Expo Go | latest | Play Store |
+| Tool | Version |
+|---|---|
+| 🐍 Python | 3.11+ (tick **Add to PATH**) |
+| 🟢 Node.js | 20+ LTS |
+| 🔧 Git | latest |
+| 📱 Expo Go | from the Play Store |
 
 </details>
 
 <details open>
-<summary><b>1️⃣ Download the project</b></summary>
+<summary><b>1️⃣ Get the project</b></summary>
 
 ```powershell
-cd C:\Users\<your-name>
 git clone https://github.com/nvaltryek-001/Tourist-Safety-monitoring-system.git
 cd Tourist-Safety-monitoring-system
 ```
-💾 Have the existing `tourist_safety.db`? Copy it into the `backend` folder **before** starting.
+💾 Have the existing `tourist_safety.db`? Put it in the `backend` folder **before** starting. Already cloned? Use `git pull origin main`.
 
 </details>
 
@@ -235,9 +299,10 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 copy .env.example .env
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
-🛠️ If `activate` is blocked, run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once.
+🏥 On first start it **loads the 7,604 emergency facilities** automatically.
+🛠️ If `activate` is blocked: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`
 
 </details>
 
@@ -250,7 +315,7 @@ copy .env.example .env.local
 npm install
 npm run dev
 ```
-🌐 `ECONNRESET` error? Switch to a mobile hotspot and run `npm install` again.
+🗺️ For Google Maps, add your key to `.env.local`. 🌐 `ECONNRESET`? Use a mobile hotspot and run `npm install` again.
 
 </details>
 
@@ -258,18 +323,14 @@ npm run dev
 <summary><b>4️⃣ Android app: Terminal 3</b></summary>
 
 ```powershell
-ipconfig
 cd mobile
-copy .env.example .env
 npm install
 npx expo install --fix
 npx expo start
 ```
-1. Note your Wi-Fi **IPv4** from `ipconfig` (e.g. `192.168.1.10`)
-2. In `mobile\.env` set `EXPO_PUBLIC_API_URL=http://192.168.1.10:8000`, using your IP
-3. Put the phone on the **same Wi-Fi**
-4. Open **Expo Go** and scan the QR code
-5. Allow **Python / Node** through the Windows Firewall if asked
+1. Phone on the **same Wi-Fi** as the PC → open **Expo Go** → scan the QR code
+2. In the app: **Server connection** → type your PC's IPv4 (from `ipconfig`) → **Test** → **Save**
+3. Allow **Python / Node** through the Windows Firewall if asked
 
 </details>
 
@@ -279,7 +340,7 @@ npx expo start
 |---|---|---|
 | 💚 | Health check | http://localhost:8000/health |
 | 🗄️ | Database check | http://localhost:8000/ready |
-| 📘 | API docs (Swagger) | http://localhost:8000/docs |
+| 📘 | API docs | http://localhost:8000/docs |
 | 🖥️ | Dashboard | http://localhost:3000 |
 | 📱 | Phone test | http://YOUR-PC-IP:8000/health |
 
@@ -288,42 +349,48 @@ npx expo start
 ## 🚀 Free Deployment
 
 <details>
-<summary><b>🟣 Step 1: Backend + database on Render</b></summary>
+<summary><b>🟣 Backend + database: Render</b></summary>
 <br/>
 
-1. **render.com** → sign in with GitHub → **New → Blueprint** → this repo
-2. `render.yaml` creates the API + a **free PostgreSQL** database
-3. Fill in `BOOTSTRAP_ADMIN_EMAIL` and `BOOTSTRAP_ADMIN_PASSWORD`
-4. Optional email: free **Brevo** API key → `EMAIL_API_KEY`, verified sender → `EMAIL_FROM`
-5. Check: `https://your-api.onrender.com/health` ✅
-
-> ℹ️ Render's free tier blocks SMTP, so this project uses the **Brevo** email API.
+1. **render.com** → **New → Blueprint** → this repo (`render.yaml` creates the API + free PostgreSQL)
+2. Fill in `BOOTSTRAP_ADMIN_EMAIL`, `BOOTSTRAP_ADMIN_PASSWORD`
+3. Optional email: a free **Brevo** API key (Render's free tier blocks SMTP)
+4. Check `https://your-api.onrender.com/health` ✅
 
 </details>
 
 <details>
-<summary><b>⚫ Step 2: Dashboard on Vercel</b></summary>
+<summary><b>⚫ Dashboard: Vercel</b></summary>
 <br/>
 
-1. **vercel.com** → **Add New Project** → this repo
-2. Root directory: `dashboard`
-3. Env: `NEXT_PUBLIC_API_URL = https://your-api.onrender.com`
-4. **Deploy** 🎉
-5. On Render, set `ALLOWED_ORIGINS = https://your-project.vercel.app`
+1. **vercel.com** → **Add New Project** → root directory `dashboard`
+2. Env: `NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`
+3. On Render set `ALLOWED_ORIGINS = https://your-project.vercel.app`
 
 </details>
 
 <details>
-<summary><b>🤖 Step 3: Android APK with Expo EAS</b></summary>
+<summary><b>🤖 Android APK: Expo EAS</b></summary>
 
 ```powershell
 cd mobile
 npm install -g eas-cli
 eas login
 eas init
+eas secret:create --name GOOGLE_MAPS_ANDROID_API_KEY --value <your-android-key>
 eas build -p android --profile preview
 ```
-Set your Render URL in `eas.json` before building. Push notifications work in the APK.
+
+</details>
+
+<details>
+<summary><b>💓 Monitoring & backups</b></summary>
+<br/>
+
+- `/health`, `/ready`, `/api/v1/system/metrics` (admin)
+- **Uptime** workflow pings the API every 30 min: set the repo variable `SAFETRAIL_API_URL`
+- Backups: `python -m app.scripts.backup_db` (SQLite copy or `pg_dump`)
+- Copy local data to the cloud: `python -m app.scripts.copy_sqlite_to_postgres`
 
 </details>
 
@@ -336,128 +403,13 @@ Set your Render URL in `eas.json` before building. Push notifications work in th
 | 🐍 Backend (pytest) | ![](https://img.shields.io/badge/98_passed-1_skipped-2ea44f?style=flat-square) |
 | 🖥️ Dashboard lint · types · tests · build | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
 | 📱 Mobile types · tests | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
-| ⚡ Performance smoke | ![](https://img.shields.io/badge/~8--9_ms-per_location_update-1f6feb?style=flat-square) |
+| 📊 Dataset pipeline | ![](https://img.shields.io/badge/42%2F42_sources-37%2F37_outputs-1f6feb?style=flat-square) |
+| ⚡ Speed (in-process) | ![](https://img.shields.io/badge/~8--10_ms-per_location_update-1f6feb?style=flat-square) |
+
+✔️ Includes a test against the **real OSM dataset** (a police station within 3 km of MG Road, Bengaluru) and the full **tourist → SOS → admin → police → resolved** flow.
 
 <details>
-<summary><b>▶️ Run tests yourself</b></summary>
-
-```powershell
-# Backend
-cd backend
-pip install -r requirements-dev.txt
-pytest -q
-
-# Dashboard
-cd dashboard
-npm run lint
-npm run typecheck
-npm test
-npm run build
-
-# Mobile
-cd mobile
-npm run typecheck
-npm test
-```
-
-</details>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
-
-## 🔒 Security & Privacy
-
-<table>
-<tr>
-<td>✅ Consent before sharing</td>
-<td>🔐 PBKDF2 password hashing</td>
-<td>⛔ Lock after 5 failed logins</td>
-</tr>
-<tr>
-<td>🚪 Real logout & device sign-out</td>
-<td>🚦 Rate limits on OTP, login, SOS</td>
-<td>🕵️ Police see contacts only during SOS</td>
-</tr>
-<tr>
-<td>🧾 Full audit log</td>
-<td>🗑️ 30-day location retention</td>
-<td>🔑 No secrets in code</td>
-</tr>
-</table>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
-
-## 🗺️ Google Maps & Real Open Datasets
-
-<table>
-<tr>
-<td align="center" width="25%">🗺️<br/><b>Google Maps</b><br/><sub>Web (vis.gl) + Android (Maps SDK)</sub></td>
-<td align="center" width="25%">🚓<br/><b>7,604 facilities</b><br/><sub>Police · hospitals · fire · pharmacies</sub></td>
-<td align="center" width="25%">📊<br/><b>42 / 42 sources</b><br/><sub>Downloaded & documented</sub></td>
-<td align="center" width="25%">🧭<br/><b>SOS routes</b><br/><sub>Nearest police → tourist</sub></td>
-</tr>
-</table>
-
-<details open>
-<summary><b>🗺️ Maps</b></summary>
-<br/>
-
-| Surface | Implementation |
-|---|---|
-| 🖥️ Admin & police dashboard | `@vis.gl/react-google-maps` following Google's **Maps Platform 101 React codelab**: `APIProvider` → `Map` → `AdvancedMarker`, **MarkerClusterer** for tourists and facilities, circle/polygon zones, GeoJSON data layers, info windows |
-| 🚨 SOS route | Incident page → *Nearest help* → **Show route**: Directions API driving route from the nearest police station / hospital to the tourist, with a one-click Google Maps navigation link |
-| 📱 Android app | `react-native-maps` with **`PROVIDER_GOOGLE`**: zones, nearby police & hospital pins, dashed route, *Navigate* opens the Google Maps app |
-| 🔁 Fallback | No key or a failed key → OpenStreetMap automatically, with the same features |
-
-🔑 Uses **your own restricted keys**, which are never committed. Setup and test checklist: [`docs/GOOGLE_MAPS_SETUP.md`](docs/GOOGLE_MAPS_SETUP.md)
-
-```env
-# dashboard/.env.local
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-referrer-restricted-key
-```
-
-</details>
-
-<details open>
-<summary><b>📊 Open datasets (<code>datasets/</code>)</b></summary>
-<br/>
-
-| Source | Licence | Used for |
-|---|---|---|
-| 🗺️ OpenStreetMap (Overpass) | ODbL | 366 police · 3,583 hospitals · 2,334 clinics · 63 fire stations · 1,258 pharmacies (60 double-mapped duplicates removed) · 283 attractions · 59 protected areas · 204 waterfalls/cliffs |
-| 🏛️ Karnataka State Police (via OpenCity) | Public Domain | District crime 2022 / 2024 / 2025, road accidents |
-| 🌧️ KSNDMC rainfall (via OpenCity) | Public Domain | Official district rainfall 2020–2025 |
-| ☁️ Open-Meteo ERA5 | CC BY 4.0 | 21,930 district-days of rain, heat and wind |
-| 🧭 geoBoundaries | ODbL | 30 Karnataka district polygons |
-
-**Findings** (full report: [`datasets/analysis/report.md`](datasets/analysis/report.md))
-- 📈 Registered crimes: **179,389 (2022) → 201,733 (2025), +12.5 %**
-- 📍 Median distance from a tourist attraction to the nearest police station: **2.1 km**; **76 attractions** are more than 15 km away
-- 🌧️ 2025: **11 districts** had rainfall ≥ 20 % above normal (Vijayapura +47 %)
-- 🧠 Explainable district risk index: crime 55 % · heavy rain 30 % · heat 15 % (no fabricated ML)
-
-Download → clean → analyse runs automatically in GitHub Actions (`.github/workflows/datasets.yml`). Every file is listed in [`datasets/dataset_manifest.csv`](datasets/dataset_manifest.csv).
-
-</details>
-
-<details>
-<summary><b>📈 Analytics, reports & monitoring</b></summary>
-<br/>
-
-| Feature | Where |
-|---|---|
-| 🔥 SOS & restricted-entry **hotspots** (500 m grid; says "not enough data" below 5 events) | Analytics page · Live map → *SOS hotspots* |
-| ⏱️ **Response times**: median and p90 to acknowledge and resolve, by type and officer | Analytics page · Police workspace |
-| 🛡️ **Zone activity**: entries, unique tourists, dwell time, inside now | Analytics page |
-| 🧭 **Tourist movement**: distance, stationary time, route deviation | Analytics page (admin) |
-| 🌦️ **Weather risk** (Open-Meteo) | Tourist home screen · Incident page |
-| 📄 **CSV reports**: incidents, zones, tourists (no contact details, every export audit-logged) | Analytics → Reports |
-| 💓 **Monitoring**: `/health`, `/ready`, `/api/v1/system/metrics`, scheduled **Uptime** workflow | Set the repo variable `SAFETRAIL_API_URL` |
-| 💾 **Backups**: `python -m app.scripts.backup_db` (SQLite copy or `pg_dump`) | backend |
-
-</details>
-
-<details>
-<summary><b>✅ Full CRUD</b></summary>
+<summary><b>✅ Full CRUD coverage</b></summary>
 <br/>
 
 | Resource | Create | Read | Update | Delete |
@@ -471,16 +423,15 @@ Download → clean → analyse runs automatically in GitHub Actions (`.github/wo
 
 </details>
 
-<details>
-<summary><b>📱 Expo Go: connecting the phone</b></summary>
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
 
-1. On the PC: `uvicorn app.main:app --host 0.0.0.0 --port 8000`
-2. In the app: **Welcome → Server connection** → type your PC's Wi-Fi IPv4 (e.g. `192.168.1.10`) → **Test connection** → **Save**
-3. The tourist's Gmail must first be added by an admin under **Dashboard → Tourist login access**
-4. Without email set up, the 6-digit code appears in the app in a yellow **Demo mode** box (`OTP_DEV_ECHO=true`)
+## 🔒 Security & Privacy
 
-</details>
+<table>
+<tr><td>✅ Consent before sharing</td><td>🔐 PBKDF2 password hashing</td><td>⛔ Lock after 5 failed logins</td></tr>
+<tr><td>🚪 Real logout & device sign-out</td><td>🚦 Rate limits on OTP, login, SOS</td><td>🕵️ Police see contacts only during SOS</td></tr>
+<tr><td>🧾 Full audit log (incl. report exports)</td><td>🗑️ 30-day location retention</td><td>🔑 No secrets or databases on GitHub</td></tr>
+</table>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
 
@@ -488,20 +439,19 @@ Download → clean → analyse runs automatically in GitHub Actions (`.github/wo
 
 ```
 📦 Tourist-Safety-monitoring-system
- ┣ 🐍 backend/        FastAPI API · services · migrations · tests
- ┣ 🖥️ dashboard/      Next.js admin + police dashboard
- ┣ 📱 mobile/         Expo Android tourist app
- ┣ 📊 datasets/       Open data: raw · processed · application_data · analysis
- ┣ 📚 docs/           Full documentation & reports
+ ┣ 🐍 backend/        FastAPI API · services · migrations · scripts · tests
+ ┣ 🖥️ dashboard/      Next.js admin + police dashboard (Google Maps)
+ ┣ 📱 mobile/         Expo Android tourist app (Google Maps)
+ ┣ 📊 datasets/       raw · processed · application_data · analysis · manifest
+ ┣ 📚 docs/           Documentation & reports
+ ┣ ⚙️ .github/        CI · dataset pipeline · uptime check
  ┣ ☁️ render.yaml     Free Render deployment
  ┣ 🐳 docker-compose.yml
  ┗ 📄 README.md
 ```
 
-## 📚 Documentation
-
 <details>
-<summary><b>Open all 18 documents</b></summary>
+<summary><b>📚 Documentation (18 files)</b></summary>
 <br/>
 
 | | Topic | File |
@@ -513,7 +463,9 @@ Download → clean → analyse runs automatically in GitHub Actions (`.github/wo
 | 🔐 | Authentication | `docs/AUTHENTICATION.md` |
 | 📍 | GPS & location | `docs/GPS_AND_LOCATION.md` |
 | 🛡️ | Geofencing | `docs/GEOFENCING.md` |
-| 🗂️ | Datasets | `docs/DATASET_DOCUMENTATION.md` |
+| 🗺️ | Google Maps setup | `docs/GOOGLE_MAPS_SETUP.md` |
+| 🗂️ | Datasets | `docs/DATASET_DOCUMENTATION.md` · `datasets/README.md` |
+| 📊 | Dataset analysis | `datasets/analysis/report.md` |
 | 🚨 | SOS workflow | `docs/SOS_WORKFLOW.md` |
 | 🧠 | AI intelligence | `docs/AI_INTELLIGENCE.md` |
 | 🔒 | Security audit | `docs/SECURITY_AUDIT.md` |
@@ -522,21 +474,20 @@ Download → clean → analyse runs automatically in GitHub Actions (`.github/wo
 | ⚙️ | Environment variables | `docs/ENVIRONMENT_VARIABLES.md` |
 | ⚠️ | Limitations | `docs/KNOWN_LIMITATIONS.md` |
 | 🏁 | Final report | `docs/FINAL_COMPLETION_REPORT.md` |
-| 🗺️ | Google Maps setup | `docs/GOOGLE_MAPS_SETUP.md` |
-| 📊 | Dataset analysis | `datasets/analysis/report.md` |
 
 </details>
 
 <details>
-<summary><b>⚠️ Known limitations</b></summary>
+<summary><b>⚠️ Honest limitations (~91 % complete)</b></summary>
 <br/>
 
-- 🗄️ The real database (`tourist_safety.db`) is private and not on GitHub
-- 🧪 209 zones = 200 synthetic test zones (`DEMO-KA`) + 9 college demo zones
-- 📏 College zones are stored at 200 m (the 50 m change is not applied yet)
-- 📱 Background location and push need the APK; they don't work in Expo Go
-- 🧠 The AI is rule-based; there isn't enough data to train an ML model
-- 💬 SMS alerts are not implemented
+- 🗺️ Google Maps rendering needs **your own API key** to see it live
+- 📱 GPS, background tracking and push need testing on a **real phone / APK**
+- 🗄️ The real tourist database is private and not on GitHub
+- 🧪 209 zones = 200 synthetic test zones + 9 college demo zones (200 m; 50 m not applied)
+- 📄 NCRB / tourism statistics exist only as PDFs, so they were not downloaded
+- 🧠 No ML model trained, because there is no labelled incident data
+- 💬 SMS alerts not implemented · PostGIS not required at this data size
 
 </details>
 
@@ -558,6 +509,8 @@ Download → clean → analyse runs automatically in GitHub Actions (`.github/wo
 **🎓 Guide:** _Guide Name_ &nbsp;·&nbsp; **🏫 College:** _College Name_ &nbsp;·&nbsp; **📅 Year:** 2026
 
 <br/>
+
+**Data credits:** © OpenStreetMap contributors · Karnataka State Police & KSNDMC via OpenCity · Open-Meteo.com · geoBoundaries
 
 ⭐ **If you like this project, give it a star!** ⭐
 
