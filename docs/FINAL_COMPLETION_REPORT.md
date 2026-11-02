@@ -81,3 +81,29 @@ Measured against the 28 Definition-of-Done items: **20 complete, 6 partial, 2 bl
 | 🟡 Partial | Database integrity (verified on fixture, real file not available) · 6 tourists preserved (by design, not re-verified on the real file) · 209 zones / 9 SVIT zones accounted for (from repo evidence) · real smartphone GPS (implemented, not device-tested here) · E2E tests (API level, no device/browser automation) · notifications (in-app live; email/push await credentials) |
 | ⛔ Blocked | Live email/push delivery (credentials) · production deployment & APK (accounts/approval) |
 | ❌ Not implemented | SMS provider · trained ML model (insufficient data, by design) · Redis multi-instance scaling |
+
+---
+
+## v3 addendum — GIS, open datasets, Google Maps, CRUD (2026-11-02)
+
+| Requirement | Status | Evidence |
+|---|---|---|
+| Open datasets downloaded, raw preserved, manifest | ✅ | `datasets/` — 42/42 sources, `dataset_manifest.csv` with URL, licence, date, records |
+| OSM police / hospitals / fire / tourism / protected areas | ✅ | 7,664 facilities, 283 attractions, 59 protected areas, 204 hazards |
+| Official crime statistics | ✅ (KSP) / ⛔ (NCRB) | KSP district tables 2022/2024/2025; NCRB not machine-readable |
+| Tourism statistics | ⛔ | Ministry of Tourism data published only as PDF; OSM POIs used instead |
+| Weather (Open-Meteo + official) | ✅ | ERA5 21,930 district-days; KSNDMC 2020–2025 |
+| District boundaries | ✅ | geoBoundaries 2021 (30 districts; Vijayanagara inside Ballari) |
+| GeoJSON + KML layers | ✅ | `datasets/application_data/*.geojson`, `protected_areas.kml`; zone import/export |
+| Synthetic vs verified zones separated | ✅ | 200 DEMO-KA in `synthetic_test_data/`; OSM zones import as inactive PENDING_REVIEW |
+| Nearby facility search, SOS routes | ✅ | `/api/v1/facilities/nearby`, `/me/nearby-help`, `/sos/{id}/nearest-help`, Directions route in dashboard |
+| Google Maps web (codelab-based) | ✅ code / 🟡 visual | `components/google/*`; builds in CI; needs your key to see tiles |
+| Google Maps Android | ✅ code / 🟡 device | `PROVIDER_GOOGLE`, `app.config.ts` key injection; Expo Go needs no key |
+| Analysis & visualisations | ✅ | `datasets/analysis/report.md` + 8 charts + 7 CSV tables; dashboard Open datasets panel |
+| ML | Not done, on purpose | No labelled outcomes or geocoded incidents; explainable index used |
+| PostGIS | ❌ | Spatial queries use bounding-box prefilter + Haversine / ray casting (works on SQLite and Postgres); PostGIS not required at this data size |
+| Full CRUD | ✅ | Tourists, access, staff, zones, facilities (see API_DOCUMENTATION.md) |
+| Expo Go connection | ✅ | Runtime server URL + connection test screen |
+| Animated UI | ✅ | Staggered entry, count-up KPIs, shimmer skeletons, page fades, hover lift, radar logo, SOS pulse; respects reduced-motion |
+
+**Updated estimate:** about 88 % of measurable requirements are verified in CI. The remaining items need your Google keys, a phone, the private `tourist_safety.db`, or PostGIS.

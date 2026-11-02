@@ -48,3 +48,17 @@ These numbers do not include network latency or PostgreSQL and do not prove conc
 
 ## Not automated
 Device/UI automation (Detox/Playwright), push delivery to a real phone, email delivery to a real inbox, and background location on a device. These require credentials or hardware and are listed in [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md).
+
+## v3 update — maps, datasets, facilities, CRUD (2026-11-02)
+GitHub Actions, branch `feature/gis-maps-datasets`, commit `69e7df2`:
+
+| Suite | Result |
+|---|---|
+| Backend `pytest` | ✅ **92 passed, 1 skipped**, 0 failed |
+| Dashboard lint · `tsc` · vitest (10 tests) · `next build` | ✅ pass (Google Maps components compile and build) |
+| Mobile `tsc` · vitest (10 tests) | ✅ pass (`PROVIDER_GOOGLE` map, nearby help, server screen) |
+| Datasets workflow | ✅ 42/42 sources downloaded, 37/37 processing outputs OK, analysis generated |
+
+New backend tests (`tests/test_geo_api.py`): OSM facility import idempotency, nearest police/hospital search and type filters, facility CRUD and permissions, SOS nearest-help, weather risk rules and offline behaviour, dataset layers and manifest, tourist update/delete safeguards, access and staff delete, zone category/evidence, open-data → pending-review zone import, and **one integration test against the real committed dataset** (more than 5,000 facilities imported, a police station within 3 km of MG Road Bengaluru, 30 district polygons, crime years 2022/2024/2025).
+
+**Not tested here (need your keys or a phone):** Google tiles, Advanced Markers, Directions routes and Android Google rendering. CI proves they compile and build; follow the checklist in [GOOGLE_MAPS_SETUP.md](GOOGLE_MAPS_SETUP.md).
