@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T02:29:53+00:00",
+  "generated_at": "2026-11-02T03:37:55+00:00",
   "limitations": [
     "OSM facility coverage is community-mapped and uneven; low counts can mean missing data, not missing facilities.",
     "ERA5 reanalysis at one centroid per district smooths local extremes; it is not station data.",
@@ -9,11 +9,11 @@
   ],
   "facilities": {
     "facility_counts": {
-      "POLICE": 374,
-      "HOSPITAL": 3610,
-      "CLINIC": 2345,
+      "POLICE": 366,
+      "HOSPITAL": 3583,
+      "CLINIC": 2334,
       "FIRE_STATION": 63,
-      "PHARMACY": 1272
+      "PHARMACY": 1258
     },
     "attractions": 283,
     "attraction_to_police_km": {
@@ -173,11 +173,11 @@
       },
       {
         "district": "Bangalore",
-        "police": 142,
-        "hospitals": 2166,
+        "police": 135,
+        "hospitals": 2146,
         "fire_stations": 22,
         "area_km2": 2060.0,
-        "police_per_1000km2": 68.93
+        "police_per_1000km2": 65.53
       },
       {
         "district": "Bangalore Rural",
@@ -198,7 +198,7 @@
       {
         "district": "Bellary",
         "police": 16,
-        "hospitals": 167,
+        "hospitals": 166,
         "fire_stations": 4,
         "area_km2": 8414.3,
         "police_per_1000km2": 1.9
@@ -237,16 +237,16 @@
       },
       {
         "district": "Chikmagalur",
-        "police": 9,
+        "police": 8,
         "hospitals": 100,
         "fire_stations": 0,
         "area_km2": 6954.8,
-        "police_per_1000km2": 1.29
+        "police_per_1000km2": 1.15
       },
       {
         "district": "Chitradurga",
         "police": 3,
-        "hospitals": 95,
+        "hospitals": 94,
         "fire_stations": 1,
         "area_km2": 8499.5,
         "police_per_1000km2": 0.35
@@ -254,7 +254,7 @@
       {
         "district": "Dakshina Kannada",
         "police": 7,
-        "hospitals": 190,
+        "hospitals": 186,
         "fire_stations": 4,
         "area_km2": 5252.4,
         "police_per_1000km2": 1.33
@@ -262,7 +262,7 @@
       {
         "district": "Davanagere",
         "police": 7,
-        "hospitals": 142,
+        "hospitals": 141,
         "fire_stations": 2,
         "area_km2": 5982.8,
         "police_per_1000km2": 1.17
@@ -270,7 +270,7 @@
       {
         "district": "Dharwad",
         "police": 7,
-        "hospitals": 176,
+        "hospitals": 174,
         "fire_stations": 1,
         "area_km2": 4251.7,
         "police_per_1000km2": 1.65
@@ -294,7 +294,7 @@
       {
         "district": "Hassan",
         "police": 11,
-        "hospitals": 125,
+        "hospitals": 123,
         "fire_stations": 3,
         "area_km2": 6823.5,
         "police_per_1000km2": 1.61
@@ -318,7 +318,7 @@
       {
         "district": "Kolar",
         "police": 7,
-        "hospitals": 99,
+        "hospitals": 98,
         "fire_stations": 1,
         "area_km2": 4128.3,
         "police_per_1000km2": 1.7
@@ -334,7 +334,7 @@
       {
         "district": "Mandya",
         "police": 13,
-        "hospitals": 115,
+        "hospitals": 114,
         "fire_stations": 2,
         "area_km2": 4935.6,
         "police_per_1000km2": 2.63
@@ -342,7 +342,7 @@
       {
         "district": "Mysore",
         "police": 28,
-        "hospitals": 335,
+        "hospitals": 332,
         "fire_stations": 3,
         "area_km2": 6466.9,
         "police_per_1000km2": 4.33
@@ -350,7 +350,7 @@
       {
         "district": "Raichur",
         "police": 2,
-        "hospitals": 113,
+        "hospitals": 112,
         "fire_stations": 0,
         "area_km2": 8499.5,
         "police_per_1000km2": 0.24
@@ -390,7 +390,7 @@
       {
         "district": "Uttara Kannada",
         "police": 11,
-        "hospitals": 115,
+        "hospitals": 114,
         "fire_stations": 0,
         "area_km2": 10428.7,
         "police_per_1000km2": 1.05
@@ -1563,7 +1563,7 @@
       "risk_level": "MEDIUM",
       "crime_total": 56472.0,
       "heavy_rain_days": 0,
-      "police_stations": 142,
+      "police_stations": 135,
       "kind": "EXPLAINABLE_INDEX"
     },
     {
@@ -1698,7 +1698,7 @@
       "risk_level": "MEDIUM",
       "crime_total": 4210.0,
       "heavy_rain_days": 1,
-      "police_stations": 9,
+      "police_stations": 8,
       "kind": "EXPLAINABLE_INDEX"
     },
     {

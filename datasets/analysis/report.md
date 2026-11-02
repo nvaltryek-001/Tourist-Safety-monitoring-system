@@ -1,6 +1,6 @@
 # SafeTrail dataset analysis
 
-Generated 2026-11-02T02:29:53+00:00 by `datasets/scripts/analyze.py` from the files in `datasets/`.
+Generated 2026-11-02T03:37:55+00:00 by `datasets/scripts/analyze.py` from the files in `datasets/`.
 
 ## 1. District-wise crime (Karnataka State Police)
 
@@ -11,7 +11,7 @@ Registered crimes (IPC/BNS + SLL) across the mapped districts: 179,389 in 2022 a
 
 ## 2. Emergency facility coverage (OpenStreetMap)
 
-Facilities mapped: {'POLICE': 374, 'HOSPITAL': 3610, 'CLINIC': 2345, 'FIRE_STATION': 63, 'PHARMACY': 1272}. Named tourist attractions: 283.
+Facilities mapped: {'POLICE': 366, 'HOSPITAL': 3583, 'CLINIC': 2334, 'FIRE_STATION': 63, 'PHARMACY': 1258}. Named tourist attractions: 283.
 Median distance from an attraction to the nearest police station: **2.12 km** (90th percentile 26.0 km); to a hospital/clinic: **1.89 km**.
 76 attractions are more than 15 km from any mapped police station (see `attractions_far_from_police.csv`).
 
@@ -41,7 +41,7 @@ Weighted mean of percentile-ranked components: registered crimes 55 %, heavy-rai
 | Gulbarga | 76.6 | HIGH | 6448.0 | 1 | 5 |
 | Shimoga | 71.6 | HIGH | 6995.0 | 2 | 7 |
 | Belgaum | 70.1 | HIGH | 8901.0 | 0 | 22 |
-| Bangalore | 66.4 | MEDIUM | 56472.0 | 0 | 142 |
+| Bangalore | 66.4 | MEDIUM | 56472.0 | 0 | 135 |
 | Bellary | 65.9 | MEDIUM | 7133.0 | 0 | 16 |
 | Bijapur | 65.9 | MEDIUM | 5054.0 | 1 | 2 |
 | Mysore | 64.5 | MEDIUM | 9128.0 | 0 | 28 |
