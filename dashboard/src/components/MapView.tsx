@@ -1,11 +1,13 @@
 "use client";
 
-import { Circle, CircleMarker, MapContainer, Polygon, Popup, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
+import { Circle, CircleMarker, GeoJSON as GeoJSONLayer, MapContainer, Polygon, Polyline, Popup, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
 import { useEffect, useMemo, useState } from "react";
+import type { FeatureCollection } from "geojson";
 import type { LatLngExpression } from "leaflet";
 import { clusterPoints } from "@/lib/cluster";
 import { coords, humanize, statusTone, timeAgo } from "@/lib/format";
-import type { SOSAlert, Tourist, Zone } from "@/lib/types";
+import { FACILITY_STYLE, googleDirectionsUrl } from "@/lib/maps";
+import type { Facility, RouteRequest, SOSAlert, Tourist, Zone } from "@/lib/types";
 import { TONE_HEX } from "./ui";
 
 export interface MapViewProps {
@@ -21,6 +23,16 @@ export interface MapViewProps {
   onAlertClick?: (a: SOSAlert) => void;
   onMapClick?: (lat: number, lon: number) => void;
   draft?: { latitude: number; longitude: number; radius_meters: number } | null;
+  facilities?: Facility[];
+  route?: RouteRequest | null;
+  layers?: MapLayer[];
+}
+
+export interface MapLayer {
+  id: string;
+  label: string;
+  color: string;
+  data: FeatureCollection | null;
 }
 
 export const ZONE_COLORS: Record<string, string> = {
@@ -70,6 +82,9 @@ export default function MapView({
   onAlertClick,
   onMapClick,
   draft,
+  facilities = [],
+  route,
+  layers = [],
 }: MapViewProps) {
   const [currentZoom, setCurrentZoom] = useState(zoom);
   const located = tourists.filter((t) => t.latitude != null && t.longitude != null);
@@ -90,6 +105,29 @@ export default function MapView({
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <ZoomWatcher onZoom={setCurrentZoom} onClick={onMapClick} />
+        {layers.map((layer) =>
+          layer.data ? (
+            <GeoJSONLayer
+              key={`${layer.id}-${layer.data.features.length}`}
+              data={layer.data}
+              style={{ color: layer.color, weight: 1, fillOpacity: 0.1 }}
+              onEachFeature={(f, l) => l.bindPopup(`<b>${String((f.properties as { name?: string })?.name ?? layer.label)}</b><br/>${layer.label}`)}
+            />
+          ) : null,
+        )}
+        {facilities.map((f) => (
+          <CircleMarker key={`f${f.id}`} center={[f.latitude, f.longitude]} radius={6}
+            pathOptions={{ color: "#fff", fillColor: FACILITY_STYLE[f.facility_type]?.color ?? "#1d4ed8", fillOpacity: 1, weight: 1.5 }}>
+            <Tooltip direction="top">{FACILITY_STYLE[f.facility_type]?.label}: {f.name}{f.phone ? ` · ${f.phone}` : ""}</Tooltip>
+          </CircleMarker>
+        ))}
+        {route && (
+          <Polyline positions={[route.from, route.to]} pathOptions={{ color: "#dc2626", weight: 4, dashArray: "8 8" }}>
+            <Popup>
+              <a href={googleDirectionsUrl(route.to, route.from)} target="_blank" rel="noreferrer">{route.label ?? "Route"} — open in Google Maps</a>
+            </Popup>
+          </Polyline>
+        )}
         <FocusOn focus={focus} />
 
         {zones.map((z) =>

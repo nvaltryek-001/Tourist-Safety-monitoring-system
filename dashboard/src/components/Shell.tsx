@@ -9,6 +9,7 @@ import {
   KeyRound,
   LayoutDashboard,
   LogOut,
+  Hospital,
   Map,
   Menu,
   Moon,
@@ -47,6 +48,7 @@ const NAV: { section: string; items: NavItem[] }[] = [
       { href: "/map", label: "Live map", icon: Map, roles: ALL },
       { href: "/incidents", label: "SOS command centre", icon: Siren, roles: ALL },
       { href: "/tourists", label: "Tourists", icon: Users, roles: ALL },
+      { href: "/facilities", label: "Emergency facilities", icon: Hospital, roles: ALL },
       { href: "/notifications", label: "Notifications", icon: Bell, roles: ALL },
     ],
   },
@@ -121,8 +123,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const nav = (
     <nav className="flex h-full flex-col">
       <div className="flex items-center gap-2.5 px-5 py-5">
-        <div className="flex h-8 w-8 items-center justify-center rounded bg-brand-600 text-white">
-          <ShieldAlert className="h-4 w-4" />
+        <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded bg-brand-600 text-white">
+          <span className="radar" />
+          <ShieldAlert className="relative h-4 w-4" />
         </div>
         <div className="leading-tight">
           <p className="text-sm font-semibold text-white">SafeTrail</p>
@@ -144,8 +147,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
                     key={item.href}
                     href={item.href}
                     className={cx(
-                      "flex items-center gap-2.5 rounded px-2.5 py-2 text-[13px] transition-colors",
-                      active ? "bg-white/10 text-white" : "text-slate-300 hover:bg-white/5 hover:text-white",
+                      "relative flex items-center gap-2.5 rounded px-2.5 py-2 text-[13px] transition-all duration-200",
+                      active ? "bg-white/10 text-white shadow-[inset_3px_0_0_#14917c]" : "text-slate-300 hover:translate-x-0.5 hover:bg-white/5 hover:text-white",
                     )}
                   >
                     <Icon className="h-4 w-4 shrink-0" />
@@ -209,7 +212,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <span className="text-sm font-semibold">SafeTrail</span>
         {isAdminRole(role) ? null : <span className="ml-auto text-xs muted">Officer</span>}
       </div>
-      <main className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">{children}</main>
+      <main key={pathname} className="animate-fade mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">{children}</main>
     </div>
   );
 }

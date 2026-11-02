@@ -48,7 +48,7 @@ export default function OverviewPage() {
           <ErrorState message={overview.error} onRetry={overview.reload} />
         </Panel>
       ) : (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
+        <div className="stagger grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
           <Stat label="Registered tourists" value={k?.registered_tourists ?? "–"} />
           <Stat label="Active now" value={k?.active_tourists ?? "–"} hint={`updated in last ${overview.data?.stale_after_minutes ?? 15} min`} />
           <Stat label="Need attention" value={k?.tourists_requiring_attention ?? "–"} tone={k?.tourists_requiring_attention ? "caution" : undefined} />

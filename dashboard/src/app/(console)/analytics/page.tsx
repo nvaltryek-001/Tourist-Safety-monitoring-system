@@ -33,7 +33,7 @@ export default function AnalyticsPage() {
       />
       {trends.loading ? <SkeletonRows rows={6} /> : trends.error || !t ? <Panel><ErrorState message={trends.error ?? "Unavailable"} onRetry={trends.reload} /></Panel> : (
         <>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          <div className="stagger grid grid-cols-2 gap-3 md:grid-cols-4">
             <Stat label="SOS alerts (all time)" value={t.total} />
             <Stat label={`SOS in last ${days} days`} value={t.daily.reduce((n, d) => n + d.count, 0)} />
             <Stat label="Median time to acknowledge" value={t.median_ack_minutes != null ? `${t.median_ack_minutes} min` : "—"} hint={`${t.acknowledged_count} acknowledged`} />

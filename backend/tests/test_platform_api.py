@@ -108,7 +108,7 @@ def test_migration_upgrades_v1_database_without_losing_rows(tmp_path):
 
     engine = create_engine(f"sqlite:///{path}")
     report = run_migrations(engine)
-    assert report["from_version"] == 1 and report["to_version"] == 2
+    assert report["from_version"] == 1 and report["to_version"] == 3
     assert report["protected_counts_after"] == {"tourists": 6, "safety_zones": 209, "sos_alerts": 5, "tourist_access": 0}
     assert report["backup_file"] and "safety_zones.risk_level" in report["added_columns"]
     columns = {c["name"] for c in inspect(engine).get_columns("sos_alerts")}

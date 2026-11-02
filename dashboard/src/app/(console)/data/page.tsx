@@ -71,7 +71,7 @@ export default function DataPage() {
       <PageHeader title="Dataset management" subtitle="Read-only integrity audit of the live database, plus validated GeoJSON/KML zone import. No personal data is shown." />
       {audit.loading ? <SkeletonRows rows={6} /> : audit.error || !audit.data || !z ? <Panel><ErrorState message={audit.error ?? "Unavailable"} onRetry={audit.reload} /></Panel> : (
         <>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-6">
+          <div className="stagger grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-6">
             <Stat label="Tourists" value={audit.data.tourists.total} hint={`${audit.data.tourists.with_login_access} with Gmail login`} />
             <Stat label="Safety zones" value={z.total_zones} hint={`${z.active_zones} active`} />
             <Stat label="Synthetic zones" value={z.synthetic_zones} hint="DEMO-KA test data" />

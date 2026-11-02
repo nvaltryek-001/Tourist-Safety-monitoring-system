@@ -72,6 +72,9 @@ class SafetyZone(Base):
     verification_status = Column(String(40), nullable=True)
     created_at = Column(DateTime(timezone=True), nullable=True, default=utc_now)
     updated_at = Column(DateTime(timezone=True), nullable=True, default=utc_now, onupdate=utc_now)
+    # added in schema v3
+    category = Column(String(40), nullable=True)  # e.g. PROTECTED_AREA, WATERFALL, DEMO, SYNTHETIC
+    evidence = Column(Text, nullable=True)
 
 
 class SOSAlert(Base):
@@ -239,3 +242,30 @@ class SchemaVersion(Base):
     version = Column(Integer, nullable=False)
     applied_at = Column(DateTime(timezone=True), nullable=False, default=utc_now)
     note = Column(String(255), nullable=True)
+
+
+# --------------------------------------------------------------- schema v3
+class EmergencyFacility(Base):
+    """Police stations, hospitals, fire stations, pharmacies (mostly from OpenStreetMap)."""
+
+    __tablename__ = "emergency_facilities"
+    __table_args__ = (
+        UniqueConstraint("source", "source_ref", name="uq_facility_source_ref"),
+        Index("ix_facilities_type_lat_lon", "facility_type", "latitude", "longitude"),
+    )
+
+    id = Column(Integer, primary_key=True)
+    facility_type = Column(String(30), nullable=False, index=True)  # POLICE / HOSPITAL / CLINIC / FIRE_STATION / PHARMACY
+    name = Column(String(200), nullable=False)
+    latitude = Column(Float, nullable=False)
+    longitude = Column(Float, nullable=False)
+    phone = Column(String(60), nullable=True)
+    address = Column(String(300), nullable=True)
+    district = Column(String(80), nullable=True)
+    opening_hours = Column(String(120), nullable=True)
+    emergency = Column(Boolean, nullable=True)
+    source = Column(String(40), nullable=False, default="admin")  # osm / admin
+    source_ref = Column(String(60), nullable=True)  # e.g. node/123
+    active = Column(Boolean, nullable=False, default=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, default=utc_now)
+    updated_at = Column(DateTime(timezone=True), nullable=True, default=utc_now, onupdate=utc_now)

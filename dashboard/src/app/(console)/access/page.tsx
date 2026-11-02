@@ -66,7 +66,19 @@ export default function AccessPage() {
                     <td className="td font-mono text-xs">{a.email}</td>
                     <td className="td">{a.tourist_name ?? <span className="text-orange-700">missing tourist</span>}<p className="text-xs muted">{a.tourist_code}</p></td>
                     <td className="td">{a.active ? <Badge tone="safe">Can sign in</Badge> : <Badge tone="neutral">Disabled</Badge>}</td>
-                    <td className="td text-right"><Button size="sm" onClick={() => toggle(a)}>{a.active ? "Disable" : "Enable"}</Button></td>
+                    <td className="td whitespace-nowrap text-right">
+                      <Button size="sm" onClick={() => toggle(a)}>{a.active ? "Disable" : "Enable"}</Button>
+                      <Button size="sm" variant="ghost" className="text-red-700" onClick={async () => {
+                        if (!window.confirm(`Remove Gmail login ${a.email}? The tourist record stays.`)) return;
+                        try {
+                          await api(`/api/v1/admin/tourist-access/${a.id}`, { method: "DELETE" });
+                          toast("Login access removed");
+                          void access.reload();
+                        } catch (err) {
+                          toast(err instanceof Error ? err.message : "Failed", "error");
+                        }
+                      }}>Remove</Button>
+                    </td>
                   </tr>
                 ))}
               </tbody>

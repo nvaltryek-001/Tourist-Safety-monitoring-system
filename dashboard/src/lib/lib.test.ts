@@ -47,3 +47,38 @@ describe("clustering", () => {
     expect(clusterPoints(pts, 17)).toHaveLength(100);
   });
 });
+
+import { boundsOf, geometryPaths, googleDirectionsUrl, hasGoogleMaps, zoneColor, zonesToFeatureCollection } from "./maps";
+
+describe("map helpers", () => {
+  it("detects whether a Google key is configured", () => {
+    expect(hasGoogleMaps("")).toBe(false);
+    expect(hasGoogleMaps("short")).toBe(false);
+    expect(hasGoogleMaps("AIza" + "x".repeat(35))).toBe(true);
+  });
+  it("converts GeoJSON rings to lat/lng paths including holes", () => {
+    const paths = geometryPaths({
+      type: "Polygon",
+      coordinates: [
+        [[77, 13], [77.1, 13], [77.1, 13.1], [77, 13]],
+        [[77.02, 13.02], [77.03, 13.02], [77.03, 13.03], [77.02, 13.02]],
+      ],
+    });
+    expect(paths).toHaveLength(2);
+    expect(paths[0][1]).toEqual({ lat: 13, lng: 77.1 });
+  });
+  it("builds feature collections only for polygon zones", () => {
+    const base = { latitude: 13, longitude: 77, radius_meters: 10, zone_type: "RESTRICTED", risk_level: null, description: null, active: true, source: null, verification_status: null, synthetic: false, college_demo: false, updated_at: null };
+    const fc = zonesToFeatureCollection([
+      { ...base, id: 1, name: "circle", geometry: null },
+      { ...base, id: 2, name: "poly", geometry: { type: "Polygon", coordinates: [[[77, 13], [77.1, 13], [77, 13.1], [77, 13]]] } },
+    ]);
+    expect(fc.features.map((f) => f.id)).toEqual([2]);
+  });
+  it("colours synthetic zones distinctly and builds directions links", () => {
+    expect(zoneColor({ zone_type: "RESTRICTED", synthetic: true })).toBe("#7c3aed");
+    expect(zoneColor({ zone_type: "RESTRICTED", synthetic: false })).toBe("#dc2626");
+    expect(googleDirectionsUrl([13.1, 77.5], [13, 77])).toContain("destination=13.1%2C77.5");
+    expect(boundsOf([{ lat: 1, lng: 2 }, { lat: -1, lng: 5 }])).toEqual({ south: -1, west: 2, north: 1, east: 5 });
+  });
+});

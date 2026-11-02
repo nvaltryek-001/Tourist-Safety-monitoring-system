@@ -1,7 +1,7 @@
 "use client";
 
 import { AlertTriangle, Inbox, Loader2, X } from "lucide-react";
-import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import { humanize, statusTone, type Tone } from "@/lib/format";
 
 export function cx(...parts: (string | false | null | undefined)[]): string {
@@ -82,7 +82,7 @@ export function Panel({ title, action, children, className, bodyClass }: {
   bodyClass?: string;
 }) {
   return (
-    <section className={cx("panel", className)}>
+    <section className={cx("panel animate-rise", className)}>
       {(title || action) && (
         <header className="flex items-center justify-between gap-3 border-b hairline px-4 py-3">
           <h2 className="text-sm font-semibold">{title}</h2>
@@ -96,7 +96,7 @@ export function Panel({ title, action, children, className, bodyClass }: {
 
 export function PageHeader({ title, subtitle, actions }: { title: string; subtitle?: string; actions?: React.ReactNode }) {
   return (
-    <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div className="animate-rise mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div>
         <h1 className="text-xl font-semibold tracking-tight">{title}</h1>
         {subtitle && <p className="mt-1 text-sm muted">{subtitle}</p>}
@@ -107,7 +107,7 @@ export function PageHeader({ title, subtitle, actions }: { title: string; subtit
 }
 
 export function Skeleton({ className }: { className?: string }) {
-  return <div className={cx("animate-pulse rounded bg-black/[.06] dark:bg-white/[.07]", className)} />;
+  return <div className={cx("shimmer rounded", className)} />;
 }
 
 export function SkeletonRows({ rows = 5 }: { rows?: number }) {
@@ -144,9 +144,37 @@ export function ErrorState({ message, onRetry }: { message: string; onRetry?: ()
   );
 }
 
+/** Animates numbers from 0 to their value (respects reduced motion). */
+export function CountUp({ value, duration = 700 }: { value: number; duration?: number }) {
+  const [shown, setShown] = useState(0);
+  const from = useRef(0);
+  useEffect(() => {
+    const reduce = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      setShown(value);
+      return;
+    }
+    const start = performance.now();
+    const origin = from.current;
+    let frame = 0;
+    const tick = (t: number) => {
+      const p = Math.min(1, (t - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setShown(Math.round(origin + (value - origin) * eased));
+      if (p < 1) frame = requestAnimationFrame(tick);
+      else from.current = value;
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [value, duration]);
+  return <>{shown.toLocaleString()}</>;
+}
+
 export function Stat({ label, value, hint, tone }: { label: string; value: React.ReactNode; hint?: string; tone?: Tone }) {
+  if (typeof value === "number") value = <CountUp value={value} />;
   return (
-    <div className="panel px-4 py-3.5">
+    <div className="panel lift relative overflow-hidden px-4 py-3.5">
+      {tone && <span className="absolute inset-x-0 top-0 h-0.5" style={{ background: TONE_HEX[tone] }} />}
       <p className="text-[11px] font-semibold uppercase tracking-wider muted">{label}</p>
       <p className="mt-1.5 text-2xl font-semibold tabular-nums" style={tone ? { color: TONE_HEX[tone] } : undefined}>
         {value}

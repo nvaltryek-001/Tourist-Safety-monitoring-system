@@ -210,6 +210,64 @@ def create_tourist(data: TouristCreate, principal: Principal = Depends(require_a
     return tourist_row(t, principal)
 
 
+class TouristPatch(BaseModel):
+    name: str | None = Field(default=None, min_length=1, max_length=100)
+    phone: str | None = Field(default=None, max_length=20)
+    enrollment_number: str | None = Field(default=None, max_length=50)
+    college_email: str | None = Field(default=None, max_length=255)
+    emergency_contact_name: str | None = Field(default=None, max_length=100)
+    emergency_contact_phone: str | None = Field(default=None, max_length=20)
+    emergency_contact_email: str | None = Field(default=None, max_length=255)
+
+
+@router.patch("/tourists/{tourist_code}")
+def update_tourist(tourist_code: str, data: TouristPatch, principal: Principal = Depends(require_admin),
+                   db: Session = Depends(get_db)):
+    t = db.query(Tourist).filter_by(tourist_code=tourist_code).first()
+    if t is None:
+        raise HTTPException(404, "Tourist not found")
+    changes = data.model_dump(exclude_unset=True)
+    for key, value in changes.items():
+        setattr(t, key, value if key == "name" else (value or None))
+    audit(db, "TOURIST_UPDATED", "STAFF", principal.subject, f"tourist:{tourist_code}", {"fields": sorted(changes)})
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(409, "Enrollment number or college email already belongs to another tourist")
+    return tourist_row(t, principal)
+
+
+@router.delete("/tourists/{tourist_code}")
+def delete_tourist(
+    tourist_code: str,
+    confirm: str = Query(..., description="Must equal the tourist code"),
+    principal: Principal = Depends(require_admin),
+    db: Session = Depends(get_db),
+):
+    """Super admin only. Removes the profile, login access, location history,
+    trips and geofence events. SOS records are kept for the incident audit trail."""
+    if principal.role != "SUPER_ADMIN":
+        raise HTTPException(403, "Only a super admin can delete tourist records")
+    if confirm != tourist_code:
+        raise HTTPException(409, "confirm must equal the tourist code")
+    t = db.query(Tourist).filter_by(tourist_code=tourist_code).first()
+    if t is None:
+        raise HTTPException(404, "Tourist not found")
+    if db.query(SOSAlert.id).filter(SOSAlert.tourist_code == tourist_code, SOSAlert.status.in_(ACTIVE_SOS_STATUSES)).first():
+        raise HTTPException(409, "Resolve the tourist's active SOS before deleting the record")
+    counts = {
+        "locations": db.query(LocationPoint).filter_by(tourist_code=tourist_code).delete(),
+        "geofence_events": db.query(GeofenceEvent).filter_by(tourist_code=tourist_code).delete(),
+        "trips": db.query(Trip).filter_by(tourist_code=tourist_code).delete(),
+        "access": db.query(TouristAccess).filter_by(tourist_code=tourist_code).delete(),
+    }
+    db.delete(t)
+    audit(db, "TOURIST_DELETED", "STAFF", principal.subject, f"tourist:{tourist_code}", counts)
+    db.commit()
+    return {"deleted": True, "tourist_code": tourist_code, **counts}
+
+
 # ------------------------------------------------------- tourist access list
 class AccessCreate(BaseModel):
     email: str = Field(min_length=6, max_length=255)
@@ -254,6 +312,17 @@ def create_access(data: AccessCreate, principal: Principal = Depends(require_adm
     audit(db, "TOURIST_ACCESS_GRANTED", "STAFF", principal.subject, f"tourist:{data.tourist_code}")
     db.commit()
     return {"id": row.id, "email": row.email, "tourist_code": row.tourist_code, "active": row.active}
+
+
+@router.delete("/tourist-access/{access_id}")
+def delete_access(access_id: int, principal: Principal = Depends(require_admin), db: Session = Depends(get_db)):
+    row = db.get(TouristAccess, access_id)
+    if row is None:
+        raise HTTPException(404, "Access record not found")
+    audit(db, "TOURIST_ACCESS_REMOVED", "STAFF", principal.subject, f"tourist:{row.tourist_code}")
+    db.delete(row)
+    db.commit()
+    return {"deleted": True, "id": access_id}
 
 
 @router.patch("/tourist-access/{access_id}")
@@ -344,6 +413,23 @@ def update_staff(staff_id: int, data: StaffUpdate, principal: Principal = Depend
     audit(db, "STAFF_UPDATED", "STAFF", principal.subject, f"staff:{user.id}", {"fields": sorted(data.model_dump(exclude_unset=True))})
     db.commit()
     return staff_dict(user)
+
+
+@router.delete("/staff/{staff_id}")
+def delete_staff(staff_id: int, principal: Principal = Depends(require_admin), db: Session = Depends(get_db)):
+    user = db.get(StaffUser, staff_id)
+    if user is None:
+        raise HTTPException(404, "Staff account not found")
+    if user.role in ADMIN_ROLES and principal.role != "SUPER_ADMIN":
+        raise HTTPException(403, "Only a super admin can delete admin accounts")
+    if user.id == principal.staff.id:
+        raise HTTPException(409, "You cannot delete your own account")
+    if db.query(SOSAlert.id).filter(SOSAlert.assigned_officer_id == user.id, SOSAlert.status.in_(ACTIVE_SOS_STATUSES)).first():
+        raise HTTPException(409, "Reassign this officer's active incidents first")
+    audit(db, "STAFF_DELETED", "STAFF", principal.subject, f"staff:{user.id}", {"role": user.role})
+    db.delete(user)
+    db.commit()
+    return {"deleted": True, "id": staff_id}
 
 
 @router.get("/officers")

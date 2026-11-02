@@ -85,6 +85,16 @@ export default function OfficersPage() {
                           <>
                             <Button size="sm" variant="ghost" onClick={() => patch(u, { active: !u.active }, u.active ? "Account disabled" : "Account enabled")}>{u.active ? "Disable" : "Enable"}</Button>
                             <Button size="sm" variant="ghost" onClick={() => setResetFor(u)}>Reset password</Button>
+                            <Button size="sm" variant="ghost" className="text-red-700" onClick={async () => {
+                              if (!window.confirm(`Delete the account of ${u.name}? This cannot be undone.`)) return;
+                              try {
+                                await api(`/api/v1/admin/staff/${u.id}`, { method: "DELETE" });
+                                toast("Account deleted");
+                                void staff.reload();
+                              } catch (e) {
+                                toast(e instanceof Error ? e.message : "Failed", "error");
+                              }
+                            }}>Delete</Button>
                           </>
                         )}
                       </td>

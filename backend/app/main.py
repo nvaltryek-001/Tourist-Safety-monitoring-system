@@ -18,7 +18,7 @@ from app.bootstrap import bootstrap_staff
 from app.core.config import get_settings
 from app.database import SessionLocal, engine
 from app.migrations import run_migrations
-from app.routers import admin, auth, incidents, legacy, me, operations, zones
+from app.routers import admin, auth, geo, incidents, legacy, me, operations, zones
 
 logging.basicConfig(
     level=os.getenv("LOG_LEVEL", "INFO"),
@@ -38,6 +38,13 @@ async def lifespan(app: FastAPI):
     db = SessionLocal()
     try:
         bootstrap_staff(db)
+        if os.getenv("AUTO_IMPORT_FACILITIES", "true").lower() == "true":
+            from app.models.models import EmergencyFacility
+            from app.services.facilities import import_geojson
+
+            if db.query(EmergencyFacility.id).first() is None:
+                result = import_geojson(db)
+                log.info("facility dataset import: %s", result)
     finally:
         db.close()
     yield
@@ -100,5 +107,5 @@ async def unhandled_error(request: Request, exc: Exception):
     return JSONResponse({"detail": "Internal server error"}, status_code=500)
 
 
-for module in (legacy, auth, me, zones, incidents, admin, operations):
+for module in (legacy, auth, me, zones, geo, incidents, admin, operations):
     app.include_router(module.router)

@@ -52,6 +52,8 @@ def zone_dict(z: SafetyZone) -> dict:
         "geometry": geometry,
         "source": z.source,
         "verification_status": z.verification_status,
+        "category": z.category,
+        "evidence": z.evidence,
         "synthetic": is_synthetic(z.name, z.description),
         "college_demo": is_college_demo(z.name),
         "updated_at": z.updated_at,
@@ -69,6 +71,8 @@ class ZoneIn(BaseModel):
     active: bool = True
     geometry: dict | None = None
     source: str | None = Field(default=None, max_length=255)
+    category: str | None = Field(default=None, max_length=40)
+    evidence: str | None = Field(default=None, max_length=2000)
 
 
 class ZonePatch(BaseModel):
@@ -83,6 +87,8 @@ class ZonePatch(BaseModel):
     geometry: dict | None = None
     source: str | None = Field(default=None, max_length=255)
     verification_status: str | None = Field(default=None, max_length=40)
+    category: str | None = Field(default=None, max_length=40)
+    evidence: str | None = Field(default=None, max_length=2000)
 
 
 class PointCheck(BaseModel):
@@ -177,7 +183,7 @@ def create_zone(data: ZoneIn, principal: Principal = Depends(require_admin), db:
         name=data.name, zone_type=data.zone_type.upper(),
         risk_level=data.risk_level.upper() if data.risk_level else None,
         description=data.description, active=data.active, source=data.source or "admin dashboard",
-        verification_status="ADMIN_CREATED",
+        verification_status="ADMIN_CREATED", category=data.category, evidence=data.evidence,
     )
     if data.geometry:
         _apply_geometry(zone, data.geometry)

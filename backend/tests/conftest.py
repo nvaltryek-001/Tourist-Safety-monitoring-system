@@ -25,6 +25,7 @@ os.environ["SEED_DEMO_STAFF"] = "true"
 os.environ["EMAIL_PROVIDER"] = "none"
 os.environ["EXPO_PUSH_ENABLED"] = "false"
 os.environ["ADMIN_ALERT_EMAIL"] = "alerts@example.invalid"
+os.environ["AUTO_IMPORT_FACILITIES"] = "false"
 
 ADMIN = ("admin@demo.local", "Admin@12345")
 SUPER = ("superadmin@demo.local", "SuperAdmin@123")

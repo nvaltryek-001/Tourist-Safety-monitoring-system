@@ -32,7 +32,7 @@ from app.database import Base
 
 log = logging.getLogger("app.migrations")
 
-CURRENT_SCHEMA_VERSION = 2
+CURRENT_SCHEMA_VERSION = 3
 PROTECTED_TABLES = ("tourists", "safety_zones", "sos_alerts", "tourist_access")
 EXTRA_INDEXES = {
     "ix_sos_alerts_idempotency_key": ("sos_alerts", "idempotency_key"),
@@ -140,7 +140,7 @@ def run_migrations(engine: Engine, backup: bool = True) -> dict:
         with engine.begin() as conn:
             conn.execute(
                 text("INSERT INTO schema_version (version, applied_at, note) VALUES (:v, :t, :n)"),
-                {"v": CURRENT_SCHEMA_VERSION, "t": datetime.now(timezone.utc), "n": "additive v2 upgrade"},
+                {"v": CURRENT_SCHEMA_VERSION, "t": datetime.now(timezone.utc), "n": f"additive upgrade to v{CURRENT_SCHEMA_VERSION}"},
             )
 
     return {

@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { api, readSession, wsUrl } from "./api";
+import { API_URL, api, readSession, wsUrl } from "./api";
+import type { FeatureCollection } from "geojson";
 import type { LiveEvent } from "./types";
 
 export interface Resource<T> {
@@ -98,4 +99,24 @@ export function useLiveEvents(onEvent: (event: LiveEvent) => void): LiveStatus {
   }, []);
 
   return status;
+}
+
+/** Loads a public open-data GeoJSON layer from the backend (null if not generated yet). */
+export function useLayer(name: string | null) {
+  const [data, setData] = useState<FeatureCollection | null>(null);
+  useEffect(() => {
+    if (!name) {
+      setData(null);
+      return;
+    }
+    let cancelled = false;
+    fetch(`${API_URL}/api/v1/datasets/layers/${name}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => !cancelled && setData(d))
+      .catch(() => !cancelled && setData(null));
+    return () => {
+      cancelled = true;
+    };
+  }, [name]);
+  return data;
 }

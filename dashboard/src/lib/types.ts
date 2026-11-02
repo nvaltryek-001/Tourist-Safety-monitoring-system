@@ -52,6 +52,8 @@ export interface Zone {
   geometry: GeoJSONGeometry | null;
   source: string | null;
   verification_status: string | null;
+  category?: string | null;
+  evidence?: string | null;
   synthetic: boolean;
   college_demo: boolean;
   updated_at: string | null;
@@ -147,4 +149,36 @@ export interface AppNotification {
 export interface LiveEvent {
   type: string;
   data: Record<string, unknown>;
+}
+
+export type FacilityType = "POLICE" | "HOSPITAL" | "CLINIC" | "FIRE_STATION" | "PHARMACY";
+
+export interface Facility {
+  id: number;
+  facility_type: FacilityType;
+  name: string;
+  latitude: number;
+  longitude: number;
+  phone: string | null;
+  address: string | null;
+  district: string | null;
+  opening_hours: string | null;
+  emergency: boolean | null;
+  source: string;
+  source_ref: string | null;
+  active: boolean;
+  distance_meters?: number;
+}
+
+export interface NearestHelp {
+  location: { latitude: number; longitude: number } | null;
+  police: Facility | null;
+  hospital: Facility | null;
+  fire_station: Facility | null;
+}
+
+export interface RouteRequest {
+  from: [number, number];
+  to: [number, number];
+  label?: string;
 }

@@ -6,8 +6,8 @@ import { LiveBadge } from "@/components/LiveBadge";
 import { MapLegend, SafetyMap } from "@/components/Map";
 import { Badge, Button, PageHeader, Panel, StatusBadge } from "@/components/ui";
 import { coords, humanize, metres, timeAgo } from "@/lib/format";
-import { useApi, useLiveEvents } from "@/lib/hooks";
-import type { Paged, SOSAlert, Tourist, Zone } from "@/lib/types";
+import { useApi, useLayer, useLiveEvents } from "@/lib/hooks";
+import type { Facility, Paged, SOSAlert, Tourist, Zone } from "@/lib/types";
 
 const FILTERS = ["ALL", "ACTIVE", "ATTENTION", "SOS"] as const;
 
@@ -20,6 +20,12 @@ export default function LiveMapPage() {
   const [selected, setSelected] = useState<Tourist | null>(null);
   const [focus, setFocus] = useState<[number, number] | null>(null);
   const [search, setSearch] = useState("");
+  const [showFacilities, setShowFacilities] = useState(true);
+  const [showProtected, setShowProtected] = useState(false);
+  const [showDistricts, setShowDistricts] = useState(false);
+  const facilities = useApi<Paged<Facility>>(showFacilities ? "/api/v1/facilities?type=POLICE,HOSPITAL,FIRE_STATION&page_size=2000" : null);
+  const protectedAreas = useLayer(showProtected ? "protected_areas" : null);
+  const districts = useLayer(showDistricts ? "districts" : null);
 
   const live = useLiveEvents((event) => {
     if (event.type === "location.updated") {
@@ -73,6 +79,12 @@ export default function LiveMapPage() {
               <option value="none">Hide zones</option>
             </select>
             <input className="field h-8 w-48 py-0 text-xs" placeholder="Search tourist…" value={search} onChange={(e) => setSearch(e.target.value)} />
+            <span className="mx-1 h-5 w-px bg-[var(--line)]" />
+            {([["Facilities", showFacilities, setShowFacilities], ["Protected areas", showProtected, setShowProtected], ["Districts", showDistricts, setShowDistricts]] as const).map(([label, on, set]) => (
+              <label key={label} className="inline-flex cursor-pointer items-center gap-1.5 text-xs">
+                <input type="checkbox" checked={on} onChange={(e) => set(e.target.checked)} /> {label}
+              </label>
+            ))}
           </div>
           <SafetyMap
             zones={visibleZones}
@@ -81,9 +93,14 @@ export default function LiveMapPage() {
             height="calc(100vh - 260px)"
             focus={focus}
             onTouristClick={(t) => setSelected(t)}
+            facilities={showFacilities ? facilities.data?.items ?? [] : []}
+            layers={[
+              { id: "protected", label: "Protected area (OSM)", color: "#16a34a", data: protectedAreas },
+              { id: "districts", label: "District boundary (geoBoundaries)", color: "#475569", data: districts },
+            ]}
           />
           <div className="mt-3">
-            <MapLegend />
+            <MapLegend facilities={showFacilities} />
           </div>
         </Panel>
 

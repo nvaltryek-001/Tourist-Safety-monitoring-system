@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --font-sans: "IBM Plex Sans";
+  --font-mono: "IBM Plex Mono";
   --bg: #f3f5f6;
   --panel: #ffffff;
   --line: #e2e7ea;
@@ -37,3 +40,25 @@ body { font-feature-settings: "tnum" 1; }
 .leaflet-popup-content { margin: 10px 12px; }
 @keyframes pulse-ring { 0% { transform: scale(.8); opacity: .9 } 100% { transform: scale(2.2); opacity: 0 } }
 .sos-pulse { animation: pulse-ring 1.6s ease-out infinite; }
+
+/* ------------------------------------------------------------ motion */
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+@keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.animate-rise { animation: rise .45s cubic-bezier(.2,.7,.2,1) both; }
+.animate-fade { animation: fade .35s ease both; }
+.stagger > * { animation: rise .5s cubic-bezier(.2,.7,.2,1) both; }
+.stagger > *:nth-child(1) { animation-delay: .02s } .stagger > *:nth-child(2) { animation-delay: .06s }
+.stagger > *:nth-child(3) { animation-delay: .10s } .stagger > *:nth-child(4) { animation-delay: .14s }
+.stagger > *:nth-child(5) { animation-delay: .18s } .stagger > *:nth-child(6) { animation-delay: .22s }
+.stagger > *:nth-child(7) { animation-delay: .26s } .stagger > *:nth-child(8) { animation-delay: .30s }
+.lift { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.lift:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -14px rgba(15,118,106,.45); border-color: rgba(20,145,124,.45); }
+.shimmer { background: linear-gradient(90deg, rgba(0,0,0,.04) 25%, rgba(0,0,0,.09) 37%, rgba(0,0,0,.04) 63%); background-size: 800px 100%; animation: shimmer 1.3s linear infinite; }
+.dark .shimmer { background: linear-gradient(90deg, rgba(255,255,255,.04) 25%, rgba(255,255,255,.09) 37%, rgba(255,255,255,.04) 63%); background-size: 800px 100%; }
+.radar { position: absolute; inset: -40%; background: conic-gradient(from 0deg, rgba(20,145,124,.0), rgba(20,145,124,.25) 12%, rgba(20,145,124,0) 22%); animation: sweep 6s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise, .animate-fade, .stagger > *, .shimmer, .radar, .sos-pulse { animation: none !important; }
+  .lift:hover { transform: none; }
+}

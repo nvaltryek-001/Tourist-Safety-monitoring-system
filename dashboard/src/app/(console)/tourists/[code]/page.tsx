@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { AdvisoryList } from "@/components/Advisories";
 import { SafetyMap } from "@/components/Map";
-import { Badge, Button, EmptyState, ErrorState, PageHeader, Panel, SkeletonRows, StatusBadge } from "@/components/ui";
+import { Badge, Button, EmptyState, ErrorState, Field, Modal, PageHeader, Panel, SkeletonRows, StatusBadge, useToast } from "@/components/ui";
+import { api } from "@/lib/api";
+import { isAdminRole, useAuth } from "@/lib/auth";
 import { coords, dateTime, humanize, metres, timeAgo } from "@/lib/format";
 import { useApi } from "@/lib/hooks";
 import type { Advisory, SOSAlert, Tourist } from "@/lib/types";
@@ -31,6 +33,42 @@ export default function TouristDetailPage() {
   const detail = useApi<Detail>(`/api/v1/admin/tourists/${encodeURIComponent(code)}`);
   const [hours, setHours] = useState<number | null>(null);
   const history = useApi<Point[]>(hours ? `/api/v1/admin/tourists/${encodeURIComponent(code)}/locations?hours=${hours}` : null);
+  const { session } = useAuth();
+  const router = useRouter();
+  const toast = useToast();
+  const [editing, setEditing] = useState<Record<string, string> | null>(null);
+  const [deleting, setDeleting] = useState(false);
+  const [confirm, setConfirm] = useState("");
+  const [busy, setBusy] = useState(false);
+  const admin = isAdminRole(session?.user.role);
+  const superAdmin = session?.user.role === "SUPER_ADMIN";
+
+  async function saveEdit() {
+    if (!editing) return;
+    setBusy(true);
+    try {
+      await api(`/api/v1/admin/tourists/${encodeURIComponent(code)}`, { method: "PATCH", body: editing });
+      toast("Tourist updated");
+      setEditing(null);
+      void detail.reload();
+    } catch (e) {
+      toast(e instanceof Error ? e.message : "Update failed", "error");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function remove() {
+    setBusy(true);
+    try {
+      await api(`/api/v1/admin/tourists/${encodeURIComponent(code)}?confirm=${encodeURIComponent(confirm)}`, { method: "DELETE" });
+      toast("Tourist record deleted");
+      router.replace("/tourists");
+    } catch (e) {
+      toast(e instanceof Error ? e.message : "Delete failed", "error");
+      setBusy(false);
+    }
+  }
 
   if (detail.loading) return <SkeletonRows rows={8} />;
   if (detail.error || !detail.data) return <Panel><ErrorState message={detail.error ?? "Not found"} onRetry={detail.reload} /></Panel>;
@@ -43,7 +81,19 @@ export default function TouristDetailPage() {
       <PageHeader
         title={t.name}
         subtitle={`${t.tourist_code} · registered ${dateTime(t.created_at)}`}
-        actions={<Link href="/tourists"><Button size="sm">← All tourists</Button></Link>}
+        actions={
+          <>
+            {admin && (
+              <Button size="sm" onClick={() => setEditing({
+                name: t.name, phone: t.phone ?? "", college_email: t.college_email ?? "", enrollment_number: t.enrollment_number ?? "",
+                emergency_contact_name: t.emergency_contact_name ?? "", emergency_contact_phone: t.emergency_contact_phone ?? "",
+                emergency_contact_email: t.emergency_contact_email ?? "",
+              })}>Edit</Button>
+            )}
+            {superAdmin && <Button size="sm" variant="danger" onClick={() => setDeleting(true)}>Delete</Button>}
+            <Link href="/tourists"><Button size="sm">← All tourists</Button></Link>
+          </>
+        }
       />
       <div className="grid gap-6 xl:grid-cols-[1fr_380px]">
         <div className="space-y-6">
@@ -138,6 +188,23 @@ export default function TouristDetailPage() {
           </Panel>
         </div>
       </div>
+      <Modal open={!!editing} title={`Edit ${t.name}`} onClose={() => setEditing(null)}
+        footer={<><Button onClick={() => setEditing(null)}>Cancel</Button><Button variant="primary" loading={busy} onClick={saveEdit}>Save</Button></>}>
+        {editing && (
+          <div className="grid gap-3 sm:grid-cols-2">
+            {Object.keys(editing).map((k) => (
+              <Field key={k} label={k.replace(/_/g, " ")}>
+                <input className="field" value={editing[k]} onChange={(e) => setEditing({ ...editing, [k]: e.target.value })} />
+              </Field>
+            ))}
+          </div>
+        )}
+      </Modal>
+      <Modal open={deleting} title="Delete tourist record" onClose={() => setDeleting(false)}
+        footer={<><Button onClick={() => setDeleting(false)}>Cancel</Button><Button variant="danger" disabled={confirm !== t.tourist_code} loading={busy} onClick={remove}>Delete permanently</Button></>}>
+        <p className="text-sm">This removes the profile, Gmail login access, location history, trips and geofence events. SOS records are kept for the incident audit trail. It cannot be undone.</p>
+        <Field label={`Type ${t.tourist_code} to confirm`}><input className="field mt-2" value={confirm} onChange={(e) => setConfirm(e.target.value)} /></Field>
+      </Modal>
     </>
   );
 }
