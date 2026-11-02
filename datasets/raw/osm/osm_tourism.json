@@ -1,0 +1,5594 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-02T02:00:17Z",
+    "timestamp_areas_base": "2026-11-02T00:10:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 339933894,
+  "lat": 15.3149215,
+  "lon": 76.4696198,
+  "tags": {
+    "historic": "ruins",
+    "name": "Guards' Barracks"
+  }
+},
+{
+  "type": "node",
+  "id": 339933896,
+  "lat": 15.3159090,
+  "lon": 76.4699225,
+  "tags": {
+    "historic": "ruins",
+    "name": "Underground Chamber"
+  }
+},
+{
+  "type": "node",
+  "id": 339934121,
+  "lat": 15.3174241,
+  "lon": 76.4697560,
+  "tags": {
+    "historic": "ruins",
+    "name": "Horse Stables",
+    "name:kn": "ಕುದುರೆ ಕೊಟ್ಟಿಗೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 340371584,
+  "lat": 15.3138568,
+  "lon": 76.4686333,
+  "tags": {
+    "historic": "ruins",
+    "name": "Bhojanasala",
+    "name:kn": "ಭೋಜನಶಾಲೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 447879872,
+  "lat": 13.4171621,
+  "lon": 77.6832185,
+  "tags": {
+    "historic": "ruins",
+    "name": "Old Temple"
+  }
+},
+{
+  "type": "node",
+  "id": 447879882,
+  "lat": 13.4193629,
+  "lon": 77.6899806,
+  "tags": {
+    "historic": "ruins",
+    "name": "Old Temple"
+  }
+},
+{
+  "type": "node",
+  "id": 574314073,
+  "lat": 13.0067586,
+  "lon": 77.5785939,
+  "tags": {
+    "artwork_type": "statue",
+    "historic": "monument",
+    "name": "Shivaji Statue",
+    "name:kn": "ಶಿವಾಜಿ ಪ್ರತಿಮೆ",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 665062640,
+  "lat": 12.9677758,
+  "lon": 77.5889307,
+  "tags": {
+    "historic": "monument",
+    "name": "Kempe Gowda Tower",
+    "name:etymology:wikidata": "Q6387049",
+    "name:kn": "ಕೆಂಪೇಗೌಡ ಸ್ಮಾರಕ",
+    "tourism": "attraction",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 666631038,
+  "lat": 12.4248759,
+  "lon": 76.6792700,
+  "tags": {
+    "historic": "monument",
+    "name": "Ranganatha Temple",
+    "name:kn": "ರಂಗನಾಥ ದೇವಾಲಯ"
+  }
+},
+{
+  "type": "node",
+  "id": 666715670,
+  "lat": 12.4251279,
+  "lon": 76.6879016,
+  "tags": {
+    "historic": "monument",
+    "name": "Tipu Sultan's Death Place Memorial"
+  }
+},
+{
+  "type": "node",
+  "id": 676875271,
+  "lat": 15.3245174,
+  "lon": 76.4878101,
+  "tags": {
+    "historic": "monument",
+    "name": "Raghunatha Temple",
+    "name:kn": "ರಘುನಾಥ ದೇವಸ್ಧಾನ",
+    "name:ru": "храм. закат 1 день"
+  }
+},
+{
+  "type": "node",
+  "id": 676875322,
+  "lat": 15.3409232,
+  "lon": 76.4742222,
+  "tags": {
+    "historic": "monument",
+    "name": "King's Balance",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 694501678,
+  "lat": 16.8253194,
+  "lon": 75.7122134,
+  "tags": {
+    "historic": "monument",
+    "name": "Jod Gumbad",
+    "name:kn": "ಜೋಡ ಗುಮ್ಮಟ್",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 694501718,
+  "lat": 16.8325262,
+  "lon": 75.7116530,
+  "tags": {
+    "historic": "monument",
+    "name": "Upli Buruj",
+    "name:kn": "ಉಪ್ಲಿ ಬುರುಜು",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 977472885,
+  "lat": 15.3419935,
+  "lon": 76.4724375,
+  "tags": {
+    "historic": "ruins",
+    "name": "Purandara Dassa Mandapa",
+    "name:kn": "ಪುರಂದರ ಮಂಟಪ"
+  }
+},
+{
+  "type": "node",
+  "id": 980400748,
+  "lat": 15.3337651,
+  "lon": 76.4668859,
+  "tags": {
+    "historic": "ruins",
+    "name": "Ranga Mantapa",
+    "name:kn": "ರಂಗ ಮಂಟಪ"
+  }
+},
+{
+  "type": "node",
+  "id": 1115063808,
+  "lat": 17.8842558,
+  "lon": 76.9482626,
+  "tags": {
+    "historic": "castle",
+    "name": "Kalyani Fort",
+    "name:kn": "ಕಲ್ಯಾಣಿ ಕೋಟೆ",
+    "wikidata": "Q4866285",
+    "wikipedia": "en:Basavakalyana Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 1153369645,
+  "lat": 12.3082788,
+  "lon": 76.6558257,
+  "tags": {
+    "historic": "monument",
+    "name": "Narasimharaja Wodeyar",
+    "name:etymology:wikidata": "Q15954240",
+    "name:kn": "ನರಸಿಂಹರಾಜ ಒಡೆಯರ್",
+    "name:ml": "നരസിംഹരാജ വോഡയാർ"
+  }
+},
+{
+  "type": "node",
+  "id": 1427080593,
+  "lat": 15.3169258,
+  "lon": 76.4670381,
+  "tags": {
+    "historic": "ruins",
+    "name": "Band Tower"
+  }
+},
+{
+  "type": "node",
+  "id": 1427115927,
+  "lat": 15.3105922,
+  "lon": 76.4489006,
+  "tags": {
+    "historic": "ruins",
+    "name": "Muslim Tombs"
+  }
+},
+{
+  "type": "node",
+  "id": 1454118462,
+  "lat": 14.8462755,
+  "lon": 74.1317832,
+  "tags": {
+    "historic": "castle",
+    "name": "Sadashivagad Fort",
+    "name:kn": "ಸದಾಶಿವಗಡ"
+  }
+},
+{
+  "type": "node",
+  "id": 1463785482,
+  "lat": 15.4316278,
+  "lon": 75.6271379,
+  "tags": {
+    "historic": "monument",
+    "name": "Kumaravyasa Stambha",
+    "name:kn": "ಕುಮಾರವ್ಯಾಸ ಸ್ತಂಭ"
+  }
+},
+{
+  "type": "node",
+  "id": 1473972559,
+  "lat": 12.9478784,
+  "lon": 77.5679115,
+  "tags": {
+    "historic": "monument",
+    "name": "Swami Vivekananda Statue",
+    "name:kn": "ಸ್ವಾಮಿ ವಿವೇಕಾನಂದ"
+  }
+},
+{
+  "type": "node",
+  "id": 1483709815,
+  "lat": 12.9693344,
+  "lon": 77.7501877,
+  "tags": {
+    "historic": "ruins",
+    "name": "Meer Sahib Store buidling"
+  }
+},
+{
+  "type": "node",
+  "id": 1575774542,
+  "lat": 15.3626106,
+  "lon": 75.1312652,
+  "tags": {
+    "historic": "monument",
+    "name": "Dr. B R Ambedkar Statue",
+    "name:kn": "ಅಂಬೇಡ್ಕರ್ ಪ್ರತಿಮ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 1575774546,
+  "lat": 15.3609933,
+  "lon": 75.1270404,
+  "tags": {
+    "historic": "monument",
+    "name": "Mahatma Gandhi Statue",
+    "name:kn": "ಮಹಾತ್ಮ ಗಾಂಧಿ ಪ್ರತಿಮೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 1589076219,
+  "lat": 12.9491363,
+  "lon": 77.5893864,
+  "tags": {
+    "historic": "monument",
+    "name": "Peninsular Gneiss National Monument",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 1610701156,
+  "lat": 12.9800397,
+  "lon": 77.5713661,
+  "tags": {
+    "historic": "monument",
+    "monument": "Statue",
+    "name": "Sangolli Rayanna",
+    "name:kn": "ಸಂಗೊಳ್ಳಿ ರಾಯಣ್ಣ",
+    "tourism": "attraction",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1617034268,
+  "lat": 16.6316780,
+  "lon": 76.6933104,
+  "tags": {
+    "historic": "castle",
+    "name": "Vanadurga Fort",
+    "name:kn": "ವನದುರ್ಗ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1632204429,
+  "lat": 13.2037564,
+  "lon": 75.0055660,
+  "tags": {
+    "historic": "monument",
+    "name": "Karkala Gomateshwara Statue",
+    "name:kn": "ಗೋಮ್ಮಟೇಶ್ವರ ಮೂತಿ೯"
+  }
+},
+{
+  "type": "node",
+  "id": 1668645383,
+  "lat": 15.3261710,
+  "lon": 76.4812125,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name": "Jain temple",
+    "name:kn": "ಜೈನ ದೇವಸ್ಥಾನ",
+    "religion": "jain"
+  }
+},
+{
+  "type": "node",
+  "id": 1668645410,
+  "lat": 15.3212062,
+  "lon": 76.4747200,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name": "Shaiva temple",
+    "name:kn": "ಶೈವ ದೇವಸ್ಥಾನ",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "node",
+  "id": 1668645414,
+  "lat": 15.3222196,
+  "lon": 76.4763451,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name": "Shringarada hebbagilu",
+    "name:kn": "ಶ್ರಿಂಗಾರದ ಹೆಬ್ಬಾಗಿಲು",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "node",
+  "id": 1668645418,
+  "lat": 15.3192644,
+  "lon": 76.4777160,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name": "Somavarada hebbagilu",
+    "name:kn": "ಸೋಮವಾರದ ಹೆಬ್ಬಾಗಿಲು",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "node",
+  "id": 1668645420,
+  "lat": 15.3194198,
+  "lon": 76.4718828,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name": "Vaishnava temple",
+    "name:en": "Ranga Temple",
+    "name:kn": "ವೈಷ್ಣವ ದೇವಸ್ಥಾನ",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "node",
+  "id": 1668645422,
+  "lat": 15.3209507,
+  "lon": 76.4743294,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name": "Vaishnava temple",
+    "name:kn": "ವೈಷ್ಣವ ದೇವಸ್ಥಾನ",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "node",
+  "id": 1673175512,
+  "lat": 15.3182313,
+  "lon": 76.4787840,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name": "Naddkall Durgamma Temple",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "node",
+  "id": 1676740758,
+  "lat": 15.3355299,
+  "lon": 76.4587842,
+  "tags": {
+    "historic": "ruins",
+    "name": "Parameshwara Temple",
+    "name:kn": "ಪರಮೇಶ್ವರ ದೇವಸ್ಥಾನ"
+  }
+},
+{
+  "type": "node",
+  "id": 1676740761,
+  "lat": 15.3354454,
+  "lon": 76.4587829,
+  "tags": {
+    "historic": "ruins",
+    "name": "Shankeshwara temple",
+    "name:kn": "ಶಂಕೇಶ್ವರ ದೇವಸ್ಥಾನ"
+  }
+},
+{
+  "type": "node",
+  "id": 1780091264,
+  "lat": 12.9621688,
+  "lon": 77.6362486,
+  "tags": {
+    "historic": "ruins",
+    "name": "Rock tablets"
+  }
+},
+{
+  "type": "node",
+  "id": 2072718460,
+  "lat": 15.3464472,
+  "lon": 76.3572949,
+  "tags": {
+    "historic": "monument",
+    "name": "Somanatakote Durgamma",
+    "name:kn": "ಸೋಮನಾಥ ಕೋಟೆ ದುರ್ಗಮ್ಮ"
+  }
+},
+{
+  "type": "node",
+  "id": 2206989167,
+  "lat": 15.9154643,
+  "lon": 75.8296604,
+  "tags": {
+    "historic": "castle",
+    "name": "Vakkandurga Fort",
+    "name:kn": "ವಕ್ಕಂದುರ್ಗ ಕೋಟೆ."
+  }
+},
+{
+  "type": "node",
+  "id": 2262896881,
+  "lat": 13.2110519,
+  "lon": 75.9944481,
+  "tags": {
+    "historic": "ruins",
+    "name": "Architectural remains of Nagareshvara temple complex"
+  }
+},
+{
+  "type": "node",
+  "id": 2315628056,
+  "lat": 15.4647934,
+  "lon": 75.0136719,
+  "tags": {
+    "historic": "monument",
+    "name": "Chatrapati Shivaji Circle",
+    "name:kn": "ಛತ್ರಪತಿ ಶಿವಾಜಿ ವೃತ್ತ"
+  }
+},
+{
+  "type": "node",
+  "id": 2429395318,
+  "lat": 15.2824581,
+  "lon": 76.5270831,
+  "tags": {
+    "historic": "monument",
+    "name": "Temple",
+    "name:kn": "ದೇವಸ್ಥಾನ"
+  }
+},
+{
+  "type": "node",
+  "id": 2481012812,
+  "lat": 14.2201451,
+  "lon": 74.7994256,
+  "tags": {
+    "historic": "monument",
+    "name": "Mahatma Gandhi Statue",
+    "name:kn": "ಮಹಾತ್ಮ ಗಾಂಧಿ ಪ್ರತಿಮ"
+  }
+},
+{
+  "type": "node",
+  "id": 2514790709,
+  "lat": 16.1506350,
+  "lon": 77.3563071,
+  "tags": {
+    "historic": "castle",
+    "name": "Maliyabad Fort",
+    "name:kn": "ಮಲಿಯಬಾದ್ ಕೊಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2619352530,
+  "lat": 13.0273698,
+  "lon": 75.2958407,
+  "tags": {
+    "historic": "castle",
+    "name": "Jamalabad Fort",
+    "name:kn": "ಜಮಲಾಬಾದ್ ಕೋಟೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 2661160883,
+  "lat": 16.0509244,
+  "lon": 75.7789386,
+  "tags": {
+    "historic": "castle",
+    "name": "Guledagudda Fort",
+    "name:kn": "ಗುಲೆದಗುದ್ದ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2764725516,
+  "lat": 15.9364133,
+  "lon": 76.4609684,
+  "tags": {
+    "historic": "ruins",
+    "name": "Rangapura Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 2805656880,
+  "lat": 15.9698505,
+  "lon": 75.3812412,
+  "tags": {
+    "historic": "castle",
+    "name": "Mudakavi Fort",
+    "name:kn": "ಮುದಕವಿ ಕೋಟೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 2905324761,
+  "lat": 14.8332103,
+  "lon": 76.6210864,
+  "tags": {
+    "historic": "castle",
+    "name": "Gudekote",
+    "name:kn": "ಗುಡೇಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2910306405,
+  "lat": 13.0124266,
+  "lon": 77.5824560,
+  "tags": {
+    "historic": "monument",
+    "name": "Kempegowda Tower",
+    "name:kn": "ಕೆಂಪೇಗೌಡ ಗೋಪುರ"
+  }
+},
+{
+  "type": "node",
+  "id": 2980669591,
+  "lat": 14.5518356,
+  "lon": 76.2860215,
+  "tags": {
+    "historic": "castle",
+    "name": "Kanakuppe Fort",
+    "name:kn": "ಕಣಕುಪ್ಪೆ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3006342920,
+  "lat": 14.4354962,
+  "lon": 74.9537182,
+  "tags": {
+    "historic": "castle"
+  }
+},
+{
+  "type": "node",
+  "id": 3071601170,
+  "lat": 16.7488304,
+  "lon": 77.1333890,
+  "tags": {
+    "historic": "monument",
+    "junction": "yes",
+    "name": "Shastri Chowk",
+    "name:kn": "ಶಾಸ್ತ್ರೀ ಚೌಕ್"
+  }
+},
+{
+  "type": "node",
+  "id": 3156734709,
+  "lat": 13.5977419,
+  "lon": 77.2086651,
+  "tags": {
+    "historic": "castle",
+    "name": "Channarayana Durga",
+    "name:kn": "ಚನ್ನರಾಯನ ದುರ್ಗ"
+  }
+},
+{
+  "type": "node",
+  "id": 3171985697,
+  "lat": 13.3758109,
+  "lon": 76.2850548,
+  "tags": {
+    "historic": "castle"
+  }
+},
+{
+  "type": "node",
+  "id": 3185202648,
+  "lat": 13.3680390,
+  "lon": 77.6821501,
+  "tags": {
+    "access": "yes",
+    "historic": "castle",
+    "name": "Nandi Durga",
+    "name:kn": "ನಂದಿದುರ್ಗ"
+  }
+},
+{
+  "type": "node",
+  "id": 3185202655,
+  "lat": 13.6364992,
+  "lon": 77.7778175,
+  "tags": {
+    "historic": "castle",
+    "name": "Varlakonda Fort",
+    "name:kn": "ವರ್ಲಕೊಂಡ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3223052629,
+  "lat": 12.9618724,
+  "lon": 77.1240124,
+  "tags": {
+    "historic": "castle",
+    "name": "Hutridurga",
+    "name:kn": "ಹುತ್ರಿದುರ್ಗ"
+  }
+},
+{
+  "type": "node",
+  "id": 3224357583,
+  "lat": 12.3087837,
+  "lon": 76.6530657,
+  "tags": {
+    "historic": "monument",
+    "name": "Krishnaraja Wodeyar",
+    "name:kn": "ಕೃಷ್ಣರಾಜ ಒಡೆಯರು"
+  }
+},
+{
+  "type": "node",
+  "id": 3287221014,
+  "lat": 14.5481237,
+  "lon": 76.0396002,
+  "tags": {
+    "historic": "castle",
+    "name": "Karadidurga",
+    "name:kn": "ಕರಡಿದುರ್ಗ"
+  }
+},
+{
+  "type": "node",
+  "id": 3287221016,
+  "lat": 14.5607438,
+  "lon": 76.0485371,
+  "tags": {
+    "historic": "castle",
+    "name": "Uchchangidurga",
+    "name:kn": "ಉಚ್ಚಂಗಿದುರ್ಗ"
+  }
+},
+{
+  "type": "node",
+  "id": 3316175218,
+  "lat": 12.9047148,
+  "lon": 78.1276599,
+  "tags": {
+    "historic": "castle",
+    "name": "Budikote",
+    "name:kn": "ಬೂದಿಕೋಟೆ",
+    "name:kn:iso15919": "Būdikōṭe"
+  }
+},
+{
+  "type": "node",
+  "id": 3345761458,
+  "lat": 12.8697354,
+  "lon": 76.0182494,
+  "tags": {
+    "access": "yes",
+    "denomination": "catholic",
+    "historic": "ruins",
+    "name": "Shettihalli Rosary Church",
+    "ruins": "church",
+    "wikidata": "Q24950770",
+    "wikimedia_commons": "Category:Shettihalli Rosary Church",
+    "wikipedia": "en:Shettihalli Rosary Church"
+  }
+},
+{
+  "type": "node",
+  "id": 3347429146,
+  "lat": 12.8201532,
+  "lon": 77.0359874,
+  "tags": {
+    "historic": "castle",
+    "name": "Huliyurudurga",
+    "name:kn": "ಹುಲಿಯೂರುದುರ್ಗ"
+  }
+},
+{
+  "type": "node",
+  "id": 3375048874,
+  "lat": 16.8343889,
+  "lon": 76.9322257,
+  "tags": {
+    "historic": "monument",
+    "name": "Ashoka Pillar",
+    "name:kn": "ಅಶೋಕ ಸ್ಥಂಭ"
+  }
+},
+{
+  "type": "node",
+  "id": 3393508235,
+  "lat": 12.9104577,
+  "lon": 77.5855754,
+  "tags": {
+    "historic": "monument",
+    "name": "Bust of Dr. Rajkumar",
+    "note": "In Memory of Dr. Rajkumar, Kannada actor and singer."
+  }
+},
+{
+  "type": "node",
+  "id": 3463767125,
+  "lat": 15.3350742,
+  "lon": 74.7546199,
+  "tags": {
+    "historic": "castle",
+    "name": "Haliyala Fort",
+    "name:kn": "ಹಳಿಯಾಳ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3583012693,
+  "lat": 15.4405815,
+  "lon": 74.9854860,
+  "tags": {
+    "historic": "monument",
+    "name": "Pavate",
+    "name:kn": "ದಾನಪ್ಪ ಚಿಂತಪ್ಪ ಪಾವಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3583789203,
+  "lat": 15.4527742,
+  "lon": 75.0073362,
+  "tags": {
+    "historic": "monument",
+    "name": "Ferdinand Kittel",
+    "name:kn": "ಫರ್ಡಿನಾಂಡ್ ಕಿಟ್ಟೆಲ್"
+  }
+},
+{
+  "type": "node",
+  "id": 3585292886,
+  "lat": 15.4593163,
+  "lon": 75.0078587,
+  "tags": {
+    "historic": "monument",
+    "name": "Basaveshwara",
+    "name:kn": "ಬಸವೇಶ್ವರ"
+  }
+},
+{
+  "type": "node",
+  "id": 3585347437,
+  "lat": 15.4595448,
+  "lon": 75.0085992,
+  "tags": {
+    "historic": "monument",
+    "name": "Dr. Ambedkar",
+    "name:kn": "ಡಾ ಅಂಬೇಡ್ಕರ್"
+  }
+},
+{
+  "type": "node",
+  "id": 3585756293,
+  "lat": 15.4633882,
+  "lon": 74.9880358,
+  "tags": {
+    "historic": "monument",
+    "name": "Poet Bendre's House"
+  }
+},
+{
+  "type": "node",
+  "id": 3585882493,
+  "lat": 15.4521514,
+  "lon": 75.0023622,
+  "tags": {
+    "historic": "monument",
+    "name": "Kargil Memorial",
+    "name:kn": "ಕಾರ್ಗಿಲ್ ಸ್ಮಾರಕ"
+  }
+},
+{
+  "type": "node",
+  "id": 3585912393,
+  "lat": 15.4603517,
+  "lon": 75.0085527,
+  "tags": {
+    "historic": "monument",
+    "name": "Subhas Chandra Bose",
+    "name:kn": "ಸುಭಾಷ್ ಚಂದ್ರ ಬೋಸ್"
+  }
+},
+{
+  "type": "node",
+  "id": 3668309489,
+  "lat": 12.2750725,
+  "lon": 76.6709592,
+  "tags": {
+    "artwork_type": "statue",
+    "historic": "monument",
+    "name": "Mahishasura",
+    "name:kn": "ಮಹಿಶಾಸುರ",
+    "tourism": "artwork",
+    "wikidata": "Q663318",
+    "wikimedia_commons": "Category:Mahishasura",
+    "wikipedia": "en:Mahishasura"
+  }
+},
+{
+  "type": "node",
+  "id": 3669879712,
+  "lat": 12.4256223,
+  "lon": 76.6839285,
+  "tags": {
+    "historic": "ruins",
+    "name": "Ruins of Tippu Sultan's Palace"
+  }
+},
+{
+  "type": "node",
+  "id": 3802126717,
+  "lat": 13.1339724,
+  "lon": 75.2898050,
+  "tags": {
+    "historic": "ruins",
+    "landmark": "yes",
+    "name": "Lobo's House",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 3802136739,
+  "lat": 13.1338733,
+  "lon": 75.2714349,
+  "tags": {
+    "historic": "ruins",
+    "monument": "yes",
+    "name": "Dilapidated Church",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "node",
+  "id": 3819506152,
+  "lat": 13.1714574,
+  "lon": 78.3805383,
+  "tags": {
+    "historic": "castle",
+    "name": "Mulabagilu Fort",
+    "name:kn": "ಮುಳಬಾಗಿಲು ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3886102986,
+  "lat": 13.0536164,
+  "lon": 76.1771010,
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "node",
+  "id": 3891509367,
+  "lat": 12.7125243,
+  "lon": 76.5858841,
+  "tags": {
+    "historic": "castle",
+    "name": "Narayanadurga",
+    "name:kn": "ನಾರಾಯಣದುರ್ಗ",
+    "natural": "peak"
+  }
+},
+{
+  "type": "node",
+  "id": 3895155048,
+  "lat": 14.5060296,
+  "lon": 74.3573534,
+  "tags": {
+    "historic": "castle",
+    "name": "Fort Kagala",
+    "name:kn": "ಕಾಗಲ ಕೋಟೆ",
+    "note": "Kagal Fort is a an ancient fort which has been forgotten by many. But the ruins still exist."
+  }
+},
+{
+  "type": "node",
+  "id": 3907790727,
+  "lat": 15.3408443,
+  "lon": 76.4740780,
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "node",
+  "id": 3914219611,
+  "lat": 15.9221735,
+  "lon": 75.6858410,
+  "tags": {
+    "historic": "ruins",
+    "name": "Kappe Arabatta Shilashasana",
+    "name:kn": "ಕಪ್ಪೆ ಅರಬಟ್ಟನ ಶಿಲಾಶಾಸನ",
+    "wikidata": "Q6367138",
+    "wikipedia": "en:Kappe Arabhatta"
+  }
+},
+{
+  "type": "node",
+  "id": 3995018999,
+  "lat": 13.3718913,
+  "lon": 77.6805343,
+  "tags": {
+    "historic": "ruins",
+    "name": "Tipu's Rest House"
+  }
+},
+{
+  "type": "node",
+  "id": 4040575263,
+  "lat": 13.3385000,
+  "lon": 74.6878216,
+  "tags": {
+    "historic": "castle",
+    "name:en": "Daria Bahadurgarh Fort",
+    "name:kn": "ದರಿಯಾ ಬಹದುರ್ಗಡ್ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 4347574908,
+  "lat": 15.3678698,
+  "lon": 76.4775317,
+  "tags": {
+    "historic": "ruins",
+    "note": "Could be a temple, according to visitor notes (biletskiy)"
+  }
+},
+{
+  "type": "node",
+  "id": 4473780943,
+  "lat": 15.1152493,
+  "lon": 75.6097640,
+  "tags": {
+    "historic": "castle",
+    "name": "Shrimantgad",
+    "name:kn": "ಶ್ರೀಮಂತಗಡ"
+  }
+},
+{
+  "type": "node",
+  "id": 4474608258,
+  "lat": 13.2120896,
+  "lon": 75.9942378,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 4474608259,
+  "lat": 13.2120850,
+  "lon": 75.9941473,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 4474796213,
+  "lat": 13.1629870,
+  "lon": 75.8607407,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 4550150890,
+  "lat": 15.3314610,
+  "lon": 76.4610752,
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "node",
+  "id": 4550329208,
+  "lat": 15.3338762,
+  "lon": 76.4668537,
+  "tags": {
+    "historic": "ruins",
+    "name": "Monolithic Bull",
+    "name:en": "Monolithic Bull"
+  }
+},
+{
+  "type": "node",
+  "id": 4550330701,
+  "lat": 15.3329279,
+  "lon": 76.4593547,
+  "tags": {
+    "historic": "ruins",
+    "name": "Hemakuta Hill Temples"
+  }
+},
+{
+  "type": "node",
+  "id": 4691598843,
+  "lat": 12.9412853,
+  "lon": 77.6088225,
+  "tags": {
+    "artwork_type": "bust",
+    "historic": "monument",
+    "tourism": "artwork"
+  }
+},
+{
+  "type": "node",
+  "id": 4691598844,
+  "lat": 12.9603763,
+  "lon": 77.6015418,
+  "tags": {
+    "access": "yes",
+    "historic": "monument",
+    "name": "Dr. BR Ambedkar, Constitution of India"
+  }
+},
+{
+  "type": "node",
+  "id": 4752462141,
+  "lat": 15.3524544,
+  "lon": 75.1344268,
+  "tags": {
+    "historic": "monument",
+    "name": "Basava Vana",
+    "name:en": "Basava Vana",
+    "name:kn": "ಬಸವ ವನ"
+  }
+},
+{
+  "type": "node",
+  "id": 4951025381,
+  "lat": 15.9195534,
+  "lon": 75.6843475,
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "ruins",
+    "name": "Yellamma Temple",
+    "name:kn": "ದತ್ತಾತ್ರೇಯ ದೇವಸ್ಥಾನ",
+    "religion": "hindu",
+    "ruins": "temple"
+  }
+},
+{
+  "type": "node",
+  "id": 5250122790,
+  "lat": 12.9797866,
+  "lon": 77.6211119,
+  "tags": {
+    "historic": "monument",
+    "name": "Kempegowda Tower",
+    "name:kn": "ಕೆಂಪೇಗೌಡ ಗೋಪುರ"
+  }
+},
+{
+  "type": "node",
+  "id": 5250142957,
+  "lat": 12.9479473,
+  "lon": 77.5634015,
+  "tags": {
+    "historic": "monument",
+    "name": "Kempegowda Tower",
+    "name:hi": "केम्पेगौडा गोपुरा",
+    "name:kn": "ಕೆಂಪೇಗೌಡ ಗೋಪುರ"
+  }
+},
+{
+  "type": "node",
+  "id": 5305560022,
+  "lat": 16.8156729,
+  "lon": 75.7199748,
+  "tags": {
+    "historic": "castle",
+    "name": "Muranakeri",
+    "name:kn": "ಮುರಾಣಕೇರಿ"
+  }
+},
+{
+  "type": "node",
+  "id": 5725420221,
+  "lat": 12.4248975,
+  "lon": 76.6899899,
+  "tags": {
+    "historic": "monument",
+    "name": "Thomas Inman's Dungeon"
+  }
+},
+{
+  "type": "node",
+  "id": 5725420321,
+  "lat": 12.4203482,
+  "lon": 76.6886281,
+  "tags": {
+    "historic": "monument",
+    "name": "Armoury House"
+  }
+},
+{
+  "type": "node",
+  "id": 5727601821,
+  "lat": 12.4243742,
+  "lon": 76.6771174,
+  "tags": {
+    "historic": "monument",
+    "name": "Armoury House"
+  }
+},
+{
+  "type": "node",
+  "id": 5791998323,
+  "lat": 15.3438655,
+  "lon": 76.5268572,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 6087532879,
+  "lat": 14.5797728,
+  "lon": 75.0408375,
+  "tags": {
+    "historic": "castle",
+    "name": "Jade Kote",
+    "name:kn": "ಜಡೆ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 6105744786,
+  "lat": 16.8047229,
+  "lon": 75.7278637,
+  "tags": {
+    "historic": "castle",
+    "name": "Laxmi Venkatesh temple, Ibrahimpur"
+  }
+},
+{
+  "type": "node",
+  "id": 6119747208,
+  "lat": 14.7378231,
+  "lon": 74.8128229,
+  "tags": {
+    "historic": "castle",
+    "name": "Sonda fort",
+    "name:kn": "ಸೋಂದಾ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 6161853552,
+  "lat": 15.3164607,
+  "lon": 76.4708958,
+  "tags": {
+    "historic": "ruins",
+    "name": "Stone Doors"
+  }
+},
+{
+  "type": "node",
+  "id": 6271193386,
+  "lat": 15.3539114,
+  "lon": 76.4821673,
+  "tags": {
+    "historic": "castle",
+    "name": "Anegundi Fort",
+    "name:kn": "ಆನೆಗುಂಡಿ ಕೋಟೆ",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 6403483986,
+  "lat": 13.6141131,
+  "lon": 74.9413479,
+  "tags": {
+    "historic": "castle",
+    "name": "A G Kodgi Residence"
+  }
+},
+{
+  "type": "node",
+  "id": 7053814891,
+  "lat": 12.2597005,
+  "lon": 77.1441138,
+  "tags": {
+    "historic": "monument",
+    "name": "Great living chola temples"
+  }
+},
+{
+  "type": "node",
+  "id": 7301398924,
+  "lat": 13.6763169,
+  "lon": 77.7010011,
+  "tags": {
+    "access": "yes",
+    "ele": "826",
+    "historic": "fort",
+    "name": "Gudibande Fort",
+    "name:kn": "ಗುಡಿಬಂಡೆ ಕೋಟೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 7301726067,
+  "lat": 12.9824012,
+  "lon": 77.6346696,
+  "tags": {
+    "historic": "monument",
+    "name": "The Water Tough"
+  }
+},
+{
+  "type": "node",
+  "id": 8324536544,
+  "lat": 12.8522447,
+  "lon": 74.8634007,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 8324572521,
+  "lat": 12.8529251,
+  "lon": 74.8716201,
+  "tags": {
+    "historic": "monument",
+    "inscription": "Place of worship",
+    "name": "Bhremer Sana"
+  }
+},
+{
+  "type": "node",
+  "id": 9860079422,
+  "lat": 17.9194464,
+  "lon": 77.5048450,
+  "tags": {
+    "historic": "monument",
+    "name": "Tomb of Ali Shahi Barid"
+  }
+},
+{
+  "type": "node",
+  "id": 10299596109,
+  "lat": 13.2411931,
+  "lon": 75.3653408,
+  "tags": {
+    "historic": "monument",
+    "name": "Hanging Bridge"
+  }
+},
+{
+  "type": "node",
+  "id": 10738768974,
+  "lat": 13.3549473,
+  "lon": 78.0072797,
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "node",
+  "id": 11405428612,
+  "lat": 12.9673726,
+  "lon": 77.5886947,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 11420343284,
+  "lat": 12.9700713,
+  "lon": 77.5844152,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 12000106440,
+  "lat": 12.9497654,
+  "lon": 77.5840136,
+  "tags": {
+    "historic": "monument",
+    "name": "Monument Inside Lalbagh"
+  }
+},
+{
+  "type": "node",
+  "id": 12291395819,
+  "lat": 15.9872695,
+  "lon": 77.0472207,
+  "tags": {
+    "historic": "monument",
+    "name": "Hazrat Syed Shah Murtuza Quadri (ra)"
+  }
+},
+{
+  "type": "node",
+  "id": 12388104601,
+  "lat": 15.3439959,
+  "lon": 76.4763454,
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "node",
+  "id": 12628402455,
+  "lat": 15.3190388,
+  "lon": 76.4617274,
+  "tags": {
+    "access": "yes",
+    "historic": "ruins",
+    "historic:civilization": "medieval",
+    "name": "Koteshankara Gateway",
+    "source": "survey;aerial imagery;local knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 12628402456,
+  "lat": 15.3224767,
+  "lon": 76.4696469,
+  "tags": {
+    "historic": "ruins",
+    "name": "Tenali Rama Pavilion",
+    "name:kn": "ತೆನಾಲಿ ರಾಮ ಮಂಟಪ",
+    "ruins": "building"
+  }
+},
+{
+  "type": "node",
+  "id": 12637207026,
+  "lat": 15.3624894,
+  "lon": 76.4966146,
+  "tags": {
+    "description": "Ruined Gate",
+    "historic": "ruins",
+    "name": "Sunkada Bagilu"
+  }
+},
+{
+  "type": "node",
+  "id": 13386427186,
+  "lat": 15.3319511,
+  "lon": 76.4677752,
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "node",
+  "id": 13390806366,
+  "lat": 15.3356624,
+  "lon": 76.4587381,
+  "tags": {
+    "historic": "ruins",
+    "name": "Durga Temple",
+    "name:kn": "ದುರ್ಗಾ ದೇವಸ್ಥಾನ"
+  }
+},
+{
+  "type": "node",
+  "id": 13638546756,
+  "lat": 18.0705644,
+  "lon": 77.1607054,
+  "tags": {
+    "historic": "fort",
+    "name": "Bhatambra Kote"
+  }
+},
+{
+  "type": "node",
+  "id": 13638718116,
+  "lat": 17.1794537,
+  "lon": 77.2916651,
+  "tags": {
+    "historic": "fort",
+    "name": "Sedam Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13638766867,
+  "lat": 16.8377870,
+  "lon": 76.9774895,
+  "tags": {
+    "historic": "fort",
+    "name": "Fortified Mound near Sannathi?"
+  }
+},
+{
+  "type": "node",
+  "id": 13640630288,
+  "lat": 17.5599667,
+  "lon": 77.1178912,
+  "tags": {
+    "historic": "fort",
+    "name": "Chengata Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13640857539,
+  "lat": 17.0657248,
+  "lon": 76.9462280,
+  "tags": {
+    "historic": "fort",
+    "name": "Ingalagi Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13640976046,
+  "lat": 17.1813636,
+  "lon": 77.1033529,
+  "tags": {
+    "historic": "fort",
+    "name": "Dandoti Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13640980053,
+  "lat": 17.1176357,
+  "lon": 77.2341405,
+  "tags": {
+    "historic": "fort",
+    "name": "Allolli Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13641018894,
+  "lat": 17.1826742,
+  "lon": 76.7884239,
+  "tags": {
+    "historic": "fort",
+    "name": "Farhatabad Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13641154715,
+  "lat": 15.6086597,
+  "lon": 76.8186943,
+  "tags": {
+    "historic": "fort",
+    "name": "Mukkundi Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13641272661,
+  "lat": 15.4104871,
+  "lon": 76.3774849,
+  "tags": {
+    "historic": "fort",
+    "name": "Kammata Durga Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13644928244,
+  "lat": 15.3383268,
+  "lon": 76.1488415,
+  "tags": {
+    "historic": "monument",
+    "name": "Enclosed circular patch of land"
+  }
+},
+{
+  "type": "node",
+  "id": 13644928265,
+  "lat": 15.3374719,
+  "lon": 76.1487928,
+  "tags": {
+    "historic": "ruins",
+    "name": "Wall ruins - to be verified in the field",
+    "ruins": "fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13645030762,
+  "lat": 16.2530348,
+  "lon": 76.4199525,
+  "tags": {
+    "historic": "ruins",
+    "name": "Ruins in Jaldurga fort, to be verified in field"
+  }
+},
+{
+  "type": "node",
+  "id": 13645098867,
+  "lat": 15.3376702,
+  "lon": 76.1488607,
+  "tags": {
+    "historic": "ruins",
+    "name": "Wall ruin (to be identified in the field)",
+    "ruins": "fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13645116282,
+  "lat": 15.3410397,
+  "lon": 76.1484432,
+  "tags": {
+    "historic": "ruins",
+    "name": "Walled ruins (to be verified in field)",
+    "ruins": "fort"
+  }
+},
+{
+  "type": "node",
+  "id": 13645116308,
+  "lat": 15.3405761,
+  "lon": 76.1487959,
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "node",
+  "id": 13645116324,
+  "lat": 15.3394221,
+  "lon": 76.1491302,
+  "tags": {
+    "historic": "ruins",
+    "name": "Walled ruins (to be verified in the field)"
+  }
+},
+{
+  "type": "node",
+  "id": 13645138049,
+  "lat": 16.5254529,
+  "lon": 76.6957496,
+  "tags": {
+    "historic": "fort",
+    "name": "Wagangera Fort"
+  }
+},
+{
+  "type": "node",
+  "id": 14141038533,
+  "lat": 15.3291140,
+  "lon": 76.4589409,
+  "tags": {
+    "historic": "monument",
+    "name": "Ugra Narasimha",
+    "name:kn": "ಉಗ್ರ ನರಸಿಂಹ"
+  }
+},
+{
+  "type": "way",
+  "id": 37238703,
+  "center": {
+    "lat": 13.0563934,
+    "lon": 77.5134138
+  },
+  "tags": {
+    "alt_name": "Mallasandra Fort Park",
+    "disused:landuse": "quarry",
+    "historic": "fort",
+    "historic:name": "Mallasandra Fort",
+    "leisure": "park",
+    "loc_name": "Mallsandra Gudde",
+    "name": "Naadaprabhu Kempegowda Park, Mallasandra",
+    "name:etymology:wikidata": "Q6387049",
+    "old_name": "Jalahalli Quarry",
+    "old_name:kn": "ಜಾಲಹಳ್ಳಿ ಕಲ್ಲುಗಣಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 38751028,
+  "center": {
+    "lat": 12.9594759,
+    "lon": 77.5737979
+  },
+  "tags": {
+    "addr:postcode": "560 002",
+    "addr:street": "Albert Victor Road",
+    "area": "yes",
+    "castle_type": "palace",
+    "historic": "castle",
+    "historic:civilization": "Mysore_Sultanate",
+    "name": "Tippu's Summer Palace",
+    "name:kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನನ ಅರಮನೆ",
+    "tourism": "attraction",
+    "wikidata": "Q7809034",
+    "wikimedia_commons": "Category:Tipu Sultan's Summer Palace",
+    "wikipedia": "en:Tipu Sultan's Summer Palace"
+  }
+},
+{
+  "type": "way",
+  "id": 38751029,
+  "center": {
+    "lat": 12.9629032,
+    "lon": 77.5757838
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Bangalore Fort",
+    "name:kn": "ಬೆಂಗಳೂರು ಕೋಟೆ",
+    "wikidata": "Q4855049",
+    "wikimedia_commons": "Category:Bangalore Fort",
+    "wikipedia": "en:Bangalore Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 53760280,
+  "center": {
+    "lat": 15.0955062,
+    "lon": 76.5545317
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "fort",
+    "name": "Sanduru Fort",
+    "name:kn": "ಸಂಡೂರು ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 57140679,
+  "center": {
+    "lat": 17.9148331,
+    "lon": 77.5301523
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Madrasa Mahmud Gawan",
+    "name:kn": "ಗಾವಾನ ಮದರಸಾ",
+    "wikidata": "Q19893532"
+  }
+},
+{
+  "type": "way",
+  "id": 84305638,
+  "center": {
+    "lat": 15.3321281,
+    "lon": 76.4700990
+  },
+  "tags": {
+    "barrier": "wall",
+    "description": "Achyutaraya Temple Complex",
+    "historic": "ruins",
+    "ruins": "wall"
+  }
+},
+{
+  "type": "way",
+  "id": 84305639,
+  "center": {
+    "lat": 15.3349403,
+    "lon": 76.4694403
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Pushkarini",
+    "name:kn": "ಪುಷ್ಕರಿಣಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 92289692,
+  "center": {
+    "lat": 16.8181522,
+    "lon": 75.7365142
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289697,
+  "center": {
+    "lat": 16.8338641,
+    "lon": 75.7364484
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289698,
+  "center": {
+    "lat": 16.8179008,
+    "lon": 75.7360914
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289700,
+  "center": {
+    "lat": 16.8190359,
+    "lon": 75.7376666
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289704,
+  "center": {
+    "lat": 16.8194846,
+    "lon": 75.7380294
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289706,
+  "center": {
+    "lat": 16.8238629,
+    "lon": 75.7394164
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289707,
+  "center": {
+    "lat": 16.8325220,
+    "lon": 75.7371200
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289713,
+  "center": {
+    "lat": 16.8224641,
+    "lon": 75.7392717
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289714,
+  "center": {
+    "lat": 16.8384816,
+    "lon": 75.7287763
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289715,
+  "center": {
+    "lat": 16.8174440,
+    "lon": 75.7354672
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289719,
+  "center": {
+    "lat": 16.8342997,
+    "lon": 75.7360663
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289720,
+  "center": {
+    "lat": 16.8331633,
+    "lon": 75.7367656
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289721,
+  "center": {
+    "lat": 16.8296807,
+    "lon": 75.7381671
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289722,
+  "center": {
+    "lat": 16.8205026,
+    "lon": 75.7386191
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289724,
+  "center": {
+    "lat": 16.8365888,
+    "lon": 75.7335169
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289729,
+  "center": {
+    "lat": 16.8162962,
+    "lon": 75.7333680
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289743,
+  "center": {
+    "lat": 16.8192153,
+    "lon": 75.7378030
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289749,
+  "center": {
+    "lat": 16.8335117,
+    "lon": 75.7365584
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289750,
+  "center": {
+    "lat": 16.8178182,
+    "lon": 75.7360066
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289753,
+  "center": {
+    "lat": 16.8184902,
+    "lon": 75.7369975
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289757,
+  "center": {
+    "lat": 16.8219076,
+    "lon": 75.7391344
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289758,
+  "center": {
+    "lat": 16.8361166,
+    "lon": 75.7341323
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289759,
+  "center": {
+    "lat": 16.8214984,
+    "lon": 75.7390028
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289762,
+  "center": {
+    "lat": 16.8167441,
+    "lon": 75.7341402
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289764,
+  "center": {
+    "lat": 16.8252552,
+    "lon": 75.7394489
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289765,
+  "center": {
+    "lat": 16.8187838,
+    "lon": 75.7373786
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289766,
+  "center": {
+    "lat": 16.8329205,
+    "lon": 75.7368819
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289767,
+  "center": {
+    "lat": 16.8161036,
+    "lon": 75.7321069
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289773,
+  "center": {
+    "lat": 16.8265081,
+    "lon": 75.7391949
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289777,
+  "center": {
+    "lat": 16.8201641,
+    "lon": 75.7384337
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289779,
+  "center": {
+    "lat": 16.8354304,
+    "lon": 75.7350238
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289782,
+  "center": {
+    "lat": 16.8371582,
+    "lon": 75.7326610
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 92289784,
+  "center": {
+    "lat": 16.8176117,
+    "lon": 75.7355751
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 96006936,
+  "center": {
+    "lat": 17.9152834,
+    "lon": 77.5601123
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Bahmani Tombs",
+    "name:kn": "ಅಶ್ತೂರ್ ಗೋರಿಗಳು",
+    "tourism": "attraction",
+    "wikidata": "Q85744926",
+    "wikipedia": "en:Bahmani Tombs"
+  }
+},
+{
+  "type": "way",
+  "id": 97204879,
+  "center": {
+    "lat": 15.6003658,
+    "lon": 74.7909717
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Kitturu Fort",
+    "name:kn": "ಕಿತ್ತೂರು ಕೋಟೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 104416059,
+  "center": {
+    "lat": 15.3143403,
+    "lon": 76.1615737
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Bahadurabandi Fort",
+    "name:kn": "ಬಹದ್ದೂರಬಂಡಿ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 108297978,
+  "center": {
+    "lat": 15.3395117,
+    "lon": 76.1479997
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Koppal Fort",
+    "name:kn": "ಕೊಪ್ಪಳ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 123463602,
+  "center": {
+    "lat": 15.3417490,
+    "lon": 76.4796710
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Krishna Pushkarini",
+    "name:en": "Krishna Pushkarini",
+    "name:kn": "ಪುಷ್ಕರಿಣಿ",
+    "natural": "water"
+  }
+},
+{
+  "type": "way",
+  "id": 129323695,
+  "center": {
+    "lat": 15.3211086,
+    "lon": 76.4727814
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Elephant Stables",
+    "name:en": "Elephant Stables",
+    "name:kn": "ಆನೆ ಲಾಯಗಳು"
+  }
+},
+{
+  "type": "way",
+  "id": 129323697,
+  "center": {
+    "lat": 15.3183814,
+    "lon": 76.4675742
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Royal Mint",
+    "name:kn": "ಟಂಕಸಾಲೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 129323699,
+  "center": {
+    "lat": 15.3211882,
+    "lon": 76.4702917
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Treasury Building"
+  }
+},
+{
+  "type": "way",
+  "id": 129325631,
+  "center": {
+    "lat": 15.3128119,
+    "lon": 76.4803731
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Bhima's Gateway"
+  }
+},
+{
+  "type": "way",
+  "id": 129325632,
+  "center": {
+    "lat": 15.3134550,
+    "lon": 76.4781574
+  },
+  "tags": {
+    "building": "temple",
+    "historic": "ruins",
+    "name": "Ganagitti Jain Temple",
+    "name:en": "Ganagitti Jain Temple",
+    "name:kn": "ಗಾಣಗಿತ್ತಿ ಜೈನ ದೇವಸ್ಥಾನ"
+  }
+},
+{
+  "type": "way",
+  "id": 129325633,
+  "center": {
+    "lat": 15.3397776,
+    "lon": 76.4849404
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Gejjala Mantapa",
+    "name:kn": "ಗೆಜ್ಜಲ ಮಂಟಪ"
+  }
+},
+{
+  "type": "way",
+  "id": 129325634,
+  "center": {
+    "lat": 15.3408293,
+    "lon": 76.4804812
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Kuduregombe Mantapa",
+    "name:en": "Kuduregombe Mantapa",
+    "name:hi": "कुदुरेगोम्बे मंडप",
+    "name:kn": "ಕುದುರೆಗೊಂಬೆ ಮಂಟಪ"
+  }
+},
+{
+  "type": "way",
+  "id": 129325635,
+  "center": {
+    "lat": 15.3155289,
+    "lon": 76.4756872
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 129325636,
+  "center": {
+    "lat": 15.3152623,
+    "lon": 76.4745734
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Sarasvati Temple",
+    "name:kn": "ಸರಸ್ವತಿ ದೇವಸ್ಥಾನ"
+  }
+},
+{
+  "type": "way",
+  "id": 129325641,
+  "center": {
+    "lat": 15.3152337,
+    "lon": 76.4649756
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 138292670,
+  "center": {
+    "lat": 15.8582712,
+    "lon": 74.5243533
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Belgaum Fort",
+    "name:kn": "ಬೆಳಗಾವಿ ಕೋಟೆ",
+    "start_date": "1204",
+    "wikidata": "Q4882410"
+  }
+},
+{
+  "type": "way",
+  "id": 140357732,
+  "center": {
+    "lat": 16.8397865,
+    "lon": 75.7237722
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516906,
+  "center": {
+    "lat": 16.8326176,
+    "lon": 75.7097138
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516955,
+  "center": {
+    "lat": 16.8342582,
+    "lon": 75.7103106
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516960,
+  "center": {
+    "lat": 16.8357172,
+    "lon": 75.7108071
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516965,
+  "center": {
+    "lat": 16.8376122,
+    "lon": 75.7131418
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516968,
+  "center": {
+    "lat": 16.8320271,
+    "lon": 75.7095025
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516970,
+  "center": {
+    "lat": 16.8350219,
+    "lon": 75.7105710
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516973,
+  "center": {
+    "lat": 16.8395237,
+    "lon": 75.7189381
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516978,
+  "center": {
+    "lat": 16.8384839,
+    "lon": 75.7152650
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516980,
+  "center": {
+    "lat": 16.8313075,
+    "lon": 75.7090476
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 140516982,
+  "center": {
+    "lat": 16.8335115,
+    "lon": 75.7100267
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 143384387,
+  "center": {
+    "lat": 12.9986075,
+    "lon": 77.5919876
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "palace",
+    "heritage": "2",
+    "heritage:operator": "nmma",
+    "heritage:website": "https://nmma.nic.in/nmma/exploreBuiltState.do?state=29",
+    "historic": "castle",
+    "name": "Bangalore Palace",
+    "name:kn": "ಬೆಂಗಳೂರು ಅರಮನೆ",
+    "name:ml": "ബെംഗളൂരു കൊട്ടാരം",
+    "ref:nmma": "KR20010387",
+    "start_date": "1944",
+    "tourism": "attraction",
+    "wikidata": "Q3520057",
+    "wikimedia_commons": "Category:Bangalore Palace",
+    "wikipedia": "en:Bangalore Palace"
+  }
+},
+{
+  "type": "way",
+  "id": 148666149,
+  "center": {
+    "lat": 16.2071386,
+    "lon": 77.3526910
+  },
+  "tags": {
+    "barrier": "gate",
+    "building": "yes",
+    "historic": "monument",
+    "name": "Navarangi Darwaza",
+    "name:alt": "North gate",
+    "name:kn": "ನವರಂಗ ದಾರ್ವಝ"
+  }
+},
+{
+  "type": "way",
+  "id": 149090065,
+  "center": {
+    "lat": 13.1324015,
+    "lon": 75.4148425
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Ballalryandurga Fort",
+    "name:kn": "ಬಲ್ಲಾಳ ರಾಯನದುರ್ಗ"
+  }
+},
+{
+  "type": "way",
+  "id": 151811088,
+  "center": {
+    "lat": 12.2757678,
+    "lon": 76.8815058
+  },
+  "tags": {
+    "addr:city": "Somanathapura",
+    "alt_name": "Somanathapura Temple",
+    "amenity": "place_of_worship",
+    "building": "temple",
+    "building:style": "hoysala",
+    "historic": "monument",
+    "religion": "hindu",
+    "start_date": "1268 AD",
+    "style": "hoysala"
+  }
+},
+{
+  "type": "way",
+  "id": 158711839,
+  "center": {
+    "lat": 13.0717254,
+    "lon": 74.9963800
+  },
+  "tags": {
+    "alt_name": "Chowtara Aramane",
+    "historic": "ruins",
+    "name": "Chowta Palace",
+    "name:kn": "ಚೌಟರ ಅರಮನೆ",
+    "source": "Bing and Wikipedia",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 159457999,
+  "center": {
+    "lat": 13.7434321,
+    "lon": 76.9137513
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "castle",
+    "name": "Sira Fort",
+    "name:kn": "ಸಿರಾ ಕೋಟೆ (ಕಸ್ತೂರಿ ರಂಗಪ್ಪನಾಯಕ)",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 167695918,
+  "center": {
+    "lat": 13.8208737,
+    "lon": 75.0345866
+  },
+  "tags": {
+    "area": "yes",
+    "castle_type": "defensive",
+    "historic": "castle",
+    "name": "Nagara Fort",
+    "name:kn": "ನಗರ ಕೋಟೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 202234832,
+  "center": {
+    "lat": 15.7680420,
+    "lon": 75.1130726
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "castle",
+    "name": "Savadatti Fort",
+    "name:kn": "ಸವದತ್ತಿ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 204034647,
+  "center": {
+    "lat": 15.7571401,
+    "lon": 74.5263636
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "fort",
+    "name": "Rajhansgad",
+    "name:kn": "ರಾಜಹಂಸಗಡ"
+  }
+},
+{
+  "type": "way",
+  "id": 210623127,
+  "center": {
+    "lat": 15.9157126,
+    "lon": 75.8295001
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 210623128,
+  "center": {
+    "lat": 15.9156453,
+    "lon": 75.8299583
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 210623134,
+  "center": {
+    "lat": 15.9152597,
+    "lon": 75.8304745
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 210623135,
+  "center": {
+    "lat": 15.9152589,
+    "lon": 75.8304860
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 210623137,
+  "center": {
+    "lat": 15.9155431,
+    "lon": 75.8300574
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 210623138,
+  "center": {
+    "lat": 15.9150216,
+    "lon": 75.8299596
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 214799699,
+  "center": {
+    "lat": 16.8277679,
+    "lon": 75.7749918
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Tomb of Jehan Begum",
+    "name:kn": "ಜಹಾನ್ ಬೇಗಮ್ ಸಮಾಧಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 214799700,
+  "center": {
+    "lat": 16.8345903,
+    "lon": 75.7684527
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Tomb of Ain ul Mulk",
+    "name:kn": "ಐನ್ ಉಲ್ ಮುಲ್ಕ್"
+  }
+},
+{
+  "type": "way",
+  "id": 216233984,
+  "center": {
+    "lat": 16.8266487,
+    "lon": 75.6575230
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 216233985,
+  "center": {
+    "lat": 16.8280954,
+    "lon": 75.6576136
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Sangita Mahal",
+    "name:kn": "ಸಂಗೀತ ಮಹಲ್"
+  }
+},
+{
+  "type": "way",
+  "id": 217384020,
+  "center": {
+    "lat": 13.2521487,
+    "lon": 76.6155059
+  },
+  "tags": {
+    "historic": "monument",
+    "name:kn": "ಚೆನ್ನಕೇಶವ ದೇವಾಲಯ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 217880888,
+  "center": {
+    "lat": 16.2034295,
+    "lon": 77.3497176
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "name:en": "Jama Masjid",
+    "name:kn": "ಜಮ ಮಸೀದಿ",
+    "religion": "muslim",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 217880889,
+  "center": {
+    "lat": 16.2018311,
+    "lon": 77.3453497
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Raichur Fort East Gate",
+    "name:en": "Makka Darawaja",
+    "name:kn": "ಮೆಕ್ಕ ದರವಾಜ"
+  }
+},
+{
+  "type": "way",
+  "id": 218240234,
+  "center": {
+    "lat": 13.2124300,
+    "lon": 75.9916315
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 231204634,
+  "center": {
+    "lat": 17.9116555,
+    "lon": 77.5301269
+  },
+  "tags": {
+    "historic": "monument",
+    "name:en": "Chaubara",
+    "name:kn": "ಚೌಬಾರಾ"
+  }
+},
+{
+  "type": "way",
+  "id": 231204647,
+  "center": {
+    "lat": 17.9200466,
+    "lon": 77.5280142
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "monument",
+    "name": "Gagan Mahal",
+    "name:kn": "ಗಗನ ಮಹಲ್"
+  }
+},
+{
+  "type": "way",
+  "id": 232404430,
+  "center": {
+    "lat": 12.2348142,
+    "lon": 75.6406164
+  },
+  "tags": {
+    "barrier": "wall",
+    "castle_type": "palace",
+    "historic": "castle",
+    "name": "Nalkunadu Palace",
+    "name:kn": "ನಾಲ್ಕುನಾಡು ಅರಮನೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 252723634,
+  "center": {
+    "lat": 15.3148101,
+    "lon": 76.4703257
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name:alt": "Pushkarani"
+  }
+},
+{
+  "type": "way",
+  "id": 252997419,
+  "center": {
+    "lat": 13.4713944,
+    "lon": 74.7559438
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Barkuru Fort",
+    "name:kn": "ಬಾರ್ಕೂರು ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 255430601,
+  "center": {
+    "lat": 13.1742159,
+    "lon": 77.6348177
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Chikkajala Fort",
+    "name:kn": "ಚಿಕ್ಕಜಾಲ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 258248652,
+  "center": {
+    "lat": 15.3319855,
+    "lon": 76.4700918
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 258248658,
+  "center": {
+    "lat": 15.3319782,
+    "lon": 76.4700986
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 324116836,
+  "center": {
+    "lat": 12.6037652,
+    "lon": 77.0523905
+  },
+  "tags": {
+    "addr:city": "Shivapura",
+    "historic": "monument",
+    "name": "Satyagraha Soudha",
+    "name:kn": "ಸತ್ಯಾಗ್ರಹ ಸೌಧ"
+  }
+},
+{
+  "type": "way",
+  "id": 329746100,
+  "center": {
+    "lat": 17.3419195,
+    "lon": 76.8320724
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "fortress",
+    "historic": "castle",
+    "wikimedia_commons": "File:Bala Qila inside Gulbarga Fort.jpg"
+  }
+},
+{
+  "type": "way",
+  "id": 330534292,
+  "center": {
+    "lat": 16.8354480,
+    "lon": 76.9342916
+  },
+  "tags": {
+    "historic": "ruins",
+    "is_in": "Chittapur; Kalaburgi; Karnataka",
+    "name": "The Great Stupa of Netherworlds",
+    "name:kn": "ಕನಗನಹಳ್ಳಿ ಬೌದ್ಧ ಅವಶೇಷಗಳು",
+    "opening_hours": "Mo-Su 10:00-17:00",
+    "wikipedia": "en:Kanaganahalli"
+  }
+},
+{
+  "type": "way",
+  "id": 349961720,
+  "center": {
+    "lat": 17.1409671,
+    "lon": 76.9307137
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Shahabad Fort",
+    "name:kn": "ಹಳೆ ಶಹಾಬಾದ್"
+  }
+},
+{
+  "type": "way",
+  "id": 373574246,
+  "center": {
+    "lat": 12.4100540,
+    "lon": 76.7139370
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "2",
+    "description": "Mausoleum of Hyder Ali and Tipu Sultan",
+    "historic": "monument",
+    "name": "Gumbaz",
+    "name:kn": "ಗುಂಬಜ್"
+  }
+},
+{
+  "type": "way",
+  "id": 373580175,
+  "center": {
+    "lat": 12.9615262,
+    "lon": 77.1234439
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Hutridurga",
+    "name:kn": "ಹುತ್ರಿದುರ್ಗ",
+    "natural": "bare_rock"
+  }
+},
+{
+  "type": "way",
+  "id": 381414287,
+  "center": {
+    "lat": 14.2108205,
+    "lon": 76.3916645
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 385208913,
+  "center": {
+    "lat": 12.1795121,
+    "lon": 77.0243637
+  },
+  "tags": {
+    "historic": "ruins",
+    "name:kn": "ಕೀರ್ತಿನಾರಾಯಣ ದೇವಾಲಯ"
+  }
+},
+{
+  "type": "way",
+  "id": 391029076,
+  "center": {
+    "lat": 13.3695495,
+    "lon": 77.2064069
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Battery"
+  }
+},
+{
+  "type": "way",
+  "id": 394975110,
+  "center": {
+    "lat": 14.4889921,
+    "lon": 74.4173298
+  },
+  "tags": {
+    "building": "ruins",
+    "historic": "fort",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 398884791,
+  "center": {
+    "lat": 16.8303180,
+    "lon": 75.7183047
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "monument",
+    "name": "Bara Kaman",
+    "name:kn": "ಬಾರಾ ಕಮಾನ್",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 398884797,
+  "center": {
+    "lat": 16.8326033,
+    "lon": 75.7118205
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Upli Buruj",
+    "name:kn": "ಉಪ್ಲಿ ಬುರುಜು",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 408877326,
+  "center": {
+    "lat": 13.2495952,
+    "lon": 77.7083367
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "building": "yes",
+    "historic": "castle",
+    "name": "West Entrance"
+  }
+},
+{
+  "type": "way",
+  "id": 416432114,
+  "center": {
+    "lat": 15.3178192,
+    "lon": 76.4641669
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 442101205,
+  "center": {
+    "lat": 15.0455050,
+    "lon": 75.8311585
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Hammigi Fort",
+    "name:kn": "ಹಮ್ಮಿಗಿ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 448441382,
+  "center": {
+    "lat": 15.3346015,
+    "lon": 74.7540156
+  },
+  "tags": {
+    "historic": "castle",
+    "material": "stone",
+    "tourism": "attraction",
+    "two_sided": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 449304314,
+  "center": {
+    "lat": 14.2150851,
+    "lon": 76.3933242
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 450529555,
+  "center": {
+    "lat": 15.3426789,
+    "lon": 76.4742677
+  },
+  "tags": {
+    "historic": "ruins",
+    "inscription": "Inscribed Vishnu Temple"
+  }
+},
+{
+  "type": "way",
+  "id": 462664168,
+  "center": {
+    "lat": 15.3164052,
+    "lon": 76.4692531
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "King's Audience Hall"
+  }
+},
+{
+  "type": "way",
+  "id": 462664169,
+  "center": {
+    "lat": 15.3159637,
+    "lon": 76.4708430
+  },
+  "tags": {
+    "building": "yes",
+    "height": "6",
+    "historic": "monument",
+    "name": "Mahanavami Dibba",
+    "name:kn": "ಮಹಾನವಮಿ ದಿಬ್ಬ",
+    "religion": "hindu",
+    "tourism": "attraction",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 477162295,
+  "center": {
+    "lat": 18.0439439,
+    "lon": 77.2092678
+  },
+  "tags": {
+    "access": "yes",
+    "barrier": "wall",
+    "castle_type": "fortress",
+    "historic": "castle",
+    "name": "Bhalki Kote",
+    "name:kn": "ಭಾಲ್ಕಿ ಕೋಟೆ",
+    "name:kn:iso15919": "Bhālki Kōṭe"
+  }
+},
+{
+  "type": "way",
+  "id": 502086024,
+  "center": {
+    "lat": 14.2138744,
+    "lon": 76.3962031
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 502086040,
+  "center": {
+    "lat": 14.2141504,
+    "lon": 76.3963729
+  },
+  "tags": {
+    "building": "ruins",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 505591267,
+  "center": {
+    "lat": 16.0098228,
+    "lon": 76.4359716
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Mudagal Fort",
+    "name:kn": "ಮುದಗಲ್ ಕೋಟೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 507066741,
+  "center": {
+    "lat": 17.9226767,
+    "lon": 77.5259444
+  },
+  "tags": {
+    "building": "palace",
+    "historic": "ruins",
+    "name": "Takht Mahal",
+    "name:kn": "ತಖ್ತ್ ಮಹಲ್"
+  }
+},
+{
+  "type": "way",
+  "id": 507066744,
+  "center": {
+    "lat": 17.9216712,
+    "lon": 77.5268211
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Diwan i Amm",
+    "name:kn": "ದಿವಾನ್-ಇ-ಆಮ್"
+  }
+},
+{
+  "type": "way",
+  "id": 518704546,
+  "center": {
+    "lat": 15.6074095,
+    "lon": 76.0119851
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "temple",
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 534738136,
+  "center": {
+    "lat": 13.3547425,
+    "lon": 78.0075940
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "fortress",
+    "historic": "castle",
+    "name": "Rehmangarh Fort",
+    "name:kn": "ರಹ್ಮಾನ್ ದುರ್ಗ",
+    "ruins": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 534768463,
+  "center": {
+    "lat": 13.3942119,
+    "lon": 78.0159062
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Ambajidurga Fort",
+    "name:kn": "ಅಂಬಾಜಿದುರ್ಗ ಬೆಟ್ಟದ"
+  }
+},
+{
+  "type": "way",
+  "id": 543551698,
+  "center": {
+    "lat": 16.0176068,
+    "lon": 75.8835786
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 543551699,
+  "center": {
+    "lat": 16.0174759,
+    "lon": 75.8836228
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 543551700,
+  "center": {
+    "lat": 16.0172639,
+    "lon": 75.8840201
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 549003420,
+  "center": {
+    "lat": 13.4327008,
+    "lon": 77.5014585
+  },
+  "tags": {
+    "historic": "ruins",
+    "historic:civilization": "middle-ages",
+    "name": "Makalidurga Fort",
+    "name:kn": "ಮಾಕಳಿದುರ್ಗ",
+    "ruins": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 555353848,
+  "center": {
+    "lat": 16.1684489,
+    "lon": 74.8149312
+  },
+  "tags": {
+    "historic": "castle",
+    "name:en": "Gokak Fort",
+    "name:kn": "ಗೋಕಾಕ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 555380130,
+  "center": {
+    "lat": 15.8548788,
+    "lon": 75.1235622
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Munavali Fort",
+    "name:kn": "ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 555380131,
+  "center": {
+    "lat": 15.8819495,
+    "lon": 75.0524434
+  },
+  "tags": {
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 555380133,
+  "center": {
+    "lat": 15.8032301,
+    "lon": 75.1948821
+  },
+  "tags": {
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 555380138,
+  "center": {
+    "lat": 15.7392594,
+    "lon": 75.1282963
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Parasagada Fort",
+    "name:kn": "ಪರಸಗಡ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 555415241,
+  "center": {
+    "lat": 16.1945408,
+    "lon": 75.7031554
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Bagalakote Fort",
+    "name:kn": "ಬಾಗಲಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 555415243,
+  "center": {
+    "lat": 15.9856612,
+    "lon": 75.1393202
+  },
+  "tags": {
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 555415248,
+  "center": {
+    "lat": 15.9432405,
+    "lon": 75.2210471
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Toragalla Fort",
+    "name:alt": "Torgal Fort",
+    "name:kn": "ತೋರಗಲ್ಲ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 555415251,
+  "center": {
+    "lat": 15.9470304,
+    "lon": 75.2920103
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Ramadurga Fort",
+    "name:kn": "ರಾಮದುರ್ಗ ಕೋಟಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 555415252,
+  "center": {
+    "lat": 15.8888594,
+    "lon": 75.3949736
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 555415253,
+  "center": {
+    "lat": 15.8681224,
+    "lon": 75.2585175
+  },
+  "tags": {
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 582562267,
+  "center": {
+    "lat": 12.9702554,
+    "lon": 77.7124867
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Kundalahalli Gate",
+    "name:kn": "ಕುಂಡಲಹಳ್ಳಿ ಗೇಟ್"
+  }
+},
+{
+  "type": "way",
+  "id": 656323590,
+  "center": {
+    "lat": 12.3052544,
+    "lon": 76.6560736
+  },
+  "tags": {
+    "addr:city": "Mysore",
+    "alt_name": "Amba Vilas Palace",
+    "castle_type": "palace",
+    "historic": "castle",
+    "name": "Mysore Palace",
+    "name:it": "Palazzo di Mysore",
+    "name:kn": "ಮೈಸೂರು ಅರಮನೆ",
+    "name:ml": "മൈസൂർ കൊട്ടാരം",
+    "website": "http://www.mysorepalace.gov.in/",
+    "wikidata": "Q456575",
+    "wikimedia_commons": "Category:Mysore Palace",
+    "wikipedia": "en:Mysore Palace"
+  }
+},
+{
+  "type": "way",
+  "id": 657850486,
+  "center": {
+    "lat": 15.3432482,
+    "lon": 76.4759643
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 657944844,
+  "center": {
+    "lat": 15.3181132,
+    "lon": 76.4666556
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 657944850,
+  "center": {
+    "lat": 15.3171001,
+    "lon": 76.4665348
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 657944852,
+  "center": {
+    "lat": 15.3208536,
+    "lon": 76.4708896
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Zenana"
+  }
+},
+{
+  "type": "way",
+  "id": 657966344,
+  "center": {
+    "lat": 15.3178386,
+    "lon": 76.4668954
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 663941738,
+  "center": {
+    "lat": 16.0156133,
+    "lon": 75.8801493
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Hucchappayya Gudi",
+    "name:kn": "ಹುಚ್ಚಪ್ಪಯ್ಯ ಗುಡಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 663941741,
+  "center": {
+    "lat": 16.0099910,
+    "lon": 75.8789286
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "monument",
+    "name": "Galaganatha Temples",
+    "name:kn": "ಗಳಗನಾಥ ಗುಡಿಗಳು"
+  }
+},
+{
+  "type": "way",
+  "id": 675518089,
+  "center": {
+    "lat": 12.9535389,
+    "lon": 77.2271539
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Kempegowda Fort",
+    "name:kn": "ಮಾಗಡಿ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 688715198,
+  "center": {
+    "lat": 15.3298350,
+    "lon": 76.4634222
+  },
+  "tags": {
+    "highway": "path",
+    "historic": "ruins",
+    "name": "Krishna Bazaar",
+    "name:kn": "ಕೃಷ್ಣ ಬಜಾರ್"
+  }
+},
+{
+  "type": "way",
+  "id": 688715202,
+  "center": {
+    "lat": 15.3142971,
+    "lon": 76.4678928
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Octagonal Water Pavilion",
+    "name:kn": "ಪುಷ್ಕರಿಣಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 732894673,
+  "center": {
+    "lat": 15.8548788,
+    "lon": 75.1235622
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 781784318,
+  "center": {
+    "lat": 13.6763079,
+    "lon": 77.7009758
+  },
+  "tags": {
+    "access": "yes",
+    "building": "yes",
+    "description": "Gudibande Fort was built by a yogi and a local chieftain called Byre Gowda some 400 odd years ago in the 17th century. It was believed that he belonged to the Tuluva dynasty of the Vijayanagar empire.",
+    "ele": "826",
+    "historic": "fort",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 809919927,
+  "center": {
+    "lat": 15.3415596,
+    "lon": 76.4710272
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Ruined bridge",
+    "note": "Ruins of medieval stone bridge"
+  }
+},
+{
+  "type": "way",
+  "id": 824386809,
+  "center": {
+    "lat": 16.6906462,
+    "lon": 76.8340659
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Shahapur Fort",
+    "name:kn": "ಶಹಾಪುರ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 895551522,
+  "center": {
+    "lat": 12.8522989,
+    "lon": 74.8633385
+  },
+  "tags": {
+    "access": "private",
+    "historic": "monument",
+    "name": "Gudde Guthu house"
+  }
+},
+{
+  "type": "way",
+  "id": 895553794,
+  "center": {
+    "lat": 12.8536141,
+    "lon": 74.8711254
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "historic": "monument",
+    "inscription": "worship place",
+    "name": "Karmbistana",
+    "name:kn": "ಕರಂಬಿಸ್ಥಾನ"
+  }
+},
+{
+  "type": "way",
+  "id": 895553795,
+  "center": {
+    "lat": 12.8528309,
+    "lon": 74.8715782
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Bhremer Sana"
+  }
+},
+{
+  "type": "way",
+  "id": 908618329,
+  "center": {
+    "lat": 13.4124967,
+    "lon": 76.1626132
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Banavara Fort",
+    "name:kn": "ಬಾಣಾವರ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 929175472,
+  "center": {
+    "lat": 15.3155279,
+    "lon": 76.4756876
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 929175473,
+  "center": {
+    "lat": 15.3155253,
+    "lon": 76.4756869
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 929180371,
+  "center": {
+    "lat": 15.3143368,
+    "lon": 76.4704751
+  },
+  "tags": {
+    "height": "-1.5",
+    "historic": "ruins",
+    "name": "Public Bath",
+    "name:kn": "ಸಾರ್ವಜನಿಕ ಸ್ನಾನ ಕೇಂದ್ರ"
+  }
+},
+{
+  "type": "way",
+  "id": 931077863,
+  "center": {
+    "lat": 15.3155890,
+    "lon": 76.4698542
+  },
+  "tags": {
+    "building": "yes",
+    "height": "1.1",
+    "historic": "ruins",
+    "name": "Plinth",
+    "name:kn": "ರಾಜಪ್ರಾಂಗಣ",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 931092275,
+  "center": {
+    "lat": 15.3202841,
+    "lon": 76.4713947
+  },
+  "tags": {
+    "alt_name": "Chitrangi Mahal",
+    "building": "yes",
+    "historic": "monument",
+    "name": "Lotus Mahal",
+    "name:kn": "ಪದ್ಮ ಮಹಾಲ",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 931120842,
+  "center": {
+    "lat": 15.3207527,
+    "lon": 76.4713306
+  },
+  "tags": {
+    "building": "yes",
+    "description": "Pool",
+    "historic": "ruins",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 931120848,
+  "center": {
+    "lat": 15.3202290,
+    "lon": 76.4706453
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Water Pavilion",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 971759801,
+  "center": {
+    "lat": 12.4983525,
+    "lon": 77.2951484
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Kabbaldurga Fort",
+    "name:kn": "ಕಬ್ಬಲದುರ್ಗ",
+    "wikidata": "Q56275768",
+    "wikipedia": "en:Kabbaldurga"
+  }
+},
+{
+  "type": "way",
+  "id": 975142644,
+  "center": {
+    "lat": 13.7484336,
+    "lon": 77.0347569
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Bhasmangi",
+    "name:kn": "ಬಸ್ಮಂಗಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 976168424,
+  "center": {
+    "lat": 15.3467221,
+    "lon": 76.3578719
+  },
+  "tags": {
+    "historic": "fort",
+    "name:kn": "ಸೋಮನಾಥ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 976169114,
+  "center": {
+    "lat": 15.3666248,
+    "lon": 76.3315889
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 976469508,
+  "center": {
+    "lat": 16.4155067,
+    "lon": 76.9368343
+  },
+  "tags": {
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 976556616,
+  "center": {
+    "lat": 16.4705499,
+    "lon": 76.3101446
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1003215092,
+  "center": {
+    "lat": 15.7264734,
+    "lon": 75.3823243
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Narangunda Fort",
+    "name:kn": "ನರಗುಂದ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1007114413,
+  "center": {
+    "lat": 15.9214238,
+    "lon": 75.6869931
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "historic": "ruins",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "way",
+  "id": 1007114414,
+  "center": {
+    "lat": 15.9213043,
+    "lon": 75.6868973
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "historic": "ruins",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "way",
+  "id": 1019349500,
+  "center": {
+    "lat": 16.2797806,
+    "lon": 74.4601822
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Vallabhgad Fort",
+    "name:kn": "ವಲ್ಲಭಗಡ್ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1019349502,
+  "center": {
+    "lat": 16.1592958,
+    "lon": 74.6130950
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Hunnurgad",
+    "name:kn": "ಹುನ್ನೂರಗಡ್"
+  }
+},
+{
+  "type": "way",
+  "id": 1019349503,
+  "center": {
+    "lat": 16.0945211,
+    "lon": 74.6870193
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Pachchapura Fort",
+    "name:kn": "ಪಚ್ಚಾಪುರ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1019349504,
+  "center": {
+    "lat": 15.9897506,
+    "lon": 74.8748235
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1019349505,
+  "center": {
+    "lat": 15.9224911,
+    "lon": 74.8586968
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Chachadi Fort",
+    "name:kn": "ಚಚಡಿ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1019350289,
+  "center": {
+    "lat": 16.3998209,
+    "lon": 74.3816900
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Nippani Rajawada",
+    "name:kn": "ನಿಪ್ಪಾಣಿ ರಾಜವಡ"
+  }
+},
+{
+  "type": "way",
+  "id": 1023826169,
+  "center": {
+    "lat": 16.5215637,
+    "lon": 76.7582089
+  },
+  "tags": {
+    "castle_type": "palace",
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 1023826173,
+  "center": {
+    "lat": 16.5225234,
+    "lon": 76.6991709
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1023827001,
+  "center": {
+    "lat": 16.2625094,
+    "lon": 76.3280490
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1023827006,
+  "center": {
+    "lat": 16.2878121,
+    "lon": 76.6306660
+  },
+  "tags": {
+    "castle_type": "palace",
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 1023827007,
+  "center": {
+    "lat": 16.2868942,
+    "lon": 76.6297808
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1023829076,
+  "center": {
+    "lat": 16.7486588,
+    "lon": 76.4347356
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1023830424,
+  "center": {
+    "lat": 16.8817917,
+    "lon": 76.9495376
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Rayanpalya Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1023830518,
+  "center": {
+    "lat": 17.0804151,
+    "lon": 76.5826785
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1023830519,
+  "center": {
+    "lat": 17.0727411,
+    "lon": 76.7949164
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Firozabad Fort",
+    "name:kn": "ಫೀರೋಜಾಬಾದ ಕೋಟಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 1023831655,
+  "center": {
+    "lat": 17.0612502,
+    "lon": 77.2173080
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1024333337,
+  "center": {
+    "lat": 13.8320846,
+    "lon": 77.1935677
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Medigeshi Fort",
+    "name:kn": "ಮಿಡಿಗೇಶಿ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1024333340,
+  "center": {
+    "lat": 14.1056362,
+    "lon": 77.2768141
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1024334333,
+  "center": {
+    "lat": 13.6549738,
+    "lon": 77.2041357
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Madhugiri Kote",
+    "name:kn": "ಮಧುಗಿರಿ ಕೋಟೆ",
+    "name:te": "చిగిలి కొండ"
+  }
+},
+{
+  "type": "way",
+  "id": 1024334334,
+  "center": {
+    "lat": 13.6522459,
+    "lon": 77.2001862
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1026835775,
+  "center": {
+    "lat": 14.7302763,
+    "lon": 76.7519054
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Yeni Maramma Temple",
+    "name:kn": "ಏಣಿ ಮಾರಮ್ಮ ಟೆಂಪಲ್",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "way",
+  "id": 1033444038,
+  "center": {
+    "lat": 13.2462968,
+    "lon": 77.7070584
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "monument",
+    "name": "Sultan Tipu's birth place"
+  }
+},
+{
+  "type": "way",
+  "id": 1076667395,
+  "center": {
+    "lat": 15.2093821,
+    "lon": 75.8796474
+  },
+  "tags": {
+    "historic": "fort",
+    "name:kn": "ಮುಂಡರಗಿ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1077854189,
+  "center": {
+    "lat": 16.5029253,
+    "lon": 75.2693912
+  },
+  "tags": {
+    "castle_type": "palace",
+    "historic": "castle",
+    "name": "Ramatirtha Palace",
+    "name:kn": "ರಾಮತೀರ್ಥ ಅರಮನೆ",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 1078013227,
+  "center": {
+    "lat": 16.5466226,
+    "lon": 74.6760154
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1098336182,
+  "center": {
+    "lat": 16.4891112,
+    "lon": 75.0762080
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1098338038,
+  "center": {
+    "lat": 15.9323480,
+    "lon": 74.5323678
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1098338667,
+  "center": {
+    "lat": 16.1849269,
+    "lon": 74.6935919
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1098714749,
+  "center": {
+    "lat": 16.1991205,
+    "lon": 77.3491426
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Raichur Fort",
+    "name:kn": "ರಾಯಚೂರು ಕೋಟೆ",
+    "wikidata": "Q15271340"
+  }
+},
+{
+  "type": "way",
+  "id": 1120713463,
+  "center": {
+    "lat": 13.5530971,
+    "lon": 77.1311247
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Siddarabetta Fort",
+    "name:kn": "ಸಿದ್ದರಬೆಟ್ಟ ಕೊಟೆ",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1124055294,
+  "center": {
+    "lat": 15.3464716,
+    "lon": 76.4532255
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Bukka Aqueduct"
+  }
+},
+{
+  "type": "way",
+  "id": 1134286592,
+  "center": {
+    "lat": 15.9231670,
+    "lon": 75.6834990
+  },
+  "tags": {
+    "historic": "ruins",
+    "ruined:building": "granary",
+    "ruins": "building"
+  }
+},
+{
+  "type": "way",
+  "id": 1134286593,
+  "center": {
+    "lat": 15.9224023,
+    "lon": 75.6840059
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Upper Shivalaya",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "way",
+  "id": 1134286594,
+  "center": {
+    "lat": 15.9216348,
+    "lon": 75.6832787
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "temple",
+    "historic": "ruins",
+    "name": "Lower Shivalaya",
+    "name:en": "Lower Shivalaya",
+    "name:hi": "निम्न शिवालय",
+    "name:kn": "ಕೆಳಗಣ ಶಿವಾಲಯ",
+    "religion": "hindu"
+  }
+},
+{
+  "type": "way",
+  "id": 1152516922,
+  "center": {
+    "lat": 15.9022606,
+    "lon": 74.9807936
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1152522505,
+  "center": {
+    "lat": 11.7204626,
+    "lon": 76.5822762
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1178058410,
+  "center": {
+    "lat": 15.6725674,
+    "lon": 74.1001351
+  },
+  "tags": {
+    "access": "yes",
+    "building": "yes",
+    "castle_type": "fortress",
+    "historic": "castle",
+    "name": "Sada Fort",
+    "name:kn": "ಸಾಡ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1209738957,
+  "center": {
+    "lat": 12.9857175,
+    "lon": 77.5903373
+  },
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "way",
+  "id": 1216642751,
+  "center": {
+    "lat": 16.9218492,
+    "lon": 75.0744180
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1217098359,
+  "center": {
+    "lat": 15.8511114,
+    "lon": 74.9685022
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1228447824,
+  "center": {
+    "lat": 17.9175621,
+    "lon": 77.5544558
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "monument",
+    "name": "Chaukhandi of Hazrath Khalil-Ullah Kirmani",
+    "name:en": "Chaukhandi of Hadrat Khalil-Ullah Kirmani"
+  }
+},
+{
+  "type": "way",
+  "id": 1245171141,
+  "center": {
+    "lat": 15.3419820,
+    "lon": 76.4723965
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245171142,
+  "center": {
+    "lat": 15.3415528,
+    "lon": 76.4762900
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245171143,
+  "center": {
+    "lat": 15.3414220,
+    "lon": 76.4762914
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245171145,
+  "center": {
+    "lat": 15.3410609,
+    "lon": 76.4745625
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245171146,
+  "center": {
+    "lat": 15.3416457,
+    "lon": 76.4742593
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Nammalawar Temple"
+  }
+},
+{
+  "type": "way",
+  "id": 1245186001,
+  "center": {
+    "lat": 15.3206786,
+    "lon": 76.4687439
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245186002,
+  "center": {
+    "lat": 15.3179729,
+    "lon": 76.4699491
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "man_made": "water_well"
+  }
+},
+{
+  "type": "way",
+  "id": 1245186003,
+  "center": {
+    "lat": 15.3186033,
+    "lon": 76.4706590
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245186004,
+  "center": {
+    "lat": 15.3183409,
+    "lon": 76.4698465
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245186472,
+  "center": {
+    "lat": 15.3414742,
+    "lon": 76.4771067
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1245186473,
+  "center": {
+    "lat": 15.3410733,
+    "lon": 76.4767018
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1262196670,
+  "center": {
+    "lat": 15.3104298,
+    "lon": 76.4487884
+  },
+  "tags": {
+    "historic": "ruins",
+    "name": "Muslim Tomb and Darga"
+  }
+},
+{
+  "type": "way",
+  "id": 1262562813,
+  "center": {
+    "lat": 15.9195645,
+    "lon": 75.6843435
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1332941596,
+  "center": {
+    "lat": 15.9021987,
+    "lon": 74.3852452
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Mahipalgad Fort",
+    "name:kn": "ಮಹಿಪಾಲ್ಗಡ ಕೋಟೆ",
+    "wikidata": "Q96391524"
+  }
+},
+{
+  "type": "way",
+  "id": 1357940692,
+  "center": {
+    "lat": 17.8841045,
+    "lon": 76.9483560
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1364311360,
+  "center": {
+    "lat": 15.3324252,
+    "lon": 76.4699357
+  },
+  "tags": {
+    "area": "yes",
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Ceremonial Hall",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 1364601441,
+  "center": {
+    "lat": 15.3341071,
+    "lon": 76.4597561
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "4 Pillar Structure",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 1364710669,
+  "center": {
+    "lat": 15.3341839,
+    "lon": 76.4702788
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "East Sule Bazaar Arcade"
+  }
+},
+{
+  "type": "way",
+  "id": 1364710670,
+  "center": {
+    "lat": 15.3336940,
+    "lon": 76.4699385
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "East Sule Bazaar Arcade"
+  }
+},
+{
+  "type": "way",
+  "id": 1365951644,
+  "center": {
+    "lat": 15.3159529,
+    "lon": 76.4704263
+  },
+  "tags": {
+    "height": "-1.5",
+    "historic": "monument",
+    "name": "Sunken Pit"
+  }
+},
+{
+  "type": "way",
+  "id": 1365951649,
+  "center": {
+    "lat": 15.3160984,
+    "lon": 76.4702557
+  },
+  "tags": {
+    "height": "-1",
+    "historic": "monument",
+    "name": "Pit"
+  }
+},
+{
+  "type": "way",
+  "id": 1378701481,
+  "center": {
+    "lat": 12.4331972,
+    "lon": 75.7400307
+  },
+  "tags": {
+    "historic": "monument",
+    "name": "Raja's tomb (Gaddige)",
+    "name:en": "Raja's tomb (Gaddige)",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 1446663943,
+  "center": {
+    "lat": 13.4701636,
+    "lon": 74.7521335
+  },
+  "tags": {
+    "access": "permissive",
+    "area": "yes",
+    "historic": "ruins",
+    "inscription": "Kattale Basadi is a historic Jain temple in Barkur, Karnataka, known for its dark, enclosed design that gives it the name \"Dark Temple\". Located in the Udupi district, it is believed to have been built in the 12th century AD .",
+    "ruins": "temple"
+  }
+},
+{
+  "type": "way",
+  "id": 1460223449,
+  "center": {
+    "lat": 15.3202573,
+    "lon": 76.4650023
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Noblemen's Quarters",
+    "name:fr": "Quartier des nobles"
+  }
+},
+{
+  "type": "way",
+  "id": 1460223451,
+  "center": {
+    "lat": 15.3181283,
+    "lon": 76.4651511
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Nobleman's Palace"
+  }
+},
+{
+  "type": "way",
+  "id": 1488547234,
+  "center": {
+    "lat": 16.7652349,
+    "lon": 77.1402116
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "historic:civilization": "medieval",
+    "name": "Ruins in Yadgir Fort",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1488550329,
+  "center": {
+    "lat": 18.0705675,
+    "lon": 77.1607087
+  },
+  "tags": {
+    "access": "yes",
+    "building": "yes",
+    "castle_type": "fortress",
+    "historic": "castle",
+    "name": "Bhatambra Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488550649,
+  "center": {
+    "lat": 15.3382407,
+    "lon": 76.1488162
+  },
+  "tags": {
+    "alt_name": "#PGSL",
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Koppal fort unidentified ruin (to be verified in the field)"
+  }
+},
+{
+  "type": "way",
+  "id": 1488550650,
+  "center": {
+    "lat": 15.3373200,
+    "lon": 76.1491396
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Koppal fort wall ruins (to be verified in the field)",
+    "ruins": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488550786,
+  "center": {
+    "lat": 16.9084888,
+    "lon": 76.6966647
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "fort",
+    "name": "Ijeri Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488551545,
+  "center": {
+    "lat": 18.0702552,
+    "lon": 77.1606910
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488552055,
+  "center": {
+    "lat": 16.7653384,
+    "lon": 77.1403801
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "fort",
+    "name": "Yadgiri fort levels"
+  }
+},
+{
+  "type": "way",
+  "id": 1488553100,
+  "center": {
+    "lat": 18.0705663,
+    "lon": 77.1607277
+  },
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "way",
+  "id": 1488553101,
+  "center": {
+    "lat": 18.0704557,
+    "lon": 77.1606695
+  },
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "way",
+  "id": 1488553199,
+  "center": {
+    "lat": 17.2119631,
+    "lon": 76.8852162
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Maratur"
+  }
+},
+{
+  "type": "way",
+  "id": 1488556860,
+  "center": {
+    "lat": 16.8699001,
+    "lon": 77.3936471
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "castle",
+    "name": "Gurumathakal Fort",
+    "name:kn": "ಗುರುಮಠಕಲ್ ಕೋಟೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1488558249,
+  "center": {
+    "lat": 16.8642120,
+    "lon": 77.4459468
+  },
+  "tags": {
+    "barrier": "wall",
+    "historic": "fort",
+    "name": "Chandriki Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561012,
+  "center": {
+    "lat": 16.2536293,
+    "lon": 76.4197768
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruins in Jaldurga fort, to be verified in field"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561013,
+  "center": {
+    "lat": 16.2528604,
+    "lon": 76.4201398
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561016,
+  "center": {
+    "lat": 16.2521893,
+    "lon": 76.4206042
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruins in Jaldurga fort, to be verified in field"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561017,
+  "center": {
+    "lat": 16.2527825,
+    "lon": 76.4204808
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruins in Jaldurga fort, to be verified in field"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561022,
+  "center": {
+    "lat": 16.2545173,
+    "lon": 76.4229584
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruins in Jaldurga fort, to be verified in field"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561023,
+  "center": {
+    "lat": 16.2531211,
+    "lon": 76.4206218
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruins in Jaldurga fort, to be verified in field"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561024,
+  "center": {
+    "lat": 16.2534211,
+    "lon": 76.4203935
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruins in Jaldurga fort, to be verified in field"
+  }
+},
+{
+  "type": "way",
+  "id": 1488561030,
+  "center": {
+    "lat": 16.2546469,
+    "lon": 76.4210862
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566734,
+  "center": {
+    "lat": 16.5250018,
+    "lon": 76.6949637
+  },
+  "tags": {
+    "building": "yes",
+    "description": "Close to entry .",
+    "historic": "fort",
+    "name": "Wagangera Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566735,
+  "center": {
+    "lat": 16.5255607,
+    "lon": 76.6956503
+  },
+  "tags": {
+    "building": "yes",
+    "description": "Wall",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566736,
+  "center": {
+    "lat": 16.5254758,
+    "lon": 76.6949992
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "fortress",
+    "description": "Circular fort wall",
+    "historic": "castle",
+    "name": "Wagangera fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566737,
+  "center": {
+    "lat": 16.5248071,
+    "lon": 76.6951406
+  },
+  "tags": {
+    "building": "yes",
+    "description": "Close to entry point",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566738,
+  "center": {
+    "lat": 16.5245124,
+    "lon": 76.6950979
+  },
+  "tags": {
+    "building": "yes",
+    "description": "Wall connecting to city/ residential area",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566739,
+  "center": {
+    "lat": 16.5250280,
+    "lon": 76.6966895
+  },
+  "tags": {
+    "building": "yes",
+    "description": "wall",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566740,
+  "center": {
+    "lat": 16.5258238,
+    "lon": 76.6966195
+  },
+  "tags": {
+    "building": "yes",
+    "description": "Wall",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488566741,
+  "center": {
+    "lat": 16.5253268,
+    "lon": 76.6940305
+  },
+  "tags": {
+    "building": "yes",
+    "description": "Ruin of wall that lead to the city",
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567504,
+  "center": {
+    "lat": 17.7149382,
+    "lon": 77.1403984
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "fort",
+    "name": "Hankuni Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567505,
+  "center": {
+    "lat": 17.7149659,
+    "lon": 77.1403917
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "fort",
+    "name": "Hankuni Fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1488568211,
+  "center": {
+    "lat": 18.0442074,
+    "lon": 77.2094550
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "palace",
+    "historic": "castle"
+  }
+},
+{
+  "type": "way",
+  "id": 1488568955,
+  "center": {
+    "lat": 17.1935669,
+    "lon": 77.1563273
+  },
+  "tags": {
+    "historic": "fort",
+    "layer": "1",
+    "name": "Malkhed Fort",
+    "name:kn": "ಮಳಖೇಡ ಕೋಟೆ",
+    "wall": "castle_wall"
+  }
+},
+{
+  "type": "way",
+  "id": 1488569459,
+  "center": {
+    "lat": 15.3379620,
+    "lon": 76.1484111
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruins of walls (to be verified in the field)"
+  }
+},
+{
+  "type": "way",
+  "id": 1488569460,
+  "center": {
+    "lat": 15.3391981,
+    "lon": 76.1485479
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Wall ruins (to be verified in field)",
+    "ruins": "wall"
+  }
+},
+{
+  "type": "way",
+  "id": 1488569461,
+  "center": {
+    "lat": 15.3411211,
+    "lon": 76.1486708
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruined enclosure (to be vefieid in the field)",
+    "ruins": "enclosure"
+  }
+},
+{
+  "type": "way",
+  "id": 1488569462,
+  "center": {
+    "lat": 15.3404625,
+    "lon": 76.1489090
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Pond (to be verified in the field)",
+    "ruins": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1488569463,
+  "center": {
+    "lat": 15.3393530,
+    "lon": 76.1491071
+  },
+  "tags": {
+    "area": "yes",
+    "historic": "ruins",
+    "name": "Ruined enclosure (to be verified in the field)",
+    "ruins": "enclosure"
+  }
+},
+{
+  "type": "way",
+  "id": 1488569491,
+  "center": {
+    "lat": 17.1794201,
+    "lon": 77.2915845
+  },
+  "tags": {
+    "building": "yes",
+    "castle_type": "palace",
+    "historic": "ruins",
+    "name": "Sedam Mahal"
+  }
+},
+{
+  "type": "way",
+  "id": 1488572180,
+  "center": {
+    "lat": 16.7656618,
+    "lon": 77.1403984
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1488572181,
+  "center": {
+    "lat": 16.7655691,
+    "lon": 77.1400341
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1488572182,
+  "center": {
+    "lat": 16.7655691,
+    "lon": 77.1400320
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1493582861,
+  "center": {
+    "lat": 12.8456363,
+    "lon": 74.8529535
+  },
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "way",
+  "id": 1516109145,
+  "center": {
+    "lat": 16.0310826,
+    "lon": 75.0386931
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1540065314,
+  "center": {
+    "lat": 14.9258188,
+    "lon": 75.2496441
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "historic": "monument",
+    "name": "Shri Nagareshwara Temple",
+    "religion": "hindu",
+    "wikidata": "Q16259469"
+  }
+},
+{
+  "type": "way",
+  "id": 1540067027,
+  "center": {
+    "lat": 14.9719811,
+    "lon": 75.3490058
+  },
+  "tags": {
+    "historic": "monument"
+  }
+},
+{
+  "type": "way",
+  "id": 1540067602,
+  "center": {
+    "lat": 14.9204521,
+    "lon": 75.5308852
+  },
+  "tags": {
+    "historic": "fort"
+  }
+},
+{
+  "type": "way",
+  "id": 1553927292,
+  "center": {
+    "lat": 15.3155420,
+    "lon": 76.4556028
+  },
+  "tags": {
+    "historic": "ruins",
+    "operator:wikidata": "Q632235"
+  }
+},
+{
+  "type": "way",
+  "id": 1553927293,
+  "center": {
+    "lat": 15.3157289,
+    "lon": 76.4556056
+  },
+  "tags": {
+    "historic": "ruins",
+    "operator:wikidata": "Q632235"
+  }
+},
+{
+  "type": "way",
+  "id": 1554351753,
+  "center": {
+    "lat": 15.3380473,
+    "lon": 76.4678670
+  },
+  "tags": {
+    "historic": "ruins"
+  }
+},
+{
+  "type": "way",
+  "id": 1554351777,
+  "center": {
+    "lat": 15.3212889,
+    "lon": 76.4719999
+  },
+  "tags": {
+    "building": "ruins",
+    "historic": "ruins",
+    "name": "Guard's house"
+  }
+},
+{
+  "type": "relation",
+  "id": 6432140,
+  "center": {
+    "lat": 12.4210515,
+    "lon": 75.7385704
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Madikeri Fort",
+    "name:kn": "ಮಡಿಕೇರಿ ಕೋಟೆ",
+    "type": "multipolygon",
+    "wikidata": "Q6727744"
+  }
+},
+{
+  "type": "relation",
+  "id": 7556800,
+  "center": {
+    "lat": 13.6549256,
+    "lon": 77.2052018
+  },
+  "tags": {
+    "historic": "castle",
+    "name": "Madhugiri Kote",
+    "name:kn": "ಮಧುಗಿರಿ ಕೋಟೆ",
+    "name:te": "చిగిలి కొండ",
+    "type": "multilinestring"
+  }
+},
+{
+  "type": "relation",
+  "id": 8744577,
+  "center": {
+    "lat": 13.2492694,
+    "lon": 77.7099440
+  },
+  "tags": {
+    "barrier": "city_wall",
+    "building": "yes",
+    "historic": "castle",
+    "name": "Devanahalli Fort",
+    "name:kn": "ದೇವನಹಳ್ಳಿ ಕೋಟೆ",
+    "name:ml": "ദേവനഹള്ളി കോട്ട",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 9042747,
+  "center": {
+    "lat": 12.8405165,
+    "lon": 77.6285979
+  },
+  "tags": {
+    "alt_name": "Bettadasanpura Fort",
+    "historic": "fort",
+    "name": "Thimmarayaswamy Fort",
+    "name:kn": "ತಿಮ್ಮರಾಯಸ್ವಾಮಿ ಕೋಟೆ",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 9149272,
+  "center": {
+    "lat": 17.3407462,
+    "lon": 76.8310622
+  },
+  "tags": {
+    "historic": "fort",
+    "name": "Bahmani Fort",
+    "name:en": "Gulbarga Fort",
+    "name:kn": "ಬಹುಮನಿ ಕೋಟೆ",
+    "type": "multipolygon",
+    "wikidata": "Q5617266"
+  }
+},
+{
+  "type": "relation",
+  "id": 9244447,
+  "center": {
+    "lat": 15.3216179,
+    "lon": 76.4722824
+  },
+  "tags": {
+    "building": "yes",
+    "historic": "ruins",
+    "name": "Guard's Quarters",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 12327099,
+  "center": {
+    "lat": 15.1486533,
+    "lon": 76.9102770
+  },
+  "tags": {
+    "historic": "fort",
+    "name:en": "Ballari Fort",
+    "name:kn": "ಬಳ್ಳಾರಿ ಕೋಟೆ",
+    "type": "multipolygon",
+    "wikidata": "Q4883513"
+  }
+}
+
+  ]
+}

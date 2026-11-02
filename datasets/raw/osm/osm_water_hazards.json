@@ -1,0 +1,2257 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-02T02:09:24Z",
+    "timestamp_areas_base": "2026-11-02T00:10:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 62073189,
+  "lat": 12.2876507,
+  "lon": 77.1848074,
+  "tags": {
+    "name": "Barachukki Falls",
+    "name:kn": "ಭರಚುಕ್ಕಿ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 459795464,
+  "lat": 14.2292983,
+  "lon": 74.8123093,
+  "tags": {
+    "name": "Jog Falls",
+    "name:kn": "ಜೋಗ ಜಲಪಾತ",
+    "name:ml": "ജോഗ് വെള്ളച്ചാട്ടം",
+    "waterway": "waterfall",
+    "wikidata": "Q672241"
+  }
+},
+{
+  "type": "node",
+  "id": 621497181,
+  "lat": 12.3515083,
+  "lon": 77.4459464,
+  "tags": {
+    "name": "Chunchi Falls",
+    "name:kn": "ಚುಂಚಿ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 755456486,
+  "lat": 12.4570242,
+  "lon": 75.7156710,
+  "tags": {
+    "name": "Abbi Falls",
+    "name:kn": "ಅಬ್ಬೆ ಜಲಪಾತ",
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 818688243,
+  "lat": 12.3480324,
+  "lon": 77.1972939,
+  "tags": {
+    "alt_name": "Ganalu Falls",
+    "name": "Shimshapura Falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 818755734,
+  "lat": 12.2936196,
+  "lon": 77.1671829,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 838536660,
+  "lat": 11.9667954,
+  "lon": 75.9839484,
+  "tags": {
+    "alt_name": "Iruppu Falls;Lakshmana Tirtha Falls",
+    "name": "Iruppu Falls",
+    "name:en": "Irupu Falls",
+    "name:kn": "ಇರ್ಪು ಜಲಪಾತ",
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 838576797,
+  "lat": 12.1184195,
+  "lon": 77.7758632,
+  "tags": {
+    "name": "Hogenakkal Falls",
+    "name:en": "Hogenakkal Falls",
+    "name:hi": "होगेन्नाकल",
+    "name:kn": "ಹೊಗೆನಕಲ್ ಜಲಪಾತ",
+    "name:ta": "ஒகேனக்கல் அருவி",
+    "name:te": "హొగెనక్కల్ జలపాతం",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 924297864,
+  "lat": 13.2581667,
+  "lon": 75.1622147,
+  "tags": {
+    "alt_name": "Seethanabbe Falls",
+    "name": "Hanumanagundi Falls",
+    "name:kn": "ಹನುಮನ ಗುಂಡಿ ಜಲಪಾತ",
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 1611745805,
+  "lat": 13.3874783,
+  "lon": 75.1796832,
+  "tags": {
+    "name": "Sirimane Falls",
+    "name:kn": "ಸಿರಿಮನೆ ಜಲಪಾತ",
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 1704748250,
+  "lat": 13.2364234,
+  "lon": 75.1782638,
+  "tags": {
+    "name": "Kadambi Falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 2140335892,
+  "lat": 14.8501077,
+  "lon": 74.7522510,
+  "tags": {
+    "name": "Magoda Falls",
+    "name:kn": "ಮಾಗೋಡು ಜಲಪಾತ",
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 2261611324,
+  "lat": 13.4236276,
+  "lon": 75.7409839,
+  "tags": {
+    "alt_name": "Majjige falls",
+    "name": "Jhari Falls",
+    "name:kn": "ಝರಿ ಜಲಪಾತ",
+    "name:ta": "ஜாரி நீர்வீழ்ச்சி",
+    "old_name": "Jhari falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 2261619342,
+  "lat": 13.4221962,
+  "lon": 75.7698018,
+  "tags": {
+    "alt_name": "Manikyadara",
+    "name": "Manikyadhara Falls",
+    "name:kn": "ಮಾಣಿಕ್ಯಧಾರಾ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 3029618315,
+  "lat": 13.5492593,
+  "lon": 75.7888969,
+  "tags": {
+    "alt_name": "Kalhatti falls",
+    "name": "Kallathigiri Falls",
+    "name:kn": "ಕಲ್ಲತ್ತಗಿರಿ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 3031839555,
+  "lat": 13.4228947,
+  "lon": 75.7457243,
+  "tags": {
+    "name": "Honnammana Halla",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 3150443028,
+  "lat": 13.4103862,
+  "lon": 75.1218925,
+  "tags": {
+    "alt_name": "Seeta Falls",
+    "name": "Kudluteertha Falls",
+    "name:kn": "ಕೂಡ್ಲುತೀರ್ಥ",
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 3451068237,
+  "lat": 14.4099730,
+  "lon": 74.7481079,
+  "tags": {
+    "alt_name": "Lushington Falls",
+    "name": "ಉಂಚಳ್ಳಿ ಜಲಪಾತ",
+    "name:en": "Unchalli Falls",
+    "name:kn": "ಉಂಚಳ್ಳಿ ಜಲಪಾತ",
+    "tourism": "attraction",
+    "waterway": "waterfall",
+    "wikidata": "Q37303"
+  }
+},
+{
+  "type": "node",
+  "id": 3500455301,
+  "lat": 12.5399324,
+  "lon": 76.9144746,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 3796478277,
+  "lat": 12.2248591,
+  "lon": 75.6142269,
+  "tags": {
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 3802136743,
+  "lat": 13.1289283,
+  "lon": 75.2727437,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4078446925,
+  "lat": 12.6812226,
+  "lon": 75.7236637,
+  "tags": {
+    "name": "Mallalli Falls",
+    "name:kn": "ಮಲ್ಲಳ್ಳಿ ಜಲಪಾತ",
+    "tourism": "attraction",
+    "waterway": "waterfall",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4090604859,
+  "lat": 12.5221756,
+  "lon": 75.7390927,
+  "tags": {
+    "alt_name": "Kote Abbe",
+    "name": "Kote Abbey falls",
+    "name:en": "Kote Abbe",
+    "name:kn": "ಕೋಟೆ ಅಬ್ಬೆ",
+    "old_name": "Kotey Abbi falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4352464545,
+  "lat": 12.8060404,
+  "lon": 77.5383898,
+  "tags": {
+    "alt_name": "TK falls",
+    "name": "Thottikallu falls",
+    "name:kn": "ತೊಟ್ಟಿಕಲ್ಲು ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4393890353,
+  "lat": 12.2933932,
+  "lon": 77.1688277,
+  "tags": {
+    "name": "Gaganachukki Falls",
+    "name:kn": "ಗಗನಚುಕ್ಕಿ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4418368082,
+  "lat": 14.2311994,
+  "lon": 74.4464330,
+  "tags": {
+    "name": "Apsarakonda Falls",
+    "name:kn": "ಅಪ್ಸರಕೊಂಡ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4461240133,
+  "lat": 14.5983501,
+  "lon": 74.5513660,
+  "tags": {
+    "alt_name": "Vibhuthi falls",
+    "name": "Vibhuti falls",
+    "name:kn": "ವಿಭೂತಿ",
+    "old_name": "Vibhooti falls",
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4552190389,
+  "lat": 15.3456118,
+  "lon": 76.4353769,
+  "tags": {
+    "name": "Swimming spot",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4590982491,
+  "lat": 12.2308911,
+  "lon": 75.6544927,
+  "tags": {
+    "name": "Chingaara Waterfall",
+    "name:en": "Chingaara Waterfall",
+    "name:kn": "ಚಿಂಗಾರ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4813160324,
+  "lat": 15.6789114,
+  "lon": 74.1896746,
+  "tags": {
+    "name": "Kalasa Falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4819525068,
+  "lat": 13.5505073,
+  "lon": 75.7654482,
+  "tags": {
+    "name": "Shanti falls",
+    "name:kn": "ಶಾಂತಿ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 4868918822,
+  "lat": 13.2404866,
+  "lon": 75.3291958,
+  "tags": {
+    "name": "Soormane falls",
+    "name:kn": "ಸೂರಮನೆ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 5358257038,
+  "lat": 16.1923761,
+  "lon": 74.7769884,
+  "tags": {
+    "name": "Gokak Falls",
+    "name:kn": "ಗೋಕಾಕ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 6075120822,
+  "lat": 12.4133950,
+  "lon": 76.6059608,
+  "tags": {
+    "name": "Balamuri Waterfall",
+    "name:kn": "ಬಲಮುರಿ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 6092073651,
+  "lat": 12.3098280,
+  "lon": 77.1751651,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 6284064688,
+  "lat": 15.3461778,
+  "lon": 76.4367269,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 6368210937,
+  "lat": 12.8726515,
+  "lon": 74.9343099,
+  "tags": {
+    "name": "Adyar falls",
+    "name:kn": "ಅಡ್ಯಾರ್ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 6404008586,
+  "lat": 13.6773338,
+  "lon": 74.9843549,
+  "tags": {
+    "name": "Abbi Falls, Irki Gadde, Thombattu",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 8084008606,
+  "lat": 13.5348297,
+  "lon": 75.7809449,
+  "tags": {
+    "alt_name": "Kalhathigiri Falls",
+    "name": "Kalhattigiri Hilltop Falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 9177400134,
+  "lat": 12.2943795,
+  "lon": 77.1671587,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 9196682417,
+  "lat": 12.4155882,
+  "lon": 76.5941864,
+  "tags": {
+    "name": "Yedmuri Falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 9272853192,
+  "lat": 12.8143875,
+  "lon": 77.2830469,
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "node",
+  "id": 9840905045,
+  "lat": 15.6996240,
+  "lon": 74.1525961,
+  "tags": {
+    "height": "64",
+    "source": "SOI",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 9853766839,
+  "lat": 13.1293430,
+  "lon": 75.5149770,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 9853767199,
+  "lat": 13.1614488,
+  "lon": 75.4975265,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 10132509761,
+  "lat": 12.6605539,
+  "lon": 75.6377625,
+  "tags": {
+    "name": "Kumara Parvatha Waterfalls",
+    "name:kn": "ಸಾತೋಡಿ ಜಲಪಾತ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 10160518207,
+  "lat": 13.1533938,
+  "lon": 75.3035705,
+  "tags": {
+    "name": "Somavathi falls",
+    "name:kn": "ಸೋಮವತಿ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 11010706364,
+  "lat": 15.6613098,
+  "lon": 74.2543495,
+  "tags": {
+    "name": "Chikhale Waterfalls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 11302719173,
+  "lat": 15.6590216,
+  "lon": 74.1247451,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 11560267465,
+  "lat": 13.4135721,
+  "lon": 75.6932439,
+  "tags": {
+    "name": "Ukkada Waterfalls",
+    "name:ta": "உக்கடா நீர்வீழ்ச்சி",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 11627478853,
+  "lat": 12.7521310,
+  "lon": 77.5988656,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 12161133336,
+  "lat": 12.9461019,
+  "lon": 77.5863206,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 12328613094,
+  "lat": 12.8062154,
+  "lon": 77.5395748,
+  "tags": {
+    "height": "1",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 12331574414,
+  "lat": 15.6680323,
+  "lon": 74.2365235,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 13239327780,
+  "lat": 15.6325838,
+  "lon": 74.2458201,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 13382740501,
+  "lat": 13.7531538,
+  "lon": 74.7162938,
+  "tags": {
+    "name": "Kanikal falls alooru",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 13390837070,
+  "lat": 15.3330616,
+  "lon": 76.4405661,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 13390837137,
+  "lat": 15.3326673,
+  "lon": 76.4384746,
+  "tags": {
+    "name": "Big",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 14005790765,
+  "lat": 12.2060603,
+  "lon": 75.6735188,
+  "tags": {
+    "name": "Chelavara Falls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 14066173101,
+  "lat": 14.7777132,
+  "lon": 74.1794242,
+  "tags": {
+    "name": "Nagarmadi Waterfall",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 14074423082,
+  "lat": 15.9728055,
+  "lon": 75.7759864,
+  "tags": {
+    "tourism": "attraction",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 14112033523,
+  "lat": 12.2971500,
+  "lon": 75.6101150,
+  "tags": {
+    "name": "Nelji hills spring",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 14324688001,
+  "lat": 14.3961057,
+  "lon": 74.7506732,
+  "tags": {
+    "name": "Burude waterfalls",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "node",
+  "id": 14335434966,
+  "lat": 12.6745671,
+  "lon": 75.7315032,
+  "tags": {
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "way",
+  "id": 158060401,
+  "center": {
+    "lat": 13.5573258,
+    "lon": 75.1679633
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 158060403,
+  "center": {
+    "lat": 13.5601852,
+    "lon": 75.1685241
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 158060404,
+  "center": {
+    "lat": 13.5588619,
+    "lon": 75.1670113
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 159562795,
+  "center": {
+    "lat": 13.8028726,
+    "lon": 74.9562125
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 159562798,
+  "center": {
+    "lat": 13.7971978,
+    "lon": 74.9436443
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 159562813,
+  "center": {
+    "lat": 13.7986234,
+    "lon": 74.9501867
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 172937210,
+  "center": {
+    "lat": 13.1615916,
+    "lon": 77.6214205
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 372431517,
+  "center": {
+    "lat": 15.7155252,
+    "lon": 74.1961766
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 372431518,
+  "center": {
+    "lat": 15.6648477,
+    "lon": 74.1884100
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 376835156,
+  "center": {
+    "lat": 13.3442119,
+    "lon": 75.0794137
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 376835157,
+  "center": {
+    "lat": 13.3417586,
+    "lon": 75.0784051
+  },
+  "tags": {
+    "name": "Valikunja Ridge point",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 376835158,
+  "center": {
+    "lat": 13.3403755,
+    "lon": 75.0787378
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 376839646,
+  "center": {
+    "lat": 13.1262633,
+    "lon": 75.2737033
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 391029050,
+  "center": {
+    "lat": 13.3748311,
+    "lon": 77.2057410
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 391029056,
+  "center": {
+    "lat": 13.3792890,
+    "lon": 77.2118887
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 391029070,
+  "center": {
+    "lat": 13.3812764,
+    "lon": 77.2120187
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 391029072,
+  "center": {
+    "lat": 13.3828158,
+    "lon": 77.2121817
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 396947712,
+  "center": {
+    "lat": 14.5889709,
+    "lon": 74.3634707
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 404535983,
+  "center": {
+    "lat": 13.1054386,
+    "lon": 75.4146995
+  },
+  "tags": {
+    "name": "Bandaje Abbi",
+    "name:kn": "ಬಂಡಾಜೆ ಅಬ್ಬಿ",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "way",
+  "id": 444348873,
+  "center": {
+    "lat": 14.2245457,
+    "lon": 74.4418249
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 444348877,
+  "center": {
+    "lat": 14.2125507,
+    "lon": 74.4491071
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 444348882,
+  "center": {
+    "lat": 14.2092184,
+    "lon": 74.4504470
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 445271173,
+  "center": {
+    "lat": 14.2130303,
+    "lon": 74.4492690
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 445271174,
+  "center": {
+    "lat": 14.2270184,
+    "lon": 74.4429899
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 481312485,
+  "center": {
+    "lat": 15.7526906,
+    "lon": 75.1216267
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 499515067,
+  "center": {
+    "lat": 15.9193710,
+    "lon": 75.6895828
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 548416051,
+  "center": {
+    "lat": 17.9261190,
+    "lon": 77.5257969
+  },
+  "tags": {
+    "barrier": "wall",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 625011255,
+  "center": {
+    "lat": 15.0797731,
+    "lon": 74.6483295
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 718319006,
+  "center": {
+    "lat": 13.3860188,
+    "lon": 74.7859534
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 775240595,
+  "center": {
+    "lat": 13.1150804,
+    "lon": 75.4076564
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 775240596,
+  "center": {
+    "lat": 13.1365419,
+    "lon": 75.4083216
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 775240597,
+  "center": {
+    "lat": 13.1494343,
+    "lon": 75.4073131
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1025443536,
+  "center": {
+    "lat": 13.1630937,
+    "lon": 77.6258726
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487854,
+  "center": {
+    "lat": 15.9242207,
+    "lon": 75.6827769
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487855,
+  "center": {
+    "lat": 15.9243841,
+    "lon": 75.6830599
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487856,
+  "center": {
+    "lat": 15.9246074,
+    "lon": 75.6841903
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487857,
+  "center": {
+    "lat": 15.9239801,
+    "lon": 75.6851779
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487858,
+  "center": {
+    "lat": 15.9242016,
+    "lon": 75.6848106
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487859,
+  "center": {
+    "lat": 15.9233180,
+    "lon": 75.6855621
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487860,
+  "center": {
+    "lat": 15.9228198,
+    "lon": 75.6858493
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487861,
+  "center": {
+    "lat": 15.9225199,
+    "lon": 75.6858132
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487862,
+  "center": {
+    "lat": 15.9223165,
+    "lon": 75.6857775
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487863,
+  "center": {
+    "lat": 15.9226083,
+    "lon": 75.6855106
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487864,
+  "center": {
+    "lat": 15.9221263,
+    "lon": 75.6852076
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487865,
+  "center": {
+    "lat": 15.9222498,
+    "lon": 75.6847534
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487866,
+  "center": {
+    "lat": 15.9221926,
+    "lon": 75.6843799
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487867,
+  "center": {
+    "lat": 15.9225164,
+    "lon": 75.6836073
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487868,
+  "center": {
+    "lat": 15.9219728,
+    "lon": 75.6838589
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487869,
+  "center": {
+    "lat": 15.9219836,
+    "lon": 75.6845920
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487870,
+  "center": {
+    "lat": 15.9214154,
+    "lon": 75.6841467
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487871,
+  "center": {
+    "lat": 15.9216246,
+    "lon": 75.6848590
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487872,
+  "center": {
+    "lat": 15.9217867,
+    "lon": 75.6850900
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487873,
+  "center": {
+    "lat": 15.9218128,
+    "lon": 75.6856107
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487874,
+  "center": {
+    "lat": 15.9220467,
+    "lon": 75.6856235
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487875,
+  "center": {
+    "lat": 15.9225306,
+    "lon": 75.6831446
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487876,
+  "center": {
+    "lat": 15.9228448,
+    "lon": 75.6833805
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487877,
+  "center": {
+    "lat": 15.9229066,
+    "lon": 75.6831749
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487878,
+  "center": {
+    "lat": 15.9228989,
+    "lon": 75.6830325
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487879,
+  "center": {
+    "lat": 15.9233210,
+    "lon": 75.6829993
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487880,
+  "center": {
+    "lat": 15.9236125,
+    "lon": 75.6826607
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487883,
+  "center": {
+    "lat": 15.9231356,
+    "lon": 75.6854393
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487887,
+  "center": {
+    "lat": 15.9217720,
+    "lon": 75.6839252
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487888,
+  "center": {
+    "lat": 15.9219004,
+    "lon": 75.6836792
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487889,
+  "center": {
+    "lat": 15.9211016,
+    "lon": 75.6852772
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487891,
+  "center": {
+    "lat": 15.9232601,
+    "lon": 75.6842243
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487892,
+  "center": {
+    "lat": 15.9237733,
+    "lon": 75.6829183
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487901,
+  "center": {
+    "lat": 15.9230971,
+    "lon": 75.6829782
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487907,
+  "center": {
+    "lat": 15.9270223,
+    "lon": 75.6807448
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487908,
+  "center": {
+    "lat": 15.9268354,
+    "lon": 75.6808047
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487909,
+  "center": {
+    "lat": 15.9266133,
+    "lon": 75.6812657
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487910,
+  "center": {
+    "lat": 15.9268222,
+    "lon": 75.6816259
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487911,
+  "center": {
+    "lat": 15.9268664,
+    "lon": 75.6811170
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487912,
+  "center": {
+    "lat": 15.9270857,
+    "lon": 75.6810735
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487913,
+  "center": {
+    "lat": 15.9261891,
+    "lon": 75.6883122
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487917,
+  "center": {
+    "lat": 15.9327144,
+    "lon": 75.6815234
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487918,
+  "center": {
+    "lat": 15.9306644,
+    "lon": 75.6792995
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487919,
+  "center": {
+    "lat": 15.9301616,
+    "lon": 75.6798137
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487920,
+  "center": {
+    "lat": 15.9295602,
+    "lon": 75.6801474
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487921,
+  "center": {
+    "lat": 15.9292632,
+    "lon": 75.6807775
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487922,
+  "center": {
+    "lat": 15.9125548,
+    "lon": 75.7020907
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487923,
+  "center": {
+    "lat": 15.9169222,
+    "lon": 75.6849144
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487924,
+  "center": {
+    "lat": 15.9162266,
+    "lon": 75.6853272
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487925,
+  "center": {
+    "lat": 15.9158725,
+    "lon": 75.6860934
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487926,
+  "center": {
+    "lat": 15.9130980,
+    "lon": 75.6882404
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487927,
+  "center": {
+    "lat": 15.9134354,
+    "lon": 75.6883264
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487928,
+  "center": {
+    "lat": 15.9131626,
+    "lon": 75.6886437
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487929,
+  "center": {
+    "lat": 15.9123536,
+    "lon": 75.6921031
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487930,
+  "center": {
+    "lat": 15.9124724,
+    "lon": 75.6950968
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487932,
+  "center": {
+    "lat": 15.9136236,
+    "lon": 75.6886200
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487933,
+  "center": {
+    "lat": 15.9133872,
+    "lon": 75.6899688
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1026487934,
+  "center": {
+    "lat": 15.9132207,
+    "lon": 75.6913754
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1069442802,
+  "center": {
+    "lat": 15.6516790,
+    "lon": 74.1568198
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1128016628,
+  "center": {
+    "lat": 15.3510824,
+    "lon": 76.4488291
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1131224441,
+  "center": {
+    "lat": 15.9287140,
+    "lon": 75.6821240
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1131224442,
+  "center": {
+    "lat": 15.9284167,
+    "lon": 75.6823124
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1131224443,
+  "center": {
+    "lat": 15.9285243,
+    "lon": 75.6831054
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1131224444,
+  "center": {
+    "lat": 15.9283179,
+    "lon": 75.6829917
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1131224445,
+  "center": {
+    "lat": 15.9286348,
+    "lon": 75.6827306
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1131224446,
+  "center": {
+    "lat": 15.9282472,
+    "lon": 75.6834683
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1131224447,
+  "center": {
+    "lat": 15.9285031,
+    "lon": 75.6834401
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1157162602,
+  "center": {
+    "lat": 15.9267676,
+    "lon": 75.6813135
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1157162603,
+  "center": {
+    "lat": 15.9267940,
+    "lon": 75.6818089
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1157162604,
+  "center": {
+    "lat": 15.9266608,
+    "lon": 75.6817415
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1157162606,
+  "center": {
+    "lat": 15.9267543,
+    "lon": 75.6814557
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1219803086,
+  "center": {
+    "lat": 15.6569947,
+    "lon": 74.2048004
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1244146270,
+  "center": {
+    "lat": 13.1649191,
+    "lon": 77.6285184
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1306076401,
+  "center": {
+    "lat": 13.5974541,
+    "lon": 77.2078102
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1418349950,
+  "center": {
+    "lat": 13.3372218,
+    "lon": 75.0804403
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1418349951,
+  "center": {
+    "lat": 13.3082909,
+    "lon": 75.0967903
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1427947964,
+  "center": {
+    "lat": 14.0150384,
+    "lon": 74.3255903
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1427947965,
+  "center": {
+    "lat": 14.0158543,
+    "lon": 74.3251336
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1427947966,
+  "center": {
+    "lat": 14.0162849,
+    "lon": 74.3248084
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1427947967,
+  "center": {
+    "lat": 14.0181574,
+    "lon": 74.3247816
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1447150477,
+  "center": {
+    "lat": 15.5657241,
+    "lon": 74.2966179
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1447150481,
+  "center": {
+    "lat": 15.5993857,
+    "lon": 74.2939190
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1447150482,
+  "center": {
+    "lat": 15.5921264,
+    "lon": 74.2860931
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1455168574,
+  "center": {
+    "lat": 15.7445103,
+    "lon": 74.1715335
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1455168575,
+  "center": {
+    "lat": 15.7408857,
+    "lon": 74.1691732
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1461278138,
+  "center": {
+    "lat": 15.7332337,
+    "lon": 74.1950404
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1461278139,
+  "center": {
+    "lat": 15.7371115,
+    "lon": 74.1979802
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1461278140,
+  "center": {
+    "lat": 15.7428940,
+    "lon": 74.2040044
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1462639635,
+  "center": {
+    "lat": 15.7245383,
+    "lon": 74.1965961
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488547255,
+  "center": {
+    "lat": 15.3148608,
+    "lon": 76.1612788
+  },
+  "tags": {
+    "height": "10 mtrs",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488547256,
+  "center": {
+    "lat": 15.3139122,
+    "lon": 76.1615737
+  },
+  "tags": {
+    "height": "10 mtrs",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488556015,
+  "center": {
+    "lat": 16.7653384,
+    "lon": 77.1403801
+  },
+  "tags": {
+    "name": "Yadgiri fort level",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488559046,
+  "center": {
+    "lat": 16.7648462,
+    "lon": 77.1396710
+  },
+  "tags": {
+    "name": "Yadgir fort level",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488559047,
+  "center": {
+    "lat": 16.7645551,
+    "lon": 77.1393762
+  },
+  "tags": {
+    "name": "Yadgiri Fort level",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567764,
+  "center": {
+    "lat": 16.7674251,
+    "lon": 77.1410734
+  },
+  "tags": {
+    "name": "level",
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567765,
+  "center": {
+    "lat": 16.7658277,
+    "lon": 77.1381502
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567766,
+  "center": {
+    "lat": 16.7658417,
+    "lon": 77.1399786
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567767,
+  "center": {
+    "lat": 16.7643322,
+    "lon": 77.1390537
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567768,
+  "center": {
+    "lat": 16.7647164,
+    "lon": 77.1400259
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488567771,
+  "center": {
+    "lat": 16.7670437,
+    "lon": 77.1419168
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488570955,
+  "center": {
+    "lat": 16.7663408,
+    "lon": 77.1417303
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488570956,
+  "center": {
+    "lat": 16.7664426,
+    "lon": 77.1417907
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1488570960,
+  "center": {
+    "lat": 16.7666893,
+    "lon": 77.1371975
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1493868577,
+  "center": {
+    "lat": 12.8991525,
+    "lon": 77.8003269
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+},
+{
+  "type": "way",
+  "id": 1534010277,
+  "center": {
+    "lat": 12.4226227,
+    "lon": 77.5698569
+  },
+  "tags": {
+    "direction": "90",
+    "natural": "cliff",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "way",
+  "id": 1537156857,
+  "center": {
+    "lat": 12.8340465,
+    "lon": 77.4016960
+  },
+  "tags": {
+    "man_made": "yes",
+    "waterway": "waterfall"
+  }
+},
+{
+  "type": "way",
+  "id": 1547440181,
+  "center": {
+    "lat": 15.9728134,
+    "lon": 75.7759183
+  },
+  "tags": {
+    "natural": "cliff"
+  }
+}
+
+  ]
+}

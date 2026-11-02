@@ -1,0 +1,770 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-02T01:58:21Z",
+    "timestamp_areas_base": "2026-11-01T19:24:35Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 928264962,
+  "lat": 13.0482487,
+  "lon": 77.6185279,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Hebbal Fire Station",
+    "name:kn": "ಹೆಬ್ಬಾಳ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ",
+    "operator": "Karnataka State Fire And Emergency Service"
+  }
+},
+{
+  "type": "node",
+  "id": 1465647252,
+  "lat": 13.2588958,
+  "lon": 76.4650062,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1474289502,
+  "lat": 15.4273768,
+  "lon": 75.6403975,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 1789651737,
+  "lat": 14.4589706,
+  "lon": 75.9330419,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Davanagere Fire Station",
+    "name:kn": "ದಾವಣಗೆರೆ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1813605986,
+  "lat": 13.9301334,
+  "lon": 75.5675255,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Shimoga Fire Brigade",
+    "name:kn": "ಶಿವಮೊಗ್ಗ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1900761944,
+  "lat": 12.4252645,
+  "lon": 75.7271549,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 1987151036,
+  "lat": 12.5755389,
+  "lon": 75.3850992,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 2373933275,
+  "lat": 13.0087261,
+  "lon": 76.1225793,
+  "tags": {
+    "amenity": "fire_station",
+    "designation": "Government",
+    "name": "Hassan Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಕೇಂದ್ರ",
+    "source": "Local Knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 3081416874,
+  "lat": 15.0780509,
+  "lon": 76.5407272,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 3207088571,
+  "lat": 15.1697997,
+  "lon": 76.3784035,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "BMM Fire station"
+  }
+},
+{
+  "type": "node",
+  "id": 5003334123,
+  "lat": 14.8348213,
+  "lon": 76.2325067,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 5016657227,
+  "lat": 14.7830263,
+  "lon": 76.0000756,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 5118895338,
+  "lat": 13.3266365,
+  "lon": 76.2470509,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 6112964504,
+  "lat": 13.0997201,
+  "lon": 77.3893592,
+  "tags": {
+    "addr:city": "Nelamangala",
+    "addr:postcode": "562123",
+    "addr:street": "Nelamangala - Chikkaballapur Highway",
+    "amenity": "fire_station",
+    "name": "Nelamangala Fire Station"
+  }
+},
+{
+  "type": "node",
+  "id": 6630947655,
+  "lat": 12.4172969,
+  "lon": 76.6881238,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 6845945393,
+  "lat": 15.8427962,
+  "lon": 74.5079663,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Belgaum Fire Station",
+    "name:kn": "ಬೆಳಗಾವಿ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 6991535449,
+  "lat": 13.0037983,
+  "lon": 77.6786402,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "ITI Fire Station"
+  }
+},
+{
+  "type": "node",
+  "id": 8919834459,
+  "lat": 13.6023877,
+  "lon": 77.5240625,
+  "tags": {
+    "addr:city": "Gauribidanur",
+    "addr:postcode": "561208",
+    "amenity": "fire_station",
+    "name": "Gauribidanur Fire Station",
+    "operator": "Govt of Karnataka",
+    "phone": "08156274322"
+  }
+},
+{
+  "type": "node",
+  "id": 8919834460,
+  "lat": 13.6727892,
+  "lon": 77.7082814,
+  "tags": {
+    "addr:city": "Gauribidanur",
+    "addr:postcode": "561209",
+    "amenity": "fire_station",
+    "name": "Gudibanda Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 10579312537,
+  "lat": 12.9777636,
+  "lon": 77.5888047,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Bengaluru Secretariat Fire Station"
+  }
+},
+{
+  "type": "node",
+  "id": 11247473279,
+  "lat": 13.3277231,
+  "lon": 74.7400363,
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Udupi Fire Station",
+    "opening_hours": "Mo-Su 09:00-09:00",
+    "website": "https://ksfes.karnataka.gov.in/"
+  }
+},
+{
+  "type": "node",
+  "id": 11248279569,
+  "lat": 12.3105759,
+  "lon": 76.3173911,
+  "tags": {
+    "amenity": "fire_station",
+    "check_date": "2023-10-08"
+  }
+},
+{
+  "type": "node",
+  "id": 11939010319,
+  "lat": 13.0280181,
+  "lon": 77.5208174,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 13167485130,
+  "lat": 17.9220741,
+  "lon": 77.5206998,
+  "tags": {
+    "amenity": "fire_station",
+    "check_date": "2025-09-16",
+    "name": "Bidar Fire Station"
+  }
+},
+{
+  "type": "node",
+  "id": 13974009301,
+  "lat": 15.4962130,
+  "lon": 75.9936834,
+  "tags": {
+    "addr:postcode": "583232",
+    "amenity": "fire_station",
+    "name": "fire station kuknur"
+  }
+},
+{
+  "type": "node",
+  "id": 13976806601,
+  "lat": 15.4962130,
+  "lon": 75.9936834,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "node",
+  "id": 14306160750,
+  "lat": 12.7838108,
+  "lon": 76.2371183,
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "way",
+  "id": 222720965,
+  "center": {
+    "lat": 14.7811903,
+    "lon": 75.1354501
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 231411029,
+  "center": {
+    "lat": 12.8354994,
+    "lon": 77.6626974
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Electronics City Fire Station",
+    "phone": "+918022971576"
+  }
+},
+{
+  "type": "way",
+  "id": 232431996,
+  "center": {
+    "lat": 12.9168126,
+    "lon": 77.6738567
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Sarjapura Road Firestation",
+    "name:kn": "ಸರ್ಜಾಪುರ ರಸ್ತೆ ಫೈರ್ ಸ್ಟೇಷನ್",
+    "operator": "Karnataka State Government"
+  }
+},
+{
+  "type": "way",
+  "id": 251882757,
+  "center": {
+    "lat": 13.2009077,
+    "lon": 77.7038208
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes",
+    "name": "Airport Rescue and Fire Fighting Station"
+  }
+},
+{
+  "type": "way",
+  "id": 268713037,
+  "center": {
+    "lat": 12.5365549,
+    "lon": 76.9146540
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 315426772,
+  "center": {
+    "lat": 12.3432848,
+    "lon": 76.6565015
+  },
+  "tags": {
+    "addr:city": "Mysuru",
+    "addr:postcode": "570015",
+    "amenity": "fire_station",
+    "building": "yes",
+    "name": "Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 325781833,
+  "center": {
+    "lat": 12.9728364,
+    "lon": 77.6102567
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "barrier": "wall",
+    "name": "Office of the Chief Fire Officer"
+  }
+},
+{
+  "type": "way",
+  "id": 327984740,
+  "center": {
+    "lat": 12.9588461,
+    "lon": 74.8883369
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes",
+    "name": "Fire House"
+  }
+},
+{
+  "type": "way",
+  "id": 328099012,
+  "center": {
+    "lat": 12.9632061,
+    "lon": 74.8891143
+  },
+  "tags": {
+    "aeroway": "hangar",
+    "amenity": "fire_station",
+    "building": "yes",
+    "name": "Old Fire House"
+  }
+},
+{
+  "type": "way",
+  "id": 351498421,
+  "center": {
+    "lat": 15.1550227,
+    "lon": 76.9128460
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Ballari Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಕೇಂದ್ರ",
+    "operator": "Govt Of Karnataka"
+  }
+},
+{
+  "type": "way",
+  "id": 668040798,
+  "center": {
+    "lat": 12.9984702,
+    "lon": 77.7023641
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Mahadevapura Fire Station",
+    "name:kn": "ಮಹಾದೇವಪುರ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 788256779,
+  "center": {
+    "lat": 12.9338189,
+    "lon": 77.6002857
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Jayanagara Fire Station",
+    "name:kn": "ಫೈರ್ ಅಂಡ್ ತುರ್ತು ಸೇವೆಗಳು ಅಕಾಡೆಮಿ",
+    "name:ta": "ஜெயாநகர் தீயணைப்பு நிலையம்"
+  }
+},
+{
+  "type": "way",
+  "id": 851636896,
+  "center": {
+    "lat": 15.3567334,
+    "lon": 75.0794313
+  },
+  "tags": {
+    "aeroway": "tower",
+    "amenity": "fire_station",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1050547521,
+  "center": {
+    "lat": 12.7429943,
+    "lon": 77.3106207
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Ramanagara Fire Station",
+    "name:kn": "ರಾಮನಗರ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1075468272,
+  "center": {
+    "lat": 12.3037350,
+    "lon": 76.6345599
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes",
+    "name": "Saraswathipuram Fire Station",
+    "name:kn": "ಸರಸ್ವತಿಪುರಂ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1076398554,
+  "center": {
+    "lat": 12.9805943,
+    "lon": 77.5799311
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "High Grounds Fire Station",
+    "name:kn": "ಹೈಗ್ರೌಂಡ್ಸ್ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1087704156,
+  "center": {
+    "lat": 13.3753685,
+    "lon": 77.8660186
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1101376586,
+  "center": {
+    "lat": 12.9873201,
+    "lon": 77.7321113
+  },
+  "tags": {
+    "alt_name": "ITPL fire station",
+    "amenity": "fire_station",
+    "check_date": "2025-07-07",
+    "name": "Whitefield Fire Station",
+    "name:kn": "ವೈಟ್‌ಫೀಲ್ಡ್‌ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1110808756,
+  "center": {
+    "lat": 13.1935034,
+    "lon": 77.7024675
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "landuse": "commercial",
+    "name": "Airport Rescue and Fire Fighting Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831504,
+  "center": {
+    "lat": 12.9753701,
+    "lon": 77.4250433
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Sunkadakatte Fire Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831506,
+  "center": {
+    "lat": 12.9354153,
+    "lon": 77.5100279
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Nagarbhavi Fire Station",
+    "name:kn": "ನಾಗರಭಾವಿ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831507,
+  "center": {
+    "lat": 12.8575018,
+    "lon": 77.5622410
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes",
+    "name": "Anjanapura Fire Station",
+    "name:kn": "ಅಂಜನಾಪುರ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831508,
+  "center": {
+    "lat": 12.8723517,
+    "lon": 77.5988148
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Hulimavu Fire Station",
+    "name:kn": "ಹುಳಿಮಾವು ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831509,
+  "center": {
+    "lat": 12.9221457,
+    "lon": 77.5611832
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Banashankari Fire Station",
+    "name:kn": "ಬನಶಂಕರಿ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831510,
+  "center": {
+    "lat": 12.9625043,
+    "lon": 77.5634324
+  },
+  "tags": {
+    "alt_name": "Agni Shamaka Dala Fire Office",
+    "amenity": "fire_station",
+    "name": "Bengaluru North Fire Station",
+    "name:kn": "ಪೊಲೀಸ್ ವಸತಿಗೃಹ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831512,
+  "center": {
+    "lat": 13.0279503,
+    "lon": 77.5205608
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Peenya Fire Station",
+    "name:kn": "ಪೀಣ್ಯ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831513,
+  "center": {
+    "lat": 13.0226214,
+    "lon": 77.5499132
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831514,
+  "center": {
+    "lat": 13.0659810,
+    "lon": 77.7789867
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Hoskote Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಕೇಂದ್ರ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831515,
+  "center": {
+    "lat": 13.2462881,
+    "lon": 77.5516467
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Doddaballapur Fire Station",
+    "name:kn": "ದೊಡ್ಡಬಳ್ಳಾಪುರ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1134831516,
+  "center": {
+    "lat": 13.1251440,
+    "lon": 77.6009510
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Yelahanka Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1136503963,
+  "center": {
+    "lat": 12.9806566,
+    "lon": 77.5485024
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Rajajinagar Fire Station",
+    "name:kn": "ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ, ರಾಜಾಜಿನಗರ"
+  }
+},
+{
+  "type": "way",
+  "id": 1327803143,
+  "center": {
+    "lat": 13.7929783,
+    "lon": 76.2636361
+  },
+  "tags": {
+    "amenity": "fire_station"
+  }
+},
+{
+  "type": "way",
+  "id": 1354141627,
+  "center": {
+    "lat": 16.8632855,
+    "lon": 75.8026914
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "fire_station",
+    "fire_station:type": "airport"
+  }
+},
+{
+  "type": "way",
+  "id": 1364481599,
+  "center": {
+    "lat": 13.0116118,
+    "lon": 77.6459969
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "check_date": "2026-09-09",
+    "landuse": "commercial",
+    "name": "Banaswadi Fire Station",
+    "name:kn": "ಬಾಣಸವಾಡಿ ಅಗ್ನಿಶಾಮಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1396722475,
+  "center": {
+    "lat": 13.1787695,
+    "lon": 78.4159393
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes",
+    "name": "Mulbagal Fire Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1459205289,
+  "center": {
+    "lat": 12.8598069,
+    "lon": 74.8414054
+  },
+  "tags": {
+    "amenity": "fire_station"
+  }
+}
+
+  ]
+}

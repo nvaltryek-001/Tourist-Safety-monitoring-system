@@ -1,0 +1,4725 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-02T01:56:14Z",
+    "timestamp_areas_base": "2026-11-01T19:24:35Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 283650908,
+  "lat": 12.8263652,
+  "lon": 77.6820851,
+  "tags": {
+    "amenity": "police",
+    "name": "Hebbagodi Police Station",
+    "name:kn": "ಹೆಬ್ಬಗೋಡಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 295766640,
+  "lat": 13.0181973,
+  "lon": 77.5581675,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-08-21",
+    "name": "DCP Bangalore North Traffic Police",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 303925790,
+  "lat": 12.9285653,
+  "lon": 77.5813657,
+  "tags": {
+    "amenity": "police",
+    "name": "Jayanagar 4th Block Police Station",
+    "name:kn": "ಜಯನಗರ ನಾಲ್ಕನೇ ಹಂತ ಪೋಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 428843493,
+  "lat": 12.9762399,
+  "lon": 77.5983458,
+  "tags": {
+    "amenity": "police",
+    "name": "Cubbon Park Police Station",
+    "name:kn": "ಕಬ್ಬನ್ ಪಾರ್ಕ್ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 428857750,
+  "lat": 12.9966811,
+  "lon": 77.5696708,
+  "tags": {
+    "addr:floor": "G",
+    "amenity": "police",
+    "check_date": "2025-12-20",
+    "level": "0",
+    "name": "Maleshwaram Police station",
+    "name:kn": "ಮಲೇಶ್ವರಂ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "limited",
+    "wheelchair:description": "slightly steep ramp from footpath to entrance. Internal ramp is proper."
+  }
+},
+{
+  "type": "node",
+  "id": 459436210,
+  "lat": 12.8399630,
+  "lon": 77.6631389,
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:postcode": "560100",
+    "addr:street": "6th Cross Road",
+    "amenity": "police",
+    "name": "Electronics City Police Station",
+    "phone": "+918022943469",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 521144416,
+  "lat": 13.0486481,
+  "lon": 77.5495673,
+  "tags": {
+    "amenity": "police",
+    "name": "Jalahalli Police Station",
+    "name:kn": "ಜಾಲಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 541332070,
+  "lat": 12.2976467,
+  "lon": 76.6428237,
+  "tags": {
+    "addr:city": "Mysuru",
+    "amenity": "police",
+    "name": "Laxmipuram Police Station",
+    "name:kn": "ಲಕ್ಷ್ಮಿಪುರಂ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 663317752,
+  "lat": 12.9695368,
+  "lon": 77.5877623,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Headquarters"
+  }
+},
+{
+  "type": "node",
+  "id": 691164726,
+  "lat": 12.9283670,
+  "lon": 77.5905691,
+  "tags": {
+    "addr:street": "Tilak Nagar Main Road",
+    "amenity": "police",
+    "name": "Tilaknagar Police Station",
+    "name:kn": "ತಿಲಕ್ ನಗರ ಪೋಲಿಸ್ ಟಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 768555312,
+  "lat": 13.3094556,
+  "lon": 76.9485410,
+  "tags": {
+    "amenity": "police",
+    "description": "Office of Sub-Inspector of Police",
+    "name": "Gubbi Police Station",
+    "name:kn": "ಗುಬ್ಬಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 844462412,
+  "lat": 12.9830190,
+  "lon": 77.6384106,
+  "tags": {
+    "amenity": "police",
+    "name": "Indira Nagar Police Station",
+    "name:kn": "ಇಂದಿರಾನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 940525605,
+  "lat": 12.9677712,
+  "lon": 77.6556937,
+  "tags": {
+    "amenity": "police",
+    "name": "Jeevan Bhima Nagar Police Station",
+    "name:kn": "ಜೀವನ ಭೀಮ ನಗರ"
+  }
+},
+{
+  "type": "node",
+  "id": 951203526,
+  "lat": 12.9086369,
+  "lon": 77.6105652,
+  "tags": {
+    "amenity": "police",
+    "name": "Mico Layout Police Station",
+    "name:kn": "ಮಿಕೋ ಬಡಾವಣೆ ಆರಕ್ಷಕ",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 953626886,
+  "lat": 12.9359170,
+  "lon": 77.5439681,
+  "tags": {
+    "amenity": "police",
+    "name": "Girinagar Police Station",
+    "name:kn": "ಗಿರಿನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 966862788,
+  "lat": 13.0335598,
+  "lon": 77.5758979,
+  "tags": {
+    "amenity": "police",
+    "name": "Sanjayanagar Police station",
+    "name:kn": "ಸಂಜಯನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 977478679,
+  "lat": 15.3340418,
+  "lon": 76.4666205,
+  "tags": {
+    "amenity": "police",
+    "name": "Hampi Traffic Police",
+    "name:kn": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ",
+    "name:zh": "亨比交警站"
+  }
+},
+{
+  "type": "node",
+  "id": 977478701,
+  "lat": 15.3341937,
+  "lon": 76.4658087,
+  "tags": {
+    "amenity": "police",
+    "name": "Hampi Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "name:zh": "亨比警署"
+  }
+},
+{
+  "type": "node",
+  "id": 1026508950,
+  "lat": 12.9881279,
+  "lon": 77.5744324,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-03-02",
+    "name": "Seshadripuram Police Station",
+    "name:kn": "ಶೇಶಾದ್ರಿಪುರಮ್ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1118255762,
+  "lat": 12.9945063,
+  "lon": 77.5542980,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-03-18",
+    "name": "Rajaji Nagar Police Station",
+    "name:kn": "ರಾಜಾಜಿನಗರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "name:ta": "ராஜாஜிநகர காவல் நிலையம்"
+  }
+},
+{
+  "type": "node",
+  "id": 1242837996,
+  "lat": 15.3518069,
+  "lon": 76.1541306,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 1242857508,
+  "lat": 15.3526763,
+  "lon": 76.1544049,
+  "tags": {
+    "amenity": "police",
+    "name": "SI office"
+  }
+},
+{
+  "type": "node",
+  "id": 1299725537,
+  "lat": 13.0386192,
+  "lon": 77.5896244,
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Hebbal Police Station",
+    "name:kn": "ಹೆಬ್ಬಾಳ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1462686365,
+  "lat": 13.0015732,
+  "lon": 77.5786280,
+  "tags": {
+    "amenity": "police",
+    "name": "Vyali Kaval Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1465640657,
+  "lat": 13.2608896,
+  "lon": 76.4609816,
+  "tags": {
+    "amenity": "police",
+    "name": "Tiptur Rural Police station",
+    "name:kn": "ತಿಪಟೂರು ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1466678862,
+  "lat": 13.3321915,
+  "lon": 74.7481242,
+  "tags": {
+    "amenity": "police",
+    "name": "Traffic Police Station Udupi",
+    "name:kn": "ಉಡುಪಿ ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1466742314,
+  "lat": 12.6804936,
+  "lon": 77.4693429,
+  "tags": {
+    "amenity": "police",
+    "name": "Harohalli Police station",
+    "name:kn": "ಹಾರೋಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 1469285618,
+  "lat": 15.0530156,
+  "lon": 76.2096639,
+  "tags": {
+    "amenity": "police",
+    "name": "Police station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1471781362,
+  "lat": 13.0996883,
+  "lon": 77.3910797,
+  "tags": {
+    "amenity": "police",
+    "name": "Nelamangala Police station",
+    "name:kn": "ನೆಲಮಂಗಲ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1471836954,
+  "lat": 13.0958954,
+  "lon": 77.4036456,
+  "tags": {
+    "amenity": "police",
+    "name": "Nelamangala Rural Police station"
+  }
+},
+{
+  "type": "node",
+  "id": 1472981151,
+  "lat": 12.9363435,
+  "lon": 77.5615008,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "operator": "Karnataka Police Department"
+  }
+},
+{
+  "type": "node",
+  "id": 1473086293,
+  "lat": 14.5149816,
+  "lon": 75.8062209,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಹರಿಹರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1474289550,
+  "lat": 15.4296167,
+  "lon": 75.6328438,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 1474293182,
+  "lat": 16.1812514,
+  "lon": 75.6917984,
+  "tags": {
+    "amenity": "police",
+    "name": "Bagalkot Police station",
+    "name:kn": "ಬಾಗಲಕೋಟೆ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1474302941,
+  "lat": 12.9825702,
+  "lon": 77.6070982,
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:housename": "Shivajinagar",
+    "addr:street": "Commercial Street",
+    "amenity": "police",
+    "name": "Commercial Street Police Station",
+    "name:kn": "ಕಮರ್ಷಿಯಲ್ ರಸ್ತೆ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1474835635,
+  "lat": 12.9733449,
+  "lon": 77.5414869,
+  "tags": {
+    "amenity": "police",
+    "name": "Vijaynagar Traffic Police Station",
+    "name:kn": "ವಿಜಯನಗರ ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1474903179,
+  "lat": 12.3368103,
+  "lon": 76.6016461,
+  "tags": {
+    "amenity": "police",
+    "designation": "Small Police Station",
+    "name": "Vijayanagara Police Station",
+    "name:kn": "ವಿಜಯನಗರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "source": "known place"
+  }
+},
+{
+  "type": "node",
+  "id": 1497217077,
+  "lat": 12.9953840,
+  "lon": 77.7574684,
+  "tags": {
+    "amenity": "police",
+    "name": "Kadugodi Police Station",
+    "name:kn": "ಕಾಡುಗೋಡಿ ಆರಕ್ಷಕ ಟಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1500601533,
+  "lat": 12.9674090,
+  "lon": 77.6559012,
+  "tags": {
+    "amenity": "police",
+    "name": "Indiranagar Traffic Police Station",
+    "name:kn": "ಇಂದಿರಾನಗರ ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1638083577,
+  "lat": 12.3142820,
+  "lon": 76.6567805,
+  "tags": {
+    "amenity": "police",
+    "name": "Devaraja Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1650147883,
+  "lat": 12.0975288,
+  "lon": 76.5558260,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 1683107842,
+  "lat": 12.9022386,
+  "lon": 74.8358179,
+  "tags": {
+    "amenity": "police",
+    "name": "Urwa Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ, ಉರ್ವ",
+    "source": "Local knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 1750823511,
+  "lat": 12.8560871,
+  "lon": 74.8393126,
+  "tags": {
+    "amenity": "police",
+    "name": "Pandeshwara Police Station",
+    "name:kn": "ಪಾಂಡೇಶ್ವರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1760597606,
+  "lat": 12.8902826,
+  "lon": 74.8526744,
+  "tags": {
+    "amenity": "police",
+    "name": "Kadri Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ, ಕದ್ರಿ"
+  }
+},
+{
+  "type": "node",
+  "id": 1778917090,
+  "lat": 12.9707264,
+  "lon": 77.5377251,
+  "tags": {
+    "amenity": "police",
+    "designation": "Vijayangar Police Station",
+    "name": "Vijayanagar Police Station",
+    "name:kn": "ವಿಜಯನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1779028051,
+  "lat": 13.6982846,
+  "lon": 75.2461258,
+  "tags": {
+    "amenity": "police",
+    "name": "Tirthahalli Police Station",
+    "name:kn": "ತೀರ್ಥಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1784418715,
+  "lat": 14.4540972,
+  "lon": 75.9246771,
+  "tags": {
+    "addr:city": "Davanagere",
+    "addr:postcode": "577004",
+    "amenity": "police",
+    "designation": "K.T.J Nagar Police Station",
+    "name": "K.T.J Nagar Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 1789375892,
+  "lat": 14.4509921,
+  "lon": 75.9206449,
+  "tags": {
+    "amenity": "police",
+    "name": "Rural Police Station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1789726678,
+  "lat": 12.9604765,
+  "lon": 77.5643202,
+  "tags": {
+    "amenity": "police",
+    "name": "Chamarajapet Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 1791567417,
+  "lat": 12.9538729,
+  "lon": 77.5701010,
+  "tags": {
+    "addr:street": "Shankar Matt Road",
+    "amenity": "police",
+    "name": "Shankarapuram Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1794656846,
+  "lat": 13.0360107,
+  "lon": 77.5211853,
+  "tags": {
+    "amenity": "police",
+    "name": "Peenya Police Station",
+    "name:kn": "ಪೀಣ್ಯ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1806966026,
+  "lat": 12.9680925,
+  "lon": 77.5700945,
+  "tags": {
+    "amenity": "police",
+    "name": "Cottenpet Police Station",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1813627626,
+  "lat": 13.9386093,
+  "lon": 75.5760229,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 1815951927,
+  "lat": 12.9292268,
+  "lon": 77.5678506,
+  "tags": {
+    "amenity": "police",
+    "name": "Women's Police Station",
+    "name:kn": "ಮಹಿಳಾ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1815951935,
+  "lat": 12.9294360,
+  "lon": 77.5678479,
+  "tags": {
+    "amenity": "police",
+    "name": "Thyagaraja Nagar Police Station",
+    "name:kn": "ತ್ಯಾಗರಾಜನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1816331548,
+  "lat": 12.9235553,
+  "lon": 77.5533335,
+  "tags": {
+    "amenity": "police",
+    "name": "BSK 3rd stage Police Station",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1820438239,
+  "lat": 12.9744861,
+  "lon": 77.5512501,
+  "tags": {
+    "amenity": "police",
+    "name": "Magadi Road Police Station",
+    "old_name": "Rajajinagar Traffic Police Station",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1828318191,
+  "lat": 13.4587393,
+  "lon": 74.9898943,
+  "tags": {
+    "amenity": "police",
+    "name": "Hebri Police Station",
+    "name:kn": "ಹೆಬ್ರಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1839779207,
+  "lat": 14.4604810,
+  "lon": 75.9310248,
+  "tags": {
+    "addr:city": "Davanagere",
+    "addr:postcode": "577005",
+    "addr:street": "P B Road",
+    "amenity": "police",
+    "name": "Davanagere Traffic Police Station",
+    "name:kn": "ದಾವಣಗೆರೆ ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ",
+    "operator": "Karnataka State Police"
+  }
+},
+{
+  "type": "node",
+  "id": 1843611471,
+  "lat": 12.9649402,
+  "lon": 77.5761878,
+  "tags": {
+    "addr:street": "Sultan Road",
+    "alt_name": "City Market Police Station",
+    "amenity": "police",
+    "name": "Krishna Rajendra Market Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 1895796754,
+  "lat": 13.8106744,
+  "lon": 75.2474920,
+  "tags": {
+    "amenity": "police",
+    "name": "Konandur Police Station",
+    "name:kn": "ಕೋಣಂದೂರು ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1900761946,
+  "lat": 12.4296619,
+  "lon": 75.7254763,
+  "tags": {
+    "amenity": "police",
+    "name": "Rural Police Station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1918889488,
+  "lat": 12.8766700,
+  "lon": 77.6000418,
+  "tags": {
+    "amenity": "police",
+    "name": "Hulimavu Police Station",
+    "name:kn": "ಹುಳಿಮಾವು ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 1933576230,
+  "lat": 12.2746373,
+  "lon": 76.6706182,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 1987115250,
+  "lat": 12.5564245,
+  "lon": 75.3930698,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2016154125,
+  "lat": 12.9707012,
+  "lon": 77.5736393,
+  "tags": {
+    "amenity": "police",
+    "name": "Chikkapete Police Station",
+    "name:kn": "ಚಿಕ್ಕಪೇಟೆ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2090827123,
+  "lat": 13.0124684,
+  "lon": 77.5368288,
+  "tags": {
+    "amenity": "police",
+    "name": "Nandini Layout Police Station",
+    "name:kn": "ನಂದಿನಿ ಲೇಔಟ್ ಪೋಲಿಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2123630629,
+  "lat": 12.9229116,
+  "lon": 77.5650055,
+  "tags": {
+    "amenity": "police",
+    "name": "Banashankari Police Station",
+    "name:kn": "ಬನಶಂಕರಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2242094275,
+  "lat": 13.6045426,
+  "lon": 74.8625164,
+  "tags": {
+    "addr:postcode": "576227",
+    "amenity": "police",
+    "name": "Shankaranarayana Police Station",
+    "name:kn": "ಶಂಕರನಾರಾಯಣ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2283064016,
+  "lat": 16.7715926,
+  "lon": 77.1378867,
+  "tags": {
+    "addr:street": "Gandhi Chowk",
+    "amenity": "police",
+    "designation": "Police Station",
+    "name": "Yadgir Urban Police Station",
+    "name:kn": "ನಗರ ಠಾಣೆ ಆರಕ್ಷಕ",
+    "source": "Survey"
+  }
+},
+{
+  "type": "node",
+  "id": 2315624156,
+  "lat": 15.4594267,
+  "lon": 75.0116253,
+  "tags": {
+    "amenity": "police",
+    "name": "Dharwad Town Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 2316646646,
+  "lat": 14.7715706,
+  "lon": 75.1252731,
+  "tags": {
+    "amenity": "police",
+    "name": "Hanagalla Police Station",
+    "name:kn": "ಹಾನಗಲ್ಲ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2326585098,
+  "lat": 15.3508749,
+  "lon": 75.1143080,
+  "tags": {
+    "amenity": "police",
+    "name": "Gokul Road Police Station",
+    "name:kn": "ಗೋಕುಲ ರಸ್ತೆ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2340693281,
+  "lat": 13.0621975,
+  "lon": 77.5741087,
+  "tags": {
+    "amenity": "police",
+    "name": "Kodigehalli Police Station",
+    "name:kn": "ಕೊಡಿಗೇಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2353097442,
+  "lat": 12.3074635,
+  "lon": 76.2941200,
+  "tags": {
+    "amenity": "police",
+    "name": "Rural Police Station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2354824532,
+  "lat": 12.3053128,
+  "lon": 76.2904091,
+  "tags": {
+    "amenity": "police",
+    "name": "City Police Station",
+    "name:kn": "ನಗರದ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2356001457,
+  "lat": 16.7628915,
+  "lon": 77.1326693,
+  "tags": {
+    "addr:street": "Balaji Temple Road",
+    "amenity": "police",
+    "designation": "Government Police Station",
+    "name": "Rural Police Station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "source": "Local Knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 2414140025,
+  "lat": 14.2202518,
+  "lon": 74.7989175,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 2430121060,
+  "lat": 15.3092804,
+  "lon": 76.4759711,
+  "tags": {
+    "amenity": "police",
+    "name": "Deputy superintendent of Police, Hampi"
+  }
+},
+{
+  "type": "node",
+  "id": 2432478978,
+  "lat": 13.2158301,
+  "lon": 77.3006440,
+  "tags": {
+    "amenity": "police",
+    "name": "Rural Police Station,Thyamagondulu",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "source": "Government"
+  }
+},
+{
+  "type": "node",
+  "id": 2459481799,
+  "lat": 14.4648959,
+  "lon": 75.9199787,
+  "tags": {
+    "amenity": "police",
+    "name": "Badavane Police Station",
+    "name:kn": "ಬಡಾವಣೆ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2460055285,
+  "lat": 17.1800609,
+  "lon": 77.2849887,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2465514589,
+  "lat": 16.7534340,
+  "lon": 77.1259524,
+  "tags": {
+    "amenity": "police",
+    "name": "Regional Transport Office",
+    "name:kn": "ಆರ್ ಟಿ ಒ ಕಛೇರಿ"
+  }
+},
+{
+  "type": "node",
+  "id": 2473214764,
+  "lat": 12.9842420,
+  "lon": 74.8023199,
+  "tags": {
+    "amenity": "police",
+    "name": "Surathkal Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ, ಸುರತ್ಕಲ್"
+  }
+},
+{
+  "type": "node",
+  "id": 2473514768,
+  "lat": 12.9878550,
+  "lon": 77.7822240,
+  "tags": {
+    "amenity": "police",
+    "name": "Tirumalashettyhalli Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 2473698430,
+  "lat": 13.6370846,
+  "lon": 74.6889136,
+  "tags": {
+    "addr:city": "Kundapura",
+    "amenity": "police",
+    "name": "City Police Station",
+    "name:en": "Kundapura Town Police Station",
+    "name:kn": "ನಗರ ಪೋಲಿಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2475357989,
+  "lat": 13.0237703,
+  "lon": 77.6457711,
+  "tags": {
+    "addr:city": "Babusabpalya, Hennur",
+    "addr:street": "Outer Ring Road",
+    "amenity": "police",
+    "check_date": "2024-07-05",
+    "name": "Hennur Police Station",
+    "name:kn": "ಹೆಣ್ಣೂರು ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2482233285,
+  "lat": 16.7464612,
+  "lon": 77.1316305,
+  "tags": {
+    "amenity": "police",
+    "name": "Circle Police Inspector Office"
+  }
+},
+{
+  "type": "node",
+  "id": 2495118980,
+  "lat": 16.1946428,
+  "lon": 76.6555951,
+  "tags": {
+    "amenity": "police",
+    "name": "Hutti Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ ಹಟ್ಟಿ"
+  }
+},
+{
+  "type": "node",
+  "id": 2529253620,
+  "lat": 16.8653035,
+  "lon": 77.3892976,
+  "tags": {
+    "amenity": "police",
+    "name": "Town Police Station, Gurumitkal",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2561089945,
+  "lat": 12.4069086,
+  "lon": 76.5728063,
+  "tags": {
+    "amenity": "police",
+    "name": "Krishnarajasagara Police Station",
+    "name:kn": "ಕೃಷ್ಣರಾಜಸಾಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2572851653,
+  "lat": 13.2944766,
+  "lon": 77.8026703,
+  "tags": {
+    "amenity": "police",
+    "name": "Vijayapura Police Station",
+    "name:kn": "ವಿಜಯಪುರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2575697297,
+  "lat": 13.0026086,
+  "lon": 77.9385563,
+  "tags": {
+    "amenity": "police",
+    "name": "Malur Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2577231853,
+  "lat": 12.9632542,
+  "lon": 77.5920638,
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:housenumber": "16",
+    "addr:postcode": "560027",
+    "addr:street": "Mission Road (Kalinga Rao Road)",
+    "amenity": "police",
+    "name": "Sampangi Rama Nagar Police Station",
+    "name:bn": "সম্পাঙ্গী রাম নগর থানা"
+  }
+},
+{
+  "type": "node",
+  "id": 2753051751,
+  "lat": 15.3058900,
+  "lon": 76.4737176,
+  "tags": {
+    "amenity": "police",
+    "name": "Kamalapura Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2844053292,
+  "lat": 17.7720906,
+  "lon": 77.1235376,
+  "tags": {
+    "amenity": "police",
+    "name": "Humnabad Police Station",
+    "name:kn": "ಹುಮನಾಬಾದ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2873904101,
+  "lat": 15.3646047,
+  "lon": 75.1246140,
+  "tags": {
+    "amenity": "police",
+    "name": "Vidyanagar Police Station",
+    "name:kn": "ವಿದ್ಯಾನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2902373406,
+  "lat": 12.9443718,
+  "lon": 78.2492379,
+  "tags": {
+    "amenity": "police",
+    "name": "District Armed Reserve Force"
+  }
+},
+{
+  "type": "node",
+  "id": 2933888284,
+  "lat": 16.6948312,
+  "lon": 76.8453847,
+  "tags": {
+    "amenity": "police",
+    "name": "Rural Police Station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 2958259459,
+  "lat": 13.3125702,
+  "lon": 76.2568665,
+  "tags": {
+    "amenity": "police",
+    "name": "Arsikere Rural Police Station",
+    "name:kn": "ಅರಸಿಕೆರೆ ಗ್ರಾಮಾಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3155574253,
+  "lat": 15.1514669,
+  "lon": 76.9008290,
+  "tags": {
+    "amenity": "police",
+    "name": "Sudha Cross Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 3155683283,
+  "lat": 15.1445623,
+  "lon": 76.9253149,
+  "tags": {
+    "amenity": "police",
+    "name": "Bellary Rural Police Station",
+    "name:kn": "ಬಳ್ಳಾರಿ ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3164902959,
+  "lat": 15.2658167,
+  "lon": 76.3497236,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಟಿಬಿ ಡ್ಯಾಂ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3270074161,
+  "lat": 12.9408782,
+  "lon": 75.7823016,
+  "tags": {
+    "amenity": "police",
+    "name": "City Police Station",
+    "name:kn": "ನಗರದ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3304487153,
+  "lat": 13.3491906,
+  "lon": 74.7859734,
+  "tags": {
+    "amenity": "police",
+    "name": "Manipal Police Station",
+    "name:kn": "ಮಣಿಪಾಲ"
+  }
+},
+{
+  "type": "node",
+  "id": 3368273815,
+  "lat": 13.0069744,
+  "lon": 76.1136678,
+  "tags": {
+    "addr:city": "hassan",
+    "addr:postcode": "573201",
+    "amenity": "police",
+    "name": "Extension Police Station",
+    "name:kn": "ಬಡಾವನೆ  ಪೊಲೀಸ್ ಠಾಣೆ",
+    "source": "bing"
+  }
+},
+{
+  "type": "node",
+  "id": 3368443586,
+  "lat": 16.2375777,
+  "lon": 74.6050442,
+  "tags": {
+    "addr:city": "Hukkeri",
+    "amenity": "police",
+    "name": "Hukkeri Police Station",
+    "name:kn": "ಹುಕ್ಕೇರಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "operator": "Government"
+  }
+},
+{
+  "type": "node",
+  "id": 3369937900,
+  "lat": 12.9782430,
+  "lon": 77.6404269,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-08-15",
+    "name": "Indiranagar Traffic Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 3476877518,
+  "lat": 12.9691307,
+  "lon": 77.6168652,
+  "tags": {
+    "amenity": "police",
+    "name": "Karnataka State Reserve Police"
+  }
+},
+{
+  "type": "node",
+  "id": 3612822516,
+  "lat": 14.0945949,
+  "lon": 76.5343773,
+  "tags": {
+    "addr:city": "Aimangala",
+    "addr:postcode": "577558",
+    "amenity": "police",
+    "name": "Aimangala Police Station",
+    "name:kn": "ಐಮಂಗಲ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "operator": "Karnataka Police"
+  }
+},
+{
+  "type": "node",
+  "id": 3630828611,
+  "lat": 12.2636480,
+  "lon": 76.6447279,
+  "tags": {
+    "amenity": "police",
+    "name": "Vidyaranyapuram Police Station",
+    "name:kn": "ವಿದ್ಯಾರಣ್ಯಪುರಂ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3642226046,
+  "lat": 13.9506702,
+  "lon": 75.5599037,
+  "tags": {
+    "amenity": "police",
+    "name": "Vinobanagara Police Station",
+    "name:kn": "ವಿನೋಭನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3732425276,
+  "lat": 13.3121349,
+  "lon": 75.7743510,
+  "tags": {
+    "amenity": "police",
+    "name": "SP office"
+  }
+},
+{
+  "type": "node",
+  "id": 3732488445,
+  "lat": 14.6212510,
+  "lon": 74.8253264,
+  "tags": {
+    "amenity": "police",
+    "name": "Police station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3761248698,
+  "lat": 12.9773726,
+  "lon": 77.5884362,
+  "tags": {
+    "amenity": "police",
+    "level": "-1",
+    "name": "Vidhana Soudha Police Station",
+    "name:kn": "ವಿಧಾನ ಸೌಧ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 3783584167,
+  "lat": 12.9568555,
+  "lon": 77.7011085,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2026-03-16",
+    "name": "Traffic Police Cabin"
+  }
+},
+{
+  "type": "node",
+  "id": 3847423872,
+  "lat": 12.3235726,
+  "lon": 76.6128737,
+  "tags": {
+    "amenity": "police",
+    "name": "Jayalakshamipuram Police Station",
+    "name:kn": "ಜಯಲಕ್ಷ್ಮಿಪುರಂ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 4009672417,
+  "lat": 12.2998992,
+  "lon": 76.6788982,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wikimedia_commons": "File:Siddhartha Nagar Police Station Mysore May23 A7C 04924.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 4101097589,
+  "lat": 12.9643591,
+  "lon": 77.5551587,
+  "tags": {
+    "addr:street": "Hosahalli Main Road",
+    "amenity": "police",
+    "name": "J J R Nagar Police station"
+  }
+},
+{
+  "type": "node",
+  "id": 4209499020,
+  "lat": 12.9680176,
+  "lon": 77.5787039,
+  "tags": {
+    "amenity": "police",
+    "name": "Avenue Road Police Chowky"
+  }
+},
+{
+  "type": "node",
+  "id": 4376816582,
+  "lat": 14.2818773,
+  "lon": 74.4508345,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಹೊನ್ನಾವರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 4443656796,
+  "lat": 12.8565752,
+  "lon": 77.5889783,
+  "tags": {
+    "addr:city": "Banglore",
+    "addr:housenumber": "5",
+    "addr:postcode": "560001",
+    "addr:street": "Gottigere Tank Bund Road",
+    "amenity": "police",
+    "name": "Hulimavu Traffic Police Station",
+    "phone": "080 2294 3030",
+    "website": "bangaloretrafficpolice.gov.in"
+  }
+},
+{
+  "type": "node",
+  "id": 4444115045,
+  "lat": 12.9301326,
+  "lon": 77.5606044,
+  "tags": {
+    "addr:city": "Bengaluru",
+    "addr:postcode": "560085",
+    "addr:street": "8th Cross Rd, Vidyapeeta Layout, Banashankari 3rd Stage",
+    "amenity": "police",
+    "name": "Chennamanakere Achukattu Police Station",
+    "name:kn": "ಚೆನ್ನಮ್ಮಕೆರೆ ಅಚ್ಚುಕಟ್ಟು",
+    "phone": "080 2294 3483",
+    "website": "ksp.gov.in"
+  }
+},
+{
+  "type": "node",
+  "id": 4445356402,
+  "lat": 12.9217846,
+  "lon": 77.6616311,
+  "tags": {
+    "addr:city": "Bengaluru",
+    "addr:postcode": "560102",
+    "addr:street": "IBBLUR SAMUDAYA BAVANA, HSR Layout",
+    "amenity": "police",
+    "check_date": "2024-09-18",
+    "name": "Bellanduru Traffic Police Station",
+    "polling_station": "no",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 4445555334,
+  "lat": 15.8359392,
+  "lon": 74.5015214,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "590006,",
+    "addr:street": "Guruwar Peth, Tilakwadi, Belagavi",
+    "amenity": "police",
+    "name": "Tilakwadi Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ, ತಿಲಕ್ವಾಡಿ",
+    "phone": "080 2294 3346"
+  }
+},
+{
+  "type": "node",
+  "id": 4445594501,
+  "lat": 15.8326557,
+  "lon": 74.5122929,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "590011",
+    "addr:street": "GSS Gogte College Rd, Vadagoan, Belagavi, Karnataka",
+    "amenity": "police",
+    "name": "Belgaum Rural Police Station",
+    "name:kn": "ಗ್ರಾಮಾಂತರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0831 240 5252"
+  }
+},
+{
+  "type": "node",
+  "id": 4445609610,
+  "lat": 15.8548335,
+  "lon": 74.5042006,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "590001",
+    "addr:street": "High St, Camp, Belagavi, Karnataka",
+    "amenity": "police",
+    "name": "Camp Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0831 240 5234"
+  }
+},
+{
+  "type": "node",
+  "id": 4445636770,
+  "lat": 16.7267221,
+  "lon": 75.0602213,
+  "tags": {
+    "addr:city": "Athani,",
+    "addr:postcode": "591304",
+    "addr:street": "Opp. Karnataka Restaurant, Near Tahshildar Office, SH31,",
+    "amenity": "police",
+    "name": "Athani Police Station",
+    "name:kn": "ಅಥಣಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "082892 51133"
+  }
+},
+{
+  "type": "node",
+  "id": 4445649977,
+  "lat": 15.8574546,
+  "lon": 74.5137166,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "590001",
+    "addr:street": "Narvekar Galli, Khade Bazar, Raviwar Peth, Belagavi,",
+    "amenity": "police",
+    "name": "Khade Bazar Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0831 240 5232"
+  }
+},
+{
+  "type": "node",
+  "id": 4445669986,
+  "lat": 15.8839399,
+  "lon": 74.5086564,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "590019",
+    "addr:street": "Bauxite Road, Sangameshwar Nagar, Ambedkar Nagar",
+    "amenity": "police",
+    "name": "APMC Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0831 240 5232"
+  }
+},
+{
+  "type": "node",
+  "id": 4445692144,
+  "lat": 15.8149752,
+  "lon": 74.4912244,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "590008",
+    "addr:street": "Udyambag, Belagavi, Karnataka",
+    "amenity": "police",
+    "name": "Udyambag Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0831 240 5238"
+  }
+},
+{
+  "type": "node",
+  "id": 4445756938,
+  "lat": 15.8396242,
+  "lon": 74.5096425,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "590003",
+    "addr:street": "Shahapur, Belgaum",
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "(91)-831-2405244"
+  }
+},
+{
+  "type": "node",
+  "id": 4446242238,
+  "lat": 12.3129194,
+  "lon": 76.6494717,
+  "tags": {
+    "addr:city": "Mysuru",
+    "addr:postcode": "570 001",
+    "addr:street": "Dhanvantri Road",
+    "amenity": "police",
+    "name": "Devaraja Police Station",
+    "name:kn": "ದೇವರಾಜ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0821-2418306",
+    "website": "devarajamyc@ksp.gov.in"
+  }
+},
+{
+  "type": "node",
+  "id": 4446249554,
+  "lat": 12.3084140,
+  "lon": 76.6673190,
+  "tags": {
+    "addr:city": "Mysuru",
+    "addr:postcode": "570 010",
+    "addr:street": "Nazarabad Main Road",
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ನಜರಬಾದ್ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0821-2418308",
+    "website": "nazarbadmyc@ksp.gov.in"
+  }
+},
+{
+  "type": "node",
+  "id": 4446264859,
+  "lat": 12.3266904,
+  "lon": 76.6809447,
+  "tags": {
+    "addr:city": "MYSORE",
+    "addr:postcode": "570 019",
+    "addr:street": "MAHADEVAPURA MAIN ROAD",
+    "amenity": "police",
+    "check_date": "2024-04-29",
+    "name": "Udayagiri Police Station",
+    "name:kn": "ಉದಯಗಿರಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0821-2418309",
+    "website": "udayagirimyc@ksp.gov.in"
+  }
+},
+{
+  "type": "node",
+  "id": 4446279578,
+  "lat": 12.3163407,
+  "lon": 76.6542216,
+  "tags": {
+    "addr:city": "Mysore",
+    "addr:postcode": "570021",
+    "addr:street": "Kabir Road",
+    "amenity": "police",
+    "name": "Mandi Police Station",
+    "name:kn": "ಮಂಡಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0821-2418313",
+    "website": "mandimyc@ksp.gov.in"
+  }
+},
+{
+  "type": "node",
+  "id": 4446294339,
+  "lat": 12.3471406,
+  "lon": 76.6304330,
+  "tags": {
+    "addr:city": "Mysore",
+    "addr:postcode": "570016",
+    "addr:street": "Krishnaraja Sagara Road",
+    "amenity": "police",
+    "name": "Metagalli Police Station",
+    "name:kn": "ಮೇಟಗಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0821-2418315",
+    "website": "metagallymyc@ksp.gov.in"
+  }
+},
+{
+  "type": "node",
+  "id": 4446310229,
+  "lat": 12.2921389,
+  "lon": 76.6475938,
+  "tags": {
+    "addr:city": "Mysuru",
+    "addr:postcode": "570004",
+    "addr:street": "Chamundipuram, Lakshmipuram,",
+    "amenity": "police",
+    "name": "Assistant Commissioner of Police Krishnaraja Division",
+    "phone": "8212418518"
+  }
+},
+{
+  "type": "node",
+  "id": 4446340502,
+  "lat": 12.5270292,
+  "lon": 76.8907645,
+  "tags": {
+    "addr:city": "mandya",
+    "addr:housenumber": "SH-17",
+    "addr:street": "Vidya Nagar",
+    "amenity": "police",
+    "name": "Police Station Mandya West",
+    "phone": "9844771982"
+  }
+},
+{
+  "type": "node",
+  "id": 4446353577,
+  "lat": 12.7057359,
+  "lon": 76.8172991,
+  "tags": {
+    "addr:city": "Mandya",
+    "addr:postcode": "571416",
+    "addr:street": "Basaralu",
+    "amenity": "police",
+    "name": "Basaralu Police Station",
+    "name:kn": "ಬಸರಾಳು ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "08232 276634"
+  }
+},
+{
+  "type": "node",
+  "id": 4446362789,
+  "lat": 12.2565176,
+  "lon": 77.1224843,
+  "tags": {
+    "addr:city": "Mandya",
+    "addr:postcode": "571417",
+    "addr:street": "Belakavadi",
+    "amenity": "police",
+    "name": "Belakavadi Police Station",
+    "name:kn": "ಬೆಳಕವಾಡಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "08232 240034"
+  }
+},
+{
+  "type": "node",
+  "id": 4446371191,
+  "lat": 12.9814367,
+  "lon": 76.7357493,
+  "tags": {
+    "addr:city": "Mandya",
+    "addr:postcode": "571418",
+    "addr:street": "Bellur",
+    "amenity": "police",
+    "name": "Bellur Police Station",
+    "name:kn": "ಬೆಳ್ಳೂರು ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "08232 287535"
+  }
+},
+{
+  "type": "node",
+  "id": 4446391955,
+  "lat": 12.4892432,
+  "lon": 77.0352446,
+  "tags": {
+    "addr:city": "Mandya",
+    "addr:postcode": "571422",
+    "addr:street": "K M Doddi",
+    "amenity": "police",
+    "name": "K M Doddi Police Station",
+    "phone": "08232 235332"
+  }
+},
+{
+  "type": "node",
+  "id": 4446413532,
+  "lat": 12.5871514,
+  "lon": 77.0416988,
+  "tags": {
+    "addr:city": "Madduru",
+    "addr:postcode": "571428",
+    "addr:street": "Bangalore-Mysore Road",
+    "amenity": "police",
+    "name": "Maddur Police Station",
+    "name:kn": "ಮದ್ದೂರು ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "8232232170"
+  }
+},
+{
+  "type": "node",
+  "id": 4446437341,
+  "lat": 17.3461141,
+  "lon": 76.8519503,
+  "tags": {
+    "addr:city": "Kalaburagi",
+    "addr:postcode": "585104",
+    "addr:street": "Khaja Colony",
+    "amenity": "police",
+    "name": "Roza Police Station",
+    "name:kn": "ರೌಝ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "8472263820"
+  }
+},
+{
+  "type": "node",
+  "id": 4446451918,
+  "lat": 13.0861329,
+  "lon": 76.2047604,
+  "tags": {
+    "addr:city": "Hassan",
+    "addr:postcode": "573118",
+    "addr:street": "Chikkanayakanahalli",
+    "amenity": "police",
+    "name": "Dudda Police Station",
+    "name:kn": "ದುದ್ದ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "91-8172-223935"
+  }
+},
+{
+  "type": "node",
+  "id": 4446460626,
+  "lat": 15.1380929,
+  "lon": 76.9250859,
+  "tags": {
+    "addr:city": "Bellary",
+    "addr:postcode": "583101",
+    "addr:street": "Brucepettah",
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "name:ur": "تھانہ",
+    "phone": "91-8392-272022"
+  }
+},
+{
+  "type": "node",
+  "id": 4446473390,
+  "lat": 15.1938514,
+  "lon": 76.6669981,
+  "tags": {
+    "addr:city": "Bellary",
+    "addr:postcode": "583123",
+    "addr:street": "Toranagallu",
+    "amenity": "police",
+    "name": "Police station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "91-8395-250100"
+  }
+},
+{
+  "type": "node",
+  "id": 4446479376,
+  "lat": 16.4150393,
+  "lon": 76.9291808,
+  "tags": {
+    "addr:city": "Raichur",
+    "addr:postcode": "584111",
+    "addr:street": "Deodurga",
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "91-8531-260333"
+  }
+},
+{
+  "type": "node",
+  "id": 4446489629,
+  "lat": 15.6006289,
+  "lon": 76.6580145,
+  "tags": {
+    "addr:city": "Karatagi",
+    "addr:postcode": "583229",
+    "addr:street": "Koppal",
+    "amenity": "police",
+    "name": "Karatagi Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "08533 275331"
+  }
+},
+{
+  "type": "node",
+  "id": 4447072942,
+  "lat": 15.5761406,
+  "lon": 74.5693403,
+  "tags": {
+    "addr:city": "belgaum",
+    "addr:postcode": "591120",
+    "addr:street": "Nangad, Belgaum",
+    "amenity": "police",
+    "name": "Nangad Police Station",
+    "name:kn": "ನಂದಗಡ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "(91)-8336-236633"
+  }
+},
+{
+  "type": "node",
+  "id": 4447099779,
+  "lat": 15.9492587,
+  "lon": 75.2947994,
+  "tags": {
+    "addr:city": "Belgaum",
+    "addr:postcode": "591123",
+    "addr:street": "Ramadurg Belgaum",
+    "amenity": "police",
+    "name": "Police Station Ramadurg",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ ರಾಮದುರ್ಗ",
+    "phone": "+91 8335242333"
+  }
+},
+{
+  "type": "node",
+  "id": 4447104817,
+  "lat": 16.1691875,
+  "lon": 74.8213498,
+  "tags": {
+    "addr:city": "Belgaum",
+    "addr:postcode": "590001",
+    "addr:street": "Ghatpradha, Belgaum",
+    "amenity": "police",
+    "name": "Police Station Ghatpradha",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "+91 8312286233"
+  }
+},
+{
+  "type": "node",
+  "id": 4447125314,
+  "lat": 15.8814487,
+  "lon": 74.6641596,
+  "tags": {
+    "addr:city": "Belgaum",
+    "addr:postcode": "591103",
+    "addr:street": "Sulebhavi Cross, Bagalkot-Belgaum Rd, Marihal",
+    "amenity": "police",
+    "name": "Marihal Police Station",
+    "name:kn": "ಮಾರಿಹಾಳ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "0831 2405239"
+  }
+},
+{
+  "type": "node",
+  "id": 4447145593,
+  "lat": 16.3374098,
+  "lon": 74.9641359,
+  "tags": {
+    "addr:city": "Belgaum",
+    "addr:postcode": "590001",
+    "addr:street": "Mudalgi, Belgaum",
+    "amenity": "police",
+    "name": "Police Station Mudalagi",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ ಮುಡಲಗಿ",
+    "phone": "+91 8312251333"
+  }
+},
+{
+  "type": "node",
+  "id": 4447176031,
+  "lat": 15.8850450,
+  "lon": 74.5254564,
+  "tags": {
+    "addr:city": "Belgaum",
+    "addr:postcode": "590017",
+    "addr:street": "Shree Nagar, Belagavi",
+    "amenity": "police",
+    "name": "Bescom Vilagence Police Station",
+    "phone": "081562 74304"
+  }
+},
+{
+  "type": "node",
+  "id": 4447380551,
+  "lat": 12.8394292,
+  "lon": 77.6614590,
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:postcode": "560100",
+    "addr:street": "Electronics City Phase 1, Electronics City,near wipro",
+    "amenity": "police",
+    "name": "Electronics City Traffic Police Station",
+    "name:kn": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಸಿಟಿ ಆರಕ್ಷಕ",
+    "phone": "080 2294 3718"
+  }
+},
+{
+  "type": "node",
+  "id": 4447398385,
+  "lat": 12.9588013,
+  "lon": 77.6675094,
+  "tags": {
+    "addr:city": "Bengalore",
+    "addr:floor": "G",
+    "addr:housenumber": "D-14/T",
+    "addr:postcode": "560017",
+    "addr:street": "HAL Employees Quarters,Old Airport Road, Near HAL Post Office,Reddypalya",
+    "amenity": "police",
+    "check_date": "2026-02-09",
+    "level": "0",
+    "name": "HAL Traffic Police Station",
+    "phone": "080 2294 3115",
+    "website": "NA",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4447422294,
+  "lat": 12.9744833,
+  "lon": 77.5748342,
+  "tags": {
+    "addr:city": "Bengalore",
+    "addr:postcode": "560009",
+    "addr:street": "Kempe Gowda Circle, Danvanthri Rd, Majestic,",
+    "amenity": "police",
+    "name": "Upparpet Traffic Police Station",
+    "name:kn": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ",
+    "phone": "080 2294 2665",
+    "website": "NA"
+  }
+},
+{
+  "type": "node",
+  "id": 4447436362,
+  "lat": 12.9724461,
+  "lon": 77.5386676,
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:postcode": "560040",
+    "addr:street": "BMTC Building, Vijayanagar Service Road, 8th Main Road, Hoshalli Extension, RPC Layout, Vijayanagar,",
+    "amenity": "police",
+    "name": "Traffic Police Station",
+    "name:kn": "ವಿಜಯನಗರ ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ",
+    "phone": "080 2294 2809",
+    "website": "NA"
+  }
+},
+{
+  "type": "node",
+  "id": 4457764089,
+  "lat": 12.8689461,
+  "lon": 77.5362854,
+  "tags": {
+    "addr:street": "Kanakapura Road",
+    "amenity": "police",
+    "name": "Thalaghattapura Police Station",
+    "name:en": "Thalaghattapura Police Station",
+    "name:kn": "ತಲಘಟ್ಟಪುರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "survey:date": "2023-09-09"
+  }
+},
+{
+  "type": "node",
+  "id": 4460123686,
+  "lat": 14.7929535,
+  "lon": 75.3965141,
+  "tags": {
+    "amenity": "police",
+    "name": "Haveri Police Station",
+    "name:kn": "ಹಾವೆರಿ ಪೊಲಿಸು"
+  }
+},
+{
+  "type": "node",
+  "id": 4472318420,
+  "lat": 12.9081741,
+  "lon": 77.6368327,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 4518518597,
+  "lat": 12.9867684,
+  "lon": 77.4912530,
+  "tags": {
+    "addr:street": "Magadi Road",
+    "amenity": "police",
+    "name": "Byadarahalli Police Station",
+    "name:en": "Byadrahalli police station",
+    "name:kn": "ಬ್ಯಾಡರಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 4566438291,
+  "lat": 17.3286115,
+  "lon": 76.8383318,
+  "tags": {
+    "amenity": "police",
+    "name": "Superintendent of police office",
+    "name:en": "Superintendent of police office"
+  }
+},
+{
+  "type": "node",
+  "id": 4570069393,
+  "lat": 17.3420527,
+  "lon": 76.8377602,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Chowk",
+    "name:en": "Police chowk"
+  }
+},
+{
+  "type": "node",
+  "id": 4615790624,
+  "lat": 14.7180824,
+  "lon": 76.7465676,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 4636471341,
+  "lat": 12.8014297,
+  "lon": 77.5085132,
+  "tags": {
+    "amenity": "police",
+    "name": "Kaggalipura Police Station",
+    "name:kn": "ಕಗ್ಗಲಿಪುರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 4794996846,
+  "lat": 13.3083721,
+  "lon": 77.1482907,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "operator": "Karnataka State Police"
+  }
+},
+{
+  "type": "node",
+  "id": 4827607329,
+  "lat": 13.3688849,
+  "lon": 77.6842015,
+  "tags": {
+    "amenity": "police",
+    "name": "Nani Hills Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 4849107667,
+  "lat": 14.7890926,
+  "lon": 75.9865093,
+  "tags": {
+    "addr:city": "Haranahalli",
+    "addr:postcode": "583131",
+    "addr:street": "Hospet-Harihar Road",
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 4939636754,
+  "lat": 13.0027776,
+  "lon": 76.1076167,
+  "tags": {
+    "amenity": "police",
+    "name": "Women's Police Station",
+    "name:kn": "ಮಹಿಳಾ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 5197810923,
+  "lat": 11.9264949,
+  "lon": 76.9379787,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 5229482744,
+  "lat": 12.9848902,
+  "lon": 77.5828907,
+  "tags": {
+    "amenity": "police",
+    "name": "High Grounds Traffic Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 5300836957,
+  "lat": 13.4191708,
+  "lon": 75.2529999,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಶೃಂಗೇರಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 5313657423,
+  "lat": 16.8290223,
+  "lon": 75.7148464,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 5862563586,
+  "lat": 13.0057165,
+  "lon": 77.5934124,
+  "tags": {
+    "amenity": "police",
+    "name": "JC Nagara Police Station",
+    "name:kn": "ಜೆಸಿ ನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 6018675386,
+  "lat": 12.4077705,
+  "lon": 76.5777011,
+  "tags": {
+    "amenity": "police",
+    "name": "PSI quarters",
+    "name:en": "KRS PSI Quarters"
+  }
+},
+{
+  "type": "node",
+  "id": 6112964505,
+  "lat": 13.0927242,
+  "lon": 77.3912140,
+  "tags": {
+    "addr:city": "Nelamangala",
+    "addr:postcode": "562123",
+    "addr:street": "Bangalore - Nelamangala Expressway",
+    "amenity": "police",
+    "name": "Nelamangala Traffic Police Station",
+    "operator": "Karnataka State Police"
+  }
+},
+{
+  "type": "node",
+  "id": 6397536885,
+  "lat": 13.5741570,
+  "lon": 74.7726483,
+  "tags": {
+    "amenity": "police",
+    "name": "Kundapura Rural PS"
+  }
+},
+{
+  "type": "node",
+  "id": 6397536890,
+  "lat": 13.6867426,
+  "lon": 74.6606408,
+  "tags": {
+    "amenity": "police",
+    "name": "Gangolli Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ ಗಂಗೊಳ್ಳಿ"
+  }
+},
+{
+  "type": "node",
+  "id": 6397536892,
+  "lat": 13.6031114,
+  "lon": 74.9486202,
+  "tags": {
+    "amenity": "police",
+    "name": "Amasebail Police Sration"
+  }
+},
+{
+  "type": "node",
+  "id": 6397537186,
+  "lat": 13.7072031,
+  "lon": 74.9617886,
+  "tags": {
+    "amenity": "police",
+    "name": "Hosangadi Check Post"
+  }
+},
+{
+  "type": "node",
+  "id": 6397537187,
+  "lat": 13.6183635,
+  "lon": 74.6914360,
+  "tags": {
+    "amenity": "police",
+    "name": "Office of the Deputy Superintendent of Police, Kundapura."
+  }
+},
+{
+  "type": "node",
+  "id": 6398553874,
+  "lat": 13.8672749,
+  "lon": 74.6264411,
+  "tags": {
+    "amenity": "police",
+    "name": "CPI Office, Byndoor"
+  }
+},
+{
+  "type": "node",
+  "id": 6398561009,
+  "lat": 13.8673034,
+  "lon": 74.6268014,
+  "tags": {
+    "amenity": "police",
+    "name": "Byndoor Police Station."
+  }
+},
+{
+  "type": "node",
+  "id": 6444375885,
+  "lat": 14.9149508,
+  "lon": 75.2707904,
+  "tags": {
+    "amenity": "police",
+    "name": "Bankapura Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 6444918888,
+  "lat": 13.2307461,
+  "lon": 77.2425462,
+  "tags": {
+    "amenity": "police",
+    "name": "Dobbespet Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 6454071385,
+  "lat": 14.5212054,
+  "lon": 75.7864689,
+  "tags": {
+    "amenity": "police",
+    "name": "Kumarapattanam ps"
+  }
+},
+{
+  "type": "node",
+  "id": 6778997140,
+  "lat": 12.5184425,
+  "lon": 76.8837623,
+  "tags": {
+    "amenity": "police",
+    "name": "ಜಿಲ್ಲಾ ಸಶಸ್ತ್ರ ಮೀಸಲು ಪಡೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 6779119308,
+  "lat": 12.5193565,
+  "lon": 76.8846887,
+  "tags": {
+    "amenity": "police",
+    "name:en": "Mandya rural police station"
+  }
+},
+{
+  "type": "node",
+  "id": 6845945398,
+  "lat": 15.8381587,
+  "lon": 74.5178764,
+  "tags": {
+    "amenity": "police",
+    "name": "Shahpur Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 6853738200,
+  "lat": 15.8703385,
+  "lon": 74.5171926,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Commissioner Office"
+  }
+},
+{
+  "type": "node",
+  "id": 6855642573,
+  "lat": 15.8624322,
+  "lon": 74.5197299,
+  "tags": {
+    "amenity": "police",
+    "name": "Market Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 6991301269,
+  "lat": 13.0041876,
+  "lon": 77.6659393,
+  "tags": {
+    "addr:street": "Kempegowda Underpass Road",
+    "amenity": "police",
+    "name": "Ramamurthy Nagar Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 7865933385,
+  "lat": 12.3891597,
+  "lon": 75.5342260,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 8415162917,
+  "lat": 13.0092684,
+  "lon": 76.1083883,
+  "tags": {
+    "amenity": "police",
+    "name": "Crime Police Station",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 8620230017,
+  "lat": 13.0156485,
+  "lon": 76.1057036,
+  "tags": {
+    "amenity": "police",
+    "name": "Anti corruption bureau"
+  }
+},
+{
+  "type": "node",
+  "id": 8919834457,
+  "lat": 13.6082851,
+  "lon": 77.5199298,
+  "tags": {
+    "addr:city": "Gauribidanur",
+    "addr:postcode": "561208",
+    "amenity": "police",
+    "name": "Gauribidanur Town Police Station",
+    "opening_hours": "24/7",
+    "operator": "Karnataka Home Minstry. Govt of Karnataka",
+    "phone": "+918155286720"
+  }
+},
+{
+  "type": "node",
+  "id": 8919834458,
+  "lat": 13.6014673,
+  "lon": 77.5083481,
+  "tags": {
+    "addr:city": "Gauribidanur",
+    "addr:postcode": "561208",
+    "amenity": "police",
+    "name": "Gauribidanur Rural Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "opening_hours": "24/7",
+    "phone": "100"
+  }
+},
+{
+  "type": "node",
+  "id": 9783706519,
+  "lat": 12.9965632,
+  "lon": 77.6425776,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಬೈಯಪ್ಪನಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 9856328138,
+  "lat": 13.1665965,
+  "lon": 75.8668104,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Circle Inspector Office"
+  }
+},
+{
+  "type": "node",
+  "id": 11034095984,
+  "lat": 14.0265730,
+  "lon": 74.5295547,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 11034195146,
+  "lat": 13.9398467,
+  "lon": 74.5958480,
+  "tags": {
+    "amenity": "police",
+    "name": "Udupi checkpost"
+  }
+},
+{
+  "type": "node",
+  "id": 11248318176,
+  "lat": 12.9104906,
+  "lon": 77.4815428,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2023-10-08",
+    "name": "Kengeri Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 11248335788,
+  "lat": 12.4845076,
+  "lon": 75.9565238,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2023-10-08",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 11295829642,
+  "lat": 12.9406149,
+  "lon": 77.5949214,
+  "tags": {
+    "amenity": "police",
+    "name": "NIMHANS Police Outpost"
+  }
+},
+{
+  "type": "node",
+  "id": 11649535553,
+  "lat": 12.9132041,
+  "lon": 77.6009835,
+  "tags": {
+    "amenity": "police",
+    "name": "Mico Layout Traffic Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 11758684231,
+  "lat": 11.9687626,
+  "lon": 76.0507858,
+  "tags": {
+    "amenity": "police",
+    "name": "Kutta Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 11874224022,
+  "lat": 14.6126221,
+  "lon": 74.8394682,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-05-02"
+  }
+},
+{
+  "type": "node",
+  "id": 11882976875,
+  "lat": 13.3606496,
+  "lon": 74.7036793,
+  "tags": {
+    "amenity": "police",
+    "name": "Malpe Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 11882976913,
+  "lat": 13.3806510,
+  "lon": 74.6725408,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 11917792343,
+  "lat": 12.9589313,
+  "lon": 77.5283822,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-05-19",
+    "name": "Chandra Layout Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 11968585747,
+  "lat": 13.5279075,
+  "lon": 74.7045654,
+  "tags": {
+    "addr:district": "Udupi",
+    "addr:postcode": "576221",
+    "addr:street": "Kota",
+    "amenity": "police",
+    "name": "Kota Police Station",
+    "name:kn": "ಕೋಟ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 12215535691,
+  "lat": 16.3490827,
+  "lon": 76.1288481,
+  "tags": {
+    "amenity": "police",
+    "name": "Muddebihal Police Station",
+    "name:en": "Muddebihal Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 12246090205,
+  "lat": 12.9964893,
+  "lon": 77.6935636,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-10-12",
+    "name": "Mahadevapura Traffic Police"
+  }
+},
+{
+  "type": "node",
+  "id": 12246090206,
+  "lat": 12.9964748,
+  "lon": 77.6936783,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-10-12",
+    "name": "Office Of The Assistant Commissioner Whitefield Subdivision"
+  }
+},
+{
+  "type": "node",
+  "id": 12265548492,
+  "lat": 13.0747194,
+  "lon": 77.6333710,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-10-19"
+  }
+},
+{
+  "type": "node",
+  "id": 12670396699,
+  "lat": 12.9760045,
+  "lon": 77.5981119,
+  "tags": {
+    "amenity": "police",
+    "name": "Cubbon Park Traffic Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 12870553637,
+  "lat": 15.0320337,
+  "lon": 75.9217562,
+  "tags": {
+    "amenity": "police",
+    "name": "DySP Office"
+  }
+},
+{
+  "type": "node",
+  "id": 12918679344,
+  "lat": 13.2329595,
+  "lon": 75.3591070,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-06-16",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 13205997044,
+  "lat": 12.8715628,
+  "lon": 77.5760581,
+  "tags": {
+    "amenity": "police",
+    "operational_status": "needs_maintenance",
+    "operator": "Bengaluru Police - Konankunte Beat"
+  }
+},
+{
+  "type": "node",
+  "id": 13347906368,
+  "lat": 14.5440105,
+  "lon": 74.3215396,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 13381419281,
+  "lat": 12.9903748,
+  "lon": 77.5929507,
+  "tags": {
+    "amenity": "police",
+    "name": "Cybercrime Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 13463594949,
+  "lat": 11.8176771,
+  "lon": 76.7924385,
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 13625209403,
+  "lat": 12.2781429,
+  "lon": 76.8832558,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 13690950857,
+  "lat": 13.5211664,
+  "lon": 75.3002114,
+  "tags": {
+    "amenity": "police",
+    "name": "Hariharapura Police Station",
+    "name:kn": "ಹರಿಹರಪುರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "node",
+  "id": 13739111501,
+  "lat": 15.2738769,
+  "lon": 76.3888126,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2026-04-03",
+    "name": "Town Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 13931254173,
+  "lat": 15.2575108,
+  "lon": 74.6211739,
+  "tags": {
+    "amenity": "police",
+    "name": "Town Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 13931254174,
+  "lat": 15.2572065,
+  "lon": 74.6212612,
+  "tags": {
+    "amenity": "police",
+    "name": "Rural Police station"
+  }
+},
+{
+  "type": "node",
+  "id": 14055459901,
+  "lat": 15.4643549,
+  "lon": 74.9981800,
+  "tags": {
+    "amenity": "police",
+    "name": "Sub Urban Police Station Dharwad"
+  }
+},
+{
+  "type": "node",
+  "id": 14076191160,
+  "lat": 15.9225613,
+  "lon": 75.6801738,
+  "tags": {
+    "amenity": "police",
+    "name": "Badami Police Station"
+  }
+},
+{
+  "type": "node",
+  "id": 14292329288,
+  "lat": 14.4692939,
+  "lon": 75.9184200,
+  "tags": {
+    "addr:city": "Davanagere",
+    "addr:postcode": "577001",
+    "addr:street": "Vasantha Road",
+    "amenity": "police",
+    "name": "Basavanagara Police Station",
+    "operator": "Karnataka State Police"
+  }
+},
+{
+  "type": "way",
+  "id": 68868261,
+  "center": {
+    "lat": 13.3423497,
+    "lon": 77.1060337
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Tumkur Rural Police Station",
+    "name:kn": "ತುಮಕೂರು ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 100575811,
+  "center": {
+    "lat": 12.4209688,
+    "lon": 75.7404457
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Madikeri Town Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ, ಮಡಿಕೆರಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 131396829,
+  "center": {
+    "lat": 12.9388722,
+    "lon": 77.5923803
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Siddapura Police Station",
+    "name:kn": "ಸಿದ್ದಾಪುರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 133242913,
+  "center": {
+    "lat": 12.5194059,
+    "lon": 76.8846090
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Rural Police station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 133370849,
+  "center": {
+    "lat": 15.0530166,
+    "lon": 76.2096800
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Hagari Bommanahalli Police station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ, ಹಗರಿ ಬೊಮ್ಮನಹಳ್ಳಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 134023570,
+  "center": {
+    "lat": 13.3307021,
+    "lon": 74.7481877
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Udupi Town Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ ಉಡುಪಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 136492654,
+  "center": {
+    "lat": 12.9942469,
+    "lon": 77.7571802
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Whitefield Traffic Police Station",
+    "name:kn": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 160435099,
+  "center": {
+    "lat": 13.5352363,
+    "lon": 75.3657237
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 162173870,
+  "center": {
+    "lat": 15.3506549,
+    "lon": 75.1393298
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 166769940,
+  "center": {
+    "lat": 12.9601316,
+    "lon": 77.5720622
+  },
+  "tags": {
+    "amenity": "police",
+    "designation": "Central Police Station",
+    "name": "Central Police Station",
+    "name:kn": "ಕೇಂದ್ರಿಯ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 168610366,
+  "center": {
+    "lat": 12.3260953,
+    "lon": 76.6327000
+  },
+  "tags": {
+    "addr:city": "Mysuru",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Vontikoppal Police Station",
+    "name:kn": "ಒಂಟಿಕೊಪ್ಪಲು ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 192964068,
+  "center": {
+    "lat": 13.3149611,
+    "lon": 76.9400375
+  },
+  "tags": {
+    "alt_name": "Newspaper ommunity",
+    "amenity": "police",
+    "name": "Office of Circle Inspector of Police",
+    "name:kn": "ಸರ್ಕಲ್ ಇನ್ಸ್‌ಪೆಕ್ಟರ್ ಪೋಲಿಸ್ ಕಛೇರಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 205016768,
+  "center": {
+    "lat": 13.8633352,
+    "lon": 74.8135181
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 207858102,
+  "center": {
+    "lat": 12.9575826,
+    "lon": 78.2717107
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Robertsonpet Police station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 208827398,
+  "center": {
+    "lat": 12.9665425,
+    "lon": 77.5870156
+  },
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:postcode": "560002",
+    "addr:street": "Cubbon Park Road, Opposite-BBMP Office, Cubbonpet,",
+    "amenity": "police",
+    "landuse": "commercial",
+    "name": "Halasuru Gate Traffic Police Station",
+    "phone": "080 2294 2660",
+    "website": "NA"
+  }
+},
+{
+  "type": "way",
+  "id": 208827412,
+  "center": {
+    "lat": 12.9814206,
+    "lon": 77.5855355
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "CID Office",
+    "old_name": "Carlton House"
+  }
+},
+{
+  "type": "way",
+  "id": 222252171,
+  "center": {
+    "lat": 15.8574034,
+    "lon": 74.5053520
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Traffic Police Station",
+    "name:kn": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 249517268,
+  "center": {
+    "lat": 12.4062195,
+    "lon": 76.5724659
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 249888151,
+  "center": {
+    "lat": 12.4077536,
+    "lon": 76.5774931
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Quarters",
+    "name:kn": "ಪೊಲೀಸ್ ವಸತಿಗೃಹ"
+  }
+},
+{
+  "type": "way",
+  "id": 271785239,
+  "center": {
+    "lat": 12.9900504,
+    "lon": 77.5649365
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Srirampura Police Station",
+    "name:kn": "ಶ್ರೀರಾಮಪುರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 286555856,
+  "center": {
+    "lat": 12.9549466,
+    "lon": 78.2591987
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Oorgaum Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 289600239,
+  "center": {
+    "lat": 12.6816347,
+    "lon": 77.4697180
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 293948696,
+  "center": {
+    "lat": 16.7627708,
+    "lon": 77.1324759
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 301679812,
+  "center": {
+    "lat": 16.7476678,
+    "lon": 77.1285383
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Lokayuktha Police",
+    "name:kn": "ಲೋಕಾಯುಕ್ತ"
+  }
+},
+{
+  "type": "way",
+  "id": 312017989,
+  "center": {
+    "lat": 12.3081281,
+    "lon": 76.6472480
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Nallappa Thana Police Station",
+    "name:kn": "ನಲ್ಲಪ್ಪ ಠಾಣಾ ಪೋಲಿಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 313978170,
+  "center": {
+    "lat": 12.2892323,
+    "lon": 76.6313598
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Ashokpuram Police Station",
+    "name:kn": "ಅಶೋಕಪುರಂ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 316041144,
+  "center": {
+    "lat": 12.3016654,
+    "lon": 76.6239124
+  },
+  "tags": {
+    "addr:city": "Mysuru",
+    "addr:street": "Sahukar Chennaiah Road",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Sarasvathipuram Police Station",
+    "name:kn": "ಸರಸ್ವತಿಪುರಂ ಪೋಲಿಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 320159641,
+  "center": {
+    "lat": 13.3395849,
+    "lon": 75.7712819
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 320159642,
+  "center": {
+    "lat": 13.3400734,
+    "lon": 75.7727962
+  },
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "way",
+  "id": 327551781,
+  "center": {
+    "lat": 12.9762185,
+    "lon": 77.5982315
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Cubbon Park Police Station",
+    "name:kn": "ಕಬ್ಬನ್ ಪಾರ್ಕ್ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 331352075,
+  "center": {
+    "lat": 12.9830254,
+    "lon": 77.6384064
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Indira Nagar Police Station",
+    "name:kn": "ಇಂದಿರಾನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 331591066,
+  "center": {
+    "lat": 14.1677444,
+    "lon": 75.0231386
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Sagar Urban Police Station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ, ಸಾಗರ",
+    "operator": "Karnataka State Police"
+  }
+},
+{
+  "type": "way",
+  "id": 331594013,
+  "center": {
+    "lat": 14.1678331,
+    "lon": 75.0322345
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Sagar Rural Police Station",
+    "name:kn": "ಸಾಗರ ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "operator": "Karnataka Police"
+  }
+},
+{
+  "type": "way",
+  "id": 332907587,
+  "center": {
+    "lat": 12.9779226,
+    "lon": 77.6010276
+  },
+  "tags": {
+    "amenity": "police",
+    "landuse": "commercial",
+    "name": "Additional Director General of Police"
+  }
+},
+{
+  "type": "way",
+  "id": 346481825,
+  "center": {
+    "lat": 13.0569304,
+    "lon": 77.5985304
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Amrutahalli Police Station",
+    "name:kn": "ಅಮೃತಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 346857854,
+  "center": {
+    "lat": 12.9550690,
+    "lon": 77.6828084
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "HAL Police Station",
+    "operator": "Bangalore City Police",
+    "wikidata": "Q4855039",
+    "wikipedia": "en:Bangalore City Police"
+  }
+},
+{
+  "type": "way",
+  "id": 347236620,
+  "center": {
+    "lat": 12.9118515,
+    "lon": 77.5875409
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "JP Nagar Police Station",
+    "name:kn": "ಜಯಪ್ರಕಾಶ ನಗರ ಆರಕ್ಷಕ ಟಾಣೆ",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 347425037,
+  "center": {
+    "lat": 12.9609483,
+    "lon": 77.5831297
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "S.J. Park Police"
+  }
+},
+{
+  "type": "way",
+  "id": 348159485,
+  "center": {
+    "lat": 13.0937944,
+    "lon": 77.4907575
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Soladevanahalli Police Station",
+    "name:kn": "ಸೋಲದೇವನಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 348457970,
+  "center": {
+    "lat": 12.9210124,
+    "lon": 77.6206703
+  },
+  "tags": {
+    "addr:city": "Bengaluru",
+    "addr:district": "Bengaluru Urban",
+    "addr:postcode": "560068",
+    "addr:street": "Madiwala Road, Santhosapuram, 1st Block Koramangala, Koramangala",
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2024-08-29",
+    "name": "Madiwala Traffic Police Station",
+    "name:kn": "ಮಡಿವಾಳ ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ",
+    "phone": "+91 80 2294 2568",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 348684279,
+  "center": {
+    "lat": 15.1525901,
+    "lon": 76.9427208
+  },
+  "tags": {
+    "addr:city": "Ballari",
+    "addr:postcode": "583103",
+    "addr:street": "Nehru Colony 2nd Cross",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Nehru Colony Outpost"
+  }
+},
+{
+  "type": "way",
+  "id": 349794011,
+  "center": {
+    "lat": 12.9085850,
+    "lon": 77.6106985
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Mico Layout Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 349960257,
+  "center": {
+    "lat": 17.1302910,
+    "lon": 76.9345027
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 350778349,
+  "center": {
+    "lat": 15.1452565,
+    "lon": 76.9307831
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Gandhi Nagar Police Station",
+    "name:kn": "ಗಾಂಧಿನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 359373295,
+  "center": {
+    "lat": 15.1484257,
+    "lon": 76.9341247
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "DRP Parade Grounds",
+    "operator": "GoK"
+  }
+},
+{
+  "type": "way",
+  "id": 360123279,
+  "center": {
+    "lat": 12.2976351,
+    "lon": 76.6426944
+  },
+  "tags": {
+    "addr:city": "Mysuru",
+    "addr:street": "Jhansi Lakshmibai Road",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Lakshmipuram Police Station",
+    "name:kn": "ಲಕ್ಷ್ಮಿಪುರಂ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 363479292,
+  "center": {
+    "lat": 12.6676612,
+    "lon": 75.6128226
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Subrahmanya Police Station",
+    "name:kn": "ಸುಬ್ರಹ್ಮಣ್ಯ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 364849899,
+  "center": {
+    "lat": 12.2636195,
+    "lon": 76.6448091
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 367581709,
+  "center": {
+    "lat": 12.7334328,
+    "lon": 77.2968891
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Ramanagara Prison",
+    "name:kn": "ರಾಮನಗರ ಕಾರಾಗೃಹ"
+  }
+},
+{
+  "type": "way",
+  "id": 369295553,
+  "center": {
+    "lat": 12.9747811,
+    "lon": 77.6252778
+  },
+  "tags": {
+    "amenity": "police",
+    "check_date": "2026-08-29",
+    "internet_access": "no",
+    "level": "0",
+    "name": "Halasuru Police Station",
+    "name:kn": "ಹಲಸೂರು ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 369453166,
+  "center": {
+    "lat": 13.3121786,
+    "lon": 75.7743509
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "SP office"
+  }
+},
+{
+  "type": "way",
+  "id": 369458367,
+  "center": {
+    "lat": 14.6212612,
+    "lon": 74.8253388
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 387857824,
+  "center": {
+    "lat": 15.3928746,
+    "lon": 75.0814990
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Navanagar Police Station",
+    "name:kn": "ನವನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 397916570,
+  "center": {
+    "lat": 13.9592757,
+    "lon": 76.6109797
+  },
+  "tags": {
+    "addr:city": "Hiriyur",
+    "addr:postcode": "577598",
+    "addr:street": "NH 48",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Station",
+    "name:en": "Hiriyur Rural Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "operator": "Karnataka State Police"
+  }
+},
+{
+  "type": "way",
+  "id": 403473919,
+  "center": {
+    "lat": 12.9716319,
+    "lon": 77.6102037
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Ashok Nagar Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ, ಅಶೋಕನಗರ"
+  }
+},
+{
+  "type": "way",
+  "id": 408258886,
+  "center": {
+    "lat": 15.4719606,
+    "lon": 74.9893498
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Dharwad Rural Police Station",
+    "name:kn": "ಗ್ರಾಮಂತರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 414062457,
+  "center": {
+    "lat": 13.3131178,
+    "lon": 77.1451525
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Old Police Station",
+    "name:kn": "ಹಳೆ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 414068081,
+  "center": {
+    "lat": 13.3369416,
+    "lon": 77.0969705
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Gandhinagara Police Station",
+    "name:kn": "ಗಾಂಧಿನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 474302061,
+  "center": {
+    "lat": 13.1992233,
+    "lon": 77.7056579
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 495678637,
+  "center": {
+    "lat": 12.9793697,
+    "lon": 78.2386878
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "BEML Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 511114417,
+  "center": {
+    "lat": 15.8716982,
+    "lon": 74.5170552
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "SP Office"
+  }
+},
+{
+  "type": "way",
+  "id": 533496075,
+  "center": {
+    "lat": 12.2862999,
+    "lon": 76.6192161
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Kuvempunagara Police Station",
+    "name:kn": "ಕುವೆಂಪುನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 537716165,
+  "center": {
+    "lat": 13.0555139,
+    "lon": 77.6463263
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Kothanur Police Station",
+    "name:kn": "ಕೊತನೂರು ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 543782627,
+  "center": {
+    "lat": 12.6537838,
+    "lon": 77.2005231
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 610388969,
+  "center": {
+    "lat": 12.9201775,
+    "lon": 77.6513034
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "HSR Police station",
+    "name:kn": "ಎಚ್ಎಸ್ಆರ್ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 610389734,
+  "center": {
+    "lat": 12.9190149,
+    "lon": 77.6679644
+  },
+  "tags": {
+    "addr:city": "Bengaluru",
+    "addr:housenumber": "37",
+    "addr:postcode": "560103",
+    "addr:street": "Sarjapur Road, PWD quarters, 1st sector, Bellandur",
+    "amenity": "police",
+    "check_date": "2025-02-12",
+    "name": "Bellanduru Police Station",
+    "name:kn": "ಬೆಳ್ಳಂದೂರು ಪೊಲೀಸ್ ಠಾಣೆ",
+    "phone": "+91 80 2574 7771",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 628639504,
+  "center": {
+    "lat": 13.0720972,
+    "lon": 77.5301925
+  },
+  "tags": {
+    "amenity": "police",
+    "building:levels": "2",
+    "name": "Gangammagudi Police Station",
+    "name:kn": "ಗಂಗಮ್ಮಗುಡಿ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "name_1": "house"
+  }
+},
+{
+  "type": "way",
+  "id": 668612952,
+  "center": {
+    "lat": 12.8766721,
+    "lon": 77.6000885
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 726132672,
+  "center": {
+    "lat": 13.4363265,
+    "lon": 77.7286344
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Town Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 726161465,
+  "center": {
+    "lat": 17.9100741,
+    "lon": 77.5142707
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 732894683,
+  "center": {
+    "lat": 15.8509515,
+    "lon": 75.1204933
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 772835104,
+  "center": {
+    "lat": 13.0149658,
+    "lon": 77.5724873
+  },
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-08-08",
+    "name": "Sadhashivanagar Police Station",
+    "name:kn": "ಸದಾಶಿವನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 774716173,
+  "center": {
+    "lat": 13.0953580,
+    "lon": 77.5938103
+  },
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-07-16",
+    "name": "Yelahanka Police Station",
+    "name:kn": "ಯಲಹಂಕ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 775169696,
+  "center": {
+    "lat": 12.9900595,
+    "lon": 77.5927243
+  },
+  "tags": {
+    "amenity": "police",
+    "landuse": "commercial",
+    "name": "High Grounds Police Station",
+    "name:kn": "ಹೈಗ್ರೌಂಡ್ಸ್ ಪೊಲೀಸ್ ಠಾಣೆ",
+    "note": "Used to be near Golf Course, on Palace Road earlier"
+  }
+},
+{
+  "type": "way",
+  "id": 779544828,
+  "center": {
+    "lat": 15.3294996,
+    "lon": 74.7671066
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 779544830,
+  "center": {
+    "lat": 15.3294261,
+    "lon": 74.7674214
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Office"
+  }
+},
+{
+  "type": "way",
+  "id": 781541656,
+  "center": {
+    "lat": 13.0028414,
+    "lon": 77.5474160
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Mahalakshmipuram Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ ಮಹಾಲಕ್ಷ್ಮಿಪುರಂ",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 782014099,
+  "center": {
+    "lat": 12.9840887,
+    "lon": 77.5947229
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Cyber Crime Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 782014100,
+  "center": {
+    "lat": 12.9844786,
+    "lon": 77.5946399
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Commisioner of Police"
+  }
+},
+{
+  "type": "way",
+  "id": 808433356,
+  "center": {
+    "lat": 13.0090998,
+    "lon": 76.0954842
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Pension Mohalla Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 885593413,
+  "center": {
+    "lat": 13.0028292,
+    "lon": 76.1008211
+  },
+  "tags": {
+    "addr:city": "Hassan",
+    "addr:street": "N.R Circle",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Office Complex",
+    "name:kn": "ಪೊಲೀಸ್ ಕಛೇರಿ ಸಂಕೀರ್ಣ"
+  }
+},
+{
+  "type": "way",
+  "id": 963352879,
+  "center": {
+    "lat": 13.0333764,
+    "lon": 77.5886106
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "R T Nagar Traffic Police station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 997867402,
+  "center": {
+    "lat": 13.0086326,
+    "lon": 77.6932057
+  },
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:postcode": "560036",
+    "addr:street": "New Police Station Road",
+    "amenity": "police",
+    "name": "KR Puram Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1030050639,
+  "center": {
+    "lat": 12.9745187,
+    "lon": 77.5749342
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Upparpet Traffic Police Station",
+    "name:kn": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1050574678,
+  "center": {
+    "lat": 12.8842174,
+    "lon": 77.4498569
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Kumbalagodu Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1065763447,
+  "center": {
+    "lat": 12.8854460,
+    "lon": 77.6718250
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "source": "microsoft/BuildingFootprints"
+  }
+},
+{
+  "type": "way",
+  "id": 1071262161,
+  "center": {
+    "lat": 12.9218103,
+    "lon": 77.6615877
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Bellandur Traffic Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1074587237,
+  "center": {
+    "lat": 13.1374574,
+    "lon": 75.5545382
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Banakal Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1076054321,
+  "center": {
+    "lat": 12.3069127,
+    "lon": 76.6654555
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Cyber Crime Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1076054322,
+  "center": {
+    "lat": 12.3071409,
+    "lon": 76.6643878
+  },
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "way",
+  "id": 1076398555,
+  "center": {
+    "lat": 12.9695587,
+    "lon": 77.5878550
+  },
+  "tags": {
+    "amenity": "police",
+    "fixme": "Accurate boundaries",
+    "name": "Police Headquarters"
+  }
+},
+{
+  "type": "way",
+  "id": 1081215245,
+  "center": {
+    "lat": 12.9802646,
+    "lon": 77.5815071
+  },
+  "tags": {
+    "alt_name": "Karnataka State Prisons Department",
+    "amenity": "police",
+    "landuse": "commercial",
+    "name": "Department of Prisons & Correctional Services",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 1084382246,
+  "center": {
+    "lat": 12.9415666,
+    "lon": 77.6087598
+  },
+  "tags": {
+    "addr:city": "Bangalore",
+    "addr:housenumber": "30",
+    "addr:postcode": "560030",
+    "addr:street": "Corporation Complex,1st Floor, Hosur-Lashkar Road, Near-Vijaya Bank, Adugodi",
+    "amenity": "police",
+    "name": "Adugodi Traffic Police Station",
+    "name:kn": "ಅಡುಗೊಡಿ ಸಂಚಾರ ಪೋಲೀಸ್ ಠಾಣೆ",
+    "phone": "080 2294 3119",
+    "website": "NA"
+  }
+},
+{
+  "type": "way",
+  "id": 1084382251,
+  "center": {
+    "lat": 12.9392272,
+    "lon": 77.6101711
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Adugodi Police Station",
+    "name:kn": "ಅಡುಗೊಡಿ ಪೋಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1084735142,
+  "center": {
+    "lat": 13.0753016,
+    "lon": 77.6356014
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "City Armed Reserve North",
+    "short_name": "CAR North"
+  }
+},
+{
+  "type": "way",
+  "id": 1087700050,
+  "center": {
+    "lat": 13.0178863,
+    "lon": 77.5584179
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Yeshwantpura Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1088209026,
+  "center": {
+    "lat": 12.9754425,
+    "lon": 77.7511459
+  },
+  "tags": {
+    "addr:postcode": "560066",
+    "addr:street": "Whitefield Main Road",
+    "amenity": "police",
+    "check_date": "2025-12-20",
+    "contact:phone": "080 22434 72",
+    "email": "Whitefieldbcp@ksp.gov.in",
+    "facebook": "Whitefieldbcp",
+    "name": "Whitefield Police Station -Office of the Deputy Commisionner",
+    "twitter": "Whitefieldbcp"
+  }
+},
+{
+  "type": "way",
+  "id": 1091543251,
+  "center": {
+    "lat": 12.9895821,
+    "lon": 77.5920271
+  },
+  "tags": {
+    "amenity": "police",
+    "heritage": "2",
+    "heritage:operator": "nmma",
+    "heritage:website": "https://nmma.nic.in/nmma/exploreBuiltState.do?state=29",
+    "name": "Superintendent of Police",
+    "ref:nmma": "KR05010889"
+  }
+},
+{
+  "type": "way",
+  "id": 1099882755,
+  "center": {
+    "lat": 12.9410977,
+    "lon": 77.6214106
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Koramangala Police Station",
+    "name:kn": "ಕೋರಮಂಗಲ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1107016495,
+  "center": {
+    "lat": 12.9993467,
+    "lon": 77.6196130
+  },
+  "tags": {
+    "alt_name": "Frazer Town Police Station",
+    "amenity": "police",
+    "name": "Pulakeshi Nagar Police Station",
+    "name:kn": "ಪುಲಕೇಶಿನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1111108766,
+  "center": {
+    "lat": 12.9946100,
+    "lon": 77.5543664
+  },
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-03-18",
+    "name": "Rajaji Nagar Police Station",
+    "name:kn": "ರಾಜಾಜಿನಗರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "name:ta": "ராஜாஜிநகர காவல் நிலையம்"
+  }
+},
+{
+  "type": "way",
+  "id": 1124828967,
+  "center": {
+    "lat": 12.9847727,
+    "lon": 77.5829241
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "High Grounds Traffic Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1144454823,
+  "center": {
+    "lat": 13.5107020,
+    "lon": 75.0976079
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1148268346,
+  "center": {
+    "lat": 12.9050939,
+    "lon": 77.5629547
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Kumaraswamy Layout Police Station",
+    "name:kn": "ಕುಮಾರಸ್ವಾಮಿ ಲೇಔಟ್ ಪೋಲಿಸ್ ಸ್ಟೇಶನ್"
+  }
+},
+{
+  "type": "way",
+  "id": 1153736764,
+  "center": {
+    "lat": 12.9518683,
+    "lon": 77.6223510
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Viveknagar Police Station",
+    "name:kn": "ವಿವೇಕನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1157218004,
+  "center": {
+    "lat": 12.9879685,
+    "lon": 77.6035505
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Shivajinagar Traffic Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1176579523,
+  "center": {
+    "lat": 12.8838351,
+    "lon": 77.5663627
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Konanakunte Police Station",
+    "name:kn": "ಕೋಣನಕುಂಟೆ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1187884325,
+  "center": {
+    "lat": 13.1401026,
+    "lon": 77.6704343
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Bagaluru Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1189287978,
+  "center": {
+    "lat": 12.9455720,
+    "lon": 77.6978864
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2025-04-06",
+    "name": "Old Marathahalli Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1202598212,
+  "center": {
+    "lat": 13.0114152,
+    "lon": 77.6130934
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "DJ Halli Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1217247634,
+  "center": {
+    "lat": 12.9654109,
+    "lon": 77.5100015
+  },
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "way",
+  "id": 1219767614,
+  "center": {
+    "lat": 15.7921220,
+    "lon": 74.4675019
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "K.S.R.P. 2nd Battalion",
+    "police": "barracks"
+  }
+},
+{
+  "type": "way",
+  "id": 1233754516,
+  "center": {
+    "lat": 13.1001374,
+    "lon": 77.5839619
+  },
+  "tags": {
+    "amenity": "police",
+    "landuse": "commercial",
+    "name": "Office of the Assisstant Commisioner of the Police"
+  }
+},
+{
+  "type": "way",
+  "id": 1234907996,
+  "center": {
+    "lat": 12.3595717,
+    "lon": 76.5411992
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Yelavala Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1238631225,
+  "center": {
+    "lat": 12.9606478,
+    "lon": 77.5408201
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Vijayanagara Traffic Police Station",
+    "name:kn": "ವಿಜಯನಗರ ಸಂಚಾರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1254511632,
+  "center": {
+    "lat": 12.2977844,
+    "lon": 76.6505426
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "K R Police station",
+    "name:kn": "ಕೆ ಆರ್ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1307025478,
+  "center": {
+    "lat": 12.9501836,
+    "lon": 77.5961204
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Wilson Garden Police Station",
+    "name:kn": "ವಿಲ್ಸನ್ ಗಾರ್ಡನ್ ಪೋಲಿಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1330344687,
+  "center": {
+    "lat": 12.9421865,
+    "lon": 77.5743328
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Basavangudi Police Station",
+    "name:kn": "ಬಸವನಗುಡಿ ಪೋಲಿಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1351244014,
+  "center": {
+    "lat": 13.0706327,
+    "lon": 77.6363671
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Hennur Traffic Police Station",
+    "name:kn": "ಹೆನ್ನೂರು ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1353870716,
+  "center": {
+    "lat": 12.9968133,
+    "lon": 77.6928379
+  },
+  "tags": {
+    "addr:street": "Whitefield Road",
+    "amenity": "police",
+    "name": "Mahadevpura Police Station",
+    "name:kn": "ಮಹಾದೇವಪುರ ಅರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1353870717,
+  "center": {
+    "lat": 12.9964813,
+    "lon": 77.6936450
+  },
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "way",
+  "id": 1354126975,
+  "center": {
+    "lat": 12.9917352,
+    "lon": 77.6573426
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Baiyyapannahalli Police Station",
+    "name:kn": "ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1366656620,
+  "center": {
+    "lat": 13.0196732,
+    "lon": 77.6401561
+  },
+  "tags": {
+    "amenity": "police",
+    "landuse": "commercial",
+    "name": "Banaswadi Police Station",
+    "name:kn": "ಬಾಣಸವಾಡಿ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1370050102,
+  "center": {
+    "lat": 13.0033745,
+    "lon": 77.5537585
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Subramanyanagar Police Station",
+    "name:kn": "ಸುಬ್ರಹ್ಮಣ್ಯ ನಗರ ಆರಕ್ಷಕ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1377007431,
+  "center": {
+    "lat": 12.9911983,
+    "lon": 77.6120845
+  },
+  "tags": {
+    "addr:city": "bangalore",
+    "addr:postcode": "560005",
+    "addr:street": "Frazer Town Police Station, Near-Mark Circle, Frazer Town",
+    "amenity": "police",
+    "name": "Bharthinagar Police Station",
+    "name:kn": "ಭಾರತಿನಗರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "080 2294 2548",
+    "website": "NA"
+  }
+},
+{
+  "type": "way",
+  "id": 1386042651,
+  "center": {
+    "lat": 13.0246853,
+    "lon": 77.5931961
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "RT Nagar Police Station",
+    "name:kn": "ಆರ್ ಟಿ ನಗರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1390313781,
+  "center": {
+    "lat": 15.0183659,
+    "lon": 75.9344500
+  },
+  "tags": {
+    "addr:city": "Huvina Hadagali",
+    "addr:district": "Vijayanagara",
+    "addr:postcode": "583219",
+    "addr:street": "Opposite Ambedker Circle",
+    "amenity": "police",
+    "building": "yes",
+    "name": "New Police Station",
+    "name:kn": "ಹೊಸ ಪೋಲಿಸ್‌ ಠಾಣೆ",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "way",
+  "id": 1396722552,
+  "center": {
+    "lat": 13.1796664,
+    "lon": 78.4152814
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "public",
+    "name": "Mulbagal Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1416675134,
+  "center": {
+    "lat": 13.0198144,
+    "lon": 77.6192540
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Kadugondanahalli Traffic Police Station",
+    "name:kn": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1416675135,
+  "center": {
+    "lat": 13.0194119,
+    "lon": 77.6192385
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Kadugondanahalli Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ ಕಾಡುಗೊಂಡನಹಳ್ಳಿ"
+  }
+},
+{
+  "type": "way",
+  "id": 1430795262,
+  "center": {
+    "lat": 13.1344357,
+    "lon": 78.1715894
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CEN Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1443188659,
+  "center": {
+    "lat": 12.9128125,
+    "lon": 77.5205160
+  },
+  "tags": {
+    "addr:city": "Bengaluru",
+    "addr:postcode": "560098",
+    "addr:street": "Mysore Road, Rajarajeshwari Nagar, Sachidananda Nagar, RR Nagar",
+    "amenity": "police",
+    "name": "Rajarajeshwari Nagar Police Station",
+    "name:kn": "ಆರಕ್ಷಕ ಠಾಣೆ",
+    "phone": "080 2294 2559"
+  }
+},
+{
+  "type": "way",
+  "id": 1443406415,
+  "center": {
+    "lat": 13.0078716,
+    "lon": 77.6938172
+  },
+  "tags": {
+    "addr:city": "K.R Puram, Bangalore",
+    "addr:street": "Old Madras Road",
+    "amenity": "police",
+    "name": "KR Puram Traffic Police Station",
+    "name:kn": "ಸಂಚಾರ ಪೊಲೀಸ್ ಠಾಣೆ"
+  }
+},
+{
+  "type": "way",
+  "id": 1450036308,
+  "center": {
+    "lat": 12.9380254,
+    "lon": 77.7469329
+  },
+  "tags": {
+    "addr:street": "Varthur Main Road",
+    "amenity": "police",
+    "check_date": "2024-12-17",
+    "name": "Varthur Police Station",
+    "name:kn": "ವರ್ತೂರು ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1458729111,
+  "center": {
+    "lat": 12.9854169,
+    "lon": 77.5426024
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Basaveshwaranagar Police Station",
+    "name:kn": "ಬಸವೇಶ್ವರ ನಗರ ಆರಕ್ಷಕ ಠಾಣೆ",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1502729412,
+  "center": {
+    "lat": 13.4147078,
+    "lon": 76.6212485
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "chikkanayakanahalli police station",
+    "opening_hours": "24/7",
+    "operator": "state karnataka police"
+  }
+},
+{
+  "type": "way",
+  "id": 1515072402,
+  "center": {
+    "lat": 12.8606427,
+    "lon": 77.7832779
+  },
+  "tags": {
+    "amenity": "police",
+    "check_date": "2026-07-14",
+    "name": "Sarjapura Police Station",
+    "name:kn": "ಸರ್ಜಾಪುರ ಪೊಲೀಸ್ ಸ್ಟೇಷನ್",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1524427841,
+  "center": {
+    "lat": 12.7631045,
+    "lon": 75.1012144
+  },
+  "tags": {
+    "addr:city": "Vitla",
+    "addr:district": "Dakshina Kannada",
+    "addr:postcode": "574243",
+    "alt_name": "Vittal Police Station",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Vitla Police Station",
+    "name:kn": "ವಿಟ್ಲ ಪೊಲೀಸ್ ಠಾಣೆ",
+    "opening_hours": "24/7",
+    "phone": "08255 239233",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1566750956,
+  "center": {
+    "lat": 13.2249707,
+    "lon": 74.9787936
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Police Station"
+  }
+},
+{
+  "type": "way",
+  "id": 1570552542,
+  "center": {
+    "lat": 12.9444048,
+    "lon": 77.6973781
+  },
+  "tags": {
+    "amenity": "police",
+    "landuse": "commercial",
+    "name": "Marathahalli Police Station"
+  }
+},
+{
+  "type": "relation",
+  "id": 5386352,
+  "center": {
+    "lat": 13.0057513,
+    "lon": 76.1018791
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Superintendent of Police, Hassan",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
