@@ -124,7 +124,7 @@ def test_operational_analytics_endpoints(client, tourist_headers, admin_headers,
     assert hot["status"] == "OK" and hot["cells"][0]["count"] >= 5
     alerts = client.get("/api/v1/sos?scope=active", headers=admin_headers).json()
     client.post(f"/api/v1/sos/{alerts[0]['id']}/acknowledge", headers=admin_headers)
-    client.post(f"/api/v1/sos/{alerts[0]['id']}/resolve", headers=admin_headers, json={"outcome": "ASSISTED", "notes": "ok"})
+    client.post(f"/api/v1/sos/{alerts[0]['id']}/resolve", headers=admin_headers, json={"outcome": "ASSISTED", "notes": "Tourist assisted"})
     rt = client.get("/api/v1/analytics/response-times", headers=admin_headers).json()
     assert rt["acknowledged"] >= 1 and rt["resolved"] == 1 and rt["outcomes"] == {"ASSISTED": 1}
     client.post("/api/v1/me/location", headers=tourist_headers, json={"latitude": 13.0, "longitude": 77.0})
