@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T02:27:49+00:00",
+  "generated_at": "2026-11-02T02:29:53+00:00",
   "limitations": [
     "OSM facility coverage is community-mapped and uneven; low counts can mean missing data, not missing facilities.",
     "ERA5 reanalysis at one centroid per district smooths local extremes; it is not station data.",
