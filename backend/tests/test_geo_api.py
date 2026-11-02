@@ -159,3 +159,29 @@ def test_import_dataset_layer_as_pending_zones(client, admin_headers, tmp_path, 
     again = client.post("/api/v1/zones/import-dataset?layer=natural_hazards&dry_run=false", headers=admin_headers).json()
     assert again["created"] == 0 and again["duplicates"] == 1
     assert client.post("/api/v1/zones/import-dataset?layer=evil", headers=admin_headers).status_code == 422
+
+
+def test_real_osm_dataset_imports_and_finds_nearest_police(client, admin_headers, monkeypatch):
+    """Runs against the committed open dataset (datasets/application_data), not a fixture."""
+    import pytest
+
+    from app.services.datasets import BACKEND
+
+    real = BACKEND.parent / "datasets" / "application_data"
+    if not (real / "emergency_facilities.geojson").exists():
+        pytest.skip("processed open datasets not present")
+    monkeypatch.setenv("DATASETS_DIR", str(real))
+    result = client.post("/api/v1/facilities/import-dataset", headers=admin_headers).json()
+    assert result["imported"] > 5000 and result["skipped"] == 0
+    stats = client.get("/api/v1/facilities/stats", headers=admin_headers).json()["by_type"]
+    assert stats["POLICE"] > 300 and stats["HOSPITAL"] > 3000
+    # Bengaluru city centre (MG Road) must have a mapped police station within 3 km
+    near = client.get("/api/v1/facilities/nearby?lat=12.9756&lon=77.6066&type=POLICE&radius_m=3000", headers=admin_headers).json()
+    assert near and near[0]["distance_meters"] < 3000
+    for layer in ("districts", "protected_areas", "natural_hazards", "district_risk", "attractions"):
+        fc = client.get(f"/api/v1/datasets/layers/{layer}").json()
+        assert fc["type"] == "FeatureCollection" and fc["features"], layer
+    assert len(client.get("/api/v1/datasets/layers/districts").json()["features"]) == 30
+    analysis = client.get("/api/v1/datasets/analysis", headers=admin_headers).json()
+    assert analysis["crime"]["years"] == [2022, 2024, 2025]
+    assert len(analysis["district_risk"]) == 30

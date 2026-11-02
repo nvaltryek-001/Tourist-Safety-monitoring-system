@@ -28,8 +28,17 @@ With 200 m radii, College demo zones whose centres are < 400 m apart overlap. `G
 
 To import real boundaries later: **Dataset management → Import** (GeoJSON or KML) → dry run → review → import (inactive, `PENDING_REVIEW`) → activate individually after verification. Record the source URL, publisher, licence and date in `docs/project-control/DATA_SOURCE_INVENTORY.csv`.
 
+## Open datasets (downloaded 2026-11-02)
+See [`datasets/README.md`](../datasets/README.md) and [`datasets/dataset_manifest.csv`](../datasets/dataset_manifest.csv): 42 of 42 source files downloaded and 37 of 37 processing outputs produced by the Datasets workflow. Analysis results are in [`datasets/analysis/report.md`](../datasets/analysis/report.md).
+
+Key processing decisions:
+* **Police units → districts.** KSP reports by police unit (commissionerates such as Bengaluru City, police districts, K.G.F., Railways). `datasets/scripts/crime.py` maps them explicitly to the 30 geoBoundaries 2021 polygons (Bengaluru City → Bangalore, Mysuru City + Dist → Mysore, K.G.F. → Kolar, Vijayanagara → Bellary, Bengaluru South → Ramanagara). Railways, CID and Coastal Security Police are statewide and excluded.
+* **District risk index** = percentile-ranked registered crimes (55 %), heavy-rain days ≥ 64.5 mm (30 %) and heat days ≥ 40 °C (15 %). OSM police density is *not* an input because OSM police mapping is incomplete (e.g. 2 stations mapped in Vijayapura); it is reported separately as a coverage gap.
+* **Open-data zones** (waterfalls, cliffs, protected areas) can be imported from the Dataset page; they are created inactive and `PENDING_REVIEW` and never alert tourists until verified.
+* **No ML model** is trained: there are no geocoded incidents or labelled outcomes in any downloaded source.
+
 ## Historical incident datasets
-`DATA_SOURCE_INVENTORY.csv` lists six candidate public sources (OpenCity, Karnataka and India open-data portals, police and disaster records). All are **NOT DOWNLOADED / NOT REVIEWED**. Analytics in this platform use only the system's own SOS and geofence records; no external statistics are displayed or invented.
+`DATA_SOURCE_INVENTORY.csv` (project-control) lists the original candidates. The KSP crime tables (SRC-002/003 family) are now downloaded via OpenCity; NCRB, IMD and tourism statistics remain unavailable in machine-readable form.
 
 ## Tourist records
 The six tourist accounts and their Gmail allow-list entries exist only in the local database. They are preserved by design: migrations are additive and backed up, and the copy script moves them to PostgreSQL unchanged. No Gmail address or personal detail appears in this repository or its documentation.

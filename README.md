@@ -16,7 +16,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-![Tests](https://img.shields.io/badge/backend_tests-82_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
+![Tests](https://img.shields.io/badge/backend_tests-92_passed-2ea44f?style=flat-square&logo=pytest&logoColor=white)
 ![Dashboard](https://img.shields.io/badge/dashboard_build-passing-2ea44f?style=flat-square&logo=vercel)
 ![Mobile](https://img.shields.io/badge/mobile_typecheck-passing-2ea44f?style=flat-square&logo=android&logoColor=white)
 ![Hardware](https://img.shields.io/badge/IoT_hardware-none-6e7781?style=flat-square)
@@ -333,7 +333,7 @@ Set your Render URL in `eas.json` before building. Push notifications work in th
 
 | Suite | Status |
 |---|---|
-| 🐍 Backend (pytest) | ![](https://img.shields.io/badge/82_passed-1_skipped-2ea44f?style=flat-square) |
+| 🐍 Backend (pytest) | ![](https://img.shields.io/badge/92_passed-1_skipped-2ea44f?style=flat-square) |
 | 🖥️ Dashboard lint · types · tests · build | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
 | 📱 Mobile types · tests | ![](https://img.shields.io/badge/all-passing-2ea44f?style=flat-square) |
 | ⚡ Performance smoke | ![](https://img.shields.io/badge/~8--9_ms-per_location_update-1f6feb?style=flat-square) |
@@ -386,6 +386,87 @@ npm test
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
 
+## 🗺️ Google Maps & Real Open Datasets
+
+<table>
+<tr>
+<td align="center" width="25%">🗺️<br/><b>Google Maps</b><br/><sub>Web (vis.gl) + Android (Maps SDK)</sub></td>
+<td align="center" width="25%">🚓<br/><b>7,664 facilities</b><br/><sub>Police · hospitals · fire · pharmacies</sub></td>
+<td align="center" width="25%">📊<br/><b>42 / 42 sources</b><br/><sub>Downloaded & documented</sub></td>
+<td align="center" width="25%">🧭<br/><b>SOS routes</b><br/><sub>Nearest police → tourist</sub></td>
+</tr>
+</table>
+
+<details open>
+<summary><b>🗺️ Maps</b></summary>
+<br/>
+
+| Surface | Implementation |
+|---|---|
+| 🖥️ Admin & police dashboard | `@vis.gl/react-google-maps` following Google's **Maps Platform 101 React codelab**: `APIProvider` → `Map` → `AdvancedMarker`, **MarkerClusterer** for tourists and facilities, circle/polygon zones, GeoJSON data layers, info windows |
+| 🚨 SOS route | Incident page → *Nearest help* → **Show route**: Directions API driving route from the nearest police station / hospital to the tourist, with a one-click Google Maps navigation link |
+| 📱 Android app | `react-native-maps` with **`PROVIDER_GOOGLE`**: zones, nearby police & hospital pins, dashed route, *Navigate* opens the Google Maps app |
+| 🔁 Fallback | No key or a failed key → OpenStreetMap automatically, with the same features |
+
+🔑 Uses **your own restricted keys**, which are never committed. Setup and test checklist: [`docs/GOOGLE_MAPS_SETUP.md`](docs/GOOGLE_MAPS_SETUP.md)
+
+```env
+# dashboard/.env.local
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-referrer-restricted-key
+```
+
+</details>
+
+<details open>
+<summary><b>📊 Open datasets (<code>datasets/</code>)</b></summary>
+<br/>
+
+| Source | Licence | Used for |
+|---|---|---|
+| 🗺️ OpenStreetMap (Overpass) | ODbL | 374 police · 3,610 hospitals · 2,345 clinics · 63 fire stations · 1,272 pharmacies · 283 attractions · 59 protected areas · 204 waterfalls/cliffs |
+| 🏛️ Karnataka State Police (via OpenCity) | Public Domain | District crime 2022 / 2024 / 2025, road accidents |
+| 🌧️ KSNDMC rainfall (via OpenCity) | Public Domain | Official district rainfall 2020–2025 |
+| ☁️ Open-Meteo ERA5 | CC BY 4.0 | 21,930 district-days of rain, heat and wind |
+| 🧭 geoBoundaries | ODbL | 30 Karnataka district polygons |
+
+**Findings** (full report: [`datasets/analysis/report.md`](datasets/analysis/report.md))
+- 📈 Registered crimes: **179,389 (2022) → 201,733 (2025), +12.5 %**
+- 📍 Median distance from a tourist attraction to the nearest police station: **2.1 km**; **76 attractions** are more than 15 km away
+- 🌧️ 2025: **11 districts** had rainfall ≥ 20 % above normal (Vijayapura +47 %)
+- 🧠 Explainable district risk index: crime 55 % · heavy rain 30 % · heat 15 % (no fabricated ML)
+
+Download → clean → analyse runs automatically in GitHub Actions (`.github/workflows/datasets.yml`). Every file is listed in [`datasets/dataset_manifest.csv`](datasets/dataset_manifest.csv).
+
+</details>
+
+<details>
+<summary><b>✅ Full CRUD</b></summary>
+<br/>
+
+| Resource | Create | Read | Update | Delete |
+|---|:-:|:-:|:-:|:-:|
+| 👥 Tourists | ✅ | ✅ | ✅ | ✅ |
+| 🔑 Gmail login access | ✅ | ✅ | ✅ | ✅ |
+| 🚓 Officers & staff | ✅ | ✅ | ✅ | ✅ |
+| 🛡️ Safety zones (+ GeoJSON/KML) | ✅ | ✅ | ✅ | ✅ |
+| 🏥 Emergency facilities | ✅ | ✅ | ✅ | ✅ |
+| 🚨 SOS incidents | ✅ | ✅ | ✅ | kept for audit |
+
+</details>
+
+<details>
+<summary><b>📱 Expo Go: connecting the phone</b></summary>
+<br/>
+
+1. On the PC: `uvicorn app.main:app --host 0.0.0.0 --port 8000`
+2. In the app: **Welcome → Server connection** → type your PC's Wi-Fi IPv4 (e.g. `192.168.1.10`) → **Test connection** → **Save**
+3. The tourist's Gmail must first be added by an admin under **Dashboard → Tourist login access**
+4. Without email set up, the 6-digit code appears in the app in a yellow **Demo mode** box (`OTP_DEV_ECHO=true`)
+
+</details>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
+
 ## 📂 Project Structure
 
 ```
@@ -393,6 +474,7 @@ npm test
  ┣ 🐍 backend/        FastAPI API · services · migrations · tests
  ┣ 🖥️ dashboard/      Next.js admin + police dashboard
  ┣ 📱 mobile/         Expo Android tourist app
+ ┣ 📊 datasets/       Open data: raw · processed · application_data · analysis
  ┣ 📚 docs/           Full documentation & reports
  ┣ ☁️ render.yaml     Free Render deployment
  ┣ 🐳 docker-compose.yml
@@ -402,7 +484,7 @@ npm test
 ## 📚 Documentation
 
 <details>
-<summary><b>Open all 16 documents</b></summary>
+<summary><b>Open all 18 documents</b></summary>
 <br/>
 
 | | Topic | File |
@@ -423,6 +505,8 @@ npm test
 | ⚙️ | Environment variables | `docs/ENVIRONMENT_VARIABLES.md` |
 | ⚠️ | Limitations | `docs/KNOWN_LIMITATIONS.md` |
 | 🏁 | Final report | `docs/FINAL_COMPLETION_REPORT.md` |
+| 🗺️ | Google Maps setup | `docs/GOOGLE_MAPS_SETUP.md` |
+| 📊 | Dataset analysis | `datasets/analysis/report.md` |
 
 </details>
 
