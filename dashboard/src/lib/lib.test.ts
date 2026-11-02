@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { clusterPoints } from "./cluster";
 import { errorMessage } from "./api";
 import { coords, humanize, metres, statusTone, timeAgo } from "./format";
+import { boundsOf, geometryPaths, googleDirectionsUrl, hasGoogleMaps, zoneColor, zonesToFeatureCollection } from "./maps";
 
 describe("format helpers", () => {
   it("formats relative time", () => {
@@ -48,7 +49,6 @@ describe("clustering", () => {
   });
 });
 
-import { boundsOf, geometryPaths, googleDirectionsUrl, hasGoogleMaps, zoneColor, zonesToFeatureCollection } from "./maps";
 
 describe("map helpers", () => {
   it("detects whether a Google key is configured", () => {
