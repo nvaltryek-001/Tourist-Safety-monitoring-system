@@ -1,0 +1,60 @@
+name: Datasets
+
+# Downloads open datasets, processes and analyses them, and commits the
+# outputs under datasets/. Runs when the dataset scripts change, or manually.
+on:
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: "Fetch steps (space separated: osm geoboundaries opencity weather). Empty = all"
+        required: false
+  push:
+    paths:
+      - "datasets/scripts/**"
+      - ".github/workflows/datasets.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datasets-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-datasets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install matplotlib==3.9.2
+      - name: Fetch (skipped for sources already present unless forced)
+        run: |
+          if [ -n "${{ github.event.inputs.steps }}" ]; then
+            python datasets/scripts/fetch_all.py ${{ github.event.inputs.steps }}
+          elif [ ! -f datasets/raw/fetch_log.json ] || grep -q "FETCH_ALL" datasets/scripts/FETCH_TRIGGER 2>/dev/null; then
+            python datasets/scripts/fetch_all.py
+          else
+            echo "::notice title=datasets::raw data present; skipping download"
+          fi
+      - name: Process
+        run: |
+          if [ -f datasets/scripts/process.py ]; then python datasets/scripts/process.py; fi
+      - name: Analyse
+        run: |
+          if [ -f datasets/scripts/analyze.py ]; then python datasets/scripts/analyze.py; fi
+      - name: Commit outputs
+        run: |
+          git config user.name "safetrail-datasets-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datasets backend/app/data 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "::notice title=datasets::no changes to commit"
+          else
+            git commit -m "data: refresh downloaded and processed datasets [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+            echo "::notice title=datasets::committed $(git rev-parse --short HEAD)"
+          fi
