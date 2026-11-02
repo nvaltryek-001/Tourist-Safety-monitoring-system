@@ -321,3 +321,116 @@ def hazard_report(zone_rows: list[dict], trends: dict, tourist_assessments: list
             "Synthetic DEMO-KA zones are test data and must not drive real decisions.",
         ],
     }
+
+
+# ---------------------------------------------------------- 6. operational analytics
+MIN_EVENTS_FOR_HOTSPOTS = 5
+
+
+def grid_hotspots(points: list[dict], cell_m: float = 500, min_count: int = 2) -> dict:
+    """Grid-density hotspots over real event coordinates (SOS alerts / zone entries).
+
+    Each point: {"latitude", "longitude", "kind", "created_at"}. Cells are about
+    cell_m x cell_m metres. Returns cells with >= min_count events, ranked.
+    Refuses to label anything a hotspot when there are too few events.
+    """
+    pts = [p for p in points if p.get("latitude") is not None and p.get("longitude") is not None]
+    if len(pts) < MIN_EVENTS_FOR_HOTSPOTS:
+        return {"status": "INSUFFICIENT_DATA", "events": len(pts), "min_events": MIN_EVENTS_FOR_HOTSPOTS, "cells": [],
+                "note": f"At least {MIN_EVENTS_FOR_HOTSPOTS} located events are needed before hotspots are reported."}
+    import math
+
+    dlat = cell_m / 111_320
+    cells: dict[tuple[int, int], list[dict]] = defaultdict(list)
+    for p in pts:
+        dlon = cell_m / (111_320 * max(0.2, math.cos(math.radians(p["latitude"]))))
+        cells[(int(p["latitude"] // dlat), int(p["longitude"] // dlon))].append(p)
+    out = []
+    for members in cells.values():
+        if len(members) < min_count:
+            continue
+        lat = statistics.fmean(m["latitude"] for m in members)
+        lon = statistics.fmean(m["longitude"] for m in members)
+        out.append({
+            "latitude": round(lat, 6), "longitude": round(lon, 6), "count": len(members),
+            "by_kind": dict(Counter(m.get("kind", "EVENT") for m in members)),
+            "first": min(_utc(m["created_at"]) for m in members).isoformat(),
+            "last": max(_utc(m["created_at"]) for m in members).isoformat(),
+        })
+    out.sort(key=lambda c: -c["count"])
+    return {"status": "OK", "events": len(pts), "cell_m": cell_m, "min_count": min_count, "cells": out,
+            "note": "Density of SafeTrail's own recorded events; not a crime prediction."}
+
+
+def _pct(values: list[float], q: int) -> float | None:
+    if not values:
+        return None
+    if len(values) == 1:
+        return round(values[0], 1)
+    return round(statistics.quantiles(values, n=100, method="inclusive")[q - 1], 1)
+
+
+def response_times(alerts: list[dict]) -> dict:
+    """Minutes from SOS creation to acknowledgement and to resolution."""
+    ack, res = [], []
+    by_type: dict[str, list[float]] = defaultdict(list)
+    by_officer: dict[str, list[float]] = defaultdict(list)
+    outcomes = Counter()
+    for a in alerts:
+        created = _utc(a["created_at"])
+        if a.get("acknowledged_at"):
+            m = (_utc(a["acknowledged_at"]) - created).total_seconds() / 60
+            ack.append(m)
+            by_type[a.get("alert_type") or "GENERAL"].append(m)
+        if a.get("resolved_at") and a.get("status") == "RESOLVED":
+            m = (_utc(a["resolved_at"]) - created).total_seconds() / 60
+            res.append(m)
+            if a.get("officer"):
+                by_officer[a["officer"]].append(m)
+            outcomes[a.get("resolution_outcome") or "UNSPECIFIED"] += 1
+    return {
+        "alerts": len(alerts),
+        "acknowledged": len(ack),
+        "resolved": len(res),
+        "ack_minutes": {"median": _pct(ack, 50), "p90": _pct(ack, 90)},
+        "resolve_minutes": {"median": _pct(res, 50), "p90": _pct(res, 90)},
+        "ack_median_by_type": {k: _pct(v, 50) for k, v in sorted(by_type.items())},
+        "resolve_median_by_officer": {k: _pct(v, 50) for k, v in sorted(by_officer.items())},
+        "outcomes": dict(outcomes),
+    }
+
+
+def zone_activity(events: list[dict]) -> list[dict]:
+    """Entries, exits, unique tourists and median dwell time per zone from ENTER/EXIT pairs."""
+    per_zone: dict[int, dict] = {}
+    open_entries: dict[tuple[str, int], datetime] = {}
+    for e in sorted(events, key=lambda x: _utc(x["created_at"])):
+        z = per_zone.setdefault(e["zone_id"], {"zone_id": e["zone_id"], "zone_name": e.get("zone_name"), "zone_type": e.get("zone_type"),
+                                               "entries": 0, "exits": 0, "tourists": set(), "dwell": []})
+        key = (e["tourist_code"], e["zone_id"])
+        if e["event_type"] == "ENTER":
+            z["entries"] += 1
+            z["tourists"].add(e["tourist_code"])
+            open_entries[key] = _utc(e["created_at"])
+        else:
+            z["exits"] += 1
+            started = open_entries.pop(key, None)
+            if started:
+                z["dwell"].append((_utc(e["created_at"]) - started).total_seconds() / 60)
+    rows = []
+    for z in per_zone.values():
+        rows.append({"zone_id": z["zone_id"], "zone_name": z["zone_name"], "zone_type": z["zone_type"], "entries": z["entries"],
+                     "exits": z["exits"], "unique_tourists": len(z["tourists"]), "median_dwell_minutes": _pct(z["dwell"], 50),
+                     "currently_inside": sum(1 for (_, zid) in open_entries if zid == z["zone_id"])})
+    return sorted(rows, key=lambda r: -r["entries"])
+
+
+def movement_summary(points_by_tourist: dict[str, list[Point]]) -> list[dict]:
+    rows = []
+    for code, pts in points_by_tourist.items():
+        f = extract_features(pts)
+        dev = route_deviation(pts)
+        rows.append({"tourist_code": code, "points": f["point_count"], "distance_km": round(f["total_distance_m"] / 1000, 2),
+                     "max_speed_kmh": round(f["max_speed_mps"] * 3.6, 1), "stationary_minutes": f["stationary_minutes"],
+                     "route_deviation": bool(dev and dev["is_anomalous"]), "last_seen": f["last_seen"]})
+    return sorted(rows, key=lambda r: -r["distance_km"])

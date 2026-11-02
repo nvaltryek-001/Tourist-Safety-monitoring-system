@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { OperationalAnalytics } from "@/components/OperationalAnalytics";
 import { Button, EmptyState, ErrorState, PageHeader, Panel, SkeletonRows, Stat } from "@/components/ui";
 import { humanize } from "@/lib/format";
 import { useApi } from "@/lib/hooks";
@@ -77,6 +78,7 @@ export default function AnalyticsPage() {
               {!Object.keys(t.by_status).length && <p className="muted">No incidents recorded.</p>}
             </div>
           </Panel>
+          <OperationalAnalytics days={days} />
         </>
       )}
     </>

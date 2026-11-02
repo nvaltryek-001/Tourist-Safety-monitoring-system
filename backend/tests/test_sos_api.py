@@ -114,3 +114,24 @@ def test_analytics_and_intelligence(client, tourist_headers, admin_headers, poli
     assert ai[0]["risk_level"] in {"HIGH", "CRITICAL"}
     report = client.get("/api/v1/intelligence/report", headers=admin_headers).json()
     assert report["kind"] == "AI_ADVISORY" and report["limitations"]
+
+
+def test_operational_analytics_endpoints(client, tourist_headers, admin_headers, police_headers, restricted_zone):
+    for i in range(5):
+        client.post("/api/v1/me/sos", headers=tourist_headers,
+                    json={"latitude": 13.0 + i * 0.0001, "longitude": 77.0, "alert_type": "MEDICAL", "idempotency_key": f"hot-{i}"})
+    hot = client.get("/api/v1/analytics/hotspots?cell_m=500", headers=police_headers).json()
+    assert hot["status"] == "OK" and hot["cells"][0]["count"] >= 5
+    alerts = client.get("/api/v1/sos?scope=active", headers=admin_headers).json()
+    client.post(f"/api/v1/sos/{alerts[0]['id']}/acknowledge", headers=admin_headers)
+    client.post(f"/api/v1/sos/{alerts[0]['id']}/resolve", headers=admin_headers, json={"outcome": "ASSISTED", "notes": "ok"})
+    rt = client.get("/api/v1/analytics/response-times", headers=admin_headers).json()
+    assert rt["acknowledged"] >= 1 and rt["resolved"] == 1 and rt["outcomes"] == {"ASSISTED": 1}
+    client.post("/api/v1/me/location", headers=tourist_headers, json={"latitude": 13.0, "longitude": 77.0})
+    client.post("/api/v1/me/location", headers=tourist_headers, json={"latitude": 13.05, "longitude": 77.05})
+    za = client.get("/api/v1/analytics/zone-activity", headers=admin_headers).json()
+    assert za["zones"][0]["entries"] == 1 and za["zones"][0]["exits"] == 1
+    mv = client.get("/api/v1/analytics/movement", headers=admin_headers).json()
+    assert mv["tourists"][0]["tourist_code"] == "T-TEST-01"
+    assert client.get("/api/v1/analytics/movement", headers=police_headers).status_code == 403
+    assert client.get("/api/v1/analytics/hotspots", headers=tourist_headers).status_code == 403

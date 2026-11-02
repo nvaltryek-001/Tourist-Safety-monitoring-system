@@ -182,3 +182,13 @@ export interface RouteRequest {
   to: [number, number];
   label?: string;
 }
+
+export interface WeatherInfo {
+  available: boolean;
+  error?: string;
+  current?: { temperature_2m?: number; precipitation?: number; wind_gusts_10m?: number; weather_code?: number };
+  weather_risk_score?: number;
+  weather_risk_level?: string;
+  reasons?: string[];
+  attribution?: string;
+}

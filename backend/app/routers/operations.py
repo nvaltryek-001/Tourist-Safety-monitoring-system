@@ -123,6 +123,59 @@ def trends(days: int = Query(default=30, ge=7, le=180), principal: Principal = D
     return data
 
 
+@router.get("/api/v1/analytics/hotspots", tags=["analytics"])
+def hotspots(
+    days: int = Query(default=90, ge=1, le=730),
+    cell_m: int = Query(default=500, ge=100, le=5000),
+    min_count: int = Query(default=2, ge=1, le=50),
+    include_zone_entries: bool = True,
+    principal: Principal = Depends(require_staff),
+    db: Session = Depends(get_db),
+):
+    since = utc_now() - timedelta(days=days)
+    pts = [{"latitude": a.latitude, "longitude": a.longitude, "kind": f"SOS_{a.alert_type or 'GENERAL'}", "created_at": as_utc(a.created_at)}
+           for a in db.query(SOSAlert).filter(SOSAlert.created_at >= since).all()]
+    if include_zone_entries:
+        pts += [{"latitude": e.latitude, "longitude": e.longitude, "kind": "RESTRICTED_ENTRY", "created_at": as_utc(e.created_at)}
+                for e in db.query(GeofenceEvent).filter(GeofenceEvent.created_at >= since, GeofenceEvent.event_type == "ENTER",
+                                                       GeofenceEvent.zone_type.in_(("RESTRICTED", "HIGH_RISK"))).all()]
+    return {"window_days": days, **intelligence.grid_hotspots(pts, cell_m, min_count)}
+
+
+@router.get("/api/v1/analytics/response-times", tags=["analytics"])
+def response_time_stats(days: int = Query(default=90, ge=1, le=730), principal: Principal = Depends(require_staff),
+                        db: Session = Depends(get_db)):
+    from app.models.models import StaffUser
+
+    since = utc_now() - timedelta(days=days)
+    officers = {u.id: u.name for u in db.query(StaffUser).all()}
+    alerts = [{"created_at": as_utc(a.created_at), "acknowledged_at": as_utc(a.acknowledged_at), "resolved_at": as_utc(a.resolved_at),
+               "status": a.status, "alert_type": a.alert_type, "resolution_outcome": a.resolution_outcome,
+               "officer": officers.get(a.assigned_officer_id)}
+              for a in db.query(SOSAlert).filter(SOSAlert.created_at >= since).all()]
+    return {"window_days": days, **intelligence.response_times(alerts)}
+
+
+@router.get("/api/v1/analytics/zone-activity", tags=["analytics"])
+def zone_activity(days: int = Query(default=30, ge=1, le=365), principal: Principal = Depends(require_staff),
+                  db: Session = Depends(get_db)):
+    since = utc_now() - timedelta(days=days)
+    events = [{"tourist_code": e.tourist_code, "zone_id": e.zone_id, "zone_name": e.zone_name, "zone_type": e.zone_type,
+               "event_type": e.event_type, "created_at": as_utc(e.created_at)}
+              for e in db.query(GeofenceEvent).filter(GeofenceEvent.created_at >= since).all()]
+    return {"window_days": days, "events": len(events), "zones": intelligence.zone_activity(events)}
+
+
+@router.get("/api/v1/analytics/movement", tags=["analytics"])
+def movement(hours: int = Query(default=24, ge=1, le=24 * 30), principal: Principal = Depends(require_admin),
+             db: Session = Depends(get_db)):
+    since = utc_now() - timedelta(hours=hours)
+    by: dict[str, list] = {}
+    for r in db.query(LocationPoint).filter(LocationPoint.recorded_at >= since).all():
+        by.setdefault(r.tourist_code, []).append(intelligence.Point(r.latitude, r.longitude, as_utc(r.recorded_at), r.accuracy))
+    return {"window_hours": hours, "tourists": intelligence.movement_summary(by)}
+
+
 # ---------------------------------------------------------- intelligence
 @router.get("/api/v1/intelligence/tourists", tags=["ai intelligence"])
 def ai_tourists(principal: Principal = Depends(require_staff), db: Session = Depends(get_db)):

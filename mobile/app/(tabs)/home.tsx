@@ -1,6 +1,8 @@
 import { router } from "expo-router";
+import { useEffect, useState } from "react";
 import { Linking, Pressable, RefreshControl, ScrollView, Text, View } from "react-native";
 import { Button, Card, Label, Muted, Pill, Row, Screen, colors, timeAgo } from "@/components/ui";
+import { api } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
 import { useLocation } from "@/lib/location";
 import { accuracyLabel, sosStatusText, statusView } from "@/lib/status";
@@ -12,6 +14,13 @@ export default function Home() {
   const { status, error, reload } = useMyStatus();
   const view = statusView(status?.display_state);
   const consent = !!profile?.location_consent_at;
+  const [weather, setWeather] = useState<{ available: boolean; weather_risk_level?: string; reasons?: string[]; current?: { temperature_2m?: number; precipitation?: number } } | null>(null);
+  const wlat = loc.lastFix ? loc.lastFix.latitude.toFixed(2) : null;
+  const wlon = loc.lastFix ? loc.lastFix.longitude.toFixed(2) : null;
+  useEffect(() => {
+    if (!wlat || !wlon) return;
+    api<typeof weather>(`/api/v1/weather?lat=${wlat}&lon=${wlon}`).then(setWeather).catch(() => setWeather(null));
+  }, [wlat, wlon]);
 
   return (
     <Screen>
@@ -72,6 +81,17 @@ export default function Home() {
             </>
           )}
         </Card>
+
+        {weather?.available && (
+          <Card style={{ borderColor: weather.weather_risk_level === "HIGH" ? "#fca5a5" : weather.weather_risk_level === "MEDIUM" ? "#fcd34d" : colors.line }}>
+            <Label>Weather here</Label>
+            <Text style={{ color: colors.text, fontWeight: "600" }}>
+              {weather.current?.temperature_2m} °C · rain {weather.current?.precipitation} mm · risk {weather.weather_risk_level?.toLowerCase()}
+            </Text>
+            {weather.reasons?.map((r) => <Muted key={r}>• {r}</Muted>)}
+            <Muted style={{ fontSize: 11, marginTop: 4 }}>Weather data by Open-Meteo.com</Muted>
+          </Card>
+        )}
 
         <Card>
           <Label>Trip</Label>

@@ -5,11 +5,11 @@ import { useParams } from "next/navigation";
 import { useState } from "react";
 import { IncidentActions, IncidentSummary, Timeline } from "@/components/IncidentPanel";
 import { SafetyMap } from "@/components/Map";
-import { Button, ErrorState, PageHeader, Panel, SkeletonRows } from "@/components/ui";
+import { Button, ErrorState, PageHeader, Panel, SkeletonRows, StatusBadge } from "@/components/ui";
 import { metres } from "@/lib/format";
 import { FACILITY_STYLE, googleDirectionsUrl } from "@/lib/maps";
 import { useApi, useLiveEvents } from "@/lib/hooks";
-import type { Facility, NearestHelp, RouteRequest, SOSAlert, Zone } from "@/lib/types";
+import type { Facility, NearestHelp, RouteRequest, SOSAlert, WeatherInfo, Zone } from "@/lib/types";
 
 export default function IncidentDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -17,6 +17,9 @@ export default function IncidentDetailPage() {
   const zones = useApi<Zone[]>("/api/v1/zones?active=true");
   const help = useApi<NearestHelp>(`/api/v1/sos/${id}/nearest-help`);
   const [routeTo, setRouteTo] = useState<Facility | null>(null);
+  const weather = useApi<WeatherInfo>(
+    alert.data?.latitude != null && alert.data?.longitude != null ? `/api/v1/weather?lat=${alert.data.latitude.toFixed(3)}&lon=${alert.data.longitude.toFixed(3)}` : null,
+  );
   useLiveEvents((event) => {
     if (event.type === "sos.updated" && String((event.data as { id?: number }).id) === id) void alert.reload();
   });
@@ -78,6 +81,20 @@ export default function IncidentDetailPage() {
                   </li>
                 ))}
               </ul>
+            )}
+          </Panel>
+          <Panel title="Weather at the SOS location">
+            {!weather.data ? <p className="text-sm muted">{weather.loading ? "Loading weather…" : "No location for this SOS."}</p> : !weather.data.available ? (
+              <p className="text-sm muted">Weather service unreachable from the server.</p>
+            ) : (
+              <div className="flex items-start justify-between gap-4 text-sm">
+                <div>
+                  <p>{weather.data.current?.temperature_2m} °C · rain {weather.data.current?.precipitation} mm · gusts {weather.data.current?.wind_gusts_10m} km/h</p>
+                  {weather.data.reasons?.length ? <ul className="mt-1 list-disc pl-5 text-xs muted">{weather.data.reasons.map((r) => <li key={r}>{r}</li>)}</ul> : <p className="mt-1 text-xs muted">No weather hazards right now.</p>}
+                  <p className="mt-1 text-[10px] muted">{weather.data.attribution}</p>
+                </div>
+                <StatusBadge status={weather.data.weather_risk_level} />
+              </div>
             )}
           </Panel>
           <Panel title="Response">

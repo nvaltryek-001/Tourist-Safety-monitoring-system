@@ -219,3 +219,45 @@ def test_rate_limiter_window():
     assert rl.hit("k", 2, 10, now=1)
     assert not rl.hit("k", 2, 10, now=2)
     assert rl.hit("k", 2, 10, now=11)
+
+
+# ------------------------------------------------------ operational analytics
+def test_hotspots_refuse_small_samples_and_cluster_dense_cells():
+    few = [{"latitude": 13.0, "longitude": 77.0, "kind": "SOS", "created_at": NOW}] * 3
+    assert intelligence.grid_hotspots(few)["status"] == "INSUFFICIENT_DATA"
+    dense = [{"latitude": 13.0 + i * 0.0001, "longitude": 77.0, "kind": "SOS", "created_at": NOW} for i in range(4)]
+    lone = [{"latitude": 13.5, "longitude": 77.5, "kind": "RESTRICTED_ENTRY", "created_at": NOW}]
+    result = intelligence.grid_hotspots(dense + lone, cell_m=500, min_count=2)
+    assert result["status"] == "OK" and result["events"] == 5
+    assert len(result["cells"]) == 1 and result["cells"][0]["count"] == 4
+
+
+def test_response_times_and_outcomes():
+    alerts = [
+        {"created_at": NOW, "acknowledged_at": NOW + timedelta(minutes=2), "resolved_at": NOW + timedelta(minutes=30),
+         "status": "RESOLVED", "alert_type": "MEDICAL", "resolution_outcome": "ASSISTED", "officer": "A"},
+        {"created_at": NOW, "acknowledged_at": NOW + timedelta(minutes=6), "resolved_at": None,
+         "status": "RESPONDING", "alert_type": "GENERAL", "officer": "A"},
+        {"created_at": NOW, "acknowledged_at": None, "resolved_at": None, "status": "OPEN"},
+    ]
+    r = intelligence.response_times(alerts)
+    assert r["acknowledged"] == 2 and r["resolved"] == 1
+    assert r["ack_minutes"]["median"] == 4.0
+    assert r["resolve_minutes"]["median"] == 30.0
+    assert r["outcomes"] == {"ASSISTED": 1} and r["resolve_median_by_officer"] == {"A": 30.0}
+
+
+def test_zone_activity_dwell():
+    ev = [
+        {"tourist_code": "T1", "zone_id": 1, "zone_name": "Z", "zone_type": "RESTRICTED", "event_type": "ENTER", "created_at": NOW},
+        {"tourist_code": "T1", "zone_id": 1, "zone_name": "Z", "zone_type": "RESTRICTED", "event_type": "EXIT", "created_at": NOW + timedelta(minutes=12)},
+        {"tourist_code": "T2", "zone_id": 1, "zone_name": "Z", "zone_type": "RESTRICTED", "event_type": "ENTER", "created_at": NOW},
+    ]
+    rows = intelligence.zone_activity(ev)
+    assert rows[0]["entries"] == 2 and rows[0]["unique_tourists"] == 2
+    assert rows[0]["median_dwell_minutes"] == 12.0 and rows[0]["currently_inside"] == 1
+
+
+def test_movement_summary():
+    rows = intelligence.movement_summary({"T1": _track(5, NOW, step_m=100)})
+    assert rows[0]["points"] == 5 and 0.35 < rows[0]["distance_km"] < 0.45
