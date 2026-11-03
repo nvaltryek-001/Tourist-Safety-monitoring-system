@@ -13,20 +13,64 @@ export class ApiError extends Error {
 
 export function readSession(): Session | null {
   if (typeof window === "undefined") return null;
+
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
-    const session = JSON.parse(raw) as Session;
-    if (new Date(session.expiresAt).getTime() < Date.now()) {
+
+    const parsed: unknown = JSON.parse(raw);
+
+    if (!parsed || typeof parsed !== "object") {
       window.localStorage.removeItem(STORAGE_KEY);
       return null;
     }
-    return session;
+
+    const candidate = parsed as Partial<Session>;
+    const token = candidate.token;
+    const expiresAt = candidate.expiresAt;
+    const user = candidate.user;
+
+    const segments = typeof token === "string"
+      ? token.trim().split(".")
+      : [];
+
+    const validToken =
+      segments.length === 3 &&
+      segments.every((part) => part.length > 0);
+
+    const expiry = typeof expiresAt === "string"
+      ? Date.parse(expiresAt)
+      : NaN;
+
+    const validUser =
+      !!user &&
+      typeof user === "object" &&
+      typeof user.role === "string";
+
+    if (
+      !validToken ||
+      !Number.isFinite(expiry) ||
+      expiry <= Date.now() ||
+      !validUser
+    ) {
+      window.localStorage.removeItem(STORAGE_KEY);
+      return null;
+    }
+
+    return {
+      token: (token as string).trim(),
+      expiresAt,
+      user
+    } as Session;
   } catch {
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Storage may be unavailable.
+    }
     return null;
   }
 }
-
 export function writeSession(session: Session | null): void {
   if (typeof window === "undefined") return;
   try {

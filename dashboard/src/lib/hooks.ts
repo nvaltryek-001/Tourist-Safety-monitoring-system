@@ -64,27 +64,63 @@ export function useLiveEvents(onEvent: (event: LiveEvent) => void): LiveStatus {
         setStatus("offline");
         return;
       }
-      socket = new WebSocket(wsUrl());
-      socket.onopen = () => {
-        socket?.send(wsAuthMessage(session.token));
-        attempt = 0;
-        setStatus("live");
-        ping = window.setInterval(() => socket?.readyState === WebSocket.OPEN && socket.send("ping"), 25000);
-      };
-      socket.onmessage = (msg) => {
+      const currentSocket = new WebSocket(wsUrl());
+      socket = currentSocket;
+
+      currentSocket.onopen = () => {
+        if (closed || currentSocket !== socket) return;
+
         try {
-          handler.current(JSON.parse(msg.data) as LiveEvent);
+          currentSocket.send(wsAuthMessage(session.token));
         } catch {
-          /* ignore malformed frames */
+          currentSocket.close();
         }
       };
-      socket.onclose = (ev) => {
+
+      currentSocket.onmessage = (msg) => {
+        try {
+          const event = JSON.parse(msg.data) as LiveEvent & {
+            type?: string;
+          };
+
+          if (event?.type === "hello") {
+            if (closed || currentSocket !== socket) return;
+
+            attempt = 0;
+            setStatus("live");
+
+            window.clearInterval(ping);
+            ping = window.setInterval(() => {
+              if (currentSocket.readyState === WebSocket.OPEN) {
+                currentSocket.send("ping");
+              }
+            }, 25000);
+
+            return;
+          }
+
+          handler.current(event);
+        } catch {
+          /* Ignore malformed frames. */
+        }
+      };
+
+      currentSocket.onerror = () => {
+        if (!closed && currentSocket === socket) {
+          setStatus("reconnecting");
+        }
+      };
+
+      currentSocket.onclose = (ev) => {
         window.clearInterval(ping);
-        if (closed) return;
+
+        if (closed || currentSocket !== socket) return;
+
         if (ev.code === 4401) {
           setStatus("offline");
           return;
         }
+
         setStatus("reconnecting");
         attempt += 1;
         timer = window.setTimeout(connect, Math.min(30000, 1000 * 2 ** attempt));

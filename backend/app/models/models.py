@@ -1,4 +1,4 @@
-﻿"""Database models.
+"""Database models.
 
 The first three tables (tourists, safety_zones, sos_alerts) are the original
 schema. Every column added later is nullable or has a server default so the
@@ -157,6 +157,7 @@ class LocationPoint(Base):
     recorded_at = Column(DateTime(timezone=True), nullable=False, default=utc_now)
     received_at = Column(DateTime(timezone=True), nullable=False, default=utc_now)
     client_id = Column(String(80), nullable=True)  # de-duplicates offline-queue replays
+    created_at = Column(DateTime(timezone=True), nullable=False, default=utc_now)
 
 
 class GeofenceEvent(Base):
