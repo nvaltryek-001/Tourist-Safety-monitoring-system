@@ -518,7 +518,7 @@ eas build -p android --profile preview
 
 <div align="center">
 
-**🎓 Guide:** _Guide Name_ &nbsp;·&nbsp; **🏫 College:** _College Name_ &nbsp;·&nbsp; **📅 Year:** 2026
+**🎓 Guide:** _Guide Name_ &nbsp;·&nbsp; **🏫 College:** _College Name_ &nbsp;·&nbsp; **📅 Year:** 2026.
 
 <br/>
 
