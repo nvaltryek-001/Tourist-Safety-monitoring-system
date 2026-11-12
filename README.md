@@ -194,6 +194,22 @@ sequenceDiagram
 | ⚠️ | **76 attractions** are more than **15 km** from any mapped police station |
 | 🌧️ | 2025: **11 districts** had rainfall ≥ 20 % above normal (Vijayapura **+47 %**) |
 
+### 📈 Charts from the open-data analysis
+
+| District-wise crime (Karnataka State Police) | Tourist-relevant crime, 2024 |
+|---|---|
+| ![District-wise crime](datasets/analysis/crime_by_district.png) | ![Tourist-relevant crime 2024](datasets/analysis/tourist_relevant_crime_2024.png) |
+| **Emergency facilities by district (OpenStreetMap)** | **Attraction → nearest police station** |
+| ![Facilities by district](datasets/analysis/facilities_by_district.png) | ![Attraction to police distance](datasets/analysis/attraction_police_distance.png) |
+| **Monthly rainfall (Open-Meteo / ERA5)** | **Heavy-rain days** |
+| ![Monthly rainfall](datasets/analysis/monthly_rainfall.png) | ![Heavy rain days](datasets/analysis/heavy_rain_days.png) |
+
+<details><summary>Official annual rainfall (KSNDMC)</summary>
+
+![KSNDMC annual rainfall](datasets/analysis/ksndmc_annual_rainfall.png)
+
+</details>
+
 📄 Full report with charts: [`datasets/analysis/report.md`](datasets/analysis/report.md)
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0f766a,100:14917c&height=3" width="100%"/>
